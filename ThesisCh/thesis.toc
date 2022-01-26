@@ -1,0 +1,10 @@
+\contentsline {chapter}{誌謝}{i}{chapter*.1}%
+\contentsline {chapter}{中文摘要}{viii}{chapter*.2}%
+\contentsline {chapter}{Abstract}{ix}{chapter*.3}%
+\contentsline {chapter}{目錄}{x}{chapter*.4}%
+\contentsline {chapter}{圖目錄}{xi}{chapter*.5}%
+\contentsline {chapter}{表目錄}{xii}{chapter*.6}%
+\ttl@change@i {\@ne }{chapter}{0em}{\fontsize {12}{18}\selectfont }{\hspace {3.5em}\contentslabel [附錄\,\thecontentslabel ]{3.5em}}{}{\hspace {0.5em}\titlerule *{.}\contentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\contentsline {chapter}{\numberline {A}First appendix title}{1}{appendix.A}%
+\contentsfinish 

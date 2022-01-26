@@ -19,18 +19,19 @@
 \maketitle
 
 %----------- side page, used for printing on spline -----------
-\makeside
+% \makeside
 
 
 \frontmatter
 %----------- generate the certification page by LaTeX -----------
-\makecertification
+%\makecertification
 %----------- includepdf by using package pdfpages -----------
 %\addcontentsline{toc}{chapter}{口試委員會審定書}
 %\includepdf[pages={1}]{cert.pdf}
 
+%\includepdf[pages={1}]{Verification_Letter.pdf}
 \onehalfspacing
-\input{acknowledgementsCH}
+\input{acknowledgementsCH} %致謝
 \input{abstractCH}
 \doublespacing
 \input{abstractEN}
@@ -40,6 +41,8 @@
 \tableofcontents
 \listoffigures
 \listoftables
+%\input{SymbolList}
+
 
 \mainmatter
 
@@ -47,7 +50,8 @@
 
 %----------- Include/Input your thesis here -----------
 %normal cite == \input
-\chapter{}
+\input{chapter/01Introduction.tex}
+\input{chapter/02LiteratureReview.tex}
 %\input{start}
 %\input{THM}
 %\input{EXP}
