@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  27 JAN 2022 01:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  27 JAN 2022 04:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -814,11 +814,7 @@ File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
 \g__pdf_backend_link_int=\count377
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-))
-Invalid UTF-8 byte or sequence at line 77 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 77 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 77 replaced by U+FFFD.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen342
 \lightrulewidth=\dimen343
@@ -1300,176 +1296,90 @@ File: watermark.pdf Graphic file (type pdf)
 
 
 
-] (./acknowledgementsCH.tex
-
-LaTeX Warning: Reference `it:download' on page i undefined on input line 2.
-
-
-LaTeX Warning: Reference `it:comp' on page i undefined on input line 2.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-
- []
-
+] (./FrontFile/acknowledgementsCH.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[1
+ [1
 
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
-
-Overfull \hbox (1.0798pt too wide) in paragraph at lines 35--37
-\TU/DFKai-SB(0)/m/n/12 可 參 考[][]\TU/TimesNewRoman(0)/m/n/12 Working with a .bib file using JabRef[][]\TU/DFKai-SB(0)/m/n/12 或 是[][]\TU/TimesNewRoman(0)/m/n/12 Google[][]\TU/DFKai-SB(0)/m/n/12 及[][]\TU/TimesNewRoman(0)/m/n/12 YouTube[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-
- []
-
-
-Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
-(xeCJK)                
-(xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
-
+]) (./FrontFile/abstractCH.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[2]
-Overfull \hbox (8.38518pt too wide) in paragraph at lines 78--79
-\TU/DFKai-SB(0)/m/n/12 而 編 譯 時 則 需 要 對 有 附 參 考 文 獻 的[][]\TU/TimesNewRoman(0)/m/n/12 introduction.tex[][]\TU/DFKai-SB(0)/m/n/12 、| [][]\TU/TimesNewRoman(0)/m/n/12 THM.tex[][]\TU/DFKai-SB(0)/m/n/12 和[][]\TU/TimesNewRoman(0)/m/n/12 EXP.tex[][]\TU/DFKai-SB(0)/m/n/12 各
- []
+ [2
 
+]) (./FrontFile/abstractEN.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+ [3
 
- []
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[4]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [5]
-Overfull \hbox (21.16861pt too wide) in paragraph at lines 165--165
- []\TU/lmtt/m/n/12 \RequirePackage[top=3cm,left=3cm,bottom=2cm,right=3cm] {geometry}[] 
- []
-
-
-Overfull \hbox (0.6071pt too wide) in paragraph at lines 172--175
-\TU/DFKai-SB(0)/m/n/12 此 範 本 中 文 字 體 使 用[] 轉 換，|  細 節 請 參 考[][]\TU/TimesNewRoman(0)/m/n/12 Hitripod[][]\TU/DFKai-SB(0)/m/n/12 寫 的[][]\TU/TimesNewRoman(0)/m/n/12 XeTeX\TU/DFKai-SB(0)/m/n/12 ：|
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--177
-
- []
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 184--190
-
- []
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[7]) (./abstractCH.tex
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [8
-
-]) (./abstractEN.tex
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [9
-
-])
-No file thesis.toc.
+]) (./thesis.toc)
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[10
+ [4
 
-]
-No file thesis.lof.
+] (./thesis.lof)
 \tf@lof=\write10
 \openout10 = `thesis.lof'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[11
+ [5
 
-]
-No file thesis.lot.
+] (./thesis.lot)
 \tf@lot=\write11
 \openout11 = `thesis.lot'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[12
+ [6
 
-] (./chapter/01Introduction.tex) (./chapter/02LiteratureReview.tex) (./AppendixA.tex
-Appendix A.
-)
+] (./chapter/01Introduction.tex
+Chapter 1.
+) (./chapter/02LiteratureReview.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [1
 
 
 ]
-No file thesis.bbl.
-(./thesis.aux)
+Chapter 2.
+) (./AppendixA.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [2
+
+]
+Appendix A.
+)
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [3
+
+] (./thesis.bbl)
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [4
+
+
+] (./thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  CE6CC3C258D6D2F2C1A1CD7C09C5DC2A;566.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: E91D6BA14593C1F215B3D9975A8A9B8D;777.
  ) 
 Here is how much of TeX's memory you used:
- 36021 strings out of 476919
- 730603 string characters out of 5821840
- 1215065 words of memory out of 5000000
- 55287 multiletter control sequences out of 15000+600000
- 411761 words of font info for 87 fonts, out of 8000000 for 9000
+ 35928 strings out of 476919
+ 725732 string characters out of 5821840
+ 1203128 words of memory out of 5000000
+ 55193 multiletter control sequences out of 15000+600000
+ 408659 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,12n,105p,864b,1320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,12n,105p,862b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (14 pages).
+Output written on thesis.pdf (11 pages).
