@@ -5,6 +5,8 @@
 \input{PackageSetting}
 \input{XeCJKsetting}
 
+\usepackage{longtable}
+
 \begin{document}
 
 %----------- hyphenation  -----------
@@ -31,17 +33,17 @@
 
 %\includepdf[pages={1}]{Verification_Letter.pdf}
 \onehalfspacing
-\input{FrontFile/acknowledgementsCH} %致謝
-\input{FrontFile/abstractCH}
-\doublespacing
-\input{FrontFile/abstractEN}
+% \input{FrontFile/acknowledgementsCH} %致謝
+% \input{FrontFile/abstractCH}
+% \doublespacing
+% \input{FrontFile/abstractEN}
 
-%\doublespacing
-\onehalfspacing
-\tableofcontents
-\listoffigures
-\listoftables
-%\input{SymbolList}
+% \doublespacing
+% \onehalfspacing
+% \tableofcontents
+% \listoffigures
+% \listoftables
+\input{Chapter/SymbolList.tex}
 
 
 \mainmatter
@@ -93,7 +95,7 @@
 %---------- Input your reference here ---------
 \bibliographystyle{ieeetr}
 \addcontentsline{toc}{chapter}{\bibname}
-\bibliography{Bib/thesisbib}
+\bibliography{thesisbib.bib}
 
 %----------- Input your Figure chapter here  -----------
 %\input{EndFigTab} 
