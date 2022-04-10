@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  27 JAN 2022 04:12
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  10 APR 2022 15:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1339,47 +1339,54 @@ File: watermark.pdf Graphic file (type pdf)
 
 ] (./chapter/01Introduction.tex
 Chapter 1.
-) (./chapter/02LiteratureReview.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [1
+[1
 
 
 ]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [2]) (./chapter/02LiteratureReview.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [3]
 Chapter 2.
+
+LaTeX Warning: Citation `von1938elektronen' on page 4 undefined on input line 9.
+
 ) (./AppendixA.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [2
+ [4
 
 ]
 Appendix A.
 )
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [3
+ [5
 
-] (./thesis.bbl)
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [4
-
-
-] (./thesis.aux)
+]
+No file thesis.bbl.
+(./thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E91D6BA14593C1F215B3D9975A8A9B8D;777.
+(rerunfilecheck)             Checksum: 2D815EC0026602C1827BC829BAAE02EE;1330.
  ) 
 Here is how much of TeX's memory you used:
- 35928 strings out of 476919
- 725732 string characters out of 5821840
- 1203128 words of memory out of 5000000
- 55193 multiletter control sequences out of 15000+600000
- 408659 words of font info for 75 fonts, out of 8000000 for 9000
+ 36037 strings out of 476919
+ 732014 string characters out of 5821840
+ 1217703 words of memory out of 5000000
+ 55301 multiletter control sequences out of 15000+600000
+ 408683 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  106i,12n,105p,862b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (11 pages).
+Output written on thesis.pdf (12 pages).
