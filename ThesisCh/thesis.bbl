@@ -1,4 +1,64 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{survey_indoor2014}
+L.~Mainetti, L.~Patrono, and I.~Sergi, ``A survey on indoor positioning
+  systems,'' in {\em 2014 22nd International Conference on Software,
+  Telecommunications and Computer Networks (SoftCOM)}, pp.~111--120, 2014.
+
+\bibitem{survey_indoor2018}
+F.~Zafari, A.~Gkelias, and K.~K. Leung, ``A survey of indoor localization
+  systems and technologies,'' {\em IEEE Communications Surveys \& Tutorials},
+  vol.~21, pp.~2568--2599, 2019.
+
+\bibitem{survey_ultrasonic}
+Z.~Qiu, Y.~Lu, and Z.~Qiu, ``Review of ultrasonic ranging methods and their
+  current challenges,'' {\em Micromachines}, vol.~13, no.~4, p.~520, 2022.
+
+\bibitem{book_electromagnetic}
+D.~J. Griffiths, ``Introduction to electrodynamics,'' 2005.
+
+\bibitem{Spectrum}
+Y.~Abdelrahman, A.~Schmidt, and P.~Knierim, ``Snake view: exploring thermal
+  imaging as a vision extender in mountains,'' pp.~1067--1071, 09 2017.
+
+\bibitem{survey_rfid}
+A.~Motroni, A.~Buffi, and P.~Nepa, ``A survey on indoor vehicle localization
+  through {RFID} technology,'' {\em {IEEE} Access}, vol.~9, pp.~17921--17942,
+  2021.
+
+\bibitem{datasheet:led_sfh4545}
+OSRAM Opto Semiconductors Inc., {\em High Power Infrared Emitter (940 nm)}, 11
+  2021.
+\newblock Ver 1.8.
+
+\bibitem{datasheet:rfid_tag}
+Avery Dennison Corp., {\em UHF RFID Inlays}, 2015.
+
+\bibitem{survey_light2018}
+Y.~Zhuang, L.~Hua, L.~Qi, J.~Yang, P.~Cao, Y.~Cao, Y.~Wu, J.~Thompson, and
+  H.~Haas, ``A survey of positioning systems using visible led lights,'' {\em
+  IEEE Communications Surveys Tutorials}, vol.~20, no.~3, pp.~1963--1988, 2018.
+
+\bibitem{si_pd}
+A.~K. Sood, J.~W. Zeller, R.~A. Richwine, Y.~R. Puri, H.~Efstathiadis,
+  P.~Haldar, N.~K. Dhar, and D.~L. Polla, ``Sige based visible-nir
+  photodetector technology for optoelectronic applications,'' in {\em Advances
+  in Optical Fiber Technology} (M.~Yasin, H.~Arof, and S.~W. Harun, eds.),
+  ch.~10, Rijeka: IntechOpen, 2015.
+
+\bibitem{book:solar_spectrum}
+C.~A. Gueymard, ``The sun's total and spectral irradiance for solar energy
+  applications and solar radiation models,'' {\em Solar Energy}, vol.~76,
+  no.~4, pp.~423--453, 2004.
+
+\bibitem{astm}
+{\em Standard Solar Spectra}.
+\newblock No.~ASTM G-173-03 (International standard ISO 9845-1), 1992.
+
+\bibitem{pic:multipath}
+G.~Kumar, G.~Rao, and M.~Kumar, ``Gps signal short-term propagation
+  characteristics modeling in urban areas for precise navigation
+  applications,'' {\em Positioning}, vol.~04, pp.~192--199, 01 2013.
 
 \bibitem{radiometry_and_photometry}
 W.~Mccluney, {\em Introduction to Radiometry and Photometry 2nd ed: Title Page

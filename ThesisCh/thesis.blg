@@ -3,46 +3,50 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: ieeetr.bst
 Database file #1: thesisbib.bib
+Warning--empty booktitle in Spectrum
+Warning--empty author and editor in astm
+Warning--there's a number but no series in astm
+Warning--empty publisher in astm
 Warning--empty publisher in radiometry_and_photometry
-You've used 1 entry,
+You've used 14 entries,
             1876 wiz_defined-function locations,
-            482 strings with 3604 characters,
-and the built_in function-call counts, 168 in all, are:
-= -- 13
-> -- 4
+            566 strings with 5827 characters,
+and the built_in function-call counts, 3778 in all, are:
+= -- 361
+> -- 147
 < -- 0
-+ -- 2
-- -- 1
-* -- 10
-:= -- 31
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 0
++ -- 55
+- -- 41
+* -- 274
+:= -- 514
+add.period$ -- 17
+call.type$ -- 14
+change.case$ -- 10
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 9
-empty$ -- 20
-format.name$ -- 1
-if$ -- 37
+cite$ -- 19
+duplicate$ -- 196
+empty$ -- 367
+format.name$ -- 41
+if$ -- 935
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 7
-num.names$ -- 1
-pop$ -- 7
+int.to.str$ -- 14
+missing$ -- 12
+newline$ -- 48
+num.names$ -- 13
+pop$ -- 53
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 136
 stack$ -- 0
-substring$ -- 0
-swap$ -- 1
+substring$ -- 246
+swap$ -- 84
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 1
-width$ -- 2
-write$ -- 10
-(There was 1 warning)
+warning$ -- 5
+while$ -- 28
+width$ -- 16
+write$ -- 131
+(There were 5 warnings)

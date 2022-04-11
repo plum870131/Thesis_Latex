@@ -2,6 +2,7 @@
 \label{chp:symbol}
 % \addcontentsline{toc}{chapter}{符號列表}
 
+
 %英文字母 -> 希臘字母%
 %小寫 -> 大寫%
 %向量 -> 純量% %粗->細%
@@ -115,7 +116,7 @@
     % $\text{Bell}(\cdot)$ & 鐘形函式\\
     符號& 中文& 英文 & 單位符號&國際單位制\\\hline
     $\Omega$ & 立體角&Solid Angle& $sr$&球面度（Steradian） \\
-    $\omega$ & 角度&Angle& $rad$&弧度（radius）\\
+    $\omega$ & 角度&Angle& $rad$&弧度（radian）\\
     $r$ & 半徑&Radius&  $m$ &公尺\\
     $\Phi$ & 輻射通量&Radiation Flux& $W$&瓦特（Watt）\\
     $I$ & 輻射強度&Radiation Intensity & $W\cdot sr^{-1}$&瓦特每球面度 \\
@@ -129,12 +130,16 @@
 
 \section*{小標解釋}
 
+論文中由於座標系、硬體數量、樣本數量眾多，為了區分不同上下小標的意義，以圖\ref{pic:symbol}呈現各小標意思，左上標表示座標系，左下標顯示是哪個樣本，而右下標則依照物理量代表著LED或PD的編號，在LED與PD交互關係的物理量中右下標同時包含兩者的編號。
+
 \begin{figure}[ht]
+    \caption{符號小標解釋}
+    \label{pic:symbol}
 	\centering
 	\includegraphics[width=3cm]{ch1pic/not_whole.png}
-    \caption{符號小標解釋}
-    \label{pic:not_whole}
 \end{figure}
+
+
 
 \begin{description}
     \item[(1)] 符號

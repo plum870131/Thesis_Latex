@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  11 APR 2022 06:27
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  11 APR 2022 19:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1255,11 +1255,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 10.
 (./Chapter/SymbolList.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1285,49 +1285,94 @@ File: watermark.pdf Graphic file (type pdf)
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [2]) (./chapter/02LiteratureReview.tex
+ [2]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [3]
+ [3]) (./chapter/02LiteratureReview.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [4]
 Chapter 2.
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[4
+[5
 
 ]
 File: ch2pic/homo_trans.png Graphic file (type bmp)
 <ch2pic/homo_trans.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [5]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [6]
+File: ch2pic/electro_spectrum.png Graphic file (type bmp)
+<ch2pic/electro_spectrum.png>
+File: ch2pic/rfid_system.png Graphic file (type bmp)
+<ch2pic/rfid_system.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [7]
+File: ch2pic/solar_spectra.png Graphic file (type bmp)
+<ch2pic/solar_spectra.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [8])
+ [8]
+File: ch2pic/multipath.png Graphic file (type bmp)
+<ch2pic/multipath.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [9] (./thesis.bbl)
+ [9]
+File: 00temppic/photometry_table.png Graphic file (type bmp)
+<00temppic/photometry_table.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [10
+ [10]
+File: 00temppic/1.png Graphic file (type bmp)
+<00temppic/1.png>
+File: 00temppic/2.png Graphic file (type bmp)
+<00temppic/2.png>
+File: 00temppic/3.png Graphic file (type bmp)
+<00temppic/3.png>
+File: 00temppic/4.png Graphic file (type bmp)
+<00temppic/4.png>
+File: 00temppic/5.png Graphic file (type bmp)
+<00temppic/5.png>
+Missing character: There is no   (U+2009) in font Times New Roman/AAT:mapping=tex-text;!
+Missing character: There is no   (U+2009) in font Times New Roman/AAT:mapping=tex-text;!
+Missing character: There is no   (U+2009) in font Times New Roman/AAT:mapping=tex-text;!
+Missing character: There is no   (U+2009) in font Times New Roman/AAT:mapping=tex-text;!
+Missing character: There is no   (U+2009) in font Times New Roman/AAT:mapping=tex-text;!
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [11]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [12]
+File: 00temppic/temp.png Graphic file (type bmp)
+<00temppic/temp.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [13])
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [14] (./thesis.bbl
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [15
 
 
-] (./thesis.aux)
+])
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [16] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: A05B6A5D6F0AD257523E97287A794858;2072.
  ) 
 Here is how much of TeX's memory you used:
- 36196 strings out of 476919
- 736716 string characters out of 5821840
- 1228639 words of memory out of 5000000
- 55450 multiletter control sequences out of 15000+600000
+ 36257 strings out of 476919
+ 736666 string characters out of 5821840
+ 1228368 words of memory out of 5000000
+ 55499 multiletter control sequences out of 15000+600000
  411452 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,16n,105p,862b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,16n,105p,862b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (12 pages).
+Output written on thesis.pdf (18 pages).
