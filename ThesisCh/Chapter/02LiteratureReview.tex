@@ -26,41 +26,51 @@
     在開始進入文獻探討之前，需先以數學定義何謂本論文所欲量測之「相對定位」。首先，本論文所討論的情境為一量測物針對另一特定目標物進行相對位置的量測，如智慧工廠內的機械手臂欲取得與移動載具之間的相對關係，以利夾取搬運物品至載具上進行運送。
     
     我們將取得相對位置的一方稱為量測者，如案例中的機械手臂；而量測者所欲取得相對位置的特定物體稱為目標物，如案例中的移動載具；兩者皆為剛體。因此，可以將量測者與目標物各自視為兩移動座標系如圖\ref{pic:homo_trans}，兩者在空間中各自有位置、旋轉的六個自由度，可以利用齊次座標轉換（Homogeneous Transformation）表示座標系之間的平移與旋轉（式\ref{eqn:homogeneous}），$^{PL}\boldsymbol{H}$表示將LED座標系上的點轉換至PD座標系上的齊次轉換矩陣，而$^{PL}\boldsymbol{T}$與$^{PL}\boldsymbol{Ro}$各自代表平移與旋轉的轉換矩陣，符號可參考符號列表（第\pageref{chp:symbol}頁）。
-  
-    \begin{equation}
-    \label{eqn:homogeneous}
-    \begin{gathered}
-        \left[
-        \begin{array}{c}
-            ^{PL}P \\1
-        \end{array}\right]
-        =^{PL}\boldsymbol{H}
-        \left[
-        \begin{array}{c}
-        ^{L}P \\ 1
-        \end{array}\right] =\left[
-        \begin{array}{cc}
-        ^{PL}\boldsymbol{Ro} & ^{PL}\boldsymbol{T} \\
-        0 & 1
-        \end{array}\right]\left[
-        \begin{array}{c}
-        ^{L}P \\ 1
-        \end{array}\right] \\
-    \end{gathered}
-    \end{equation}
-
-    \begin{equation}
-        ^{PL}\boldsymbol{T}=\left[\begin{array}{l}
-        ^{PL}x \\ ^{PL}y \\ ^{PL}z
-        \end{array}\right]
-    \end{equation}
-
+    
     \begin{figure}[ht]
         \centering
         \includegraphics[width=9cm]{ch2pic/homo_trans.png}
         \caption{LED座標系與PD座標系及相對關係}
         \label{pic:homo_trans}
     \end{figure}
+
+    \begin{equation}
+        \label{eqn:homogeneous}
+        \begin{aligned}
+        {\left[\begin{array}{c}
+        { }^{P L} P \\
+        1
+        \end{array}\right]={ }^{P L} \boldsymbol{H}\left[\begin{array}{c}
+        { }^{L} P \\
+        1
+        \end{array}\right] } &=\left[\begin{array}{cc}
+        { }^{P L} \boldsymbol{R} \boldsymbol{o} & { }^{P L} \boldsymbol{T} \\
+        0 & 1
+        \end{array}\right]\left[\begin{array}{c}
+        { }^{L} P \\
+        1
+        \end{array}\right] \\
+        &=\left[\begin{array}{cccc}
+        { }^{P L} \gamma_{11} & { }^{P L} \gamma_{12} & { }^{P L} \gamma_{13} & { }^{P L} {t}_{x} \\
+        { }^{P L} \gamma_{21} & ^{P L } \gamma_{22} & { }^{P L} \gamma_{23} & { }^{P L} {t}_{y} \\
+        { }^{P L} \gamma_{31} & ^{P L} \gamma_{32} & { }^{P L} \gamma_{33} & { }^{P L} {t}_{z} \\
+        0 & 0 & 0 & 1
+        \end{array}\right]\left[\begin{array}{c}
+        { }^{L} {x} \\
+        { }^{L} {y} \\
+        { }^{L} z \\
+        1
+        \end{array}\right]
+        \end{aligned}
+    \end{equation}
+
+    % \begin{equation}
+    %     ^{PL}\boldsymbol{T}=\left[\begin{array}{l}
+    %     ^{PL}x \\ ^{PL}y \\ ^{PL}z
+    %     \end{array}\right]
+    % \end{equation}
+
+    
     
    其中，兩座標系之間的平移關係$^{PL}\boldsymbol{T}$即為欲得到的相對位置資訊，共有三個自由度。
 
@@ -135,6 +145,7 @@
         光波段的光感測器常見的材料有矽（Si）、鍺（Ge）與III或V族元素，價格最便宜的是矽材料，而矽感測器的感光波段約在400-1000nm，也就是可見光與近紅外光（NIR）波段。這也是為什麼普遍對紅外光波段的硬體都有價格昂貴的印象，但凡波長較長的紅外光在硬體材料便需要使用到昂貴的鍺或其他三五族元素\cite{si_pd}。因此，考量到硬體的價格與普遍性，挑選可見光與近紅外光波段較為合適。
 
         \item[誤差] \hfill 
+        
         利用Photodiode定位最大的困難就是要克服其他光所造成的雜訊（Shot Noise），因此在選擇工作波長時，挑選自然環境中強度較低的波段。日常環境中的光源包含太陽光與燈，太陽光可以從圖\ref{pic:solar_spectrum}太陽輻射波譜（Solar Irradiance Spectrum）觀察強度與波長的關係，低谷出現在760nm左右的氧氣吸收帶（Oxygen A-band）、與940nm和1550nm附近被水蒸氣吸收之波段\cite{book:solar_spectrum}。
 
         \begin{figure}[ht]
@@ -188,22 +199,16 @@
         首先，描述光照的單位在文獻上經常有些混亂，單位分為兩種制度，且常有混用以及口語省略，令人感到困惑，因此以下進行釐清：光領域中的計量單位大致分成兩種系統，輻射測量學(Radiometry)與光度測量學(Photometry)，兩領域以不同單位描述光源，其中輻射測量學著重在電磁波輻射的量測，描述通量單位為瓦特(Watt)；而光度測量學著重在人演可見之可見光波段的研究，通量單位為流明(Lumen)，同樣物理量下單位定義不同。\cite{radiometry_and_photometry}
         
 
-        % \begin{tabular}
-        % 改成表格
-
         \begin{figure}[ht]
             \centering
-            \includegraphics[width=10cm]{00temppic/photometry_table.png}
-            % \caption{多重路徑傳輸\cite{pic:multipath}}
-            % \label{pic:multipath}
+            \caption{輻射測量學與光度測量學的物理量}
+            \label{tab:photometry}
+            \includegraphics[width=10cm]{ch2pic/photometry_table.png}
         \end{figure}
 
 
         本研究聚焦在近紅外光波段，因此本論文所使用的單位系統為輻射測量學的系統，然而文獻上可見光定位數量較多，因此在單位的換算上需特別注意，以下針對光領域常用物理量簡單敘述。
 
-        % $\Phi$ & 輻射通量&Radiation Flux& $W$&瓦特（Watt）\\
-        % $I$ & 輻射強度&Radiation Intensity & $W\cdot sr^{-1}$&瓦特每球面度 \\
-        % $E$ & 輻照度&Irradiance&$W\cdot m^{-2}$ &瓦特每平方公尺\\
         
         \begin{description}
             \item[立體角 Solid Angle $\Omega$] \hfill
@@ -221,7 +226,7 @@
 
             \item[輻射通量 Radiant Flux $\Phi$]  \hfill
                 
-                描述光照功率的物理量單位為通量（Flux）或稱輻射功率，代表每單位時間的輻射能量，單位為瓦特，而大多LED規格表上以此物理量來描述LED在指定電流下可產生的最大光功率。
+                描述光照功率的物理量為通量（Flux）或稱輻射功率（Power），代表每單位時間的輻射能量，單位為瓦特，而大多LED規格表上以此物理量來描述LED在指定電流下可產生的最大光功率。
 
                 \begin{figure}[ht]
                     \centering
@@ -251,7 +256,7 @@
                 
                 \begin{equation}
                     \label{eqn:I2E}
-                    E = I \cos\omega / D^2
+                    E=I\cos\omega/D^2
                 \end{equation}
 
                 
@@ -263,32 +268,59 @@
         
 
     \subsection{LED與PD的硬體參數與特性}
+        \subsubsection{擺放自由度}
+        LED與PD硬體有許多種類，最常見的市面上LED與PD為軸對稱並滿足朗博輻射模式（Lambertian Radiation Pattern），本論文僅考慮此類硬體。軸對稱代表當LED或PD僅對出射角或入射角以及距離有敏感度，以球座標系來看，凡在同一仰角與距離，無論方位角為何，光照強度與感光強度皆相同。
 
-        為建立一完整描述光傳遞的模型，需先介紹實際實際硬體挑選時所需注意的參數。
+        因此，在描述座標系空間中的LED與PD時，一共有五個自由度，包含擺放位置$P$的三個分量$x,y,z$，以及定義指向的單位向量$N$。由於LED與PD皆為軸對稱，因此僅有兩個自由度：仰角$\alpha$與方位角$\beta$，$N$在卡氏座標系下的xyz分量則為$u,v,w$。
 
-        首先LED包含總輻射強度、半角度
-        
-        LED與PD硬體有許多種類，最常見的市面上LED與PD為軸對稱並滿足Lambertian Radiation Pattern，本論文也只考慮此類硬體。軸對稱代表當LED或PD僅對出射角或入射角以及距離有敏感度，以球座標系來看，凡在同一仰角與距離，無論方位角為何，光照強度與感光強度皆相同。
+        %補公式
 
-    \subsection{光傳遞模型}
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=10cm]{ch2pic/LED_config.png}
+            \caption{LED在座標系中的擺放自由度}
+            \label{pic:led_config}
+        \end{figure}
+
+        \subsubsection{朗博輻射模式}
 
         LED與PD的照射與接收模式(Pattern)可以用Lambertian Radiation Pattern量化，代表感光與發光強度隨著LED出射角與PD入射角的增加而變小，其衰減模式可用餘弦函數(cosine)的M次方(power)表示，M代表的是Lambertian Order。
 
-        以二維的角度來看如圖，LED光照射的能量隨出射角度增加而減少，在LED中心軸的方向強度最高，在此描述LED強度時不考慮距離。如先前所述，LED為軸對稱，因此三維的照射模式即為二維模式以中心軸旋轉。在同樣出射角下，光intensity相同。
+        以二維的角度來看如圖，LED光照射的能量隨出射角度增加而減少，在LED中心軸的方向強度最高，在此描述LED強度時不考慮距離。如先前所述，LED為軸對稱，因此三維的照射模式即為二維模式以中心軸旋轉。在同樣出射角下，光輻射強度相同。
         
-        有了光intensity在不同入射角的關係，將整個半球中的intensity積分，得到LED在整個半球上所照射的總瓦數比例，將該值倒數，即可由LED發射之總能量推算各入射角的光intensity。
-        
-        討論完LED與角度的關係後，再來考慮光能量與距離的關係。考慮同一Solid angle下的一束光，隨傳遞距離拉長，所照射到的表面積增加，因此「能量」隨距離平方遞減。
-        
-        綜合角度與距離的影響，空間中任一點的「光大小」如式
-        
-        接著考慮PD接收的Model，PD的接收能量與入射角同樣遵守Lambertian Pattern，變數一樣包含入射角以及Lambertian Order。除了角度以外，藉由乘上PD的硬體參數感光面積得到該PD所感測到的瓦數，PD會將感受到的光瓦數轉換為電流輸出，其中轉換比例為Responsivity。
-        
-        舉具體的例子來描述lambertian order的影響，M越大的LED，光強度隨出射角度衰減的速度越大，而照射範圍則越小。在挑選硬體時，M的選擇則為強度與範圍的取捨。同樣總輻射能量的LED，不同M隨角度的發光強度如圖示，首先可以觀察到M越小所覆蓋的角度範圍越大，而中心軸的光強度也小很多，其原因是因為其照射範圍大，因此在半球面上大角度的積分，入射角度越大時在半球面上的面積越大。
-        
-        從硬體層面來看，LED與PD的照射範圍
+        有了光輻射強度在不同入射角的關係，將整個半球中的輻射強度積分，得到LED在整個半球上所照射的總瓦數比例，將該值倒數，即可由LED發射之總能量推算各入射角的光輻射強度。
 
 
+        \subsubsection{硬體參數}
+
+        \begin{figure}[ht]
+            \caption{LED與PD對模式與強度影響之硬體參數}
+            \label{tab:hardwarepara}
+            \centering
+            \includegraphics[width=6cm]{ch2pic/tab_hardwarepara.png}
+        \end{figure}
+
+        實際硬體挑選時所需注意的參數
+        
+
+    % \subsection{光傳遞模型}
+
+   
+
+        
+        
+    %     討論完LED與角度的關係後，再來考慮光能量與距離的關係。考慮同一Solid angle下的一束光，隨傳遞距離拉長，所照射到的表面積增加，因此「能量」隨距離平方遞減。
+        
+    %     綜合角度與距離的影響，空間中任一點的「光大小」如式
+        
+    %     接著考慮PD接收的Model，PD的接收能量與入射角同樣遵守Lambertian Pattern，變數一樣包含入射角以及Lambertian Order。除了角度以外，藉由乘上PD的硬體參數感光面積得到該PD所感測到的瓦數，PD會將感受到的光瓦數轉換為電流輸出，其中轉換比例為Responsivity。
+        
+    %     舉具體的例子來描述lambertian order的影響，M越大的LED，光強度隨出射角度衰減的速度越大，而照射範圍則越小。在挑選硬體時，M的選擇則為強度與範圍的取捨。同樣總輻射能量的LED，不同M隨角度的發光強度如圖示，首先可以觀察到M越小所覆蓋的角度範圍越大，而中心軸的光強度也小很多，其原因是因為其照射範圍大，因此在半球面上大角度的積分，入射角度越大時在半球面上的面積越大。
+        
+    %     從硬體層面來看，LED與PD的照射範圍
+
+
+        
 
 
 
@@ -296,7 +328,8 @@
 
         LED與PD的相對定位量測系統中，根據\ref{chp:relative}目標物為LED座標系，剛體上裝載著主動發送訊號的LED；而量測者為PD座標系，上面裝載著傳感器收取資訊；兩座標系上的感測器與訊號發送器皆為固定的，可以想像成將PD焊於電路板上，封裝成一量測儀器，並以螺絲等固定在量測者剛體上，隨著量測者與目標物移動時，兩座標系之間的座標轉換關係會改變，然而PD與其座標轉換關係並不會改變，LED亦然。
 
-
+        %補
+        [覺得應該要補硬體怎麼編碼解碼的]
 
 
 

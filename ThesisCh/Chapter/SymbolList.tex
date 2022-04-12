@@ -8,7 +8,7 @@
 %向量 -> 純量% %粗->細%
 
 
-\section*{符號列表}
+% \section*{符號列表}
 \subsection*{座標系}
 
 \begin{longtable}[l]{cl}
@@ -45,7 +45,9 @@
 \begin{longtable}[l]{cl}
     $\boldsymbol{H}$ & 齊次轉換矩陣 Homogeneous Transformation Matrix\\
     $\boldsymbol{T}$ & 平移向量 Transfer Vector\\
+    $t_x,t_y,t_z$ &平移向量的xyz分量\\
     $\boldsymbol{Ro}$ & 旋轉矩陣 Rotation Matrix\\
+    $\gamma_{ij}$ & 旋轉矩陣i列j行的元素\\
 \end{longtable}
 
 % \begin{figure}[ht]
@@ -63,16 +65,7 @@
 % \end{description}
 
 
-\onehalfspacing
 
-\subsection*{LED與PD的交互關係}
-
-\begin{longtable}[l]{cl}
-    % $\text{Bell}(\cdot)$ & 鐘形函式\\
-    $\phi$ & PD入射角\\
-    $\theta$ & LED出射角\\
-    $D$&距離\\
-\end{longtable}
 
 % \begin{figure}[ht]
 % 	\centering
@@ -110,6 +103,17 @@
 
 \onehalfspacing
 
+\subsection*{LED與PD的交互關係}
+
+\begin{longtable}[l]{cl}
+    % $\text{Bell}(\cdot)$ & 鐘形函式\\
+    $\phi$ & PD入射角\\
+    $\theta$ & LED出射角\\
+    $D$&距離\\
+\end{longtable}
+
+\onehalfspacing
+
 \subsection*{光學領域單位}
 
 \begin{longtable}[l]{cllll}
@@ -133,10 +137,10 @@
 論文中由於座標系、硬體數量、樣本數量眾多，為了區分不同上下小標的意義，以圖\ref{pic:symbol}呈現各小標意思，左上標表示座標系，左下標顯示是哪個樣本，而右下標則依照物理量代表著LED或PD的編號，在LED與PD交互關係的物理量中右下標同時包含兩者的編號。
 
 \begin{figure}[ht]
+	\centering
+	\includegraphics[width=2cm]{ch1pic/not_whole.png}
     \caption{符號小標解釋}
     \label{pic:symbol}
-	\centering
-	\includegraphics[width=3cm]{ch1pic/not_whole.png}
 \end{figure}
 
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  11 APR 2022 19:51
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  12 APR 2022 12:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1293,13 +1293,13 @@ File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [4]
 Chapter 2.
+File: ch2pic/homo_trans.png Graphic file (type bmp)
+<ch2pic/homo_trans.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [5
 
 ]
-File: ch2pic/homo_trans.png Graphic file (type bmp)
-<ch2pic/homo_trans.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [6]
@@ -1320,8 +1320,8 @@ File: ch2pic/multipath.png Graphic file (type bmp)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [9]
-File: 00temppic/photometry_table.png Graphic file (type bmp)
-<00temppic/photometry_table.png>
+File: ch2pic/photometry_table.png Graphic file (type bmp)
+<ch2pic/photometry_table.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [10]
@@ -1335,17 +1335,16 @@ File: 00temppic/4.png Graphic file (type bmp)
 <00temppic/4.png>
 File: 00temppic/5.png Graphic file (type bmp)
 <00temppic/5.png>
-Missing character: There is no   (U+2009) in font Times New Roman/AAT:mapping=tex-text;!
-Missing character: There is no   (U+2009) in font Times New Roman/AAT:mapping=tex-text;!
-Missing character: There is no   (U+2009) in font Times New Roman/AAT:mapping=tex-text;!
-Missing character: There is no   (U+2009) in font Times New Roman/AAT:mapping=tex-text;!
-Missing character: There is no   (U+2009) in font Times New Roman/AAT:mapping=tex-text;!
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [11]
+File: ch2pic/LED_config.png Graphic file (type bmp)
+<ch2pic/LED_config.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [12]
+File: ch2pic/tab_hardwarepara.png Graphic file (type bmp)
+<ch2pic/tab_hardwarepara.png>
 File: 00temppic/temp.png Graphic file (type bmp)
 <00temppic/temp.png>
 File: watermark.pdf Graphic file (type pdf)
@@ -1364,15 +1363,15 @@ File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [16] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A05B6A5D6F0AD257523E97287A794858;2072.
+(rerunfilecheck)             Checksum: D65977DC6CBE23FB8D419258AC4F74B5;1970.
  ) 
 Here is how much of TeX's memory you used:
- 36257 strings out of 476919
- 736666 string characters out of 5821840
- 1228368 words of memory out of 5000000
- 55499 multiletter control sequences out of 15000+600000
+ 36272 strings out of 476919
+ 736999 string characters out of 5821840
+ 1229386 words of memory out of 5000000
+ 55512 multiletter control sequences out of 15000+600000
  411452 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,16n,105p,862b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,17n,105p,862b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on thesis.pdf (18 pages).
