@@ -290,6 +290,10 @@
         
         有了光輻射強度在不同入射角的關係，將整個半球中的輻射強度積分，得到LED在整個半球上所照射的總瓦數比例，將該值倒數，即可由LED發射之總能量推算各入射角的光輻射強度。
 
+        \begin{equation}
+            I(\omega)=I(\omega=0)\times\cos(\omega)^{M}\\
+            I(\omega)=Pt\frac{(M+1)}{2 \pi} \cos \omega^{M}
+        \end{equation}
 
         \subsubsection{硬體參數}
 
@@ -297,15 +301,32 @@
             \caption{LED與PD對模式與強度影響之硬體參數}
             \label{tab:hardwarepara}
             \centering
-            \includegraphics[width=6cm]{ch2pic/tab_hardwarepara.png}
+            \includegraphics[width=6cm]{00temppic/7.png}
         \end{figure}
 
-        實際硬體挑選時所需注意的參數
+        % 實際硬體挑選時所需注意的參數
         
 
-    % \subsection{光傳遞模型}
+    \subsection{光傳遞模型}
+    
+    \begin{figure}[ht]
+        \caption{LED與PD的交互關係}
+        % \label{tab:hardwarepara}
+        \centering
+        \includegraphics[width=6cm]{ch2pic/tab_hardwarepara.png}
+    \end{figure}
 
-   
+    第$p$個LED量測到第$l$個LED的強度$\Phi_{lp}$可由\ref{eqn:model}描述。
+    
+    \begin{equation}
+        \label{eqn:model}
+        \Phi_{lp}=\frac{ A_p\cos\phi_{lp}^{m_{p}} }{D^2_{lp}}\times Pt_l\frac{(M_{l}+1)}{2 \pi} \cos \theta_{lp}^{M_{l}}  \\
+        =k_{lp}\frac{{\cos\theta_{lp}}^{M_{l}}{\cos\phi_{pl}}^{m_{p}}}{D_{lp}^2}\\
+    \end{equation}
+
+    
+    
+    
 
         
         
