@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  14 APR 2022 14:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  18 APR 2022 17:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1275,7 +1275,10 @@ File: ch1pic/not_whole.png Graphic file (type bmp)
 )
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [2] (./chapter/01Introduction.tex
+ [2]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [3] (./chapter/01Introduction.tex
 Chapter 1.
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
@@ -1310,21 +1313,21 @@ File: ch2pic/rfid_system.png Graphic file (type bmp)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [7]
-File: ch2pic/solar_spectra.png Graphic file (type bmp)
-<ch2pic/solar_spectra.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [8]
+File: ch2pic/solar_spectra.png Graphic file (type bmp)
+<ch2pic/solar_spectra.png>
 File: ch2pic/multipath.png Graphic file (type bmp)
 <ch2pic/multipath.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [9]
-File: ch2pic/photometry_table.png Graphic file (type bmp)
-<ch2pic/photometry_table.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [10]
+File: ch2pic/photometry_table.png Graphic file (type bmp)
+<ch2pic/photometry_table.png>
 File: 00temppic/1.png Graphic file (type bmp)
 <00temppic/1.png>
 File: 00temppic/2.png Graphic file (type bmp)
@@ -1381,15 +1384,11 @@ File: watermark.pdf Graphic file (type pdf)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [19]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 14.
-
 File: ch3pic/testpoint.jpg Graphic file (type bmp)
 <ch3pic/testpoint.jpg>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[20
+ [20
 
 ]
 File: ch4pic/error.png Graphic file (type bmp)
@@ -1415,15 +1414,15 @@ File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [24] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A0514C1635C01D13FB7DE8ED0ACEE7CF;2594.
+(rerunfilecheck)             Checksum: 80B5CEBB0E1DACF1BA0AD4DA6674C81C;2681.
  ) 
 Here is how much of TeX's memory you used:
- 36331 strings out of 476919
- 738050 string characters out of 5821840
- 1229367 words of memory out of 5000000
- 55554 multiletter control sequences out of 15000+600000
- 411452 words of font info for 86 fonts, out of 8000000 for 9000
+ 36338 strings out of 476919
+ 738243 string characters out of 5821840
+ 1226543 words of memory out of 5000000
+ 55558 multiletter control sequences out of 15000+600000
+ 411460 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  106i,17n,105p,862b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (26 pages).
+Output written on thesis.pdf (27 pages).

@@ -21,6 +21,9 @@ D.~J. Griffiths, ``Introduction to electrodynamics,'' 2005.
 Y.~Abdelrahman, A.~Schmidt, and P.~Knierim, ``Snake view: exploring thermal
   imaging as a vision extender in mountains,'' pp.~1067--1071, 09 2017.
 
+\bibitem{rf_law}
+國家通訊傳播委員會, {\em 業餘無線電技術規範}, 10 2015.
+
 \bibitem{survey_rfid}
 A.~Motroni, A.~Buffi, and P.~Nepa, ``A survey on indoor vehicle localization
   through {RFID} technology,'' {\em {IEEE} Access}, vol.~9, pp.~17921--17942,
@@ -45,6 +48,11 @@ A.~K. Sood, J.~W. Zeller, R.~A. Richwine, Y.~R. Puri, H.~Efstathiadis,
   photodetector technology for optoelectronic applications,'' in {\em Advances
   in Optical Fiber Technology} (M.~Yasin, H.~Arof, and S.~W. Harun, eds.),
   ch.~10, Rijeka: IntechOpen, 2015.
+
+\bibitem{survey_light2020}
+M.~Maheepala, A.~Z. Kouzani, and M.~A. Joordens, ``Light-based indoor
+  positioning systems: A review,'' {\em IEEE Sensors Journal}, vol.~20, no.~8,
+  pp.~3971--3995, 2020.
 
 \bibitem{book:solar_spectrum}
 C.~A. Gueymard, ``The sun's total and spectral irradiance for solar energy

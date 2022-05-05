@@ -43,11 +43,12 @@
 \subsection*{座標系轉換}
 
 \begin{longtable}[l]{cl}
-    $\boldsymbol{H}$ & 齊次轉換矩陣 Homogeneous Transformation Matrix\\
-    $\boldsymbol{T}$ & 平移向量 Transfer Vector\\
-    $t_x,t_y,t_z$ &平移向量的xyz分量\\
-    $\boldsymbol{Ro}$ & 旋轉矩陣 Rotation Matrix\\
-    $\gamma_{ij}$ & 旋轉矩陣i列j行的元素\\
+    $\boldsymbol{H}=\left[\begin{array}{cc}
+         \boldsymbol{Ro}  & \boldsymbol{T} \\
+        0_{1\times3} & 1
+        \end{array}\right]$ & 齊次轉換矩陣 Homogeneous Transformation Matrix\\
+    $\boldsymbol{T}=\left[\begin{array}{ccc}t_x&t_y&t_z\end{array}\right]^T$ & 平移向量 Transfer Vector\\
+    $\boldsymbol{Ro}=\left\{\gamma_{ij}\right\}$ & 旋轉矩陣 Rotation Matrix\\
 \end{longtable}
 
 % \begin{figure}[ht]
@@ -88,14 +89,14 @@
 \begin{longtable}[l]{cl}
     % $\text{Bell}(\cdot)$ & 鐘形函式\\
     符號 & LED硬體參數\\ \hline
-    $M$ & LED的朗伯次方（Lambertian Order）\\
+    $Ml$ & LED的朗伯次方（Lambertian Order）\\
     $Pt$ & 總輻射通量（Total Radiation Flux） 
 \end{longtable}
 
 \begin{longtable}[l]{cl}
     % $\text{Bell}(\cdot)$ & 鐘形函式\\
     符號 & PD硬體參數\\ \hline
-    $m$ & PD的朗伯次方（Lambertian Order）\\
+    $Mp$ & PD的朗伯次方（Lambertian Order）\\
     $A$ & 有效面積\\
     $Re$ & 響應率（Responsivity）\\
 \end{longtable}
@@ -153,3 +154,8 @@
     \item[(5)] 第$k$個樣本點（$k=1,2,...,K$）
     \item[(6)] 第$p$個PD（$p=1,2,...,P$）或第$l$個LED（$l=1,2,...,L$）；LED與PD交互關係物理量的(6)小標為$lp$兩者的交互關係
 \end{description}
+
+$^{PL}_{k}\hat{\boldsymbol{T}}$：第k個樣本點中，模擬量測方式所得到的PD座標系指向LED座標系的平移向量。
+$^{L}P_l,^{LP}P_l$：$^{L}P_l,$為第l個LED於LED座標系上的位置座標，$^{PL}P_l$則是將其投影到PD座標系上
+$_{k}D_lp$：第k個樣本點鐘，第l個LED與第p個PD的距離
+$Ml_l$：第l個LED的朗博次方

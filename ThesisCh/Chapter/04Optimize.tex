@@ -1,5 +1,7 @@
 \chapter{最佳化}
 
+\section{簡介}
+
 此章節要針對特定情境進行最佳化，希望針對該情境，藉由調整LED與PD的硬體參數以及擺放位置，改善系統的量測表現，流程圖如\ref{flow:opt}。
 
 \begin{figure}[ht]
@@ -41,10 +43,17 @@
 
 \begin{equation}
     \label{eqn:objective}
-    \underset{^{P}P_p, ^{L}P_l,^{P}N_p, ^{L}N_l,M_l,m_p,A_p,Re_p,Pt_l}{\operatorname{minimize}} 
+    \underset{^{P}P_p, ^{L}P_l,^{P}N_p, ^{L}N_l,Ml_l,Mp_p,A_p,Re_p,Pt_l}{\operatorname{minimize}} 
     \quad f = 
-    \frac{\sum_{k=1}^{K}(||^{PL}_k\boldsymbol{T} -\hat{^{PL}_k\boldsymbol{T} } ||)}{K}  \\
+    \frac{\sum_{i=1}^{K}(||^{PL}_k\boldsymbol{T} -\hat{^{PL}_k\boldsymbol{T} } ||)}{K}  \\
 \end{equation}
+
+
+\begin{align*} \text{where }
+    &p=1,2,...,P\\&l=1,2,...,L
+\end{align*}
+
+
 
 \subsection{最佳化變數}
 
