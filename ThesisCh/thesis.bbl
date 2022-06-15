@@ -73,4 +73,37 @@ W.~Mccluney, {\em Introduction to Radiometry and Photometry 2nd ed: Title Page
   \& Table of Contents}.
 \newblock 11 2015.
 
+\bibitem{vlc}
+S.~U. Rehman, S.~Ullah, P.~H.~J. Chong, S.~Yongchareon, and D.~Komosny,
+  ``Visible light communication: A system perspective---overview and
+  challenges,'' {\em Sensors}, vol.~19, no.~5, 2019.
+
+\bibitem{decoding}
+P.~Lou, H.~Zhang, X.~Zhang, M.~Yao, and Z.~Xu, ``Fundamental analysis for
+  indoor visible light positioning system,'' in {\em 2012 1st IEEE
+  International Conference on Communications in China Workshops (ICCC)},
+  pp.~59--63, 2012.
+
+\bibitem{case:cart2d}
+X.~Yu, J.~Wang, and H.~Lu, ``Single led-based indoor positioning system using
+  multiple photodetectors,'' {\em IEEE Photonics Journal}, vol.~10, no.~6,
+  pp.~1--8, 2018.
+
+\bibitem{case:cart3d}
+X.~Yu, J.~Wang, and H.~Lu, ``Indoor positioning system based on single led
+  using symmetrical optical receiver,'' in {\em Asia Communications and
+  Photonics Conference (ACP) 2018}, p.~Su2A.50, Optica Publishing Group, 2018.
+
+\bibitem{case:3d_layers}
+S.-H. Yang, H.-S. Kim, Y.-H. Son, and S.-K. Han, ``Three-dimensional visible
+  light indoor localization using aoa and rss with multiple optical
+  receivers,'' {\em Journal of Lightwave Technology}, vol.~32, no.~14,
+  pp.~2480--2485, 2014.
+
+\bibitem{case:ml}
+A.~H.~A. Bakar, T.~Glass, H.~Y. Tee, F.~Alam, and M.~Legg, ``Accurate visible
+  light positioning using multiple-photodiode receiver and machine learning,''
+  {\em IEEE Transactions on Instrumentation and Measurement}, vol.~70,
+  pp.~1--12, 2021.
+
 \end{thebibliography}

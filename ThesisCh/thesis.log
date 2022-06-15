@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  18 APR 2022 17:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  14 JUN 2022 14:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1313,6 +1313,8 @@ File: ch2pic/rfid_system.png Graphic file (type bmp)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [7]
+File: ch2pic/method_compare.jpg Graphic file (type bmp)
+<ch2pic/method_compare.jpg>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [8]
@@ -1332,6 +1334,9 @@ File: 00temppic/1.png Graphic file (type bmp)
 <00temppic/1.png>
 File: 00temppic/2.png Graphic file (type bmp)
 <00temppic/2.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [11]
 File: 00temppic/3.png Graphic file (type bmp)
 <00temppic/3.png>
 File: 00temppic/4.png Graphic file (type bmp)
@@ -1340,55 +1345,80 @@ File: 00temppic/5.png Graphic file (type bmp)
 <00temppic/5.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [11]
+ [12]
 File: ch2pic/LED_config.png Graphic file (type bmp)
 <ch2pic/LED_config.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [12]
-File: 00temppic/7.png Graphic file (type bmp)
-<00temppic/7.png>
 File: ch2pic/tab_hardwarepara.png Graphic file (type bmp)
 <ch2pic/tab_hardwarepara.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [13]
+File: ch2pic/lambertian.png Graphic file (type bmp)
+<ch2pic/lambertian.png>
+File: 00temppic/7.png Graphic file (type bmp)
+<00temppic/7.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [14]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [15]
+File: ch2pic/vlc.png Graphic file (type bmp)
+<ch2pic/vlc.png>
+
+
+LaTeX Warning: Reference `model' on page 16 undefined on input line 436.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[16]
 File: 00temppic/temp.png Graphic file (type bmp)
 <00temppic/temp.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [14]) (./chapter/03Method.tex
+ [17]) (./chapter/03Method.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [15]
+ [18]
 Chapter 3.
 File: ch3pic/flowchart_pos.png Graphic file (type bmp)
 <ch3pic/flowchart_pos.png>
-) (./chapter/04Optimize.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [16
+[19
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [17]
+ [20]
+File: ch3pic/solve_targetori.png Graphic file (type bmp)
+<ch3pic/solve_targetori.png>
+) (./chapter/04Optimize.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [21]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [22]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [23]
 Chapter 4.
 File: ch4pic/flowchart_opt.png Graphic file (type bmp)
 <ch4pic/flowchart_opt.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[18
+[24
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [19]
+ [25]
 File: ch3pic/testpoint.jpg Graphic file (type bmp)
 <ch3pic/testpoint.jpg>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [20
+ [26
 
 ]
 File: ch4pic/error.png Graphic file (type bmp)
@@ -1398,31 +1428,34 @@ File: ch4pic/variable.png Graphic file (type bmp)
 )
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [21
+ [27
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [22] (./thesis.bbl
+ [28] (./thesis.bbl
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [23
+ [29
 
 
 ])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [24] (./thesis.aux)
+ [30] (./thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 80B5CEBB0E1DACF1BA0AD4DA6674C81C;2681.
+(rerunfilecheck)             Checksum: F30CEE7A64E45811798CFE8FF0B3F122;2872.
  ) 
 Here is how much of TeX's memory you used:
- 36338 strings out of 476919
- 738243 string characters out of 5821840
- 1226543 words of memory out of 5000000
- 55558 multiletter control sequences out of 15000+600000
+ 36398 strings out of 476919
+ 740195 string characters out of 5821840
+ 1231288 words of memory out of 5000000
+ 55614 multiletter control sequences out of 15000+600000
  411460 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,17n,105p,862b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,17n,105p,862b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (27 pages).
+Output written on thesis.pdf (33 pages).

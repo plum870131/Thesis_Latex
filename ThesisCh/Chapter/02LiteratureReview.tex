@@ -8,7 +8,7 @@
 
 本研究所探討情境下的量測方法有以下需求：有易於拆裝的量測單位與被量測單位，能夠快速進行拆裝、靈活應用於不同場域，而安裝完成後即可進行三維相對位置量測。為滿足靈活且易於安裝且能夠應用在不同場域的特性，需要有體積小、能耗低、所需校正步驟少、能夠使用於不同場域等特色。
 
-因此，本章節先定義所謂相對定位，再介紹現有文獻的定位技術與方法，比較優缺點並凸顯「近紅外光定位」的優勢，近而針對本論文著重的「LED與PD以近紅外光波段進行定位」的文獻進行探討，敘述此領域研究現況與困難。
+因此，本章節先定義所謂相對定位，再介紹現有文獻的定位技術與方法，比較優缺點並凸顯「近紅外光定位」的優勢，近而針對本論文著重的「LED與PD以近紅外光波段進行定位」的文獻進行探討，敘述此領域研究現況與困難。       
 
 
 
@@ -125,7 +125,7 @@
         % 補系統圖
 
 
-    % \subsubsection{光波段定位}
+    \subsubsection{光波段定位}
 
         光波段的定位發展近幾年來十分顯著，主要原因為光學硬體上的進步，促使光通訊（LC, Light Communication）的發展，使發光與感光元件具有傳播ID、訊息等資訊的能力，因此光通訊與光定位便於近年得到研究關注。在如今電磁波訊號充斥環境的狀況下，光波段提供一替代方案，除了可以應用在禁用電磁波的機場與醫療場域，其特性還包含較高的頻寬。
         
@@ -142,9 +142,15 @@
     \subsubsection{小結}
 
         
+        
         綜上所述，比較低頻波段與光波段，從精度層面來看，光波段捨棄非可視範圍的定位以減少影響訊號的因素，加上波長較短的特性，較符合本研究目標；針對靈活應用的需求，光波段無論是小體積還是低能耗，都是較佳的選擇。因此，根據本研究目標所需，將研究方法聚焦在光波段的定位上。
 
-
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=10cm]{ch2pic/method_compare.jpg}
+            \caption{定位方法特性}
+            \label{pic:method_compare}
+        \end{figure}
 
     \subsection{光波段定位的分類}
 
@@ -292,10 +298,15 @@
         
 
     \subsection{LED與PD的硬體參數與特性}
-        \subsubsection{擺放自由度}
-        LED與PD硬體有許多種類，最常見的市面上LED與PD為軸對稱並滿足朗博輻射模式（Lambertian Radiation Pattern），本論文僅考慮此類硬體。軸對稱代表當LED或PD僅對出射角或入射角以及距離有敏感度，以球座標系來看，凡在同一仰角與距離，無論方位角為何，光照強度與感光強度皆相同。
 
-        因此，在描述座標系空間中的LED與PD時，一共有五個自由度，包含擺放位置$P$的三個分量$x,y,z$，以及定義指向的單位向量$N$。由於LED與PD皆為軸對稱，因此僅有兩個自由度：仰角$\alpha$與方位角$\beta$，$N$在卡氏座標系下的xyz分量則為$u,v,w$。
+    LED與PD硬體有許多種類，最常見的市面上LED與PD為軸對稱並滿足朗博輻射模式（Lambertian Radiation Pattern），本論文僅考慮此類硬體。軸對稱代表當LED或PD僅對出射角或入射角以及距離有敏感度，以球座標系來看，凡在同一仰角與距離，無論方位角為何，光照強度與感光強度皆相同。
+
+    
+        
+
+        \subsubsection{擺放自由度}
+
+        LED與PD量測系統包含許多參數，其中針對各LED與PD如何擺放，則可以藉由設計電路板、設計載體與擺放方式，在硬體購入後仍有改變的空間。而在描述座標系空間中的LED與PD時，一共有五個自由度，包含擺放位置$P$的三個分量$x,y,z$，以及定義指向的單位向量$N$。由於LED與PD皆為軸對稱，因此僅有兩個自由度：仰角$\alpha$與方位角$\beta$，$N$在卡氏座標系下的xyz分量則為$u,v,w$。
 
         %補公式
 
@@ -306,41 +317,71 @@
             \label{pic:led_config}
         \end{figure}
 
-        \subsubsection{朗博輻射模式}
-
-        LED與PD的照射與接收模式(Pattern)可以用Lambertian Radiation Pattern量化，代表感光與發光強度隨著LED出射角與PD入射角的增加而變小，其衰減模式可用餘弦函數(cosine)的M次方(power)表示，M代表的是Lambertian Order。
-
-        以二維的角度來看如圖，LED光照射的能量隨出射角度增加而減少，在LED中心軸的方向強度最高，在此描述LED強度時不考慮距離。如先前所述，LED為軸對稱，因此三維的照射模式即為二維模式以中心軸旋轉。在同樣出射角下，光輻射強度相同。
-        
-        有了光輻射強度在不同入射角的關係，將整個半球中的輻射強度積分，得到LED在整個半球上所照射的總瓦數比例，將該值倒數，即可由LED發射之總能量推算各入射角的光輻射強度。
-
-        \begin{equation}
-            I(\omega)=I(\omega=0)\times\cos(\omega)^{M}\\
-            I(\omega)=Pt\frac{(M+1)}{2 \pi} \cos \omega^{M}
-        \end{equation}
 
         \subsubsection{硬體參數}
+
+        系統中，其他參數與硬體設計相關，在購置後便不能改變，此類稱為硬體參數，包含了影響模式（Pattern）與影響發光或接收強度的參數。
 
         \begin{figure}[ht]
             \caption{LED與PD對模式與強度影響之硬體參數}
             \label{tab:hardwarepara}
             \centering
-            \includegraphics[width=6cm]{00temppic/7.png}
+            \includegraphics[width=6cm]{ch2pic/tab_hardwarepara.png}
         \end{figure}
 
-        % 實際硬體挑選時所需注意的參數
+
+        \subsubsection{朗博輻射模式}
+
+        LED與PD的照射與接收模式(Pattern)可以用Lambertian Radiation Pattern量化，代表感光與發光強度隨著LED出射角與PD入射角的增加而變小，其衰減模式可用餘弦函數(cosine)的M次方(power)表示，M代表的是Lambertian Order。
+
+        \begin{equation}
+            \label{eqn:lambertian_pattern}
+            I(\omega)=I(\omega=0)\times\cos(\omega)^{M}\\
+        \end{equation}
+
+        以二維的角度來看如圖，LED光照射的能量隨出射角度增加而減少，在LED中心軸的方向強度最高，在此描述LED強度時不考慮距離。如先前所述，LED為軸對稱，因此三維的照射模式即為二維模式以中心軸旋轉。在同樣出射角下，光輻射強度相同。
+        
+        
+
+        以較直觀的方式來解釋朗博次方，其主要是在敏感度與照射範圍中的取捨：朗博次方較小時，其照射範圍較大，最大可以覆蓋接近半個球面，光強度隨出射角度衰減的速度不大，也就是對不同入射角度的敏感度則不高。反之，朗博次方較大的硬體雖然覆蓋範圍較小，但對覆蓋範圍內的角度變化敏感度高。如圖\ref{pic:lambertian}，不同朗博次方的PD在接收模式就呈現不同的特性，在此特別注意接收模式僅與角度有關。
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=6cm]{ch2pic/lambertian.png}
+            \caption{朗博次方與輻射模式}
+            \label{pic:lambertian}
+        \end{figure}
+
         
 
     \subsection{光傳遞模型}
-    
+
+    光傳遞模型中，除了硬體參數以外，受到三個參數影響：距離、入射角、出射角，其中出入射角如圖\ref{pic:interactive}，分別為硬體中心軸與距離向量之間的夾角。
+
     \begin{figure}[ht]
-        \caption{LED與PD的交互關係}
-        % \label{tab:hardwarepara}
         \centering
-        \includegraphics[width=6cm]{ch2pic/tab_hardwarepara.png}
+        \includegraphics[width=6cm]{00temppic/7.png}
+        \caption{LED與PD的交互關係}
+        \label{pic:interactive}
     \end{figure}
 
-    第$p$個LED量測到第$l$個LED的強度$\Phi_{lp}$可由\ref{eqn:model}描述。
+    從LED發光開始分析，\ref{eqn:lambertian_pattern}描述了光輻射強度在不同入射角的關係，將整個半球中的輻射強度積分，得到LED在整個半球上所照射的總瓦數比例，將該值倒數，即可由LED發射之總能量推算各入射角的光輻射強度，\ref{eqn:lambertian}完整描述LED的發光輻射強度。
+    
+    \begin{equation}
+        \label{eqn:lambertian}
+        I(\omega)=Pt\frac{(M+1)}{2 \pi} \cos \omega^{M}
+    \end{equation}
+    
+    空間中光波由LED傳遞至PD的部分以式\ref{eqn:model_pre}描述，藉由\ref{eqn:I2E}將距離對照射範圍的影響考慮進去，，其中PD的接收範圍由硬體參數有效面積$A$描述，藉由乘上有效面積則可將單位轉換回輻射強度。透過朗博次方描述PD接收模式，即可完整的描述從LED到PD的光傳遞模型。
+    
+    \begin{equation}
+        \label{eqn:model_pre}
+        \Phi=I\times\frac{ 1 }{D^2}\times A\times\cos\phi^{m} \\
+    \end{equation}
+    
+
+
+    本論文為多LED對多PD的系統，在描述第$p$個LED量測到第$l$個LED的強度$\Phi_{lp}$時，以下標備註，完整公式可由\ref{eqn:model}描述。
     
     \begin{equation}
         \label{eqn:model}
@@ -349,21 +390,18 @@
     \end{equation}
 
     
-    
-    
+    \subsection{PD硬體特性}
+
+    \ref{eqn:model}描述LED輻射強度傳遞到PD接收的輻射強度之間的轉換，單位雖然是輻射強度，然而PD硬體輸出的物理量是電流$Ie$，之間的轉換受到PD的響應率和飽和上限$s$影響。
+
+
+    \begin{equation}
+        \label{eqn:current}
+        Ie = \begin{cases}\Phi\times Re, & \text { if } Ie<s \\ s, & \text { otherwise }\end{cases}
+    \end{equation}
 
         
-        
-    %     討論完LED與角度的關係後，再來考慮光能量與距離的關係。考慮同一Solid angle下的一束光，隨傳遞距離拉長，所照射到的表面積增加，因此「能量」隨距離平方遞減。
-        
-    %     綜合角度與距離的影響，空間中任一點的「光大小」如式
-        
-    %     接著考慮PD接收的Model，PD的接收能量與入射角同樣遵守Lambertian Pattern，變數一樣包含入射角以及Lambertian Order。除了角度以外，藉由乘上PD的硬體參數感光面積得到該PD所感測到的瓦數，PD會將感受到的光瓦數轉換為電流輸出，其中轉換比例為Responsivity。
-        
-    %     舉具體的例子來描述lambertian order的影響，M越大的LED，光強度隨出射角度衰減的速度越大，而照射範圍則越小。在挑選硬體時，M的選擇則為強度與範圍的取捨。同樣總輻射能量的LED，不同M隨角度的發光強度如圖示，首先可以觀察到M越小所覆蓋的角度範圍越大，而中心軸的光強度也小很多，其原因是因為其照射範圍大，因此在半球面上大角度的積分，入射角度越大時在半球面上的面積越大。
-        
-    %     從硬體層面來看，LED與PD的照射範圍
-
+    
 
         
 
@@ -373,14 +411,35 @@
 
         LED與PD的相對定位量測系統中，根據\ref{chp:relative}目標物為LED座標系，剛體上裝載著主動發送訊號的LED；而量測者為PD座標系，上面裝載著傳感器收取資訊；兩座標系上的感測器與訊號發送器皆為固定的，可以想像成將PD焊於電路板上，封裝成一量測儀器，並以螺絲等固定在量測者剛體上，隨著量測者與目標物移動時，兩座標系之間的座標轉換關係會改變，然而PD與其座標轉換關係並不會改變，LED亦然。
 
-        %補
-        [覺得應該要補硬體怎麼編碼解碼的]
-
+        
+        在多LED與多PD的系統之中，一個PD會同時接收到多個LED的訊號，實作上需要能夠分辨不同LED各自的訊號強度，此時即可可見光通訊（Visible Light Communication，簡寫VLC）的技術\cite{vlc}來進行編碼與解碼。\ref{pic:vlc}呈現簡單的VLC技術應用在室內定位上的架構圖，由驅動器控制各個LED根據編碼規定發出特定訊號，透過光傳遞至PD上後，PD根據編碼方式進行解碼，即可分辨出光訊號來源以及各自的強度。
+        
+        由於本論文並無涉及硬體，因此在編解碼的部分不以更多篇幅描述。在定位上最常見到的編解碼方式為OOK（On-Off Keying），由於定位上僅需知道是哪個LED，所需傳遞的資訊含量較少，使用簡單的OOK便已足夠。
+        
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=6cm]{ch2pic/vlc.png}
+            \caption{可見光通訊編碼與解碼\cite{decoding}}
+            \label{pic:vlc}
+        \end{figure}
 
 
     \subsection{LED與PD定位文獻探討}
 
         了解LED與PD定位系統的運作方式後，本章節介紹現有文獻的成果，並舉實例情境來凸顯此領域不足之處，提出可改善之方向。
+
+        以下由硬體數量、使用情境限制、二維或是三維定位、朗博次方的考量、LED與PD的擺設方式等面向切入介紹與分析：
+
+        硬體數量上，大多是單個對多個的組合，單個LED對多個PD的方法\cite{case:cart2d}\cite{case:cart3d}\cite{case:3d_layers}優勢在於不用考量光的干涉，僅有單個光源連編碼解碼的部分也可以有條件的省略，簡化了系統複雜度。多個LED對單個PD的優勢則在於訊號處理不需同步多個PD，該PD進行解碼之後即可在計算單元內進行演算法的運作，不需綜合多個PD、考量到不同硬體時間的不同步，一樣簡化了系統複雜度。多對多的方法\cite{case:ml}雖然增加了系統複雜度，然而能獲取到的資訊同樣也較多。
+
+        %   補    
+        LED與PD的擺設方式上，為了降低\ref{model}所描述的模型複雜度，最常見到的LED擺設方式便為中心軸平行的等距陣列（補圖），PD擺設方式則是全部位於同個位置、同樣仰角，方位角則等距分配（補圖）\cite{case:cart2d}\cite{case:cart3d}\cite{case:3d_layers}。以上兩種最常見的擺設方式皆是為了降低系統複雜度，其中將PD擺放於同個位置僅改變指向，可使不同PD的距離與LED出射角這兩個變數一致，即可進行消除。
+        
+        演算法上，大致分成利用光強度與已知的硬體組態，透過空間中的幾何交互關係解聯立求出位置，以及利用機器學習、Fingerprinting等透過蒐集大量數據進行比對的方法。現今有非常多透過機器學習方法提升精度的方法，但是此種演算法無法應對環境的改變，使用中若是有人介入互動，擋住了其中幾個PD接收資訊，則可造成數據庫上無法比對，難以在人機互動的情境中使用，更不論本研究目標中目標物與觀察者兩者皆有可能移動的靈活應用。因此著重在前者演算法的研究，此種演算法因為方程式的複雜度過高，使得需透過不同的限制來降低複雜度，例如上述的限制擺設方式、或是於後文的情境限制。
+        
+        朗博次方是一個影響模式的重要參數，LED與PD兩者皆有各自的朗博次方，大多研究皆不考慮PD的朗博次方，LED則僅有部分研究有考慮\cite{case:cart2d}\cite{case:cart3d}。假設朗博次方為一在實際上是不符合現實的，朗博次方為一代表輻射強度並不隨著出入射角度的改變有所不同，假設其為完美的朗博輻射物，此假設可以將變數簡略至只剩距離，卻忽略掉實際硬體的表現。
+
+        使用情境上，（待補）
         
         (不確定走向，所以先用列表整理在Notion之後確定再補上)
         % 補
@@ -396,7 +455,7 @@
 
 \section{結論}
 
-雖然此種做法已被討論且有潛力，但缺少完整考慮[三維、組態、硬體參數]的方式，因此本論文有以下研究成果：
+雖然此種做法已被討論且有潛力，但缺少能夠達成三維定位又靈活的方法，也缺乏完整考量硬體擺設方法以及朗博次方的研究，此本論文有以下研究成果：
 \begin{itemize}
     \item 利用LED與PD進行三維相對位置量測的方法，於第三章詳述。
     \item 為了將第三章所提出之相對位置量測方法，靈活應用於不同情境，提出針對不同使用情境的最佳化方法，藉由調整硬體參數、LED與PD的組態（Deployment），改善系統表現，於第四章詳述。
