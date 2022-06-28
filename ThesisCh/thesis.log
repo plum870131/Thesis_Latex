@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  14 JUN 2022 14:46
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  20 JUN 2022 20:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1447,13 +1447,13 @@ File: watermark.pdf Graphic file (type pdf)
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F30CEE7A64E45811798CFE8FF0B3F122;2872.
+(rerunfilecheck)             Checksum: A5B3F1451192035892C5C39BA6C3578E;3306.
  ) 
 Here is how much of TeX's memory you used:
- 36398 strings out of 476919
- 740195 string characters out of 5821840
- 1231288 words of memory out of 5000000
- 55614 multiletter control sequences out of 15000+600000
+ 36399 strings out of 476919
+ 740208 string characters out of 5821840
+ 1229765 words of memory out of 5000000
+ 55615 multiletter control sequences out of 15000+600000
  411460 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  106i,17n,105p,862b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
