@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  20 JUN 2022 20:22
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  10 JUL 2022 16:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1280,83 +1280,81 @@ File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [3] (./chapter/01Introduction.tex
 Chapter 1.
+File: ch1pic/iot.png Graphic file (type bmp)
+<ch1pic/iot.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [1
 
 
 ]
+File: ch1pic/intro_pos.png Graphic file (type bmp)
+<ch1pic/intro_pos.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [2]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [3]) (./chapter/02LiteratureReview.tex
+ [3]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [4]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [5]) (./chapter/02LiteratureReview.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [6]
 Chapter 2.
 File: ch2pic/homo_trans.png Graphic file (type bmp)
 <ch2pic/homo_trans.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[5
+[7
 
 ]
+File: ch2pic/method_sort.png Graphic file (type bmp)
+<ch2pic/method_sort.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [6]
+ [8]
+File: ch2pic/multilateration.png Graphic file (type bmp)
+<ch2pic/multilateration.png>
+File: ch2pic/triangulation.png Graphic file (type bmp)
+<ch2pic/triangulation.png>
+File: ch2pic/fingerprinting.png Graphic file (type bmp)
+<ch2pic/fingerprinting.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [9]
+File: ch2pic/image_processing.png Graphic file (type bmp)
+<ch2pic/image_processing.png>
+File: ch2pic/aruco.png Graphic file (type bmp)
+<ch2pic/aruco.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [10]
+File: ch2pic/technique_sort.png Graphic file (type bmp)
+<ch2pic/technique_sort.png>
 File: ch2pic/electro_spectrum.png Graphic file (type bmp)
 <ch2pic/electro_spectrum.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [11]
 File: ch2pic/rfid_system.png Graphic file (type bmp)
 <ch2pic/rfid_system.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [7]
+ [12]
 File: ch2pic/method_compare.jpg Graphic file (type bmp)
 <ch2pic/method_compare.jpg>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [8]
+ [13]
 File: ch2pic/solar_spectra.png Graphic file (type bmp)
 <ch2pic/solar_spectra.png>
 File: ch2pic/multipath.png Graphic file (type bmp)
 <ch2pic/multipath.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [9]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [10]
-File: ch2pic/photometry_table.png Graphic file (type bmp)
-<ch2pic/photometry_table.png>
-File: 00temppic/1.png Graphic file (type bmp)
-<00temppic/1.png>
-File: 00temppic/2.png Graphic file (type bmp)
-<00temppic/2.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [11]
-File: 00temppic/3.png Graphic file (type bmp)
-<00temppic/3.png>
-File: 00temppic/4.png Graphic file (type bmp)
-<00temppic/4.png>
-File: 00temppic/5.png Graphic file (type bmp)
-<00temppic/5.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [12]
-File: ch2pic/LED_config.png Graphic file (type bmp)
-<ch2pic/LED_config.png>
-File: ch2pic/tab_hardwarepara.png Graphic file (type bmp)
-<ch2pic/tab_hardwarepara.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [13]
-File: ch2pic/lambertian.png Graphic file (type bmp)
-<ch2pic/lambertian.png>
-File: 00temppic/7.png Graphic file (type bmp)
-<00temppic/7.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [14]
@@ -1365,97 +1363,89 @@ File: watermark.pdf Graphic file (type pdf)
  [15]
 File: ch2pic/vlc.png Graphic file (type bmp)
 <ch2pic/vlc.png>
-
-
-LaTeX Warning: Reference `model' on page 16 undefined on input line 436.
-
+File: ch2pic/photometry_table.png Graphic file (type bmp)
+<ch2pic/photometry_table.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[16]
+ [16]
+File: 00temppic/1.png Graphic file (type bmp)
+<00temppic/1.png>
+File: 00temppic/2.png Graphic file (type bmp)
+<00temppic/2.png>
+File: 00temppic/3.png Graphic file (type bmp)
+<00temppic/3.png>
+File: 00temppic/4.png Graphic file (type bmp)
+<00temppic/4.png>
+File: 00temppic/5.png Graphic file (type bmp)
+<00temppic/5.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [17]
+File: ch2pic/LED_config.png Graphic file (type bmp)
+<ch2pic/LED_config.png>
+File: ch2pic/tab_hardwarepara.png Graphic file (type bmp)
+<ch2pic/tab_hardwarepara.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [18]
+File: ch2pic/lambertian.png Graphic file (type bmp)
+<ch2pic/lambertian.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [19]
+File: 00temppic/7.png Graphic file (type bmp)
+<00temppic/7.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [20]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [21]
 File: 00temppic/temp.png Graphic file (type bmp)
 <00temppic/temp.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [17]) (./chapter/03Method.tex
+ [22])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [18]
-Chapter 3.
-File: ch3pic/flowchart_pos.png Graphic file (type bmp)
-<ch3pic/flowchart_pos.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[19
+ [23] (./thesis.bbl
 
-]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [20]
-File: ch3pic/solve_targetori.png Graphic file (type bmp)
-<ch3pic/solve_targetori.png>
-) (./chapter/04Optimize.tex
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [21]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [22]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [23]
-Chapter 4.
-File: ch4pic/flowchart_opt.png Graphic file (type bmp)
-<ch4pic/flowchart_opt.png>
+Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 46--49
+[]\TU/TimesNewRoman(0)/m/n/12 OpenCV, “Detection of aruco markers.” Retrieved Jul 2022 from: [][]$[][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--49
+[] [] [][][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][][][][][][][][][][][] [] [][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] []
+ []
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [24
 
-]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [25]
-File: ch3pic/testpoint.jpg Graphic file (type bmp)
-<ch3pic/testpoint.jpg>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [26
-
-]
-File: ch4pic/error.png Graphic file (type bmp)
-<ch4pic/error.png>
-File: ch4pic/variable.png Graphic file (type bmp)
-<ch4pic/variable.png>
-)
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [27
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [28] (./thesis.bbl
+ [25])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [29
-
-
-])
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [30] (./thesis.aux)
-
-LaTeX Warning: There were undefined references.
-
+ [26] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A5B3F1451192035892C5C39BA6C3578E;3306.
+(rerunfilecheck)             Checksum: 8CBBD733FC05E390E21C4F93346AEB32;4052.
  ) 
 Here is how much of TeX's memory you used:
- 36399 strings out of 476919
- 740208 string characters out of 5821840
- 1229765 words of memory out of 5000000
- 55615 multiletter control sequences out of 15000+600000
- 411460 words of font info for 87 fonts, out of 8000000 for 9000
+ 36437 strings out of 476919
+ 741480 string characters out of 5821840
+ 1236198 words of memory out of 5000000
+ 55658 multiletter control sequences out of 15000+600000
+ 411468 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,17n,105p,862b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,17n,105p,862b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (33 pages).
+Output written on thesis.pdf (29 pages).

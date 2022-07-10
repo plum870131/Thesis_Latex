@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{iot}
+K.~Shafique, B.~A. Khawaja, F.~Sabir, S.~Qazi, and M.~Mustaqim, ``Internet of
+  things (iot) for next-generation smart systems: A review of current
+  challenges, future trends and prospects for emerging 5g-iot scenarios,'' {\em
+  IEEE Access}, vol.~8, pp.~23022--23040, 2020.
+
 \bibitem{survey_indoor2014}
 L.~Mainetti, L.~Patrono, and I.~Sergi, ``A survey on indoor positioning
   systems,'' in {\em 2014 22nd International Conference on Software,
@@ -9,6 +15,37 @@ L.~Mainetti, L.~Patrono, and I.~Sergi, ``A survey on indoor positioning
 F.~Zafari, A.~Gkelias, and K.~K. Leung, ``A survey of indoor localization
   systems and technologies,'' {\em IEEE Communications Surveys \& Tutorials},
   vol.~21, pp.~2568--2599, 2019.
+
+\bibitem{survey_light2018}
+Y.~Zhuang, L.~Hua, L.~Qi, J.~Yang, P.~Cao, Y.~Cao, Y.~Wu, J.~Thompson, and
+  H.~Haas, ``A survey of positioning systems using visible led lights,'' {\em
+  IEEE Communications Surveys Tutorials}, vol.~20, no.~3, pp.~1963--1988, 2018.
+
+\bibitem{survey_light2020}
+M.~Maheepala, A.~Z. Kouzani, and M.~A. Joordens, ``Light-based indoor
+  positioning systems: A review,'' {\em IEEE Sensors Journal}, vol.~20, no.~8,
+  pp.~3971--3995, 2020.
+
+\bibitem{pic:triangulation}
+H.~Hasan, M.~Hussein, S.~mad saad, and M.~A. Mat~Dzahir, ``An overview of local
+  positioning system: Technologies, techniques and applications,'' {\em
+  International Journal of Engineering and Technology(UAE)}, vol.~7, pp.~1--5,
+  08 2018.
+
+\bibitem{pic:fingerprinting}
+T.~Tegou, I.~Kalamaras, M.~Tsipouras, N.~Giannakeas, K.~Votis, and D.~Tzovaras,
+  ``A low-cost indoor activity monitoring system for detecting frailty in older
+  adults,'' {\em Sensors}, vol.~19, p.~452, 01 2019.
+
+\bibitem{pic:image_processing}
+J.-Y. Kim, I.-S. Kim, D.-Y. Yun, T.-W. Jung, S.-C. Kwon, and K.-D. Jung,
+  ``Visual positioning system based on 6d object pose estimation using mobile
+  web,'' {\em Electronics}, vol.~11, no.~6, 2022.
+
+\bibitem{pic:aruco}
+OpenCV, ``Detection of aruco markers.'' Retrieved Jul 2022 from:
+  \url{http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm}.
+\newblock Retrieved Jul 2022.
 
 \bibitem{survey_ultrasonic}
 Z.~Qiu, Y.~Lu, and Z.~Qiu, ``Review of ultrasonic ranging methods and their
@@ -37,22 +74,12 @@ OSRAM Opto Semiconductors Inc., {\em High Power Infrared Emitter (940 nm)}, 11
 \bibitem{datasheet:rfid_tag}
 Avery Dennison Corp., {\em UHF RFID Inlays}, 2015.
 
-\bibitem{survey_light2018}
-Y.~Zhuang, L.~Hua, L.~Qi, J.~Yang, P.~Cao, Y.~Cao, Y.~Wu, J.~Thompson, and
-  H.~Haas, ``A survey of positioning systems using visible led lights,'' {\em
-  IEEE Communications Surveys Tutorials}, vol.~20, no.~3, pp.~1963--1988, 2018.
-
 \bibitem{si_pd}
 A.~K. Sood, J.~W. Zeller, R.~A. Richwine, Y.~R. Puri, H.~Efstathiadis,
   P.~Haldar, N.~K. Dhar, and D.~L. Polla, ``Sige based visible-nir
   photodetector technology for optoelectronic applications,'' in {\em Advances
   in Optical Fiber Technology} (M.~Yasin, H.~Arof, and S.~W. Harun, eds.),
   ch.~10, Rijeka: IntechOpen, 2015.
-
-\bibitem{survey_light2020}
-M.~Maheepala, A.~Z. Kouzani, and M.~A. Joordens, ``Light-based indoor
-  positioning systems: A review,'' {\em IEEE Sensors Journal}, vol.~20, no.~8,
-  pp.~3971--3995, 2020.
 
 \bibitem{book:solar_spectrum}
 C.~A. Gueymard, ``The sun's total and spectral irradiance for solar energy
@@ -68,6 +95,12 @@ G.~Kumar, G.~Rao, and M.~Kumar, ``Gps signal short-term propagation
   characteristics modeling in urban areas for precise navigation
   applications,'' {\em Positioning}, vol.~04, pp.~192--199, 01 2013.
 
+\bibitem{decoding}
+P.~Lou, H.~Zhang, X.~Zhang, M.~Yao, and Z.~Xu, ``Fundamental analysis for
+  indoor visible light positioning system,'' in {\em 2012 1st IEEE
+  International Conference on Communications in China Workshops (ICCC)},
+  pp.~59--63, 2012.
+
 \bibitem{radiometry_and_photometry}
 W.~Mccluney, {\em Introduction to Radiometry and Photometry 2nd ed: Title Page
   \& Table of Contents}.
@@ -77,12 +110,6 @@ W.~Mccluney, {\em Introduction to Radiometry and Photometry 2nd ed: Title Page
 S.~U. Rehman, S.~Ullah, P.~H.~J. Chong, S.~Yongchareon, and D.~Komosny,
   ``Visible light communication: A system perspective---overview and
   challenges,'' {\em Sensors}, vol.~19, no.~5, 2019.
-
-\bibitem{decoding}
-P.~Lou, H.~Zhang, X.~Zhang, M.~Yao, and Z.~Xu, ``Fundamental analysis for
-  indoor visible light positioning system,'' in {\em 2012 1st IEEE
-  International Conference on Communications in China Workshops (ICCC)},
-  pp.~59--63, 2012.
 
 \bibitem{case:cart2d}
 X.~Yu, J.~Wang, and H.~Lu, ``Single led-based indoor positioning system using
@@ -105,5 +132,10 @@ A.~H.~A. Bakar, T.~Glass, H.~Y. Tee, F.~Alam, and M.~Legg, ``Accurate visible
   light positioning using multiple-photodiode receiver and machine learning,''
   {\em IEEE Transactions on Instrumentation and Measurement}, vol.~70,
   pp.~1--12, 2021.
+
+\bibitem{case:hypercube}
+T.~Raharijaona, P.~Mignon, R.~Juston, L.~Kerhuel, and S.~Viollet, ``Hypercube:
+  A small lensless position sensing device for the tracking of flickering
+  infrared leds,'' {\em Sensors}, vol.~15, no.~7, pp.~16484--16502, 2015.
 
 \end{thebibliography}

@@ -8,45 +8,45 @@ Warning--empty author and editor in astm
 Warning--there's a number but no series in astm
 Warning--empty publisher in astm
 Warning--empty publisher in radiometry_and_photometry
-You've used 22 entries,
+You've used 28 entries,
             1876 wiz_defined-function locations,
-            612 strings with 7325 characters,
-and the built_in function-call counts, 6053 in all, are:
-= -- 577
-> -- 246
+            642 strings with 8693 characters,
+and the built_in function-call counts, 7816 in all, are:
+= -- 743
+> -- 338
 < -- 0
-+ -- 91
-- -- 69
-* -- 441
-:= -- 827
-add.period$ -- 25
-call.type$ -- 22
-change.case$ -- 17
++ -- 124
+- -- 96
+* -- 579
+:= -- 1084
+add.period$ -- 32
+call.type$ -- 28
+change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 321
-empty$ -- 578
-format.name$ -- 69
-if$ -- 1504
+cite$ -- 33
+duplicate$ -- 402
+empty$ -- 726
+format.name$ -- 96
+if$ -- 1929
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 19
-newline$ -- 72
-num.names$ -- 20
-pop$ -- 77
+int.to.str$ -- 28
+missing$ -- 24
+newline$ -- 91
+num.names$ -- 26
+pop$ -- 92
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 224
+skip$ -- 288
 stack$ -- 0
-substring$ -- 379
-swap$ -- 140
+substring$ -- 489
+swap$ -- 179
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 5
-while$ -- 46
-width$ -- 24
-write$ -- 210
+while$ -- 60
+width$ -- 30
+write$ -- 270
 (There were 5 warnings)
