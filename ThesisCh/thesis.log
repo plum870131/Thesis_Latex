@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  10 JUL 2022 16:24
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  11 JUL 2022 12:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1113,6 +1113,32 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \c@LT@tables=\count428
 \c@LT@chunks=\count429
 \LT@p@ftn=\toks69
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen417
+\captionmargin@=\dimen418
+\captionwidth=\dimen419
+\caption@tempdima=\dimen420
+\caption@indent=\dimen421
+\caption@parindent=\dimen422
+\caption@hangindent=\dimen423
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count430
+\c@continuedfloat=\count431
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen424
+\caption@adjustwidth@linewidth=\dimen425
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
 ) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
@@ -1146,7 +1172,7 @@ Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count430
+\c@section@level=\count432
 )
 LaTeX Info: Redefining \ref on input line 10.
 LaTeX Info: Redefining \pageref on input line 10.
@@ -1162,7 +1188,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 )
-\c@lstlisting=\count431
+\c@lstlisting=\count433
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1254,6 +1280,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 10.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 10.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 (./Chapter/SymbolList.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1334,118 +1362,64 @@ File: ch2pic/aruco.png Graphic file (type bmp)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [10]
-File: ch2pic/technique_sort.png Graphic file (type bmp)
-<ch2pic/technique_sort.png>
-File: ch2pic/electro_spectrum.png Graphic file (type bmp)
-<ch2pic/electro_spectrum.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [11]
-File: ch2pic/rfid_system.png Graphic file (type bmp)
-<ch2pic/rfid_system.png>
+File: ch2pic/electro_spectrum.png Graphic file (type bmp)
+<ch2pic/electro_spectrum.png>
+File: ch2pic/electro_sort.png Graphic file (type bmp)
+<ch2pic/electro_sort.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [12]
-File: ch2pic/method_compare.jpg Graphic file (type bmp)
-<ch2pic/method_compare.jpg>
+File: ch2pic/rfid_system.png Graphic file (type bmp)
+<ch2pic/rfid_system.png>
+File: ch2pic/landmarc.png Graphic file (type bmp)
+<ch2pic/landmarc.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [13]
-File: ch2pic/solar_spectra.png Graphic file (type bmp)
-<ch2pic/solar_spectra.png>
-File: ch2pic/multipath.png Graphic file (type bmp)
-<ch2pic/multipath.png>
+File: ch2pic/rfid_1to1.png Graphic file (type bmp)
+<ch2pic/rfid_1to1.png>
+File: ch2pic/vlc_flow.png Graphic file (type bmp)
+<ch2pic/vlc_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [14]
+File: ch2pic/method_compare.png Graphic file (type bmp)
+<ch2pic/method_compare.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [15]
-File: ch2pic/vlc.png Graphic file (type bmp)
-<ch2pic/vlc.png>
-File: ch2pic/photometry_table.png Graphic file (type bmp)
-<ch2pic/photometry_table.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [16]
-File: 00temppic/1.png Graphic file (type bmp)
-<00temppic/1.png>
-File: 00temppic/2.png Graphic file (type bmp)
-<00temppic/2.png>
-File: 00temppic/3.png Graphic file (type bmp)
-<00temppic/3.png>
-File: 00temppic/4.png Graphic file (type bmp)
-<00temppic/4.png>
-File: 00temppic/5.png Graphic file (type bmp)
-<00temppic/5.png>
+File: ch2pic/solar_spectra.png Graphic file (type bmp)
+<ch2pic/solar_spectra.png>
+File: ch2pic/light_freq_compare.png Graphic file (type bmp)
+<ch2pic/light_freq_compare.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [17]
-File: ch2pic/LED_config.png Graphic file (type bmp)
-<ch2pic/LED_config.png>
-File: ch2pic/tab_hardwarepara.png Graphic file (type bmp)
-<ch2pic/tab_hardwarepara.png>
+File: ch2pic/rolling_shutter.png Graphic file (type bmp)
+<ch2pic/rolling_shutter.png>
+File: ch2pic/rolling_shutter_case.png Graphic file (type bmp)
+<ch2pic/rolling_shutter_case.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [18]
-File: ch2pic/lambertian.png Graphic file (type bmp)
-<ch2pic/lambertian.png>
+File: ch2pic/multipath.png Graphic file (type bmp)
+<ch2pic/multipath.png>
+File: ch2pic/vlc_multi_pd.png Graphic file (type bmp)
+<ch2pic/vlc_multi_pd.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [19]
-File: 00temppic/7.png Graphic file (type bmp)
-<00temppic/7.png>
+File: ch2pic/env_finger.png Graphic file (type bmp)
+<ch2pic/env_finger.png>
+File: ch2pic/env_1to1.png Graphic file (type bmp)
+<ch2pic/env_1to1.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [20]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [21]
-File: 00temppic/temp.png Graphic file (type bmp)
-<00temppic/temp.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [22])
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [23] (./thesis.bbl
-
-Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
-(xeCJK)                
-(xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
-
-
-Underfull \hbox (badness 3895) in paragraph at lines 46--49
-[]\TU/TimesNewRoman(0)/m/n/12 OpenCV, “Detection of aruco markers.” Retrieved Jul 2022 from: [][]$[][][][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--49
-[] [] [][][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][][][][][][][][][][][] [] [][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] []
- []
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[24
-
-
-]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [25])
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [26] (./thesis.aux)
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 8CBBD733FC05E390E21C4F93346AEB32;4052.
- ) 
-Here is how much of TeX's memory you used:
- 36437 strings out of 476919
- 741480 string characters out of 5821840
- 1236198 words of memory out of 5000000
- 55658 multiletter control sequences out of 15000+600000
- 411468 words of font info for 88 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 106i,17n,105p,862b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on thesis.pdf (29 pages).
+File: ch2pic/pd_camera_sort.pn

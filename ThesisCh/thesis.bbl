@@ -45,18 +45,17 @@ J.-Y. Kim, I.-S. Kim, D.-Y. Yun, T.-W. Jung, S.-C. Kwon, and K.-D. Jung,
 \bibitem{pic:aruco}
 OpenCV, ``Detection of aruco markers.'' Retrieved Jul 2022 from:
   \url{http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm}.
-\newblock Retrieved Jul 2022.
 
 \bibitem{survey_ultrasonic}
 Z.~Qiu, Y.~Lu, and Z.~Qiu, ``Review of ultrasonic ranging methods and their
   current challenges,'' {\em Micromachines}, vol.~13, no.~4, p.~520, 2022.
 
-\bibitem{book_electromagnetic}
-D.~J. Griffiths, ``Introduction to electrodynamics,'' 2005.
-
 \bibitem{Spectrum}
 Y.~Abdelrahman, A.~Schmidt, and P.~Knierim, ``Snake view: exploring thermal
   imaging as a vision extender in mountains,'' pp.~1067--1071, 09 2017.
+
+\bibitem{book_electromagnetic}
+D.~J. Griffiths, ``Introduction to electrodynamics,'' 2005.
 
 \bibitem{rf_law}
 國家通訊傳播委員會, {\em 業餘無線電技術規範}, 10 2015.
@@ -65,6 +64,20 @@ Y.~Abdelrahman, A.~Schmidt, and P.~Knierim, ``Snake view: exploring thermal
 A.~Motroni, A.~Buffi, and P.~Nepa, ``A survey on indoor vehicle localization
   through {RFID} technology,'' {\em {IEEE} Access}, vol.~9, pp.~17921--17942,
   2021.
+
+\bibitem{landmarc}
+L.~Ni, Y.~Liu, Y.~C. Lau, and A.~Patil, ``Landmarc: indoor location sensing
+  using active rfid,'' in {\em Proceedings of the First IEEE International
+  Conference on Pervasive Computing and Communications, 2003. (PerCom 2003).},
+  pp.~407--415, 2003.
+
+\bibitem{case:rfid_1to1}
+M.~Kim and N.~Y. Chong, ``Enhancing rfid location sensing using a dual
+  directional antenna,'' 2005.
+
+\bibitem{pic:vlc}
+T.~{\c C}evik and S.~Yilmaz, ``An overview of visible light communication
+  systems,'' {\em ArXiv}, vol.~abs/1512.03568, 2015.
 
 \bibitem{datasheet:led_sfh4545}
 OSRAM Opto Semiconductors Inc., {\em High Power Infrared Emitter (940 nm)}, 11
@@ -90,26 +103,43 @@ C.~A. Gueymard, ``The sun's total and spectral irradiance for solar energy
 {\em Standard Solar Spectra}.
 \newblock No.~ASTM G-173-03 (International standard ISO 9845-1), 1992.
 
+\bibitem{pic:rolling_shutter}
+M.~Rahman, M.~A. Sejan, J.-J. Kim, and W.-Y. Chung, ``Reduced tilting effect of
+  smartphone cmos image sensor in visible light indoor positioning,'' {\em
+  Electronics}, vol.~9, pp.~1--19, 10 2020.
+
+\bibitem{pic:rolling_shutter_case}
+Y.-S. Kuo, P.~Pannuto, K.-J. Hsiao, and P.~Dutta, ``Luxapose: indoor
+  positioning with mobile phones and visible light,'' {\em Proceedings of the
+  20th annual international conference on Mobile computing and networking},
+  2014.
+
 \bibitem{pic:multipath}
 G.~Kumar, G.~Rao, and M.~Kumar, ``Gps signal short-term propagation
   characteristics modeling in urban areas for precise navigation
   applications,'' {\em Positioning}, vol.~04, pp.~192--199, 01 2013.
 
-\bibitem{decoding}
-P.~Lou, H.~Zhang, X.~Zhang, M.~Yao, and Z.~Xu, ``Fundamental analysis for
-  indoor visible light positioning system,'' in {\em 2012 1st IEEE
-  International Conference on Communications in China Workshops (ICCC)},
-  pp.~59--63, 2012.
+\bibitem{case:ml}
+A.~H.~A. Bakar, T.~Glass, H.~Y. Tee, F.~Alam, and M.~Legg, ``Accurate visible
+  light positioning using multiple-photodiode receiver and machine learning,''
+  {\em IEEE Transactions on Instrumentation and Measurement}, vol.~70,
+  pp.~1--12, 2021.
+
+\bibitem{case:3d_layers}
+S.-H. Yang, H.-S. Kim, Y.-H. Son, and S.-K. Han, ``Three-dimensional visible
+  light indoor localization using aoa and rss with multiple optical
+  receivers,'' {\em Journal of Lightwave Technology}, vol.~32, no.~14,
+  pp.~2480--2485, 2014.
 
 \bibitem{radiometry_and_photometry}
 W.~Mccluney, {\em Introduction to Radiometry and Photometry 2nd ed: Title Page
   \& Table of Contents}.
 \newblock 11 2015.
 
-\bibitem{vlc}
-S.~U. Rehman, S.~Ullah, P.~H.~J. Chong, S.~Yongchareon, and D.~Komosny,
-  ``Visible light communication: A system perspective---overview and
-  challenges,'' {\em Sensors}, vol.~19, no.~5, 2019.
+\bibitem{case:hypercube}
+T.~Raharijaona, P.~Mignon, R.~Juston, L.~Kerhuel, and S.~Viollet, ``Hypercube:
+  A small lensless position sensing device for the tracking of flickering
+  infrared leds,'' {\em Sensors}, vol.~15, no.~7, pp.~16484--16502, 2015.
 
 \bibitem{case:cart2d}
 X.~Yu, J.~Wang, and H.~Lu, ``Single led-based indoor positioning system using
@@ -120,22 +150,5 @@ X.~Yu, J.~Wang, and H.~Lu, ``Single led-based indoor positioning system using
 X.~Yu, J.~Wang, and H.~Lu, ``Indoor positioning system based on single led
   using symmetrical optical receiver,'' in {\em Asia Communications and
   Photonics Conference (ACP) 2018}, p.~Su2A.50, Optica Publishing Group, 2018.
-
-\bibitem{case:3d_layers}
-S.-H. Yang, H.-S. Kim, Y.-H. Son, and S.-K. Han, ``Three-dimensional visible
-  light indoor localization using aoa and rss with multiple optical
-  receivers,'' {\em Journal of Lightwave Technology}, vol.~32, no.~14,
-  pp.~2480--2485, 2014.
-
-\bibitem{case:ml}
-A.~H.~A. Bakar, T.~Glass, H.~Y. Tee, F.~Alam, and M.~Legg, ``Accurate visible
-  light positioning using multiple-photodiode receiver and machine learning,''
-  {\em IEEE Transactions on Instrumentation and Measurement}, vol.~70,
-  pp.~1--12, 2021.
-
-\bibitem{case:hypercube}
-T.~Raharijaona, P.~Mignon, R.~Juston, L.~Kerhuel, and S.~Viollet, ``Hypercube:
-  A small lensless position sensing device for the tracking of flickering
-  infrared leds,'' {\em Sensors}, vol.~15, no.~7, pp.~16484--16502, 2015.
 
 \end{thebibliography}
