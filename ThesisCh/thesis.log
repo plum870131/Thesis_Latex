@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  11 JUL 2022 12:57
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  11 JUL 2022 17:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1422,4 +1422,124 @@ File: ch2pic/env_1to1.png Graphic file (type bmp)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [20]
-File: ch2pic/pd_camera_sort.pn
+File: ch2pic/pd_camera_sort.png Graphic file (type bmp)
+<ch2pic/pd_camera_sort.png>
+
+Overfull \hbox (6.20865pt too wide) in paragraph at lines 454--455
+[]\TU/DFKai-SB(0)/m/n/12 在[][]\TU/TimesNewRoman(0)/m/n/12 2.3[][]\TU/DFKai-SB(0)/m/n/12 章 中，|  由 電 磁 波 頻 率 分 類 為 無 線 電 波 段 與 光 波 段，|  分 別 於[][]\TU/TimesNewRoman(0)/m/n/12 2.3.1[][]\TU/DFKai-SB(0)/m/n/12 章 與[][]\TU/TimesNewRoman(0)/m/n/12 2.3.2[][]\TU/DFKai-SB(0)/m/n/12 章
+ []
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[21]
+File: ch2pic/photometry_table.png Graphic file (type bmp)
+<ch2pic/photometry_table.png>
+File: ch2pic/solid_angle.png Graphic file (type bmp)
+<ch2pic/solid_angle.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [22]
+File: ch2pic/intensity_irradiance.png Graphic file (type bmp)
+<ch2pic/intensity_irradiance.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [23]
+File: ch2pic/lambertian.png Graphic file (type bmp)
+<ch2pic/lambertian.png>
+File: ch2pic/lambertian_3d.png Graphic file (type bmp)
+<ch2pic/lambertian_3d.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [24]
+File: ch2pic/hardware_para.png Graphic file (type bmp)
+<ch2pic/hardware_para.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [25]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [26]
+File: ch2pic/interactive_1to1.png Graphic file (type bmp)
+<ch2pic/interactive_1to1.png>
+
+
+Package hyperref Warning: Suppressing empty link on input line 694.
+
+File: ch2pic/interactive_mul.png Graphic file (type bmp)
+<ch2pic/interactive_mul.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[27]
+File: ch2pic/model_transform_flow.png Graphic file (type bmp)
+<ch2pic/model_transform_flow.png>
+File: ch2pic/LED_config.png Graphic file (type bmp)
+<ch2pic/LED_config.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [28]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [29]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [30]
+File: ch2pic/case_parallel.png Graphic file (type bmp)
+<ch2pic/case_parallel.png>
+File: ch2pic/config_orient.png Graphic file (type bmp)
+<ch2pic/config_orient.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [31]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [32]
+
+LaTeX Warning: Reference `chp:3' on page 33 undefined on input line 964.
+
+)
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [33] (./thesis.bbl
+
+Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 46--48
+[]\TU/TimesNewRoman(0)/m/n/12 OpenCV, “Detection of aruco markers.” Retrieved Jul 2022 from: [][]$[][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--48
+[] [] [][][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][][][][][][][][][][][] [] [][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] []
+ []
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[34
+
+
+]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [35])
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [36] (./thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: F7C1E1B70EDF59A3DE3B06E60EE764D6;3580.
+ ) 
+Here is how much of TeX's memory you used:
+ 37781 strings out of 476919
+ 769151 string characters out of 5821840
+ 1258032 words of memory out of 5000000
+ 56985 multiletter control sequences out of 15000+600000
+ 411468 words of font info for 88 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 106i,17n,117p,862b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on thesis.pdf (39 pages).

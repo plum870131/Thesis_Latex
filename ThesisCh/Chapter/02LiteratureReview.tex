@@ -691,7 +691,7 @@
     \subsubsection{多LED對多PD光傳遞模型}
     \label{chp:model_mul}
 
-    由於LED與PD定位時數量通常不只一個，因此描述多LED對多PD的光傳遞模型時，需註明清楚（可參考\ref{chp:symbol}）。在此設定LED總數為$L$、PD總數為$P$，描述第$l$個LED與第$p$個PD的硬體參數時，於硬體參數的右下標加註，如$A_2$為第二個PD的有效面積；再來，描述第$l$個LED與第$p$個PD之間的關係時，則將$lp$同樣加註於右下標，例如$D_34$為第三個LED與第四個PD之間的距離，參考圖\ref{pic:interactive_mul}。
+    由於LED與PD定位時數量通常不只一個，因此描述多LED對多PD的光傳遞模型時，需註明清楚（可參考\ref{chp:symbol}）。在此設定LED總數為$L$、PD總數為$P$，描述第$l$個LED與第$p$個PD的硬體參數時，於硬體參數的右下標加註，如$A_2$為第二個PD的有效面積；再來，描述第$l$個LED與第$p$個PD之間的關係時，則將$lp$同樣加註於右下標，例如$D_{34}$為第三個LED與第四個PD之間的距離，參考圖\ref{pic:interactive_mul}。
     
     \begin{figure}[ht]
         \centering
@@ -746,13 +746,72 @@
         \item[- 將LED投影到PD座標系上]\hfill 
         
         \qquad
+        LED於空間中由$^L P$代表LED位置、$^L V$代表朝向，於式\ref{eqn:homogeneous}呈現出$^L P$經過齊次座標轉換至PD座標系上$^{PL P}$，而$^L V$為單位項量，由式\ref{eqn:homogeneous_vector}轉換至PD座標系上為$^{PL}V$。
+
+        \begin{equation}
+            \label{eqn:homogeneous_vector}
+            \begin{aligned}
+            \left[\begin{array}{cc}
+            { }^{P L} P \\
+            1
+            \end{array}\right]&={ }^{P L} \boldsymbol{H}\left[\begin{array}{c}
+            { }^{L} P \\
+            1
+            \end{array}\right] &=\left[\begin{array}{cc}
+            { }^{P L} \boldsymbol{R} \boldsymbol{o} & { }^{P L} \boldsymbol{T} \\
+            0 & 1
+            \end{array}\right]\left[\begin{array}{c}
+            { }^{L} P \\
+            1
+            \end{array}\right] \\
+            ^{P L} V &=^{P L} \boldsymbol{R} \boldsymbol{o} ^{L} V 
+            \end{aligned}
+        \end{equation}
+
+
+
 
         \item[- 於PD座標系中計算距離、出入射角]\hfill 
         
-        
         \qquad
+        首先，我們在PD座標系中計算距離：第$l$個LED與第$p$個PD之間的距離以$D_{lp}$表示，在此定義PD指向LED位置的向量為$\vec{D_{lp}}$，於式\ref{eqn:distance_to_coor}轉換成PD座標系的形式。
+        
+        \begin{equation}
+            \label{eqn:distance_to_coor}
+            \begin{aligned}
+            \vec{D_{lp}} = ^{LP}\boldsymbol{P_l}- ^{LP}\boldsymbol{P_l} \\
+            D_{lp} = ||\vec{D_{lp}}||
+            \end{aligned}
+        \end{equation}
 
-    \end{description}   
+        \qquad
+        再來，出射角$\theta_{lp}$與入射角$\phi_{lp}$可透過餘弦與內積的關係求得，於式\ref{eqn:angle_to_coor}表示。
+
+        \begin{equation}
+            \label{eqn:angle_to_coor}
+            \begin{aligned}
+            \theta_{lp} = \arccos(-\frac{^{PL}V_l \cdot \vec{D_{lp}}}{D_{lp}})\\
+            \phi_{lp} = \arccos(\frac{^{P}V_p \cdot \vec{D_{lp}}}{D_{lp}})\\
+            \end{aligned}
+        \end{equation}
+
+        \qquad
+        將距離、出入射角都以PD座標系表示後，於式\ref{eqn:model_coor}將整個光傳播模型（式\ref{eqn:model}）以PD座標系表示：
+
+        \begin{equation}
+            \label{eqn:model_coor}
+            \begin{aligned}
+                \text { if } Ie<s \\
+                Ie &= \frac{Re_pA_pPt_l(Ml_{l}+1)}{2 \pi} \frac{ {\cos\phi_{lp}}^{Mp_{p}} {\cos \theta_{lp}}^{Ml_{l}}}{D^2_{lp}}\\
+                    & = \frac{Re_pA_pPt_l(Ml_{l}+1)}{2 \pi} \frac{ {\frac{^{P}V_p \cdot \vec{D_{lp}}}{D_{lp}}}^{Mp_{p}} {-\frac{^{PL}V_l \cdot \vec{D_{lp}}}{D_{lp}}}^{Ml_{l}}}  {{||\vec{D_{lp}}||}^2}\\
+                    & = \frac{Re_pA_pPt_l(Ml_{l}+1)}{2 \pi} \frac{ {{(^{P}V_p \cdot \vec{D_{lp}})}}^{Mp_{p}} {(-^{PL}V_l \cdot \vec{D_{lp}})}^{Ml_{l}}}  {{||\vec{D_{lp}}||}^{2+Ml_l+Mp_p}}
+            \end{aligned}
+        \end{equation}
+
+        \qquad
+        式\ref{eqn:model_coor}中，$\vec{D_{lp}}$、$||\vec{D_{lp}}||$、$^{PL}V_l$都還未完全展開，可以得出結論，無論是硬體擺設方式$P$或$V$更換，或是兩座標系姿態改變，皆會影響到$\vec{D_{lp}}$、$||\vec{D_{lp}}||$、$^{PL}V_l$、$^{PL}P_l$等，是一個牽一髮動全身的模型。因此，所有的研究都利用不同的限制方式，使式\ref{eqn:model_coor}簡化，得以取得相對位置資訊。
+
+        \end{description}   
 
 
         
@@ -823,6 +882,18 @@
         \item[- 缺乏三維定位的演算法]\hfill 
         
         \qquad
+        此領域進行三維定位的研究較少，雖然有許多人利用機器學習、指紋法等方式，成功利用LED與PD量測三維定位，如\cite{case:ml}，但利用指紋法的類型需大量的事先校正，並不符合本研究目的。
+
+        \qquad 
+        常見的限制如圖\ref{pic:case_parallel}，將目標物可移動的範圍限制在二維的平面上，且在大多實驗中，都會將目標物與可移動範圍的垂直距離設為已知，即可將PD的光傳遞模型簡化。
+
+        
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=8cm]{ch2pic/case_parallel.png}
+            \caption{常見的LED與PD定位系統架設\cite{case:aoa}}
+            \label{pic:case_parallel}
+        \end{figure}
 
         \item[- 硬體組態自由度低]\hfill 
         
@@ -830,7 +901,7 @@
         同樣是為了降低系統複雜度，大多LED的組態為平行的等距陣列，有些類似於多點定位的擺法（參考圖\ref{pic:env_finger}）。
 
         \qquad
-        PD常見的組態類型為所有PD位於同一點，僅改變各PD的指向，如圖\ref{pic:config_orient}，雖然指向能夠改變，大多情況仍會給予限制，例如所有PD的天頂角需相同等。
+        PD常見的組態類型\cite{case:cart2d}\cite{case:cart3d}\cite{case:3d_layers}為全部PD位於同個位置、同樣仰角，方位角則等角分配，如圖\ref{pic:config_orient}，雖然指向能夠改變，大多情況仍會給予限制，例如所有PD的天頂角需相同等。
 
         \begin{figure}[ht]
             \centering
@@ -843,7 +914,13 @@
         
         \qquad
 
+        在使用幾何類型演算法的研究中，最常見的使用情境限制為：目標物與量測者需平行，如圖\ref{pic:case_parallel}。舉例來說，展場內的光源中心軸朝地面，此時利用手機前鏡頭進行定位的使用者，便需將手機平放，以使其中心軸垂直地面朝上達到平行。
 
+        \qquad
+        此限制常見，是因為光傳遞模型中（參考式\ref{eqn:model}）有距離、出入射角三個變數，只要限制兩者平行，即可使出入射角可經過計算，使變數剩下兩個。若僅提供二維定位且已知距離，則變數僅剩一個。以\cite{case:aoa}（圖\ref{pic:case_parallel}）\cite{case:cart2d}為例，兩研究都只進行二維定位，並且限制目標物僅能在特定垂直距離的平面上移動，除此之外，還限制觀察者與目標物平行。如此多的限制在LED與PD領域中，經常為了簡化定位複雜度，亦或是搭配室內原先的照明光源。
+
+        \qquad
+        雖然此限制常見，但是他造成很大的使用不便，大幅度限制了使用的情境，難以達到具有靈活度的應用，因此本研究的主要目標之一便是去除此相限制。
 
     \end{description}
 
@@ -854,8 +931,7 @@
     %     \subsubsection{硬體數量}
     %     硬體數量上，大多是單個對多個的組合，單個LED對多個PD的方法\cite{case:cart2d}\cite{case:cart3d}\cite{case:3d_layers}優勢在於不用考量光的干涉，僅有單個光源連編碼解碼的部分也可以有條件的省略，簡化了系統複雜度。多個LED對單個PD的優勢則在於訊號處理不需同步多個PD，該PD進行解碼之後即可在計算單元內進行演算法的運作，不需綜合多個PD、考量到不同硬體時間的不同步，一樣簡化了系統複雜度。多對多的方法\cite{case:ml}雖然增加了系統複雜度，然而能獲取到的資訊同樣也較多。
 
-    %     \subsubsection{硬體組態}   
-    %     LED與PD的擺設方式上，為了降低\ref{eqn:model}所描述的模型複雜度，最常見到的LED擺設方式便為中心軸平行的等距陣列（補圖），PD擺設方式則是全部位於同個位置、同樣仰角，方位角則等距分配（補圖）\cite{case:cart2d}\cite{case:cart3d}\cite{case:3d_layers}。以上兩種最常見的擺設方式皆是為了降低系統複雜度，其中將PD擺放於同個位置僅改變指向，可使不同PD的距離與LED出射角這兩個變數一致，即可進行消除。
+
         
     %     \subsubsection{演算法}
     %     演算法上，如\ref{chp:method}介紹，常見的方法如多點定位、三角定位、指紋法，都需要有多個參考點，雖然多個參考點能夠提高精度，但是此種演算法裝設與事先校正都十分複雜，無法應對環境的改變，不符合不本論文研究目標的靈活應用。
@@ -870,12 +946,7 @@
     %     
         
     %    
-    %     
-
-        
-    %     (不確定走向，所以先用列表整理在Notion之後確定再補上)
-    %     % 補
-
+    %
     %     \begin{figure}[ht]
     %         \centering
     %         \includegraphics[width=10cm]{00temppic/temp.png}

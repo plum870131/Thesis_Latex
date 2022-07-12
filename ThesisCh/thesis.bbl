@@ -151,4 +151,9 @@ X.~Yu, J.~Wang, and H.~Lu, ``Indoor positioning system based on single led
   using symmetrical optical receiver,'' in {\em Asia Communications and
   Photonics Conference (ACP) 2018}, p.~Su2A.50, Optica Publishing Group, 2018.
 
+\bibitem{case:aoa}
+S.-H. Yang, E.-M. Jeong, and S.~Han, ``Indoor positioning based on received
+  optical power difference by angle of arrival,'' {\em Electronics Letters},
+  vol.~50, pp.~49--51, 2014.
+
 \end{thebibliography}
