@@ -13,12 +13,11 @@
 
 \begin{longtable}[l]{cl}
     % $\text{Bell}(\cdot)$ & 鐘形函式\\
-    $P$ & 座標點\\
-    $x,y,z$ & 座標點$P$的$x,y,z$分量\\
-    $N$ & 單位向量\\
-    $u,v,w$ & 單位向量$V$的$x,y,z$分量\\
-    $\alpha$ & 球座標系中的天頂角（Zenith Angle）分量\\
-    $\beta$ & 球座標系中的方位角（Azimuth Angle）分量\\
+    $\boldsymbol{P}$ & 座標點\\
+    $x,y,z$ & 座標點$\boldsymbol{P}$的$x,y,z$分量\\
+    $\boldsymbol{V}$ & 單位向量\\
+    $u,v,w$ & 單位向量$\boldsymbol{V}$的$x,y,z$分量\\
+    $d,\alpha,\beta$ & 球座標系中的天頂角（Zenith Angle）、方位角（Azimuth Angle）、距離分量\\
 \end{longtable}
 
 % \begin{figure}[ht]
@@ -148,15 +147,22 @@
 
 
 \begin{description}
-    \item[(1)] 符號
-    \item[(2)] 投影至的座標系（$P$: PD座標系；$L$: LED座標系）
-    \item[(3)] 定義於哪個座標系（$P$: PD座標系；$L$: LED座標系）
-    \item[(4)] $\hat{(\cdot)}$代表該物理量為量測所得或處理量測所得訊號而得
-    \item[(5)] 第$k$個樣本點（$k=1,2,...,K$）
-    \item[(6)] 第$p$個PD（$p=1,2,...,P$）或第$l$個LED（$l=1,2,...,L$）；LED與PD交互關係物理量的(6)小標為$lp$兩者的交互關係
+    \item[(1) 符號] 
+    \item[(2) 投影至的座標系：] （$P$: PD座標系；$L$: LED座標系）
+    \item[(3) 定義於哪個座標系：] （$P$: PD座標系；$L$: LED座標系）
+    \item[(4) 量測訊號：] $\hat{(\cdot)}$代表該物理量為量測所得或處理量測所得訊號而得
+    \item[(5) 樣本點：] 第$k$個樣本點（$k=1,2,...,K$）
+    \item[(6) 硬體編號：] 第$p$個PD（$p=1,2,...,P$）或第$l$個LED（$l=1,2,...,L$）；LED與PD交互關係物理量的(6)小標為$lp$兩者的交互關係
+    \item[(7) 使用的座標系統：]  以何種座標系呈現（無：卡氏座標系；$sph$：球座標系）
 \end{description}
 
-$^{PL}_{k}\hat{\boldsymbol{T}}$：第k個樣本點中，模擬量測方式所得到的PD座標系指向LED座標系的平移向量。
-$^{L}P_l,^{LP}P_l$：$^{L}P_l,$為第l個LED於LED座標系上的位置座標，$^{PL}P_l$則是將其投影到PD座標系上
-$_{k}D_lp$：第k個樣本點鐘，第l個LED與第p個PD的距離
+
+以下舉例解釋：
+\begin{description}
+\item[- $^{PL}_{k}\hat{\boldsymbol{T}}$：]第k個樣本點中，模擬量測方式所得到的PD座標系指向LED座標系的平移向量。
+
+\item[- $^{L}P_l,^{PL}P_l$：]$^{L}P_l,$為第l個LED於LED座標系上的位置座標，$^{PL}P_l$則是將其投影到PD座標系上
+
+\item[- $_{k}D_lp$：]第k個樣本點鐘，第l個LED與第p個PD的距離
 $Ml_l$：第l個LED的朗博次方
+\end{description}

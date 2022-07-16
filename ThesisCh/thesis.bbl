@@ -6,6 +6,27 @@ K.~Shafique, B.~A. Khawaja, F.~Sabir, S.~Qazi, and M.~Mustaqim, ``Internet of
   challenges, future trends and prospects for emerging 5g-iot scenarios,'' {\em
   IEEE Access}, vol.~8, pp.~23022--23040, 2020.
 
+\bibitem{outdoor_scenario}
+G.~De~Angelis, A.~De~Angelis, V.~Pasku, A.~Moschitta, and P.~Carbone, ``A
+  hybrid outdoor/indoor positioning system for iot applications,'' in {\em 2015
+  IEEE International Symposium on Systems Engineering (ISSE)}, pp.~1--6, 2015.
+
+\bibitem{GPS_important}
+S.-C. Yeh, W.-H. Hsu, M.-Y. Su, C.-H. Chen, and K.-H. Liu, ``A study on outdoor
+  positioning technology using gps and wifi networks,'' in {\em 2009
+  International Conference on Networking, Sensing and Control}, pp.~597--601,
+  2009.
+
+\bibitem{survey_light2020}
+M.~Maheepala, A.~Z. Kouzani, and M.~A. Joordens, ``Light-based indoor
+  positioning systems: A review,'' {\em IEEE Sensors Journal}, vol.~20, no.~8,
+  pp.~3971--3995, 2020.
+
+\bibitem{survey_light2018}
+Y.~Zhuang, L.~Hua, L.~Qi, J.~Yang, P.~Cao, Y.~Cao, Y.~Wu, J.~Thompson, and
+  H.~Haas, ``A survey of positioning systems using visible led lights,'' {\em
+  IEEE Communications Surveys Tutorials}, vol.~20, no.~3, pp.~1963--1988, 2018.
+
 \bibitem{survey_indoor2014}
 L.~Mainetti, L.~Patrono, and I.~Sergi, ``A survey on indoor positioning
   systems,'' in {\em 2014 22nd International Conference on Software,
@@ -16,15 +37,21 @@ F.~Zafari, A.~Gkelias, and K.~K. Leung, ``A survey of indoor localization
   systems and technologies,'' {\em IEEE Communications Surveys \& Tutorials},
   vol.~21, pp.~2568--2599, 2019.
 
-\bibitem{survey_light2018}
-Y.~Zhuang, L.~Hua, L.~Qi, J.~Yang, P.~Cao, Y.~Cao, Y.~Wu, J.~Thompson, and
-  H.~Haas, ``A survey of positioning systems using visible led lights,'' {\em
-  IEEE Communications Surveys Tutorials}, vol.~20, no.~3, pp.~1963--1988, 2018.
+\bibitem{survey:indoor_wayfinding}
+J.~Kunhoth, A.~Karkar, S.~Al-ma'adeed, and A.~Al-Ali, ``Indoor positioning and
+  wayfinding systems: a survey,'' {\em Human-centric Computing and Information
+  Sciences}, vol.~10, 12 2020.
 
-\bibitem{survey_light2020}
-M.~Maheepala, A.~Z. Kouzani, and M.~A. Joordens, ``Light-based indoor
-  positioning systems: A review,'' {\em IEEE Sensors Journal}, vol.~20, no.~8,
-  pp.~3971--3995, 2020.
+\bibitem{survey:radio}
+T.~Kim~Geok, K.~Zar~Aung, M.~Sandar~Aung, M.~Thu~Soe, A.~Abdaziz, C.~Pao~Liew,
+  F.~Hossain, C.~P. Tso, and W.~H. Yong, ``Review of indoor positioning: Radio
+  wave technology,'' {\em Applied Sciences}, vol.~11, no.~1, 2021.
+
+\bibitem{case:vlc_mobile}
+G.~del Campo-Jimenez, J.~M. Perandones, and F.~J. Lopez-Hernandez, ``A
+  vlc-based beacon location system for mobile applications,'' in {\em 2013
+  International Conference on Localization and GNSS (ICL-GNSS)}, pp.~1--4,
+  2013.
 
 \bibitem{pic:triangulation}
 H.~Hasan, M.~Hussein, S.~mad saad, and M.~A. Mat~Dzahir, ``An overview of local
@@ -78,6 +105,11 @@ M.~Kim and N.~Y. Chong, ``Enhancing rfid location sensing using a dual
 \bibitem{pic:vlc}
 T.~{\c C}evik and S.~Yilmaz, ``An overview of visible light communication
   systems,'' {\em ArXiv}, vol.~abs/1512.03568, 2015.
+
+\bibitem{vlc_adv}
+P.~H. Pathak, X.~Feng, P.~Hu, and P.~Mohapatra, ``Visible light communication,
+  networking, and sensing: A survey, potential and challenges,'' {\em IEEE
+  Communications Surveys and Tutorials}, vol.~17, no.~4, pp.~2047--2077, 2015.
 
 \bibitem{datasheet:led_sfh4545}
 OSRAM Opto Semiconductors Inc., {\em High Power Infrared Emitter (940 nm)}, 11
@@ -136,10 +168,11 @@ W.~Mccluney, {\em Introduction to Radiometry and Photometry 2nd ed: Title Page
   \& Table of Contents}.
 \newblock 11 2015.
 
-\bibitem{case:hypercube}
-T.~Raharijaona, P.~Mignon, R.~Juston, L.~Kerhuel, and S.~Viollet, ``Hypercube:
-  A small lensless position sensing device for the tracking of flickering
-  infrared leds,'' {\em Sensors}, vol.~15, no.~7, pp.~16484--16502, 2015.
+\bibitem{case:orient}
+S.~Shen, S.~Li, and H.~Steendam, ``Simultaneous position and orientation
+  estimation for visible light systems with multiple {LEDs} and multiple
+  {PDs},'' {\em {IEEE} Journal on Selected Areas in Communications}, vol.~38,
+  pp.~1866--1879, aug 2020.
 
 \bibitem{case:cart2d}
 X.~Yu, J.~Wang, and H.~Lu, ``Single led-based indoor positioning system using
@@ -155,5 +188,21 @@ X.~Yu, J.~Wang, and H.~Lu, ``Indoor positioning system based on single led
 S.-H. Yang, E.-M. Jeong, and S.~Han, ``Indoor positioning based on received
   optical power difference by angle of arrival,'' {\em Electronics Letters},
   vol.~50, pp.~49--51, 2014.
+
+\bibitem{case:hypercube}
+T.~Raharijaona, P.~Mignon, R.~Juston, L.~Kerhuel, and S.~Viollet, ``Hypercube:
+  A small lensless position sensing device for the tracking of flickering
+  infrared leds,'' {\em Sensors}, vol.~15, no.~7, pp.~16484--16502, 2015.
+
+\bibitem{vlc}
+S.~U. Rehman, S.~Ullah, P.~H.~J. Chong, S.~Yongchareon, and D.~Komosny,
+  ``Visible light communication: A system perspective---overview and
+  challenges,'' {\em Sensors}, vol.~19, no.~5, 2019.
+
+\bibitem{multipath}
+J.~Barry, J.~Kahn, W.~Krause, E.~Lee, and D.~Messerschmitt, ``Simulation of
+  multipath impulse response for indoor wireless optical channels,'' {\em IEEE
+  Journal on Selected Areas in Communications}, vol.~11, no.~3, pp.~367--379,
+  1993.
 
 \end{thebibliography}
