@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  17 JUL 2022 06:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  18 JUL 2022 23:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1291,7 +1291,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (19.22762pt too wide) in alignment at lines 14--21
+Overfull \hbox (96.42757pt too wide) in alignment at lines 14--21
 [] [] 
  []
 
@@ -1534,64 +1534,60 @@ File: watermark.pdf Graphic file (type pdf)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [32]
-
-LaTeX Warning: Reference `pic:lp_system_structure' on page 33 undefined on input line 968.
-
+File: ch2pic/lp_system_structure.png Graphic file (type bmp)
+<ch2pic/lp_system_structure.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[33]
+ [33]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [34]
-File: ch2pic/config_orient.png Graphic file (type bmp)
-<ch2pic/config_orient.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [35]
+File: ch2pic/config_orient.png Graphic file (type bmp)
+<ch2pic/config_orient.png>
 File: ch2pic/case_parallel.png Graphic file (type bmp)
 <ch2pic/case_parallel.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [36]
+[36]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [37]
 File: ch2pic/hypercube_pd.png Graphic file (type bmp)
 <ch2pic/hypercube_pd.png>
 
-Overfull \hbox (41.25728pt too wide) in paragraph at lines 1177--1178
+Overfull \hbox (41.25728pt too wide) in paragraph at lines 1184--1185
  [][] 
  []
 
 File: ch2pic/hypercube_setup.png Graphic file (type bmp)
 <ch2pic/hypercube_setup.png>
 
-Overfull \hbox (42.67912pt too wide) in paragraph at lines 1183--1184
+Overfull \hbox (42.67912pt too wide) in paragraph at lines 1190--1191
  [][] 
  []
 
 File: ch2pic/hypercube_2led.png Graphic file (type bmp)
 <ch2pic/hypercube_2led.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[37]
-File: ch2pic/layers_2d.png Graphic file (type bmp)
-<ch2pic/layers_2d.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: ch2pic/layers_3d.png Graphic file (type bmp)
-<ch2pic/layers_3d.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [38]
+File: ch2pic/layers_2d.png Graphic file (type bmp)
+<ch2pic/layers_2d.png>
+File: ch2pic/layers_3d.png Graphic file (type bmp)
+<ch2pic/layers_3d.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: ch2pic/case_cart3d.png Graphic file (type bmp)
 <ch2pic/case_cart3d.png>
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1600,73 +1596,112 @@ File: watermark.pdf Graphic file (type pdf)
 [39]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [40]) (./chapter/03Method.tex
+ [40]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [41]
+ [41]) (./chapter/03Method.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [42]
 Chapter 3.
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[42
-
-]
-Chapter 4.
-File: ch3pic/flowchart_pos.png Graphic file (type bmp)
-<ch3pic/flowchart_pos.png>
+File: ch3pic/algorithm_place.png Graphic file (type bmp)
+<ch3pic/algorithm_place.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [43
 
 ]
+Overfull \hbox (1.93298pt too wide) in paragraph at lines 33--35
+[]\TU/TimesNewRoman(0)/m/n/12 LED \TU/DFKai-SB(0)/m/n/12 擺 放 位 置 相 同 並 於 \TU/TimesNewRoman(0)/m/n/12 LED \TU/DFKai-SB(0)/m/n/12 座 標 系 原 點，| $[][][] \OT1/cmr/m/n/12 = [][]$ 
+ []
+
+File: ch3pic/algorithm_flow.png Graphic file (type bmp)
+<ch3pic/algorithm_flow.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: ch3pic/orient_flow.png Graphic file (type bmp)
+<ch3pic/orient_flow.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [44]
-File: ch3pic/solve_targetori.png Graphic file (type bmp)
-<ch3pic/solve_targetori.png>
-) (./chapter/04Optimize.tex
+[44]
+
+LaTeX Warning: Reference `eqn:cosine_ratio ' on page 45 undefined on input line 109.
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [45]
+[45]
+File: ch3pic/solve_surface.png Graphic file (type bmp)
+<ch3pic/solve_surface.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [46]
+[46]
+File: ch3pic/solve_axis.png Graphic file (type bmp)
+<ch3pic/solve_axis.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [47]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [48]) (./chapter/04Analysis.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [49]
+Chapter 4.
+) (./chapter/05Optimize.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [50
+
+]
 Chapter 5.
 File: ch4pic/flowchart_opt.png Graphic file (type bmp)
 <ch4pic/flowchart_opt.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[48
+[51
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [49]
+ [52]
 File: ch3pic/testpoint.jpg Graphic file (type bmp)
 <ch3pic/testpoint.jpg>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [50
+ [53
 
 ]
 File: ch4pic/error.png Graphic file (type bmp)
 <ch4pic/error.png>
 File: ch4pic/variable.png Graphic file (type bmp)
 <ch4pic/variable.png>
-)
+) (./chapter/06Conclusion.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [51
+ [54
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [52] (./thesis.bbl
+ [55]
+Chapter 6.
+)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [53
+ [56
+
+] (./thesis.bbl
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [57
 
 
 ]
@@ -1687,26 +1722,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[54]
+[58]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [55])
+ [59])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [56] (./thesis.aux)
+ [60] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7ECF2DBDEE29E8361C3E648754DBAA81;6687.
+(rerunfilecheck)             Checksum: 4F282A50A2B0BE2063FC2DD4DEC06F69;7851.
  ) 
 Here is how much of TeX's memory you used:
- 37940 strings out of 476919
- 772716 string characters out of 5821840
- 1265295 words of memory out of 5000000
- 57118 multiletter control sequences out of 15000+600000
+ 38015 strings out of 476919
+ 774759 string characters out of 5821840
+ 1267967 words of memory out of 5000000
+ 57183 multiletter control sequences out of 15000+600000
  411468 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,18n,117p,862b,639s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,19n,117p,862b,639s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (59 pages).
+Output written on thesis.pdf (63 pages).

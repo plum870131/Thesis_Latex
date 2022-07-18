@@ -17,7 +17,7 @@
     $x,y,z$ & 座標點$\boldsymbol{P}$的$x,y,z$分量\\
     $\boldsymbol{V}$ & 單位向量\\
     $u,v,w$ & 單位向量$\boldsymbol{V}$的$x,y,z$分量\\
-    $d,\alpha,\beta$ & 球座標系中的天頂角（Zenith Angle）、方位角（Azimuth Angle）、距離分量\\
+    $d,\alpha,\beta$ & 單位向量$\boldsymbol{V}$在球座標系中的天頂角（Zenith Angle）、方位角（Azimuth Angle）、距離分量\\
 \end{longtable}
 
 % \begin{figure}[ht]
@@ -47,6 +47,7 @@
         0_{1\times3} & 1
         \end{array}\right]$ & 齊次轉換矩陣 Homogeneous Transformation Matrix\\
     $\boldsymbol{T}=\left[\begin{array}{ccc}t_x&t_y&t_z\end{array}\right]^T$ & 平移向量 Transfer Vector\\
+    $\boldsymbol{T}^{sph}=\left[\begin{array}{ccc}t_d&t_{\alpha}&t_{\beta}\end{array}\right]^T$ & 平移向量以球座標系表示\\
     $\boldsymbol{Ro}=\left\{\gamma_{ij}\right\}$ & 旋轉矩陣 Rotation Matrix\\
 \end{longtable}
 
@@ -126,6 +127,25 @@
     $\Phi$ & 輻射通量&Radiation Flux& $W$&瓦特（Watt）\\
     $I$ & 輻射強度&Radiation Intensity & $W\cdot sr^{-1}$&瓦特每球面度 \\
     $E$ & 輻照度&Irradiance&$W\cdot m^{-2}$ &瓦特每平方公尺\\
+\end{longtable}
+
+
+\onehalfspacing
+
+\subsection*{系統與演算法}
+
+\begin{longtable}[l]{cl}
+    % $\text{Bell}(\cdot)$ & 鐘形函式\\
+    $t_d$ & 兩座標系之間距離\\
+    $\boldsymbol{Tv}$ & 兩座標系中對方所在方位\\
+    $L,P$ & LED與PD總數\\
+    $l,p$ & LED與PD編號\\
+    $Fl,Fp$ & 過濾後的LED與PD數量\\
+    $Ra$& 餘弦比值\\
+    $r_c$& 取作餘弦比值參考值的硬體編號\\
+    $r_s$& 參考平面由$r_c$與$r_s$編號的硬體資訊獲得\\
+    $N$& 平面法向量\\
+
 \end{longtable}
 
 
