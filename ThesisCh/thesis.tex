@@ -21,7 +21,7 @@
 \setlength{\wpYoffset}{10.5225cm}
 
 %----------- cover page -----------
-% \maketitle
+\maketitle
 
 %----------- side page, used for printing on spline -----------
 % \makeside
@@ -41,10 +41,10 @@
 % \doublespacing
 % \input{FrontFile/abstractEN}
 
-% \doublespacing
-% \onehalfspacing
-% \tableofcontents
-% \listoffigures
+\doublespacing
+\onehalfspacing
+\tableofcontents
+\listoffigures
 % \listoftables
 \input{Chapter/SymbolList.tex}
 
@@ -96,7 +96,8 @@
 
 
 %---------- Input your reference here ---------
-\bibliographystyle{ieeetr}
+% \bibliographystyle{ieeetr}
+\bibliographystyle{unsrt}
 \addcontentsline{toc}{chapter}{\bibname}
 \bibliography{thesisbib.bib}
 

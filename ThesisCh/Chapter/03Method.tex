@@ -1,6 +1,7 @@
-\chapter{LED與PD三維相對位置演算法}
+\chapter{以LED與PD建立三維相對位置之演算法}
 \label{chp:3}
 
+如\ref{chp:LEDPD_problem}章所述，現今LED與PD的定位方法雖具有靈活應用的潛力，然而在單點對單點的定位中，仍未有可以進行三維定位，且不限制目標物與觀察者平行的方法。因此，本章節將提出一定位演算法，利用$L\times P$個LED對PD的電流大小資訊，計算出三維相對定位，且不需限制目標平面與使用者平面平行，並在模型中將LED與PD的朗博次方考慮進去。首先，於\ref{chp:algorithm_constraint}章中定義本方法的拘束條件，再於\ref{chp:algorithm_filter}章中針對電流資訊進行過濾，於\ref{chp:algorithm}章中解釋如何由過濾過的訊號，計算出三維相對定位。
 
 % 前言
 % description：現有限制與目標
@@ -14,10 +15,10 @@
     \label{pic:algorithm_coor}
 \end{figure}
 
-由於大多文獻在討輪三維定位時是以卡式座標系定義$^{PL}\boldsymbol{T}=\left[\begin{array}{ccc}t_x&t_y&t_z\end{array}\right]^T$，而我們提出的演算法則是以球座標系定義$^{PL}\boldsymbol{T}^{sph}=\left[\begin{array}{ccc}t_d&t_{\alpha}&t_{\beta}\end{array}\right]^T$，因此我們要求出的三個未知數為$t_d,t_alpha,t_beta$三項，$t_d$即為兩座標系之間的距離，而$t_{\alpha},t_{\beta}$則為LED座標系所在「方位」，其中方位以球座標系表示：$^{PL}\boldsymbol{Tv}^{sph} = \left[\begin{array}{ccc}1&t_{\alpha}&t_{\beta}\end{array}\right]^T$，方位為於單位向量，可用單位圓表示。
+由於大多文獻在討輪三維定位時是以卡式座標系定義$^{PL}\boldsymbol{T}=\left[\begin{array}{ccc}t_x&t_y&t_z\end{array}\right]^T$，而我們提出的演算法則是以球座標系定義$^{PL}\boldsymbol{T}^{sph}=\left[\begin{array}{ccc}t_d&t_{\alpha}&t_{\beta}\end{array}\right]^T$，因此我們要求出的三個未知數為$t_d,t_\alpha,t_\beta$三項，$t_d$即為兩座標系之間的距離，而$t_{\alpha},t_{\beta}$則為LED座標系所在「方位」，其中方位以球座標系表示：$^{PL}\boldsymbol{Tv}^{sph} = \left[\begin{array}{ccc}1&t_{\alpha}&t_{\beta}\end{array}\right]^T$，方位為單位向量，可用單位圓表示方位的可行解範圍。
 
 
-本章節將提出一定位演算法，利用$L\times P$個LED對PD的電流大小資訊，計算出三維相對定位，且不需限制目標物與使用者平行，並在模型中將LED與PD的朗博次方考慮進去。首先，於\ref{chp:algorithm_constraint}章中定義本方法的拘束條件，再於\ref{chp:algorithm_filter}章中針對電流資訊進行過濾，於\ref{chp:algorithm}章中解釋如何由過濾過的訊號，計算出三維相對定位。
+
 
 
 
@@ -27,7 +28,7 @@
 
     \begin{description}
 
-        \item[1. 硬體選用限制：]系統使用的LED皆為同款式，PD毅然。
+        \item[1. 硬體選用限制：]系統使用的LED皆為同款式，PD亦然。
         \item[2. PD組態限制：]PD擺放位置相同並於PD座標系原點，$^P\boldsymbol{P}_p=
         \left[\begin{array}{ccc}0&0&0\end{array}\right]^T$
         \item[3. LED組態限制：]LED擺放位置相同並於LED座標系原點，$^L\boldsymbol{P}_l=
@@ -90,7 +91,7 @@
     \subsubsection{對同一LED，兩PD比較得到入射角餘弦比值}
     \label{chp:cosine_ratio}
     
-        當我們僅考慮第$l$個LED時，各PD接收的訊號，LED出射角$\theta$以及距離$D$都一樣；因此，式\ref{eqn:model_algorithm_filter}可簡化，而我們於式\ref{eqn:cosine_ratio}中，將不同PD對同樣第$l$個LED的強度訊號相除，可得到餘弦比值的朗博次方。藉由將其開朗博次方根，我們得到兩PD對同LED的入射角餘弦比值$Ra$。
+        當我們僅考慮第$l$個LED時，各PD接收的訊號，LED出射角$\theta$以及距離$D$都一樣；因此，式\ref{eqn:model_algorithm_filter}可簡化，而我們於式\ref{eqn:cosine_ratio}中，將不同PD對同樣第$l$個LED的強度訊號相除，可得到入射角餘弦比值的朗博次方。藉由將其開朗博次方根，我們得到編號$p_1$與$p_2$的PD，對第$l$個LED入射角餘弦比值$Ra_{p_1p_2}$。
     
         \begin{equation}
             \label{eqn:cosine_ratio}
@@ -100,13 +101,15 @@
             \end{aligned}
         \end{equation}
 
-        對第$l$個LED來說，過濾過後的訊號有$Fp_l$個，我們選擇第$r_c$個PD當作參考值，將其作為分母，其他PD電流值與其相比，得到$Fp_l-1$個比值$Ra_{pr_c}$
+        為了更有系統性的進行兩兩比較，我們選擇一參考值，其餘訊號都與參考值比較，即可有效率的完成兩兩比較的動作。其中，對第$l$個LED來說，過濾過後的訊號有$Fp_l$個，我們選擇第$r_c$個PD當作參考值，將其作為分母，其他PD電流值與其相比，得到$Fp_l-1$個比值$Ra_{pr_c}$
 
     \subsubsection{滿足入射角餘弦比值的方位為通過原點之平面}
     \label{chp:solve_surface}
         
-        於式\ref{eqn:cosine_ratio
-        }中得到兩入射角餘弦比值，而我們需要從餘弦比值中得到方位關係。首先，將式中的PD入射角$\phi_{lp}$，就是PD組態的指向$^P\boldsymbol{V}_p$與入射方位$^{PL}\boldsymbol{Tv}$的內積，如式\ref{eqn:phi2dot}。而此式經過整理呈現於式\ref{eqn:surface}，透過移項整理，並將方位以卡氏座標系呈現於式\ref{eqn:surface_normal}：$^{PL}\boldsymbol{Tv}=\left[\begin{array}{ccc}^{PL}tv_u&^{PL}tv_u&^{PL}tv_u\end{array}\right]^T$
+        於式\ref{eqn:cosine_ratio}中得到兩入射角餘弦比值，而我們需要從餘弦比值中得到方位關係，然而兩角度的餘弦比值並沒有單一解，僅能將可能方位縮減成一通過原點之平面。
+        
+        首先，將式中的PD入射角$\phi_{lp}$，就是PD指向$^P\boldsymbol{V}_p$與入射方位$^{PL}\boldsymbol{Tv}$的內積，如式\ref{eqn:phi2dot}。而此式經過移項整理呈現於式\ref{eqn:surface}，其中，PD座標系中，LED座標系所在方位以卡氏座標系表示如$^{PL}\boldsymbol{Tv}=\left[\begin{array}{ccc}^{PL}tv_u&^{PL}tv_v&^{PL}tv_w\end{array}\right]^T$。
+     
 
         \begin{equation}
             \label{eqn:phi2dot}
@@ -157,12 +160,12 @@
             \label{eqn:solve_axis}
              \hat{{^{PL}\boldsymbol{Tv}}_{p{r_sr_c}}} = 
              \begin{cases}
-                (\boldsymbol{N}_{pr_c}\times \boldsymbol{N}_{r_sr_c}),(\boldsymbol{N}_{pr_c}\times \boldsymbol{N}_{r_sr_c})>0\\
-                -(\boldsymbol{N}_{pr_c}\times \boldsymbol{N}_{r_sr_c}),\text{else}
+                (\boldsymbol{N}_{pr_c}\times \boldsymbol{N}_{r_sr_c})&,(\boldsymbol{N}_{pr_c}\times \boldsymbol{N}_{r_sr_c})>0\\
+                -(\boldsymbol{N}_{pr_c}\times \boldsymbol{N}_{r_sr_c})&,\text{else}
              \end{cases}
         \end{gather}
 
-        利用$Fp_l-1$個平面，除了作為參考平面的$\boldsymbol{N}_{r_sr_c}$，我們將他以外的$Fp_l-2$個平面與其外積得$Fp_l-2$個計算出的方位$\hat{{^{PL}\boldsymbol{Tv}}_{p{r_sr_c}}}$。
+        我們利用\ref{chp:cosine_ratio}章中產生的$Fp_l-1$個平面，選擇其中一個作為參考平面，將他以外的$Fp_l-2$個平面與其參考平面外積，得$Fp_l-2$個計算出的方位$\hat{{^{PL}\boldsymbol{Tv}}_{p{r_sr_c}}}$。
 
 
     \subsubsection{平均方位}
@@ -249,7 +252,7 @@
         \end{equation}
 
 
-
+        式\ref{eqn:solve_dis}中得到的$L\times P$個距離解，於式\ref{eqn:average_dis}中平均得到解。
 
         \begin{equation}
             \label{eqn:average_dis}
@@ -266,22 +269,31 @@
 
 介紹完本研究所提出的演算法，在這裡以條列分析此演算法的優缺點。
 
-優點如下：
 
 \begin{description}
-
-    \item[- 人眼可視與否]\hfill 
+    \item[1. 優點：]\hfill
     
-    \qquad
+    \begin{description}
+        \item[- 目標物與量測者不需平行：]現今研究中，單點對單點的定位中，大多會限制目標物需與量測者平行，此限制可使式\ref{eqn:model}光傳播模型中的變數只剩距離$D$與出入射角$\phi=\theta$。同時，由於
+        
+        \item[- 可獲得目標物姿態：] 本研究提出的方法除了三維相對位置$^{PL}\boldsymbol{T}$，還能夠得到目標物的姿態，也就是LED座標系中PD座標系所在方位$^{LP}\boldsymbol{Tv}$，這項資訊在LED與PD定位方法中較少出現。
+        
+        \item[- 考量LED與PD的朗博次方：]完整的考量LED與PD的朗博次方，可使挑選LED與PD的硬體時，更貼近實際，挑選市面上的硬體時不用侷限在朗博次方為一，也使系統的靈活度更高。
+        
+        \item[- 靈活度高：] 此演算法並不像大多文獻中會限制LED與PD組態，例如常見限制組態中天頂角$\alpha$需相同，而LED與PD數量也可改變，只要兩者數量都大於三，可視範圍內便可進行定位。因此靈活度高，設計上可調整的變數多，即可針對不同情境調整。
+    
+    \end{description}
 
+    \item[2. 缺點：] \hfill
+    
+    \begin{description}
+        \item[- 演算法較為複雜：]  限制多的演算法，大多可以透過簡單的矩陣或方程式運算得到定位；相較起來，本研究所提出的演算法需要先解出兩座標系互相的方位，進而計算出$L\times P$個出入射角來計算距離，演算法較為複雜。
+        \item[- 多LED對多PD定位系統的難度：] 多LED與多PD的定位系統，由於光通訊的硬體尚未被商業化，因此在文獻上較少有硬體的實驗驗整，所以在評估演算法時，大多僅能透過模擬。這樣會使評估缺乏可信度，僅能夠探討系統發展的可能性，而模擬與實際上的差異則需要被注意。
+    \end{description}
+    
 \end{description}
 
-缺點如下：
-
-% -----------------------------------------------------------
-
-% -----------------------------------------------------------
-
+介紹完本研究提出的演算法後，我們需要分析此演算法在定位上的效果，以及各參數對定位表現的影響，因此於\ref{chp:4}中，建立模擬環境模擬多LED與多PD的定位系統，套用本章節提出的定位演算法，進行誤差分析。
 
 
 
