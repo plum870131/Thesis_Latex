@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  23 JUL 2022 08:33
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  25 JUL 2022 23:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1362,31 +1362,34 @@ File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [4
 
-])
+]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [5])
 \tf@lof=\write10
 \openout10 = `thesis.lof'.
 
  (./Chapter/SymbolList.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [5]
+ [6]
 Overfull \hbox (96.42757pt too wide) in alignment at lines 14--21
 [] [] 
  []
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[6
+[7
 
 ]
 File: ch1pic/not_whole.png Graphic file (type bmp)
 <ch1pic/not_whole.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [7])
+ [8])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [8] (./chapter/01Introduction.tex
+ [9] (./chapter/01Introduction.tex
 Chapter 1.
 File: ch1pic/iot.png Graphic file (type bmp)
 <ch1pic/iot.png>
@@ -1736,39 +1739,125 @@ File: watermark.pdf Graphic file (type pdf)
  [50]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [51]) (./chapter/04Analysis.tex
+ [51]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [52]
+ [52]) (./chapter/04Analysis.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [53]
 Chapter 4.
-File: ch4pic/simulation_flow.png Graphic file (type bmp)
-<ch4pic/simulation_flow.png>
-File: ch4pic/error.png Graphic file (type bmp)
-<ch4pic/error.png>
+File: ch4pic/simulate_hardware.png Graphic file (type bmp)
+<ch4pic/simulate_hardware.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[53
-
-]) (./chapter/05Optimize.tex
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [54]
-Chapter 5.
-) (./chapter/06Conclusion.tex
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [55
+[54
 
 ]
+File: ch4pic/simulation_flow.png Graphic file (type bmp)
+<ch4pic/simulation_flow.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [55]
+File: ch4pic/error.png Graphic file (type bmp)
+<ch4pic/error.png>
+File: ch4pic/translate_sample.png Graphic file (type bmp)
+<ch4pic/translate_sample.png>
+File: ch4pic/rotate_sample.png Graphic file (type bmp)
+<ch4pic/rotate_sample.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[56]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [57]
+File: ch4pic/sample_out.png Graphic file (type bmp)
+<ch4pic/sample_out.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [58]
+File: ch4pic/m_translate.png Graphic file (type bmp)
+<ch4pic/m_translate.png>
+File: ch4pic/m_rotate.png Graphic file (type bmp)
+<ch4pic/m_rotate.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_effect.png Graphic file (type bmp)
+<ch4pic/m_effect.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[59]
+File: ch4pic/alpha_translate.png Graphic file (type bmp)
+<ch4pic/alpha_translate.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_rotate.png Graphic file (type bmp)
+<ch4pic/m_rotate.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_effect.png Graphic file (type bmp)
+<ch4pic/m_effect.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[60]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [61]) (./chapter/05Optimize.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [62]
+Chapter 5.
+File: ch5pic/optimize_flow.png Graphic file (type bmp)
+<ch5pic/optimize_flow.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[63
+
+]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [64]
+File: ch5pic/optimize_variable.png Graphic file (type bmp)
+<ch5pic/optimize_variable.png>
+File: ch5pic/opt_result.png Graphic file (type bmp)
+<ch5pic/opt_result.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[65]) (./chapter/06Conclusion.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [66]
 Chapter 6.
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[56
+[67
 
 ])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [57] (./thesis.bbl
+ [68] (./thesis.bbl
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
@@ -1786,34 +1875,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--41
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[58
+[69
 
 
 ]
 Missing character: There is no ‐ (U+2010) in font Times New Roman/AAT:mapping=tex-text;!
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [59]
+ [70]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [60])
+ [71])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [61] (./thesis.aux)
+ [72] (./thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E91ED8109F8FA9368FF10D2D8FE7237E;8504.
+(rerunfilecheck)             Checksum: 6AB540189C1C298A5EF6EDF27675D82C;8670.
  ) 
 Here is how much of TeX's memory you used:
- 38063 strings out of 476919
- 776150 string characters out of 5821840
- 1269965 words of memory out of 5000000
- 57221 multiletter control sequences out of 15000+600000
+ 38162 strings out of 476919
+ 778318 string characters out of 5821840
+ 1271294 words of memory out of 5000000
+ 57307 multiletter control sequences out of 15000+600000
  414602 words of font info for 105 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  106i,19n,117p,862b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (70 pages).
+Output written on thesis.pdf (82 pages).

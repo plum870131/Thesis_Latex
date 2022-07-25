@@ -9,45 +9,45 @@ Warning--empty author and editor in astm
 Warning--there's a number but no series in astm
 Warning--empty publisher in astm
 Warning--empty publisher in radiometry_and_photometry
-You've used 41 entries,
+You've used 42 entries,
             1791 wiz_defined-function locations,
-            675 strings with 11244 characters,
-and the built_in function-call counts, 9710 in all, are:
-= -- 794
-> -- 507
+            680 strings with 11322 characters,
+and the built_in function-call counts, 9801 in all, are:
+= -- 802
+> -- 508
 < -- 9
-+ -- 185
++ -- 186
 - -- 144
-* -- 700
-:= -- 1523
-add.period$ -- 121
-call.type$ -- 41
+* -- 705
+:= -- 1534
+add.period$ -- 123
+call.type$ -- 42
 change.case$ -- 35
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 436
-empty$ -- 942
+cite$ -- 48
+duplicate$ -- 442
+empty$ -- 955
 format.name$ -- 144
-if$ -- 2197
+if$ -- 2219
 int.to.chr$ -- 0
-int.to.str$ -- 41
+int.to.str$ -- 42
 missing$ -- 36
-newline$ -- 203
+newline$ -- 207
 num.names$ -- 38
-pop$ -- 119
+pop$ -- 122
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 214
+skip$ -- 216
 stack$ -- 0
 substring$ -- 560
-swap$ -- 112
+swap$ -- 113
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
 while$ -- 71
-width$ -- 43
-write$ -- 432
+width$ -- 44
+write$ -- 440
 (There were 6 warnings)

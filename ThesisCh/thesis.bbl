@@ -245,4 +245,8 @@ J.R. Barry, J.M. Kahn, W.J. Krause, E.A. Lee, and D.G. Messerschmitt.
 \newblock {\em IEEE Journal on Selected Areas in Communications},
   11(3):367--379, 1993.
 
+\bibitem{datasheet:BPW}
+Vishay Semiconductors.
+\newblock {\em Silicon PN Photodiode BPW20RF}, 08 2005.
+
 \end{thebibliography}

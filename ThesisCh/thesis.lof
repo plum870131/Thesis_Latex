@@ -1,4 +1,4 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces 符號小標解釋\relax }}{viii}{figure.caption.4}%
+\contentsline {figure}{\numberline {1}{\ignorespaces 符號小標解釋\relax }}{ix}{figure.caption.4}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces 物聯網應用的領域\cite {iot}\relax }}{1}{figure.caption.5}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces 想像使用情境\relax }}{2}{figure.caption.6}%
@@ -56,8 +56,21 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces 滿足入射角餘弦比值$Ra$的方位為通過原點之平面\relax }}{49}{figure.caption.56}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces 兩平面交於一軸\relax }}{50}{figure.caption.57}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 模擬多LED對多PD定位系統的流程圖\relax }}{53}{figure.caption.58}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 樣本點與誤差\relax }}{54}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 多LED對多PD定位系統以硬體驗證與軟體模擬的流程圖\relax }}{54}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 模擬流程圖\relax }}{55}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 樣本點與誤差\relax }}{56}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 平移樣本點\relax }}{57}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 旋轉樣本點\relax }}{57}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 容許範圍內的樣本點比例\relax }}{59}{figure.caption.65}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 改變朗博次方對平移樣本點的影響\relax }}{59}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces 改變朗博次方對旋轉樣本點的影響\relax }}{60}{figure.caption.67}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces 改變朗博次方對系統的影響\relax }}{60}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces 改變硬體指向對平移樣本點的影響\relax }}{61}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces 改變硬體指向對旋轉樣本點的影響\relax }}{61}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces 改變硬體指向對系統的影響\relax }}{62}{figure.caption.71}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 最佳化流程圖\relax }}{64}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 最佳化變數\relax }}{65}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 最佳化結果\relax }}{66}{figure.caption.74}%
 \addvspace {10\p@ }
 \contentsfinish 
