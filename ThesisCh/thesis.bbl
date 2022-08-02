@@ -207,18 +207,18 @@ Christian~A. Gueymard.
   and solar radiation models.
 \newblock {\em Solar Energy}, 76(4):423--453, 2004.
 
-\bibitem{radiometry_and_photometry}
-William Mccluney.
-\newblock {\em Introduction to Radiometry and Photometry 2nd ed: Title Page \&
-  Table of Contents}.
-\newblock 11 2015.
-
 \bibitem{case:orient}
 Shengqiang Shen, Shiyin Li, and Heidi Steendam.
 \newblock Simultaneous position and orientation estimation for visible light
   systems with multiple {LEDs} and multiple {PDs}.
 \newblock {\em {IEEE} Journal on Selected Areas in Communications},
   38(8):1866--1879, aug 2020.
+
+\bibitem{radiometry_and_photometry}
+William Mccluney.
+\newblock {\em Introduction to Radiometry and Photometry 2nd ed: Title Page \&
+  Table of Contents}.
+\newblock 11 2015.
 
 \bibitem{datasheet:led_vsma}
 Vishay.
@@ -244,9 +244,5 @@ J.R. Barry, J.M. Kahn, W.J. Krause, E.A. Lee, and D.G. Messerschmitt.
   channels.
 \newblock {\em IEEE Journal on Selected Areas in Communications},
   11(3):367--379, 1993.
-
-\bibitem{datasheet:BPW}
-Vishay Semiconductors.
-\newblock {\em Silicon PN Photodiode BPW20RF}, 08 2005.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  25 JUL 2022 23:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  2 AUG 2022 13:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1550,41 +1550,46 @@ File: watermark.pdf Graphic file (type pdf)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [23]
+File: ch2pic/lp_system_structure.png Graphic file (type bmp)
+<ch2pic/lp_system_structure.png>
+File: ch2pic/ml_pd_config.png Graphic file (type bmp)
+<ch2pic/ml_pd_config.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: ch2pic/lp_system_flow.png Graphic file (type bmp)
+<ch2pic/lp_system_flow.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[24]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [25]
 File: ch2pic/photometry_table.png Graphic file (type bmp)
 <ch2pic/photometry_table.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [24]
+ [26]
 File: ch2pic/solid_angle.png Graphic file (type bmp)
 <ch2pic/solid_angle.png>
-File: ch2pic/intensity_irradiance.png Graphic file (type bmp)
-<ch2pic/intensity_irradiance.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [25]
+ [27]
+File: ch2pic/intensity_irradiance.png Graphic file (type bmp)
+<ch2pic/intensity_irradiance.png>
 File: ch2pic/vec_config.png Graphic file (type bmp)
 <ch2pic/vec_config.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [26]
+ [28]
 File: ch2pic/LED_config.png Graphic file (type bmp)
 <ch2pic/LED_config.png>
 File: ch2pic/lambertian.png Graphic file (type bmp)
 <ch2pic/lambertian.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [27]
-File: ch2pic/3d_angle.png Graphic file (type bmp)
-<ch2pic/3d_angle.png>
-File: ch2pic/lambertian_3d.png Graphic file (type bmp)
-<ch2pic/lambertian_3d.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [28]
-File: ch2pic/hardware_para.png Graphic file (type bmp)
-<ch2pic/hardware_para.png>
-File: ch2pic/lambertian_led.png Graphic file (type bmp)
-<ch2pic/lambertian_led.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1592,29 +1597,41 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [29]
+File: ch2pic/3d_angle.png Graphic file (type bmp)
+<ch2pic/3d_angle.png>
+File: ch2pic/lambertian_3d.png Graphic file (type bmp)
+<ch2pic/lambertian_3d.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [30]
-File: ch2pic/interactive_1to1.png Graphic file (type bmp)
-<ch2pic/interactive_1to1.png>
+File: ch2pic/hardware_para.png Graphic file (type bmp)
+<ch2pic/hardware_para.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [31]
+File: ch2pic/lambertian_led.png Graphic file (type bmp)
+<ch2pic/lambertian_led.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [32]
+File: ch2pic/interactive_1to1.png Graphic file (type bmp)
+<ch2pic/interactive_1to1.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[33]
 File: ch2pic/interactive_mul.png Graphic file (type bmp)
 <ch2pic/interactive_mul.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [32]
+ [34]
+File: ch2pic/relative_vs_coor.png Graphic file (type bmp)
+<ch2pic/relative_vs_coor.png>
 File: ch2pic/model_transform_flow.png Graphic file (type bmp)
 <ch2pic/model_transform_flow.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [33]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [34]
-File: ch2pic/lp_system_structure.png Graphic file (type bmp)
-<ch2pic/lp_system_structure.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1625,33 +1642,32 @@ File: watermark.pdf Graphic file (type pdf)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [36]
-File: ch2pic/config_orient.png Graphic file (type bmp)
-<ch2pic/config_orient.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[37]
-File: ch2pic/case_parallel.png Graphic file (type bmp)
-<ch2pic/case_parallel.png>
+ [37]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [38]
-File: ch2pic/hypercube_pd.png Graphic file (type bmp)
-<ch2pic/hypercube_pd.png>
+File: ch2pic/config_orient.png Graphic file (type bmp)
+<ch2pic/config_orient.png>
+File: ch2pic/case_parallel.png Graphic file (type bmp)
+<ch2pic/case_parallel.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[39]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [40]
+File: ch2pic/hypercube_pd.png Graphic file (type bmp)
+<ch2pic/hypercube_pd.png>
 File: ch2pic/hypercube_setup.png Graphic file (type bmp)
 <ch2pic/hypercube_setup.png>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (72.85477pt too wide) in paragraph at lines 1200--1202
+Overfull \hbox (72.85477pt too wide) in paragraph at lines 1232--1234
 \OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 /\OML/cmm/m/it/12 t[]; [] ^^^[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 /\OML/cmm/m/it/12 t[]; [] ^^^[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 /\OML/cmm/m/it/12 t[]$\TU/DFKai-SB(0)/m/n/12 ，|  而 方 位 角 $\OML/cmm/m/it/12 t[] \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 /\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 ) = []([] \OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 / [] \OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 ) =
  []
 
@@ -1662,10 +1678,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[39]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [40]
+[41]
 File: ch2pic/layers_2d.png Graphic file (type bmp)
 <ch2pic/layers_2d.png>
 File: ch2pic/layers_3d.png Graphic file (type bmp)
@@ -1674,158 +1687,163 @@ File: ch2pic/layers_3d.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[42]
 File: ch2pic/case_cart3d.png Graphic file (type bmp)
 <ch2pic/case_cart3d.png>
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[41]
+[43]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [42]
+ [44]) (./chapter/03Method.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [43]) (./chapter/03Method.tex
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [44]
+ [45]
 Chapter 3.
-File: ch3pic/algorithm_place.png Graphic file (type bmp)
-<ch3pic/algorithm_place.png>
+File: ch3pic/chp3_flow.png Graphic file (type bmp)
+<ch3pic/chp3_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[45
+[46
 
 ]
-Overfull \hbox (1.93298pt too wide) in paragraph at lines 34--36
+Overfull \hbox (3.71828pt too wide) in paragraph at lines 31--33
+[]\TU/TimesNewRoman(0)/m/n/12 PD \TU/DFKai-SB(0)/m/n/12 擺 放 位 置 相 同 並 於 \TU/TimesNewRoman(0)/m/n/12 PD \TU/DFKai-SB(0)/m/n/12 座 標 系 原 點，| $[][][] \OT1/cmr/m/n/12 = [][]$ 
+ []
+
+
+Overfull \hbox (25.93298pt too wide) in paragraph at lines 33--35
 []\TU/TimesNewRoman(0)/m/n/12 LED \TU/DFKai-SB(0)/m/n/12 擺 放 位 置 相 同 並 於 \TU/TimesNewRoman(0)/m/n/12 LED \TU/DFKai-SB(0)/m/n/12 座 標 系 原 點，| $[][][] \OT1/cmr/m/n/12 = [][]$ 
  []
 
-File: ch3pic/algorithm_flow.png Graphic file (type bmp)
-<ch3pic/algorithm_flow.png>
+File: ch3pic/algorithm_place.png Graphic file (type bmp)
+<ch3pic/algorithm_place.png>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[46]
-File: ch3pic/orient_flow.png Graphic file (type bmp)
-<ch3pic/orient_flow.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (14.7819pt too wide) in paragraph at lines 52--53
+[][]$\TU/DFKai-SB(0)/m/n/12 ，|  而 我 們 提 出 的 演 算 法 則 是 以 球 座 標 系 定 義 $[][][] \OT1/cmr/m/n/12 = [][]$\TU/DFKai-SB(0)/m/n/12 ，|
+ []
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [47]
+File: ch3pic/after_filter.png Graphic file (type bmp)
+<ch3pic/after_filter.png>
+File: ch3pic/algorithm_flow.png Graphic file (type bmp)
+<ch3pic/algorithm_flow.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [48]
-File: ch3pic/solve_surface.png Graphic file (type bmp)
-<ch3pic/solve_surface.png>
-File: ch3pic/solve_axis.png Graphic file (type bmp)
-<ch3pic/solve_axis.png>
+[48]
+Overfull \hbox (9.93904pt too wide) in paragraph at lines 98--99
+[]\TU/DFKai-SB(0)/m/n/12 解 方 位 的 流 程 詳 細 如 圖[][]\TU/TimesNewRoman(0)/m/n/12 3.5[][]\TU/DFKai-SB(0)/m/n/12 ，|  於[][]\TU/TimesNewRoman(0)/m/n/12 3.3.1.1[][]\TU/DFKai-SB(0)/m/n/12 章 到[][]\TU/TimesNewRoman(0)/m/n/12 3.3.1.4[][]\TU/DFKai-SB(0)/m/n/12 章 詳 細 介 紹 取 得 方 位 $[][][] \OT1/cmr/m/n/12 =
+ []
 
+File: ch3pic/orient_flow.png Graphic file (type bmp)
+<ch3pic/orient_flow.png>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch3pic/1led_mulpd.png Graphic file (type bmp)
+<ch3pic/1led_mulpd.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [49]
+
+LaTeX Warning: Text page 50 contains only floats.
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [50]
+[50]
+File: ch3pic/solve_surface.png Graphic file (type bmp)
+<ch3pic/solve_surface.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [51]
+[51]
+File: ch3pic/solve_axis.png Graphic file (type bmp)
+<ch3pic/solve_axis.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [52]) (./chapter/04Analysis.tex
+ [52]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [53]
+File: ch3pic/mulled_1pd.png Graphic file (type bmp)
+<ch3pic/mulled_1pd.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [54]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [55]) (./chapter/04Analysis.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [56]
 Chapter 4.
 File: ch4pic/simulate_hardware.png Graphic file (type bmp)
 <ch4pic/simulate_hardware.png>
+
+LaTeX Warning: Reference `chp:system_evaluate' on page 57 undefined on input line 16.
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[54
+[57
 
 ]
-File: ch4pic/simulation_flow.png Graphic file (type bmp)
-<ch4pic/simulation_flow.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [55]
-File: ch4pic/error.png Graphic file (type bmp)
-<ch4pic/error.png>
-File: ch4pic/translate_sample.png Graphic file (type bmp)
-<ch4pic/translate_sample.png>
-File: ch4pic/rotate_sample.png Graphic file (type bmp)
-<ch4pic/rotate_sample.png>
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[56]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [57]
-File: ch4pic/sample_out.png Graphic file (type bmp)
-<ch4pic/sample_out.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [58]
-File: ch4pic/m_translate.png Graphic file (type bmp)
-<ch4pic/m_translate.png>
-File: ch4pic/m_rotate.png Graphic file (type bmp)
-<ch4pic/m_rotate.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [59]
+Missing character: There is no ˊ (U+02CA) in font Times New Roman/AAT:mapping=tex-text;!
+File: ch4pic/evaluate_flow.png Graphic file (type bmp)
+<ch4pic/evaluate_flow.png>
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `pic:simulation_flow' on page 60 undefined on input line 136.
 
-File: ch4pic/m_effect.png Graphic file (type bmp)
-<ch4pic/m_effect.png>
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `chp:scenario' on page 60 undefined on input line 136.
+
+
+LaTeX Warning: Reference `chp:hardware_design' on page 60 undefined on input line 136.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[59]
-File: ch4pic/alpha_translate.png Graphic file (type bmp)
-<ch4pic/alpha_translate.png>
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: ch4pic/m_rotate.png Graphic file (type bmp)
-<ch4pic/m_rotate.png>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: ch4pic/m_effect.png Graphic file (type bmp)
-<ch4pic/m_effect.png>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[60]) (./chapter/05Optimize.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[60]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [61]) (./chapter/05Optimize.tex
+ [61]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [62]
 Chapter 5.
+
+LaTeX Warning: Reference `chp:scenario' on page 63 undefined on input line 6.
+
 File: ch5pic/optimize_flow.png Graphic file (type bmp)
 <ch5pic/optimize_flow.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `chp:system_perform' on page 63 undefined on input line 30.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
@@ -1835,74 +1853,4 @@ File: watermark.pdf Graphic file (type pdf)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [64]
-File: ch5pic/optimize_variable.png Graphic file (type bmp)
-<ch5pic/optimize_variable.png>
-File: ch5pic/opt_result.png Graphic file (type bmp)
-<ch5pic/opt_result.png>
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[65]) (./chapter/06Conclusion.tex
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [66]
-Chapter 6.
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[67
-
-])
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [68] (./thesis.bbl
-
-Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
-(xeCJK)                
-(xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
-
-
-Underfull \hbox (badness 1694) in paragraph at lines 37--41
-[]\TU/TimesNewRoman(0)/m/n/12 OpenCV.  Detection of aruco markers.  Retrieved Jul 2022 from: [][]$[][][][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--41
-[] [] [][][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][][][][][][][][][][][] [] [][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] []
- []
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[69
-
-
-]
-Missing character: There is no ‐ (U+2010) in font Times New Roman/AAT:mapping=tex-text;!
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [70]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [71])
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [72] (./thesis.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.28pt have occurred.
-
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 6AB540189C1C298A5EF6EDF27675D82C;8670.
- ) 
-Here is how much of TeX's memory you used:
- 38162 strings out of 476919
- 778318 string characters out of 5821840
- 1271294 words of memory out of 5000000
- 57307 multiletter control sequences out of 15000+600000
- 414602 words of font info for 105 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 106i,19n,117p,862b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on thesis.pdf (82 pages).
+File: ch5pic/o
