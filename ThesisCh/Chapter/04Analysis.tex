@@ -24,10 +24,10 @@
 
 
 
-\subsection{模擬系統設計}
+\subsection{系統設計模擬}
 \label{chp:system_design}
 
-系統設計需決定硬體數量$L,P$，以及硬體的規格與組態，在此章節將敘述軟體模擬中需設定的數值，以及與實際硬體系統設計時的差異。
+系統設計中，我們需決定硬體數量$L,P$，以及硬體的規格與組態，在此章節將敘述軟體模擬中需設定的數值，以及與實際硬體系統設計時的差異。
 
 硬體數量的部分，參考\ref{chp:orient_conclu}章中所述，LED與PD數量各需要最少三個來達成三維定位，因此在設定數量$L,P$時需確定其大於等於3。
 
@@ -84,10 +84,18 @@
         Is_{lp}=\sqrt{2qIe_{lp}B}
     \end{gather}
 
+    除了加上誤差以外，我還需評估硬體的解析度，光電二極體的解析度可以用雜訊等效功率（noise equivalent power，以下簡稱NEP）描述，在模擬訊號時的解析度以NEP決定，而NEP大小則取自硬體規格表。
 
+    \subsection{計算定位結果}
 
-\section{模擬定位結果}
+    我們將上述的系統設計、相對位置、誤差模擬等以數值帶入模型，透過圖\ref{pic:simulate_hardware}中軟體模擬的流程計算不同系統設計下，兩硬體於空間中各位置的定位誤差。
+
+    有了流程之後，我們即可將欲評估的系統設計與相對位置帶入，利用計算出的定位與定義相對位置的平移向量$^{PL}\boldsymbol{T}$
+
+\section{計算定位結果}
 \label{chp:simulate_result}
+
+
 
 在此段落，我們將上述的系統設計、相對位置、誤差模擬等以數值帶入模型，透過圖\ref{pic:simulate_hardware}中軟體模擬的流程計算不同系統設計下，兩硬體於空間中各位置的定位誤差。使用的參數於\ref{chp:simulate_para}章中紀錄，而模擬的結果呈現於\ref{chp:simulate_result_sub}章中。
 

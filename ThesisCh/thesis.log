@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  2 AUG 2022 13:52
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  3 AUG 2022 09:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1812,21 +1812,22 @@ File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [59]
 Missing character: There is no ˊ (U+02CA) in font Times New Roman/AAT:mapping=tex-text;!
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [60]
 File: ch4pic/evaluate_flow.png Graphic file (type bmp)
 <ch4pic/evaluate_flow.png>
 
 
-LaTeX Warning: Reference `pic:simulation_flow' on page 60 undefined on input line 136.
+LaTeX Warning: Reference `pic:simulation_flow' on page 61 undefined on input line 144.
 
 
-LaTeX Warning: Reference `chp:scenario' on page 60 undefined on input line 136.
+LaTeX Warning: Reference `chp:scenario' on page 61 undefined on input line 144.
 
 
-LaTeX Warning: Reference `chp:hardware_design' on page 60 undefined on input line 136.
+LaTeX Warning: Reference `chp:hardware_design' on page 61 undefined on input line 144.
 
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[60]) (./chapter/05Optimize.tex
+) (./chapter/05Optimize.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [61]
@@ -1853,4 +1854,80 @@ File: watermark.pdf Graphic file (type pdf)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [64]
-File: ch5pic/o
+File: ch5pic/optimize_variable.png Graphic file (type bmp)
+<ch5pic/optimize_variable.png>
+
+
+LaTeX Warning: Reference `chp:scenario' on page 65 undefined on input line 71.
+
+File: ch5pic/opt_result.png Graphic file (type bmp)
+<ch5pic/opt_result.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[65]) (./chapter/06Conclusion.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [66]
+Chapter 6.
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[67
+
+])
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [68] (./thesis.bbl
+
+Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 37--41
+[]\TU/TimesNewRoman(0)/m/n/12 OpenCV.  Detection of aruco markers.  Retrieved Jul 2022 from: [][]$[][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--41
+[] [] [][][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][][][][][][][][][][][] [] [][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] []
+ []
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[69
+
+
+]
+Missing character: There is no ‐ (U+2010) in font Times New Roman/AAT:mapping=tex-text;!
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [70]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [71])
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [72] (./thesis.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 8707C25E7B301C8C1BBC14EA91F2C2CC;9932.
+ ) 
+Here is how much of TeX's memory you used:
+ 38184 strings out of 476919
+ 779669 string characters out of 5821840
+ 1273626 words of memory out of 5000000
+ 57330 multiletter control sequences out of 15000+600000
+ 414602 words of font info for 105 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 106i,19n,117p,862b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on thesis.pdf (82 pages).
