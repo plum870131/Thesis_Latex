@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.3)  4 AUG 2022 08:35
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.3)  5 AUG 2022 04:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2339,9 +2339,6 @@ File: watermark.pdf Graphic file (type pdf)
 Chapter 4.
 File: ch4pic/simulate_hardware.png Graphic file (type bmp)
 <ch4pic/simulate_hardware.png>
-
-LaTeX Warning: Reference `chp:system_evaluate' on page 57 undefined on input line 16.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [57
@@ -2362,76 +2359,146 @@ LaTeX Warning: Citation `survey_light2018' on page 61 undefined on input line 18
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [61]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [62]
 
-LaTeX Warning: Reference `tab:para:error' on page 62 undefined on input line 203.
+LaTeX Warning: Citation `datasheet:led_vsma' on page 63 undefined on input line 294.
+
+
+LaTeX Warning: Citation `datasheet:hm_L12170' on page 63 undefined on input line 295.
+
+
+LaTeX Warning: Citation `datasheet:hm_pd' on page 63 undefined on input line 312.
+
+
+LaTeX Warning: Citation `datasheet:hm_pd' on page 63 undefined on input line 312.
+
+
+Overfull \hbox (52.91295pt too wide) in paragraph at lines 315--342
+ [][] 
+ []
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[62]
+[63]
 File: ch4pic/evaluate_flow.png Graphic file (type bmp)
 <ch4pic/evaluate_flow.png>
 
 
-LaTeX Warning: Reference `pic:simulation_flow' on page 63 undefined on input line 290.
+LaTeX Warning: Reference `chp:chp:evaluate_method' on page 64 undefined on input line 379.
 
 
-LaTeX Warning: Reference `chp:scenario' on page 63 undefined on input line 290.
-
-
-LaTeX Warning: Reference `chp:hardware_design' on page 63 undefined on input line 290.
+LaTeX Warning: Reference `chp:chp:design_result' on page 64 undefined on input line 379.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[63]) (./chapter/05Optimize.tex
+[64]
+File: ch4pic/error.png Graphic file (type bmp)
+<ch4pic/error.png>
+
+
+LaTeX Warning: Citation `case:cart3d' on page 65 undefined on input line 408.
+
+
+LaTeX Warning: Citation `case:3d_layers' on page 65 undefined on input line 408.
+
+File: ch4pic/translate_sample.png Graphic file (type bmp)
+<ch4pic/translate_sample.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [64]
+[65]
+File: ch4pic/rotate_sample.png Graphic file (type bmp)
+<ch4pic/rotate_sample.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[66]
+File: ch4pic/sample_out.png Graphic file (type bmp)
+<ch4pic/sample_out.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [67]
+File: ch4pic/alpha_translate.png Graphic file (type bmp)
+<ch4pic/alpha_translate.png>
+File: ch4pic/m_rotate.png Graphic file (type bmp)
+<ch4pic/m_rotate.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_effect.png Graphic file (type bmp)
+<ch4pic/m_effect.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_translate.png Graphic file (type bmp)
+<ch4pic/m_translate.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_rotate.png Graphic file (type bmp)
+<ch4pic/m_rotate.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_effect.png Graphic file (type bmp)
+<ch4pic/m_effect.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[68]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [69]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [70]) (./chapter/05Optimize.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [71]
 Chapter 5.
-
-LaTeX Warning: Reference `chp:scenario' on page 65 undefined on input line 6.
-
 File: ch5pic/optimize_flow.png Graphic file (type bmp)
 <ch5pic/optimize_flow.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `chp:system_perform' on page 65 undefined on input line 30.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[65
+[72
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [66]
+ [73]
 File: ch5pic/optimize_variable.png Graphic file (type bmp)
 <ch5pic/optimize_variable.png>
-
-
-LaTeX Warning: Reference `chp:scenario' on page 67 undefined on input line 71.
-
 File: ch5pic/opt_result.png Graphic file (type bmp)
 <ch5pic/opt_result.png>
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[67]) (./chapter/06Conclusion.tex
+[74]) (./chapter/06Conclusion.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [68]
+ [75]
 Chapter 6.
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[69
+[76
 
 ])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [70]
+ [77]
 No file thesis.bbl.
 (./thesis.aux)
 
@@ -2442,15 +2509,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 49861A91DFCA3B9A45DBED453382A63C;10166.
+(rerunfilecheck)             Checksum: 6FB991777443A225DDA13847E4DAFBB0;9902.
  ) 
 Here is how much of TeX's memory you used:
- 43689 strings out of 476179
- 952673 string characters out of 5809545
- 1364889 words of memory out of 5000000
- 63569 multiletter control sequences out of 15000+600000
+ 43784 strings out of 476179
+ 955314 string characters out of 5809545
+ 1365666 words of memory out of 5000000
+ 63656 multiletter control sequences out of 15000+600000
  481071 words of font info for 106 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,19n,117p,865b,960s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (80 pages).
+Output written on thesis.pdf (87 pages).
