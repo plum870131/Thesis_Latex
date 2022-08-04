@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.3)  4 AUG 2022 13:33
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.3)  5 AUG 2022 04:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2347,12 +2347,9 @@ File: watermark.pdf Graphic file (type pdf)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [58]
-
-LaTeX Warning: Reference `chp:evaluate' on page 59 undefined on input line 89.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[59]
+ [59]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [60]
@@ -2397,30 +2394,88 @@ LaTeX Warning: Reference `chp:chp:design_result' on page 64 undefined on input l
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [64]
+File: ch4pic/error.png Graphic file (type bmp)
+<ch4pic/error.png>
 
-LaTeX Warning: Reference `pic:error_show' on page 65 undefined on input line 396.
 
-) (./chapter/05Optimize.tex
+LaTeX Warning: Citation `case:cart3d' on page 65 undefined on input line 408.
+
+
+LaTeX Warning: Citation `case:3d_layers' on page 65 undefined on input line 408.
+
+File: ch4pic/translate_sample.png Graphic file (type bmp)
+<ch4pic/translate_sample.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [65]
+[65]
+File: ch4pic/rotate_sample.png Graphic file (type bmp)
+<ch4pic/rotate_sample.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[66]
+File: ch4pic/sample_out.png Graphic file (type bmp)
+<ch4pic/sample_out.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [67]
+File: ch4pic/alpha_translate.png Graphic file (type bmp)
+<ch4pic/alpha_translate.png>
+File: ch4pic/m_rotate.png Graphic file (type bmp)
+<ch4pic/m_rotate.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_effect.png Graphic file (type bmp)
+<ch4pic/m_effect.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_translate.png Graphic file (type bmp)
+<ch4pic/m_translate.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_rotate.png Graphic file (type bmp)
+<ch4pic/m_rotate.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch4pic/m_effect.png Graphic file (type bmp)
+<ch4pic/m_effect.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[68]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [69]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [70]) (./chapter/05Optimize.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [71]
 Chapter 5.
 File: ch5pic/optimize_flow.png Graphic file (type bmp)
 <ch5pic/optimize_flow.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `chp:system_perform' on page 66 undefined on input line 30.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[66
+[72
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [67]
+ [73]
 File: ch5pic/optimize_variable.png Graphic file (type bmp)
 <ch5pic/optimize_variable.png>
 File: ch5pic/opt_result.png Graphic file (type bmp)
@@ -2431,19 +2486,19 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[68]) (./chapter/06Conclusion.tex
+[74]) (./chapter/06Conclusion.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [69]
+ [75]
 Chapter 6.
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[70
+[76
 
 ])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [71]
+ [77]
 No file thesis.bbl.
 (./thesis.aux)
 
@@ -2454,15 +2509,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 9E74712067BBB7EEA71E29EA49395DA1;10052.
+(rerunfilecheck)             Checksum: 6FB991777443A225DDA13847E4DAFBB0;9902.
  ) 
 Here is how much of TeX's memory you used:
- 43696 strings out of 476179
- 952785 string characters out of 5809545
- 1365081 words of memory out of 5000000
- 63576 multiletter control sequences out of 15000+600000
+ 43784 strings out of 476179
+ 955314 string characters out of 5809545
+ 1365666 words of memory out of 5000000
+ 63656 multiletter control sequences out of 15000+600000
  481071 words of font info for 106 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,19n,117p,865b,960s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (81 pages).
+Output written on thesis.pdf (87 pages).

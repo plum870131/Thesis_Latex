@@ -16,8 +16,6 @@
 \section{最佳化流程}
 \label{chp:optimize}
 
-最佳化變數的部分，包含朗博次方$Mp,M\ell$、硬體指向$^{P}\boldsymbol{V}_p,^{L}\boldsymbol{V}_l$與硬體數量$P,L$，而其中每個硬體皆有朗博次方與硬體指向需要定義，因此最佳化的變數量又會根據硬體數量而改變，使得最佳化難度高。為了簡化這個變數數量與變數本身相關的問題，我們將硬體數量於於最佳化流程的最開始定義，參考流程圖\ref{pic:optimize_flow}，硬體數量確定後，針對朗博次方與指向的最佳化問題則可利用基因演算法（Genetic Algorithm，以下簡稱GA）求解。而透過迭代改變硬體數量，我們可以得到不同硬體數量對應的最佳設計，以及該設計的目標函數。擁有這些資訊，即可透過人類決策者介入選擇最合適的硬體數量，在系統表現以及硬體成本中進行取捨。
-
 \begin{figure}[h!]
     \centering
     \includegraphics[width=13cm]{ch5pic/optimize_flow.png}
@@ -25,9 +23,13 @@
     \label{pic:optimize_flow}
 \end{figure}
 
+最佳化變數的部分，包含朗博次方$Mp,M\ell$、硬體指向$^{P}\boldsymbol{V}_p,^{L}\boldsymbol{V}_l$與硬體數量$P,L$，而其中每個硬體皆有朗博次方與硬體指向需要定義，因此最佳化的變數量又會根據硬體數量而改變，使得最佳化難度高。為了簡化這個變數數量與變數本身相關的問題，我們將硬體數量於於最佳化流程的最開始定義，參考流程圖\ref{pic:optimize_flow}，硬體數量確定後，針對朗博次方與指向的最佳化問題則可利用基因演算法（Genetic Algorithm，以下簡稱GA）求解。而透過迭代改變硬體數量，我們可以得到不同硬體數量對應的最佳設計，以及該設計的目標函數。擁有這些資訊，即可透過人類決策者介入選擇最合適的硬體數量，在系統表現以及硬體成本中進行取捨。
+
+
+
     \subsection{目標函數}
 
-    我們的最佳化目標，是希望使系統表現更好，而評估方式可以參考\ref{chp:system_perform}章所述，目標是讓在容許範圍內的樣本點比例越高越好。因此，在硬體總數設定為$P,L$的情況下，最佳化目標函數$f$呈現於式\ref{eqn:objective}
+    我們的最佳化目標，是希望使系統表現更好，而評估方式可以參考\ref{chp:evaluate_method}章所述，目標是讓在容許範圍內的樣本點比例越高越好。因此，在硬體總數設定為$P,L$的情況下，最佳化目標函數$f$呈現於式\ref{eqn:objective}
 
     \begin{equation}
         \label{eqn:objective}

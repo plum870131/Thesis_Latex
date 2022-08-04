@@ -86,7 +86,7 @@
 
 硬體組態的部分，位置的限制如\ref{chp:algorithm_constraint}章中所述，需限制PD擺放位置於PD座標系原點：$^P\boldsymbol{P}_p=
 \left[\begin{array}{ccc}0&0&0\end{array}\right]^T$，LED的擺放位置也限制於LED座標系原點：$^L\boldsymbol{P}_l=
-\left[\begin{array}{ccc}0&0&0\end{array}\right]^T$。而實際在設計硬體模組時，可以參考圖\ref{pic:ml_pd_config}，需要將各電子元件與LED、PD硬體固定於一特殊形狀的載體上，利用載體的形狀來調整硬體的擺放指向。在模擬時，我們僅需透過定義各硬體的指向$\boldsymbol{V}$即可，其中各指向有兩個自由度：以球座標系定義的天頂角$\alpha$與方位角$\beta$。改變各硬體的指向時，各硬體的照射範圍也會改變，導致定位效果不同，因此硬體指向如何設計為一影響系統表現的因素，於\ref{chp:evaluate}章中進行評估。執得注意的是，每一個硬體的組態需要定義兩個自由度，因此組態的部分，總共需定義$2\times(L+P)$個自由度，組態的變數數量為硬體數量的函數。
+\left[\begin{array}{ccc}0&0&0\end{array}\right]^T$。而實際在設計硬體模組時，可以參考圖\ref{pic:ml_pd_config}，需要將各電子元件與LED、PD硬體固定於一特殊形狀的載體上，利用載體的形狀來調整硬體的擺放指向。在模擬時，我們僅需透過定義各硬體的指向$\boldsymbol{V}$即可，其中各指向有兩個自由度：以球座標系定義的天頂角$\alpha$與方位角$\beta$。改變各硬體的指向時，各硬體的照射範圍也會改變，導致定位效果不同，因此硬體指向如何設計為一影響系統表現的因素，於\ref{chp:system_evaluate}章中進行評估。值得注意的是，每一個硬體的組態需要定義兩個自由度，因此組態的部分，總共需定義$2\times(L+P)$個自由度，組態的變數數量為硬體數量的函數。
 
 \begin{table}[h]
     % \toprule% you can only use this within a tabular and if you load booktabs
@@ -389,82 +389,97 @@
 
 
 
-為了針對不同使用情境評估系統表現，我們需針對不同情境ROI，
+為了針對不同使用情境評估系統表現，我們須了解不同情境的ROI，而由於相對位置是定義LED座標系投影至PD座標系的齊次座標轉矩陣（參考\ref{chp:simulate_position}章），因此ROI是相對PD座標系去作定義。有了ROI之後，於其中建立多個樣本點，在設定樣本點時以\ref{chp:simulate_position}章中表\ref{tab:para_relative}呈現的參數來定義相對關係，包含平移與旋轉的各三個自由度，並針對每個樣本點進行誤差的計算，其中第$k$個樣本點中量測出的相對位置$\hat{^{PL}_{k}\boldsymbol{T}}$，式\ref{eqn:sample_error}計算出與實際相對位置$^{PL}\boldsymbol{T}$的誤差為$_k e$，參考示意圖\ref{pic:error_show}。
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=9cm]{ch4pic/error.png}
+    \caption{樣本點與誤差示意圖}
+    \label{pic:error_show}
+\end{figure}
+
+\begin{gather}
+    \label{eqn:sample_error}
+    \hat{_k e} = ||^{PL}\boldsymbol{T}-\hat{^{PL}_k\boldsymbol{T}}||
+\end{gather}
+
+
+在這裡，我們選擇常見的室內定位情境作為模擬情境，
+也就是目標物LED座標系固定於天花板朝地面照射，而量測者的PD座標系於室內空間中。測試範圍則是設置的較\cite{case:cart3d}\cite{case:3d_layers}中的都大，為$3 \times 3 \times 3 m$的平移範圍。我們在此範圍內建立樣本點，平移自由度$^{PL}t_x$、$^{PL}t_y$、$^{PL}t_z$各自於範圍內平分為10段，總共有1000個平移樣本點。數值呈現於表\ref{tab:translate}中，空間中的關係則呈現於圖\ref{pic:translate_sample}。
+
+\begin{table}[h!]
+    \begin{center}
+      \caption{平移樣本點}
+      \label{tab:translate}
+      \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+         & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
+        \hline
+        $^{PL}t_x$ & -1.5 & 1.5&10\\
+        $^{PL}t_y$ & -1.5 & 1.5&10\\
+        $^{PL}t_z$ & 0 & 3 &10\\
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=6cm]{ch4pic/translate_sample.png}
+    \caption{平移樣本點}
+    \label{pic:translate_sample}
+\end{figure}
+
+而由於本研究所使用的演算法並不需限制目標平面與量測平面平行，因此兩座標系之間的姿態也可以改變，除了平移的樣本點還需建立旋轉的樣本點，旋轉相對關係一樣參考\ref{chp:simulate_position}章中定義的方法，以Roll $^{PL}rx$、Pitch $^{PL}ry$、Yaw$^{PL}rz$定義。定義時，我們將Roll設定為$\pi$，使兩座標系呈現翻轉面對面的姿態。除了面對面姿態以外，其餘不平行旋轉樣本的設定參數呈現於表\ref{tab:rotate}中，共有61個旋轉樣本點。參考圖\ref{pic:rotate_sample}，紅色箭頭代表的是PD座標系Z軸，藍色的各個箭頭則代表與其相對的的LED座標系Z軸，而Pitch與Yaw以極座標圖呈現於圖中。
 
 
 
-中建立多個樣本點，針對第$k$個樣本點中量測出的相對位置$\hat{^{PL}_{k}\boldsymbol{T}}$，計算出與實際相對位置$^{PL}\boldsymbol{T}$的誤差$_k e$，參考圖\ref{pic:error_show}。其中，ROI是相對PD座標系去作定義，也就是將PD視為固定，定義LED座標系相對於PD座標系的座標轉換關係$^{PL}\boldsymbol{H}$。僅定義LED座標系相對於PD座標系的關係之原因，是因為在不考慮環境障礙物情況下，兩座標系的絕對位置並不重要，僅有相對關係會對相對位置造成影響。
+\begin{table}[h]
+    \begin{center}
+      \caption{旋轉樣本點}
+      \label{tab:rotate}
+      \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+        & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
+       \hline
+       $^{PL}rx$ & $\pi$ & $\pi$&1\\
+       $^{PL}ry$ & $\pi/18$ &$\pi/3$&6\\
+       $^{PL}rz$ & $\pi/5$ & $2\pi$&10\\
+     \end{tabular}
+   \end{center}
+ \end{table}
 
-% \begin{figure}[ht]
-%     \centering
-%     \includegraphics[width=9cm]{ch4pic/error.png}
-%     \caption{樣本點與誤差}
-%     \label{pic:error_show}
-% \end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm]{ch4pic/rotate_sample.png}
+    \caption{旋轉樣本點}
+    \label{pic:rotate_sample}
+\end{figure}
 
-% 在這裡，我們選擇常見的室內定位情境作為模擬情境，也就是目標物LED座標系固定於天花板朝地面照射，而量測者的PD座標系於室內空間中，測試範圍設置的較\cite{case:cart3d}\cite{case:3d_layers}中的都大，為$3 \times 3 \times 3 m$的範圍，如圖\ref{pic:translate_sample}。而由於本研究所使用的演算法並不需限制目標平面與量測平面平行，因此兩座標系之間的姿態也可以改變，除了平移的樣本點還需建立旋轉的樣本點，旋轉樣本點由翻滾（以下稱為Roll）、俯仰（以下稱為Pitch）、偏擺（以下稱為yaw）三個旋轉角度定義，旋轉順序依序為Roll, Pitch, Yaw。旋轉樣本可參考圖\ref{pic:rotate_sample}，紅色箭頭代表的是PD座標系Z軸，藍色的各個箭頭則代表與其相對的的LED座標系Z軸，並以極座標圖呈現於圖中。
 
-% \begin{figure}[ht]
-%     \centering
-%     \includegraphics[width=6cm]{ch4pic/translate_sample.png}
-%     \caption{平移樣本點}
-%     \label{pic:translate_sample}
-% \end{figure}
+如表\ref{tab:translate}中所示，一共有$10\times 10\times 10$總共1000個平移樣本點，旋轉樣本點則有$1+1\times 6\times 10$共61個。這代表著每個平移樣本點上皆需做出61次旋轉，以旋轉樣本點來看也是，每個旋轉姿態都需在1000個平移樣本點上計算一次，兩者相乘代表總共61000個樣本點。
 
-% \begin{figure}[ht]
-%     \centering
-%     \includegraphics[width=8cm]{ch4pic/rotate_sample.png}
-%     \caption{旋轉樣本點}
-%     \label{pic:rotate_sample}
-% \end{figure}
 
-% \begin{table}[h!]
-%     \begin{center}
-%       \caption{平移樣本點}
-%       \label{tab:translate}
-%       \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-%          & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
-%         \hline
-%         $t_x$ & -1.5 & 1.5&10\\
-%         $t_y$ & -1.5 & 1.5&10\\
-%         $t_z$ & 0 & 3 &10\\
-%       \end{tabular}
-%     \end{center}
-%   \end{table}
 
-%   \begin{table}[h!]
-%     \begin{center}
-%       \caption{旋轉樣本點}
-%       \label{tab:rotate}
-%       \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-%         & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
-%        \hline
-%        Roll & $\pi$ & $\pi$&1\\
-%        Pitch & $\pi/18$ &$\pi/3$&6\\
-%        Yaw & $\pi/5$ & $2\pi$&10\\
-%      \end{tabular}
-%    \end{center}
-%  \end{table}
 
-% 如表\ref{tab:translate}中所示，一共有$10\times 10\times 10$總共一千個平移樣本點，旋轉樣本點則有$1\times 6\times 10$共六十個，兩者相乘代表總共六萬個樣本點。這代表著每個平移樣本點上皆需做出60次旋轉，以旋轉樣本點來看也是，每個旋轉樣本點都需在每個平移樣本點上計算一次。
+
 
 \subsection{量化系統表現}
 \label{chp:evaluate_method}
 
-% 根據以上設定，我們將六萬個樣本點進行定位，然而，各樣本點都有可能遇到無法求解的狀況，如\ref{chp:orient_conclu}章所提到，若沒有任何一個LED同時將訊號傳送給三個以上的PD，則無法解出方位；而若沒有任何一個PD同時接受到三個以上LED資訊，則無法計算距離。即使我們今天系統設計有超過三個以上的LED與PD硬體數量，在\ref{chp:algorithm_filter}章中也會將訊號過大、過小的數值去除，導致所得訊號不足求解的狀況。在各樣本點可能會解不出來的情況下，解不出來則會完全無法計算誤差，因此無法利用樣本點平均誤差來完整描述系統的表現。
+根據以上設定，我們將61000個樣本點進行定位，然而，各樣本點都有可能遇到無法求解的狀況，如\ref{chp:orient_conclu}章所提到，\textbf{若沒有任何一個LED同時將訊號傳送給三個以上的PD，則無法解出方位；而若沒有任何一個PD同時接受到三個以上LED資訊，則無法計算距離}。即使我們今天系統設計有超過三個以上的LED與PD硬體數量，在\ref{chp:algorithm_filter}章中也會將訊號過大、過小的數值去除，導致所得訊號不足求解的狀況。在各樣本點可能會解不出來的情況下，解不出來則會完全無法計算誤差，無法僅用誤差來量化系統的表現。
 
-% 因此，我們改看「在容許範圍$To$（Tolerance）」內的樣本點比例，在這邊我們設定$To=0.1m$，而結果呈現於圖\ref{pic:sample_out}。
 
-% \begin{figure}[ht]
-%     \centering
-%     \includegraphics[width=9cm]{ch4pic/sample_out.png}
-%     \caption{容許範圍內的樣本點比例}
-%     \label{pic:sample_out}
-% \end{figure}
 
-% 觀察圖中的現象，在PD座標系延伸出去，有一橢圓區塊具有很高的定位能力，定位能力的分佈與其他文獻符合。
+因此，我們改看「在容許範圍$To$（Tolerance）」內的樣本點比例，在這邊我們設定$To=0.1m$，而結果呈現於圖\ref{pic:sample_out}。
 
-% 而由於第三章此演算法並沒有限制硬體數量、朗博次方與硬體指向，在設計上是有靈活度的，因此我們透過改變這幾項變數，來觀察系統的反應。其中，LED與PD指向的部分，我們將每個硬體皆具有的兩個由度限制剩下一個，假設方位角平均分配：$^P\beta_p = 2\pi/P$、$^L\beta_l = 2\pi/L$，仰角的部分則限制必須相同$^P\alpha_p =^P\alpha$、$^L\alpha_l = ^L\alpha$。在這樣的限制下，我們分別探討各項變數的影響。
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=9cm]{ch4pic/sample_out.png}
+    \caption{容許範圍內的樣本點比例}
+    \label{pic:sample_out}
+\end{figure}
+
+觀察圖中的現象，在PD座標系延伸出去，有一橢圓區塊具有很高的定位能力，定位能力的分佈與其他文獻符合。
+
+而由於第三章此演算法並沒有限制硬體數量、朗博次方與硬體指向，在設計上是有靈活度的，因此我們透過改變這幾項變數，來觀察系統的反應。其中，LED與PD指向的部分，我們將每個硬體皆具有的兩個由度限制剩下一個，假設方位角平均分配：$^P\beta_p = 2\pi/P$、$^L\beta_l = 2\pi/L$，仰角的部分則限制必須相同$^P\alpha_p =^P\alpha$、$^L\alpha_l = ^L\alpha$。在這樣的限制下，我們分別探討各項變數的影響。
 
 
 
@@ -472,15 +487,73 @@
 \label{chp:design_result}
 
 \subsubsection{硬體指向對系統表現的影響}
-\subsubsection{朗博次方對系統表現的影響}
-\subsubsection{硬體數量對系統表現的影響}
+\label{chp:orient_effect}
 
-\subsection{不同使用情境的系統表現}
+在假設朗博次方$Mp=M\ell=1$，以及硬體數量$L=P-8$的情況下，我們改變硬體指向$^P\alpha,^L\alpha$，並將樣本中於容許範圍內的比例，呈現於圖\ref{pic:alpha_translate}與圖\ref{pic:alpha_rotate}中。隨著硬體指向提升，多個硬體之間重疊的覆蓋範圍便越來越小，漸漸僅剩下於中心位置的樣本點：$x,y,=0$。
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=14cm]{ch4pic/alpha_translate.png}
+    \caption{改變硬體指向對平移樣本點的影響}
+    \label{pic:alpha_translate}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=14cm]{ch4pic/m_rotate.png}
+    \caption{改變硬體指向對旋轉樣本點的影響}
+    \label{pic:alpha_rotate}
+\end{figure}
+
+我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:alpha_effect}，我們可以觀察到在此情境中，較小的硬體擺設天頂角，使系統表現較佳。
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=9cm]{ch4pic/m_effect.png}
+    \caption{改變硬體指向對系統的影響}
+    \label{pic:alpha_effect}
+\end{figure}
+
+\subsubsection{朗博次方對系統表現的影響}
+\label{chp:m_effect}
+
+在假設$^P\alpha_p =\pi/18$、$^L\alpha_l = \pi/18$，以及硬體數量$L=P-8$的情況下，我們改變朗博次方，並將樣本中於容許範圍內的比例，呈現於圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}中。隨著朗博次方的提升，硬體所照射的範圍越來越小，因此容許範圍內比例高的的區域便越顯集中。
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=14cm]{ch4pic/m_translate.png}
+    \caption{改變朗博次方對平移樣本點的影響}
+    \label{pic:m_translate}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=14cm]{ch4pic/m_rotate.png}
+    \caption{改變朗博次方對旋轉樣本點的影響}
+    \label{pic:m_rotate}
+\end{figure}
+
+我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:m_effect}，我們可以觀察到在此情境中，較小的朗博次方使系統表現較佳。
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=9cm]{ch4pic/m_effect.png}
+    \caption{改變朗博次方對系統的影響}
+    \label{pic:m_effect}
+\end{figure}
+
+\subsubsection{硬體數量對系統表現的影響}
+\label{chp:amount_effect}
+
+由圖\ref{pic:m_effect}與圖\ref{pic:alpha_effect}中，我們都可以看出在提高硬體數量時，系統表現提升，然而系統表現提升的幅度不與硬體提升的數量成正比。因此，在挑選硬體數量時，除了系統表現以外，也需將硬體增加所造成的硬體成本，以及架設系統的難度考慮進來，在系統表現與硬體系統簡單中取捨。
+
+
+% \subsection{不同使用情境的系統表現}
 
 
 \section{結論}
 \label{chp:4_conclusion}
+由以上分析，我們可以看出在\ref{chp:scenario}章中提出的情境下，小的朗博次方與較小的硬體天頂角$\alpha$使系統的表現較佳，而硬體數量則是愈多愈好，但成長的趨勢隨著硬體數量增多而減慢。
 
+我們本章節提出的方法，可以在軟體中透過改變硬體的選擇、樣本點的集合、組態等，快速的對不同情境，評估不同系統設計的表現。有了此模擬方法，我們可以在硬體系統架設之前對系統表現有所了解，避免在硬體架設的部分浪費時間與硬體成本。除此之外，藉由可以分析不同設計下的系統表現，我們進而於第五章針對不同情境，進行朗博次方、硬體指向以及硬體數量的最佳化，提供特定使用情境下的最佳系統設計。
 %______________________________________
 
 
@@ -500,78 +573,8 @@
 
 
 
-% % --------------------------------------
-
-
 
 % % --------------------------------------
-% \section{評估系統表現}
-% \label{chp:system_perform}
-
-
-
-
-
-
-% \subsection{朗博次方的影響}
-
-% 在假設$^P\alpha_p =\pi/18$、$^L\alpha_l = \pi/18$，以及硬體數量$L=P-8$的情況下，我們改變朗博次方，並將樣本中於容許範圍內的比例，呈現於圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}中。隨著朗博次方的提升，硬體所照射的範圍越來越小，因此容許範圍內比例高的的區域便越顯集中。
-
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=14cm]{ch4pic/m_translate.png}
-%     \caption{改變朗博次方對平移樣本點的影響}
-%     \label{pic:m_translate}
-% \end{figure}
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=14cm]{ch4pic/m_rotate.png}
-%     \caption{改變朗博次方對旋轉樣本點的影響}
-%     \label{pic:m_rotate}
-% \end{figure}
-
-% 我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:m_effect}，我們可以觀察到在此情境中，較小的朗博次方使系統表現較佳。
-
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=9cm]{ch4pic/m_effect.png}
-%     \caption{改變朗博次方對系統的影響}
-%     \label{pic:m_effect}
-% \end{figure}
-
-
-
-% \subsection{LED與PD指向的影響}
-
-% 在假設朗博次方$Mp=M\ell=1$，以及硬體數量$L=P-8$的情況下，我們改變硬體指向$^P\alpha,^L\alpha$，並將樣本中於容許範圍內的比例，呈現於圖\ref{pic:alpha_translate}與圖\ref{pic:alpha_rotate}中。隨著硬體指向提升，多個硬體之間重疊的覆蓋範圍便越來越小，漸漸僅剩下於中心位置的樣本點：$x,y,=0$。
-
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=14cm]{ch4pic/alpha_translate.png}
-%     \caption{改變硬體指向對平移樣本點的影響}
-%     \label{pic:alpha_translate}
-% \end{figure}
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=14cm]{ch4pic/m_rotate.png}
-%     \caption{改變硬體指向對旋轉樣本點的影響}
-%     \label{pic:alpha_rotate}
-% \end{figure}
-
-% 我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:alpha_effect}，我們可以觀察到在此情境中，較小的硬體擺設天頂角，使系統表現較佳。
-
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=9cm]{ch4pic/m_effect.png}
-%     \caption{改變硬體指向對系統的影響}
-%     \label{pic:alpha_effect}
-% \end{figure}
-
-
-
-% \subsection{LED與PD數量的影響}
-
-% 由圖\ref{pic:m_effect}與圖\ref{pic:alpha_effect}中，我們都可以看出在提高硬體數量時，系統表現提升，然而系統表現提升的幅度不與硬體提升的數量成正比。因此，在挑選硬體數量時，除了系統表現以外，也需將硬體增加所造成的硬體成本，以及架設系統的難度考慮進來，在系統表現與硬體系統簡單中取捨。
 
 
 
@@ -585,11 +588,7 @@
 
 
 
-% % --------------------------------------
-% \section{結論}
-% \label{chp:4_conclusion}
 
 
-% 由以上分析，我們可以看出在\ref{chp:scenario}章中提出的情境下，小的朗博次方與較小的硬體天頂角$\alpha$使系統的表現較佳，而硬體數量則是愈多愈好，但成長的趨勢隨著硬體數量增多而減慢。
 
-% 我們本章節提出的方法，可以在軟體中透過改變硬體的選擇、樣本點的集合、組態等，快速的對不同情境，評估不同系統設計的表現。有了此模擬方法，我們可以在硬體系統架設之前對系統表現有所了解，避免在硬體架設的部分浪費時間與硬體成本。除此之外，藉由可以分析不同設計下的系統表現，我們進而於第五章針對不同情境，進行朗博次方、硬體指向以及硬體數量的最佳化，提供特定使用情境下的最佳系統設計。
+
