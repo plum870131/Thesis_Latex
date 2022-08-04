@@ -21,24 +21,24 @@
 \contentsline {figure}{\numberline {2.16}{\ignorespaces 太陽輻射波譜\cite {astm}\relax }}{19}{figure.caption.22}%
 \contentsline {figure}{\numberline {2.17}{\ignorespaces 光波段中的波段特性比較\relax }}{19}{figure.caption.23}%
 \contentsline {figure}{\numberline {2.18}{\ignorespaces 滾動式快門效應的成因\cite {pic:rolling_shutter}\relax }}{20}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces 滾動式快門效應產生的條紋樣式\cite {pic:rolling_shutter_case}\relax }}{21}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces 滾動式快門效應產生的條紋樣式\cite {pic:rolling_shutter_case}\relax }}{20}{figure.caption.25}%
 \contentsline {figure}{\numberline {2.20}{\ignorespaces 多重路徑傳輸\cite {pic:multipath}\relax }}{21}{figure.caption.26}%
 \contentsline {figure}{\numberline {2.21}{\ignorespaces 多PD進行光通訊解碼\cite {case:ml}\relax }}{22}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.22}{\ignorespaces 使用指紋法的系統環境\cite {case:ml}\relax }}{22}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.23}{\ignorespaces 使用幾何方法的系統環境\cite {case:3d_layers}\relax }}{23}{figure.caption.29}%
-\contentsline {figure}{\numberline {2.24}{\ignorespaces 影像感測器與PD的特性比較\relax }}{23}{figure.caption.30}%
-\contentsline {figure}{\numberline {2.25}{\ignorespaces LED與PD定位系統架構\relax }}{24}{figure.caption.31}%
-\contentsline {figure}{\numberline {2.26}{\ignorespaces \cite {case:ml}研究的硬體組態設計\relax }}{25}{figure.caption.32}%
-\contentsline {figure}{\numberline {2.27}{\ignorespaces LED與PD定位系統流程\relax }}{26}{figure.caption.33}%
-\contentsline {figure}{\numberline {2.28}{\ignorespaces 輻射測量學與光度測量學的物理量比較\relax }}{27}{figure.caption.34}%
-\contentsline {figure}{\numberline {2.29}{\ignorespaces 角度與立體角\relax }}{27}{figure.caption.35}%
-\contentsline {figure}{\numberline {2.30}{\ignorespaces 輻射強度與輻照度\relax }}{28}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces 使用指紋法的系統環境\cite {case:ml}\relax }}{23}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces 使用幾何方法的系統環境\cite {case:3d_layers}\relax }}{24}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.24}{\ignorespaces 影像感測器與PD的特性比較\relax }}{24}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.25}{\ignorespaces LED與PD定位系統架構\relax }}{25}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.26}{\ignorespaces \cite {case:ml}研究的硬體組態設計\relax }}{26}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.27}{\ignorespaces LED與PD定位系統流程\relax }}{27}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.28}{\ignorespaces 輻射測量學與光度測量學的物理量比較\relax }}{28}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.29}{\ignorespaces 角度與立體角\relax }}{28}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.30}{\ignorespaces 輻射強度與輻照度\relax }}{29}{figure.caption.36}%
 \contentsline {figure}{\numberline {2.31}{\ignorespaces 三維空間中的向量\relax }}{29}{figure.caption.37}%
-\contentsline {figure}{\numberline {2.32}{\ignorespaces LED在座標系中的擺放自由度\relax }}{29}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.32}{\ignorespaces LED在座標系中的擺放自由度\relax }}{30}{figure.caption.38}%
 \contentsline {figure}{\numberline {2.33}{\ignorespaces 輻射強度與出入射角的關係\relax }}{30}{figure.caption.39}%
-\contentsline {figure}{\numberline {2.34}{\ignorespaces LED與PD於三維空間中的入射角\relax }}{30}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.34}{\ignorespaces LED與PD於三維空間中的入射角\relax }}{31}{figure.caption.40}%
 \contentsline {figure}{\numberline {2.35}{\ignorespaces 朗博次方為一時空間中輻射強度與出入射角方位的關係\relax }}{31}{figure.caption.41}%
-\contentsline {figure}{\numberline {2.36}{\ignorespaces LED與PD的硬體參數\relax }}{31}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.36}{\ignorespaces LED與PD的硬體參數\relax }}{32}{figure.caption.42}%
 \contentsline {figure}{\numberline {2.37}{\ignorespaces 輻射強度與總輻射通量比值\relax }}{32}{figure.caption.43}%
 \contentsline {figure}{\numberline {2.38}{\ignorespaces 單LED與單PD的交互關係\relax }}{34}{figure.caption.44}%
 \contentsline {figure}{\numberline {2.39}{\ignorespaces 多LED與多PD的交互關係\relax }}{34}{figure.caption.45}%
@@ -64,10 +64,10 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces 多LED對同一PD之間的幾何關係\relax }}{54}{figure.caption.64}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces 多LED對多PD定位系統以硬體驗證與軟體模擬的流程圖\relax }}{58}{figure.caption.65}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 評估系統流程圖\relax }}{61}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 評估系統流程圖\relax }}{63}{figure.caption.71}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 最佳化流程圖\relax }}{64}{figure.caption.67}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces 最佳化變數\relax }}{65}{figure.caption.68}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 最佳化結果\relax }}{66}{figure.caption.69}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 最佳化流程圖\relax }}{66}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 最佳化變數\relax }}{67}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 最佳化結果\relax }}{68}{figure.caption.74}%
 \addvspace {10\p@ }
 \contentsfinish 
