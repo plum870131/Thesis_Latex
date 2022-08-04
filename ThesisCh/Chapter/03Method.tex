@@ -302,8 +302,13 @@
 
         \subsubsection{小結}
 
-        如\ref{chp:orient_conclu}章所述，最少需要一個LED與3個PD才能獲得方位$\hat{{^{PL}\boldsymbol{Tv}}}$；而概念相同，PD座標系於LED座標系中的方位$\hat{{^{LP}\boldsymbol{Tv}}}$，則需要至少一個PD與3個LED才能解。\textbf{綜合兩者，我們需要最少三個LED對三個PD才能同時得到LED與PD於對方座標系中的方位，進而解出距離。}
+        如\ref{chp:orient_conclu}章所述，最少需要一個LED與3個PD才能獲得方位$\hat{{^{PL}\boldsymbol{Tv}}}$；而概念相同，PD座標系於LED座標系中的方位$\hat{{^{LP}\boldsymbol{Tv}}}$，則需要至少一個PD與3個LED才能解，進而得到距離資訊。\textbf{綜合兩者，我們需要最少三個LED對三個PD才能同時得到LED與PD於對方座標系中的方位$\hat{{^{PL}\boldsymbol{Tv}}}$，進而解出距離$\hat{t_d}$。}綜合方位與距離，相對位置以卡氏座標系表示如式\ref{eqn:solu}
 
+
+        \begin{equation}
+            \label{eqn:sollu}
+            \hat{^{PL}\boldsymbol{T} }= \hat{t_d} \times {^{PL}\boldsymbol{Tv}} 
+        \end{equation}
 
 \section{演算法優點與缺點}
 \label{chp:algorithm_ad_dis}
