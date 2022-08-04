@@ -42,14 +42,14 @@
         \label{pic:algorithm_coor}
     \end{figure}
 
-    根據以上限制，LED與PD的定位系統可以呈現於圖\ref{pic:algorithm_coor}，LED與PD座標系中的硬體皆固定於各自的座標系原點，指向則並無特別限制。在將LED與PD組態設計完成後，座標系放置於空間中兩個點進行定位，其中，各LED到各PD的距離$D_{lp}$皆相同，都是兩座標系之間的距離$t_d$，我們便將光傳遞模型\ref{eqn:model}簡化為\ref{eqn:model_algorithm}。
+    根據以上限制，LED與PD的定位系統可以呈現於圖\ref{pic:algorithm_coor}，LED與PD座標系中的硬體皆固定於各自的座標系原點，指向則並無特別限制。在將LED與PD組態設計完成後，座標系放置於空間中兩個點進行定位，其中，各LED到各PD的距離$D_{lp}$皆相同，都是兩座標系之間的距離$^{PL}t_d$，我們便將光傳遞模型\ref{eqn:model}簡化為\ref{eqn:model_algorithm}。
 
     \begin{equation}
         \label{eqn:model_algorithm}
         Ie_{lp} = \begin{cases}Re\frac{PtA(Ml+1)}{2\pi}\frac{\cos\phi_{lp}^{Mp}\cos \theta_{lp}^{Ml}}{D^2} , & \text { if } Ie_{lp}<s \\ s, & \text { otherwise }\end{cases}
     \end{equation}
 
-    然而，大多文獻在討輪三維定位時是以卡氏座標系定義相對位置$^{PL}\boldsymbol{T}=\left[\begin{array}{ccc}t_x&t_y&t_z\end{array}\right]^T$，而我們提出的演算法則是以球座標系定義$^{PL}\boldsymbol{T}^{sph}=\left[\begin{array}{ccc}t_d&t_{\alpha}&t_{\beta}\end{array}\right]^T$，因此我們需求出的三個未知數為$t_d,t_\alpha,t_\beta$三項，$t_d$即為兩座標系之間的距離，而$t_{\alpha},t_{\beta}$則為LED座標系所在「方位」。
+    然而，大多文獻在討輪三維定位時是以卡氏座標系定義相對位置$^{PL}\boldsymbol{T}=\left[\begin{array}{ccc}^{PL}t_x&^{PL}t_y&^{PL}t_z\end{array}\right]^T$，而我們提出的演算法則是以球座標系定義$^{PL}\boldsymbol{T}^{sph}=\left[\begin{array}{ccc}^{PL}t_d&^{PL}t_{\alpha}&^{PL}t_{\beta}\end{array}\right]^T$，因此我們需求出的三個未知數為$^{PL}t_d,^{PL}t_\alpha,^{PL}t_\beta$三項，$^{PL}t_d$即為兩座標系之間的距離，而$^{PL}t_{\alpha},^{PL}t_{\beta}$則為LED座標系所在「方位」。
 
 
 \section{訊號過濾}
@@ -76,7 +76,7 @@
 
 本章結提出的定位演算法，為LED與PD系統流程圖\ref{pic:chp3_flow}中的定位演算法步驟，定位演算法的步驟則呈現於圖\ref{pic:algorithm_flow}，依序從\ref{chp:solve_phi}章解出PD座標系中，LED座標系所在方位；\ref{chp:solve_D}綜合LED與PD方位資訊，解出距離。
 
-為了方便表示，將方位以符號表示$^{PL}\boldsymbol{Tv}^{sph} = \left[\begin{array}{ccc}1&t_{\alpha}&t_{\beta}\end{array}\right]^T$，方位為單位向量，可用單位圓表示方位的可行解範圍。
+為了方便表示，將方位以符號表示$^{PL}\boldsymbol{Tv}^{sph} = \left[\begin{array}{ccc}1&^{PL}t_{\alpha}&^{PL}t_{\beta}\end{array}\right]^T$，方位為單位向量，可用單位圓表示方位的可行解範圍。
 
 
 
@@ -297,7 +297,7 @@
 
         \begin{equation}
             \label{eqn:average_dis}
-            \hat{t_d }= \frac{\sum^{L}_{l=1}\sum^{P}_{p=1} \hat{t_d },_{lp} }{L\times P}
+            \hat{^{PL}t_d }= \frac{\sum^{L}_{l=1}\sum^{P}_{p=1} \hat{t_d },_{lp} }{L\times P}
         \end{equation}
 
         \subsubsection{小結}

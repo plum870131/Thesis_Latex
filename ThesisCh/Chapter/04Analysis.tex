@@ -29,16 +29,86 @@
 
 系統設計中，我們需決定硬體數量$L,P$，以及硬體的規格與組態，在此章節將敘述軟體模擬中需設定的數值，以及與實際硬體系統設計時的差異。
 
-硬體數量的部分，參考\ref{chp:orient_conclu}章中所述，LED與PD數量各需要最少三個來達成三維定位，因此在設定數量$L,P$時需確定其大於等於3。
+\subsubsection{硬體數量}
+
+硬體數量的部分，參考\ref{chp:orient_conclu}章中所述，LED與PD數量各需要最少三個來達成三維定位，因此在設定數量$L,P$時需確定其大於等於3，參考表\ref{tab:para_amount}。
+
+\begin{table}[h]
+    % \toprule% you can only use this within a tabular and if you load booktabs
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\arrayrulewidth}{0.15mm}
+    \setlength{\doublerulesep}{0.12mm}
+    \caption{模擬中需設定的硬體數量}
+    \label{tab:para_amount}
+    \centering
+    \begin{tabular}{|cc|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{硬體數量}}  &\textbf{單位}  &  \textbf{備註}   \\
+    \hline
+     LED數量 &$L$ & 個 & 最小為3的整數 \\\hline
+      PD數量& $P$& 個  & 最小為3的整數 \\\hline
+    \end{tabular}
+\end{table}
+    
+\subsubsection{硬體參數}
 
 硬體規格在挑選時需著重注意的參數可以參考圖\ref{pic:hardware_para}，包含影響輻射模式的朗博次方$Mp,M\ell$
-，以及影響收發光強度的參數：LED總輻射通量$Pt$、PD有效面積$A$、飽和電流$s$、響應率$Re$。這些參數中，除了朗博次方與有效面積以外，各參數又會隨著給予的電壓電流改變，因此，挑選朗博次方格外重要，一旦購買該規格硬體則無法調整輻射模型，不像收發光強度可再購買後透過提高給定電壓電流來提升表現。除此之外，朗博輻射模型在軟體模擬中，可以設定為任意大於一的數值，設計空間為連續的，然而實際硬體挑選時設計空間不連續，僅能從市面上的硬體中挑選合適的，並不能將朗博次方調整至任意數值，需特別注意。
+，以及影響收發光強度的參數：LED總輻射通量$Pt$、PD有效面積$A$、飽和電流$s$、響應率$Re$；我們將這些參數統整於表\ref{tab:para_hardware}。這些參數中，除了朗博次方$M\ell,Mp$與有效面積$A$以外，各參數又會隨著給予的電壓電流改變。因此，\textbf{挑選朗博次方格外重要}，一旦購買該規格硬體則無法調整輻射模型，不像其他可在購買後透過提高給定電壓電流來提升表現。
+
+需要注意的是，朗博輻射模型在軟體模擬中，可以設定為任意大於一的數值，設計空間為連續的；然而實際硬體挑選時，各硬體的朗博次方無法改變，設計空間不連續，僅能從市面上的硬體中挑選合適的，在市售硬體中無法指定所需的朗博次方。
+
+\begin{table}[h]
+% \toprule% you can only use this within a tabular and if you load booktabs
+\renewcommand{\arraystretch}{1.3}
+\setlength{\arrayrulewidth}{0.15mm}
+\setlength{\doublerulesep}{0.12mm}
+\caption{模擬中需設定的硬體參數}
+\label{tab:para_hardware}
+\centering
+\begin{tabular}{|c|cc|c|c|}
+\hline
+\multicolumn{3}{|c|}{\textbf{硬體參數}}  &\textbf{單位}  &  \textbf{備註}   \\
+\hline
+\multirow{2}{*}{LED} 
+& 總輻射通量 &$Pt$ & $W/sr$ & 可透過改變電壓調整 \\
+ & 朗博次方& $M\ell$& -  & 最小為1 \\\hline
+\multirow{4}{*}{PD} 
+& 響應率 &$Re$ & $A/W$ & 可透過改變電壓調整 \\
+& 有效面積& $A$& $m^2$ & - \\
+& 飽和電流& $s$& $A$ & 可透過改變電壓調整 \\
+& 朗博次方& $Mp$& -  & 最小為1 \\\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsubsection{硬體組態}
 
 硬體組態的部分，位置的限制如\ref{chp:algorithm_constraint}章中所述，需限制PD擺放位置於PD座標系原點：$^P\boldsymbol{P}_p=
 \left[\begin{array}{ccc}0&0&0\end{array}\right]^T$，LED的擺放位置也限制於LED座標系原點：$^L\boldsymbol{P}_l=
-\left[\begin{array}{ccc}0&0&0\end{array}\right]^T$。而實際在設計硬體模組時，可以參考圖\ref{pic:ml_pd_config}，需要將各電子元件與LED、PD硬體固定於一特殊形狀的載體上，利用載體的形狀來調整硬體的擺放位置與指向。在模擬時，我們僅需透過定義各硬體的指向$\boldsymbol{V}$即可，其中各指向有兩個自由度：天頂角$\alpha$與方位角$\beta$。改變各硬體的指向時，各硬體的照射範圍也會改變，導致定位效果不同，因此硬體指向如何設計為一影響系統表現的變數，於\ref{chp:evaluate}章中進行評估。
+\left[\begin{array}{ccc}0&0&0\end{array}\right]^T$。而實際在設計硬體模組時，可以參考圖\ref{pic:ml_pd_config}，需要將各電子元件與LED、PD硬體固定於一特殊形狀的載體上，利用載體的形狀來調整硬體的擺放指向。在模擬時，我們僅需透過定義各硬體的指向$\boldsymbol{V}$即可，其中各指向有兩個自由度：以球座標系定義的天頂角$\alpha$與方位角$\beta$。改變各硬體的指向時，各硬體的照射範圍也會改變，導致定位效果不同，因此硬體指向如何設計為一影響系統表現的因素，於\ref{chp:evaluate}章中進行評估。執得注意的是，每一個硬體的組態需要定義兩個自由度，因此組態的部分，總共需定義$2\times(L+P)$個自由度，組態的變數數量為硬體數量的函數。
 
-
+\begin{table}[h]
+    % \toprule% you can only use this within a tabular and if you load booktabs
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\arrayrulewidth}{0.15mm}
+    \setlength{\doublerulesep}{0.12mm}
+    \caption{模擬中需設定的硬體組態}
+    \label{tab:para_config}
+    \centering
+    \begin{tabular}{|c|cc|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{組態參數}}  &\textbf{單位}  &  \textbf{備註}   \\
+    \hline
+    \multirow{2}{*}{第$l$個LED} 
+    & 天頂角 &$^L \alpha_l$ & $rad$ & $0\leq ^L \alpha_l<\pi$ \\
+     & 方位角& $^L \beta_l$& $rad$ & $0\leq ^L \beta_l<2\pi$ \\\hline
+    \multirow{2}{*}{第$p$個PD} 
+    & 天頂角 &$^P \alpha_p$ & $rad$ & $0\leq ^P \alpha_p<\pi$ \\
+    & 方位角& $^P \beta_p$& $rad$ & $0\leq ^P \beta_p<2\pi$ \\\hline
+    \end{tabular}
+    \end{table}
+    
 
 \subsection{兩硬體單位擺放位置的模擬}
 \label{chp:simulate_position}
@@ -47,19 +117,63 @@
 
 根據\ref{chp:LEDPD_flow}章中描述，LED與PD各自可視為一個座標系，而兩者之間的相對關係可以齊次座標轉換表示，參考\ref{chp:relative}章。因此，我們可以透過改變齊次轉換矩陣$^{PL}\boldsymbol{H}$，使兩座標系之間的相對關係改變，以模擬兩硬體單位於空間中擺放位置。
 
-而根據式\ref{eqn:homogeneous}中呈現，齊次座標轉換矩陣$^{PL}\boldsymbol{H}$可以視為平移向量$^{PL}\boldsymbol{T}$與旋轉矩陣$^{PL}\boldsymbol{Ro}$綜合的效果，而平移與旋轉各自三個自由度。我們透過定義平移矩陣與旋轉矩陣來模擬兩硬體單位於空間中的相對位置，如式\ref{eqn:simulate_position}，平移位置透過$^{PL}t_x,^{PL}t_y,^{PL}t_z$三項定義，而旋轉則透過翻滾角$^{PL}rx$（Roll）、俯仰角$^{PL}ry$（Pitch）、偏航角$^{PL}rz$（Yaw）定義，各自代表繞x,y,z軸旋轉的角度，則旋轉矩陣可以寫為$^{PL}\boldsymbol{Rx},^{PL}\boldsymbol{Ry},^{PL}\boldsymbol{Rz}$三個矩陣的相乘結果。
+而根據式\ref{eqn:homogeneous}中呈現，齊次座標轉換矩陣$^{PL}\boldsymbol{H}$可以視為平移向量$^{PL}\boldsymbol{T}$與旋轉矩陣$^{PL}\boldsymbol{Ro}$綜合的效果，而平移與旋轉各自三個自由度，呈現於表\ref{tab:para_relative}。我們透過定義平移矩陣與旋轉矩陣來模擬兩硬體單位於空間中的相對位置，如式\ref{eqn:simulate_position}，平移位置透過$^{PL}t_x,^{PL}t_y,^{PL}t_z$三項定義，而旋轉則透過翻滾角$^{PL}rx$（Roll）、俯仰角$^{PL}ry$（Pitch）、偏航角$^{PL}rz$（Yaw）定義，各自代表繞x,y,z軸旋轉的角度，則旋轉矩陣可以寫為$^{PL}\boldsymbol{Rx},^{PL}\boldsymbol{Ry},^{PL}\boldsymbol{Rz}$三個矩陣的相乘結果。
 
 \begin{equation}
     \label{eqn:simulate_position}
     \begin{aligned}
-    &^{PL}\boldsymbol{T} = 
+    ^{PL}\boldsymbol{T} &= 
     \left[\begin{array}{c}
         ^{PL}t_x \\^{PL}t_y\\^{PL}t_z
     \end{array}\right]\\
-    &^{PL}\boldsymbol{Ro} = 
-    ^{PL}\boldsymbol{Rz} (^{PL}rz)^{PL}\boldsymbol{Ry}(^{PL}ry) ^{PL}\boldsymbol{Rx} (^{PL}rx)
+    ^{PL}\boldsymbol{Ro} &= 
+    ^{PL}\boldsymbol{Rz} (^{PL}rz)^{PL}\boldsymbol{Ry}(^{PL}ry) ^{PL}\boldsymbol{Rx} (^{PL}rx)\\
+    \text{Where }&\\
+    &^{PL}\boldsymbol{Rx} (^{PL}rx) =
+    \left[ \begin{array}{ccc}
+        1&0&0\\
+        0&\cos (^{PL}rx) &-\sin (^{PL}rx) \\
+        0&\sin (^{PL}rx) &\cos (^{PL}rx) 
+    \end{array}\right] \\
+    &^{PL}\boldsymbol{Ry}(^{PL}ry)=
+    \left[ \begin{array}{ccc}
+        \cos (^{PL}ry) &0&\sin (^{PL}ry) \\
+        0&1&0\\
+        -\sin (^{PL}ry) &0&\cos (^{PL}ry)
+    \end{array}\right]\\
+    &^{PL}\boldsymbol{Rz} (^{PL}rz) = 
+    \left[ \begin{array}{ccc}
+        \cos (^{PL}rz) &-\sin (^{PL}rz)& 0 \\
+        \sin (^{PL}rz) &\cos (^{PL}rz)& 0 \\
+        0 &0&1
+    \end{array}\right]\\
     \end{aligned}
 \end{equation}
+
+\begin{table}[h]
+    % \toprule% you can only use this within a tabular and if you load booktabs
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\arrayrulewidth}{0.15mm}
+    \setlength{\doublerulesep}{0.12mm}
+    \caption{模擬中定義相對位置的參數}
+    \label{tab:para_relative}
+    \centering
+    \begin{tabular}{|c|cc|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{定義相對位置的參數}}  &\textbf{單位}  &  \textbf{備註}   \\
+    \hline
+    \multirow{3}{*}{平移向量$^{PL}\boldsymbol{T}$自由度} 
+    & x分量 &$^{PL}t_x$ & $m$ &  \\
+    & y分量 &$^{PL}t_y$ & $m$ &  \\
+    & z分量 &$^{PL}t_z$ & $m$ &  \\
+    \hline
+    \multirow{3}{*}{旋轉矩陣$^{PL}\boldsymbol{Ro}$自由度} 
+    & Roll &${^{PL}rx}$ & $rad$ &  $0\leq {^{PL}rx}<2\pi$\\
+    & Pitch &$^{PL}ry$ & $rad$ & $0\leq {^{PL}rx}<2\pi$ \\
+    & Yaw &$^{PL}rz$ & $rad$ & $0\leq {^{PL}rx}<2\pi$ \\
+    \hline
+    \end{tabular}
+    \end{table}
 
 \subsection{光通訊訊號模擬}
 \label{chp:simulate_vlc}
@@ -86,11 +200,43 @@
 
     除了加上誤差以外，我還需評估硬體的解析度，光電二極體的解析度可以用雜訊等效功率（noise equivalent power，以下簡稱NEP）描述，在模擬訊號時的解析度以NEP決定，而NEP大小則取自硬體規格表。
 
+    模擬硬體誤差這段落所需設定得參數整理於表\ref{tab:para:error}：
+
+    \begin{table}[h]
+        % \toprule% you can only use this within a tabular and if you load booktabs
+        \renewcommand{\arraystretch}{1.3}
+        \setlength{\arrayrulewidth}{0.15mm}
+        \setlength{\doublerulesep}{0.12mm}
+        \caption{模擬硬體誤差需定義的參數}
+        \label{tab:para_error}
+        \centering
+        \begin{tabular}{|cc|c|c|}
+        \hline
+        \multicolumn{2}{|c|}{\textbf{模擬硬體誤差的參數}}  &\textbf{單位}  &  \textbf{備註}   \\
+        \hline
+        絕對溫度 &$Te$ & $K$ &  \\
+        頻寬 &$B$ & $Hz$ &  \\
+        分路電阻 &$Rs$ & $\Omega$ &  \\
+        雜訊等效功率 &$NEP$ & $\Omega$ &  \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+
     \subsection{計算定位結果}
 
     我們將上述的系統設計、相對位置、誤差模擬等以數值帶入模型，透過圖\ref{pic:simulate_hardware}中軟體模擬的流程計算不同系統設計下，兩硬體於空間中各位置的定位誤差。
 
     有了流程之後，我們即可將欲評估的系統設計與相對位置帶入，利用計算出的定位與定義相對位置的平移向量$^{PL}\boldsymbol{T}$
+
+
+
+
+
+
+
+
+
 
 \section{計算定位結果}
 \label{chp:simulate_result}
