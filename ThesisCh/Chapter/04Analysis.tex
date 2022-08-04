@@ -366,7 +366,7 @@
 \section{系統評估}
 \label{chp:system_evaluate}
 
-上一章節中，我們能夠完整的以數值模擬方式，針對不同設計在模擬空間中不同位置，進行定位以及計算誤差，完成圖\ref{pic:simulate_hardware}中的流程。而本章節則是想要了解不同系統設計的表現，模擬流程整理於圖\ref{pic:evaluate_flow}：
+上一章節中，我們能夠完整的以數值模擬方式，針對不同設計在模擬空間中不同位置，進行定位以及計算誤差，完成圖\ref{pic:simulate_hardware}中的流程。而本章節則是想要了解不同系統設計的表現，評估流程整理於圖\ref{pic:evaluate_flow}：
 
 
 \begin{figure}[ht]
@@ -376,21 +376,24 @@
     \label{pic:evaluate_flow}
 \end{figure}
 
-在評估系統時，我們需先設定感興趣範圍（Region of Interest，以下簡稱ROI）以對不同的使用情境進行設計，
+模擬流程中設定兩座標系相對關係的步驟一次計算一個位置的定位與誤差；而在評估系統設計時，我們須判斷環境中多個位置的誤差，以觀察該設計在不同位置的表現。因此評估時，我們需針對特定情境下感興趣範圍（Region of Interest，以下簡稱ROI）內的所有位置進行誤差計算，以建立多個樣本點的方式達到，詳述於\ref{chp:scenario}章中。而評估步驟的最後，則是對系統表現以\ref{chp:chp:evaluate_method}章的方法進行量化與評估，系統設計的影響結果則於\ref{chp:chp:design_result}章中分析。
 
 
 
 
-因此我們的模擬流程由定義使用情境開始，參考\ref{chp:scenario}章，而根據不同使用情境，量測與目標單位於空間中的相對位置與姿態也會有所不同。系統設計的部分於\ref{chp:hardware_design}章中介紹，需決定的部分包含硬體數量、硬體參數以及硬體組態。有了硬體組態與座標轉換關係，即可透過式\ref{eqn:model_coor_extend}計算出相對位置，如何模擬硬體誤差則在\ref{chp:hardware_error}章中介紹。最後則是透過第三章提出的演算法，計算出相對位置與誤差。
+
 
 \subsection{使用情境與樣本點}
 \label{chp:scenario}
 
-\subsection{量化系統表現}
-\label{chp:evaluate_method}
 
 
-% 為了針對不同使用情境評估系統表現，我們於此情境中的感興趣區域（Region of Interest，以下簡稱ROI）中建立多個樣本點，針對第$k$個樣本點中量測出的相對位置$\hat{^{PL}_{k}\boldsymbol{T}}$，計算出與實際相對位置$^{PL}\boldsymbol{T}$的誤差$_k e$，參考圖\ref{pic:error_show}。其中，ROI是相對PD座標系去作定義，也就是將PD視為固定，定義LED座標系相對於PD座標系的座標轉換關係$^{PL}\boldsymbol{H}$。僅定義LED座標系相對於PD座標系的關係之原因，是因為在不考慮環境障礙物情況下，兩座標系的絕對位置並不重要，僅有相對關係會對相對位置造成影響。
+
+為了針對不同使用情境評估系統表現，我們需針對不同情境ROI，
+
+
+
+中建立多個樣本點，針對第$k$個樣本點中量測出的相對位置$\hat{^{PL}_{k}\boldsymbol{T}}$，計算出與實際相對位置$^{PL}\boldsymbol{T}$的誤差$_k e$，參考圖\ref{pic:error_show}。其中，ROI是相對PD座標系去作定義，也就是將PD視為固定，定義LED座標系相對於PD座標系的座標轉換關係$^{PL}\boldsymbol{H}$。僅定義LED座標系相對於PD座標系的關係之原因，是因為在不考慮環境障礙物情況下，兩座標系的絕對位置並不重要，僅有相對關係會對相對位置造成影響。
 
 % \begin{figure}[ht]
 %     \centering
@@ -445,7 +448,8 @@
 
 % 如表\ref{tab:translate}中所示，一共有$10\times 10\times 10$總共一千個平移樣本點，旋轉樣本點則有$1\times 6\times 10$共六十個，兩者相乘代表總共六萬個樣本點。這代表著每個平移樣本點上皆需做出60次旋轉，以旋轉樣本點來看也是，每個旋轉樣本點都需在每個平移樣本點上計算一次。
 
-% \subsubsection{量化系統表現}
+\subsection{量化系統表現}
+\label{chp:evaluate_method}
 
 % 根據以上設定，我們將六萬個樣本點進行定位，然而，各樣本點都有可能遇到無法求解的狀況，如\ref{chp:orient_conclu}章所提到，若沒有任何一個LED同時將訊號傳送給三個以上的PD，則無法解出方位；而若沒有任何一個PD同時接受到三個以上LED資訊，則無法計算距離。即使我們今天系統設計有超過三個以上的LED與PD硬體數量，在\ref{chp:algorithm_filter}章中也會將訊號過大、過小的數值去除，導致所得訊號不足求解的狀況。在各樣本點可能會解不出來的情況下，解不出來則會完全無法計算誤差，因此無法利用樣本點平均誤差來完整描述系統的表現。
 

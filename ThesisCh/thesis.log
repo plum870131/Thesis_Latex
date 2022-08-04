@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.3)  4 AUG 2022 13:19
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.3)  4 AUG 2022 13:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2282,4 +2282,187 @@ File: ch3pic/algorithm_flow.png Graphic file (type bmp)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: watermark.pdf Graphic
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[48]
+Overfull \hbox (9.93904pt too wide) in paragraph at lines 98--99
+[]\TU/DFKai-SB(0)/m/n/12 解 方 位 的 流 程 詳 細 如 圖[][]\TU/TimesNewRoman(0)/m/n/12 3.5[][]\TU/DFKai-SB(0)/m/n/12 ，|  於[][]\TU/TimesNewRoman(0)/m/n/12 3.3.1.1[][]\TU/DFKai-SB(0)/m/n/12 章 到[][]\TU/TimesNewRoman(0)/m/n/12 3.3.1.4[][]\TU/DFKai-SB(0)/m/n/12 章 詳 細 介 紹 取 得 方 位 $[][][] \OT1/cmr/m/n/12 =
+ []
+
+File: ch3pic/orient_flow.png Graphic file (type bmp)
+<ch3pic/orient_flow.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ch3pic/1led_mulpd.png Graphic file (type bmp)
+<ch3pic/1led_mulpd.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[49]
+
+LaTeX Warning: Text page 50 contains only floats.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[50]
+File: ch3pic/solve_surface.png Graphic file (type bmp)
+<ch3pic/solve_surface.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[51]
+File: ch3pic/solve_axis.png Graphic file (type bmp)
+<ch3pic/solve_axis.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [52]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [53]
+File: ch3pic/mulled_1pd.png Graphic file (type bmp)
+<ch3pic/mulled_1pd.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [54]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [55]) (./chapter/04Analysis.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [56]
+Chapter 4.
+File: ch4pic/simulate_hardware.png Graphic file (type bmp)
+<ch4pic/simulate_hardware.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[57
+
+]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [58]
+
+LaTeX Warning: Reference `chp:evaluate' on page 59 undefined on input line 89.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[59]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [60]
+
+LaTeX Warning: Citation `survey_light2018' on page 61 undefined on input line 186.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[61]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [62]
+
+LaTeX Warning: Citation `datasheet:led_vsma' on page 63 undefined on input line 294.
+
+
+LaTeX Warning: Citation `datasheet:hm_L12170' on page 63 undefined on input line 295.
+
+
+LaTeX Warning: Citation `datasheet:hm_pd' on page 63 undefined on input line 312.
+
+
+LaTeX Warning: Citation `datasheet:hm_pd' on page 63 undefined on input line 312.
+
+
+Overfull \hbox (52.91295pt too wide) in paragraph at lines 315--342
+ [][] 
+ []
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[63]
+File: ch4pic/evaluate_flow.png Graphic file (type bmp)
+<ch4pic/evaluate_flow.png>
+
+
+LaTeX Warning: Reference `chp:chp:evaluate_method' on page 64 undefined on input line 379.
+
+
+LaTeX Warning: Reference `chp:chp:design_result' on page 64 undefined on input line 379.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[64]
+
+LaTeX Warning: Reference `pic:error_show' on page 65 undefined on input line 396.
+
+) (./chapter/05Optimize.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [65]
+Chapter 5.
+File: ch5pic/optimize_flow.png Graphic file (type bmp)
+<ch5pic/optimize_flow.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `chp:system_perform' on page 66 undefined on input line 30.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[66
+
+]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [67]
+File: ch5pic/optimize_variable.png Graphic file (type bmp)
+<ch5pic/optimize_variable.png>
+File: ch5pic/opt_result.png Graphic file (type bmp)
+<ch5pic/opt_result.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[68]) (./chapter/06Conclusion.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [69]
+Chapter 6.
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[70
+
+])
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [71]
+No file thesis.bbl.
+(./thesis.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 9E74712067BBB7EEA71E29EA49395DA1;10052.
+ ) 
+Here is how much of TeX's memory you used:
+ 43696 strings out of 476179
+ 952785 string characters out of 5809545
+ 1365081 words of memory out of 5000000
+ 63576 multiletter control sequences out of 15000+600000
+ 481071 words of font info for 106 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 98i,19n,117p,865b,960s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on thesis.pdf (81 pages).
