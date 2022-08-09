@@ -1,4 +1,4 @@
-\chapter*{符號列表}
+\chapter*{符號列表：依定義}
 \label{chp:symbol}
 % \addcontentsline{toc}{chapter}{符號列表}
 
@@ -9,15 +9,23 @@
 
 
 % \section*{符號列表}
-\subsection*{座標系}
+\subsection*{次系統座標系}
 
-\begin{longtable}[l]{cl}
+\begin{longtable}[l]{ll}
     % $\text{Bell}(\cdot)$ & 鐘形函式\\
-    $\boldsymbol{P}$ & 座標點\\
-    $x,y,z$ & 座標點$\boldsymbol{P}$的$x,y,z$分量\\
-    $\boldsymbol{V}$ & 單位向量\\
-    $u,v,w$ & 單位向量$\boldsymbol{V}$的$x,y,z$分量\\
-    $d,\alpha,\beta$ & 單位向量$\boldsymbol{V}$在球座標系中的天頂角（Zenith Angle）、方位角（Azimuth Angle）、距離分量\\
+    $\boldsymbol{P}(x,y,z) =
+        \left[\begin{array}{ccc}
+        x &y&z
+        \end{array}\right]^T $ & 座標點$\boldsymbol{P}$與卡氏座標系中的$x,y,z$分量\\
+    $\boldsymbol{V}(u,v,w) =
+        \left[\begin{array}{ccc}
+        u &v&w
+        \end{array}\right]^T$ & 指向向量$\boldsymbol{V}$與卡氏座標系中的$x,y,z$分量\\
+   $\boldsymbol{V}^{sph}(d,\alpha,\beta) =
+        \left[\begin{array}{ccc}
+        d &\alpha&\beta
+        \end{array}\right]^T$ & 指向向量$\boldsymbol{V}$與球座標系中的距離、天頂角（Zenith Angle）、\\
+        &方位角（Azimuth Angle）分量\\
 \end{longtable}
 
 % \begin{figure}[ht]
@@ -41,14 +49,16 @@
 
 \subsection*{座標系轉換}
 
-\begin{longtable}[l]{cl}
+\begin{longtable}[l]{ll}
     $\boldsymbol{H}=\left[\begin{array}{cc}
          \boldsymbol{Ro}  & \boldsymbol{T} \\
         0_{1\times3} & 1
         \end{array}\right]$ & 齊次轉換矩陣 Homogeneous Transformation Matrix\\
+    $\boldsymbol{Ro}=Rz(rz)Ry(ry)Rx(rx)=\left\{\gamma_{ij}\right\}$ & 旋轉矩陣$Ro$以翻滾角$rx$（Roll）、俯仰角$ry$（Pitch）、\\
+        &偏航角定義$rz$（Yaw）\\%\left\{\gamma_{ij}\right\}
     $\boldsymbol{T}=\left[\begin{array}{ccc}t_x&t_y&t_z\end{array}\right]^T$ & 平移向量 Transfer Vector\\
-    $\boldsymbol{T}^{sph}=\left[\begin{array}{ccc}t_d&t_{\alpha}&t_{\beta}\end{array}\right]^T$ & 平移向量以球座標系表示\\
-    $\boldsymbol{Ro}=\left\{\gamma_{ij}\right\}$ & 旋轉矩陣 Rotation Matrix\\
+    $\boldsymbol{T}^{sph}=\left[\begin{array}{ccc}t_d&t_{\alpha}&t_{\beta}\end{array}\right]^T$ & 平移向量以球座標系中的距離$t_d$、天頂角$t_{\alpha}$、方位角$t_{\beta}$分量\\
+    $\boldsymbol{Tv}^{sph}=\left[\begin{array}{ccc}1&t_{\alpha}&t_{\beta}\end{array}\right]^T$ & 方位（單位平移向量）與球座標系中分量\\
 \end{longtable}
 
 % \begin{figure}[ht]
@@ -99,7 +109,7 @@
     $Mp$ & PD的朗伯次方（Lambertian Order）\\
     $A$ & 有效面積\\
     $Re$ & 響應率（Responsivity）\\
-    $s$ &飽和電流
+    $S$ &飽和電流
 \end{longtable}
 
 
@@ -132,29 +142,33 @@
 
 \onehalfspacing
 
-\subsection*{系統與演算法}
+\subsection*{演算法參數}
 
-\begin{longtable}[l]{cl}
+\begin{longtable}[l]{ll}
     % $\text{Bell}(\cdot)$ & 鐘形函式\\
-    $t_d$ & 兩座標系之間距離\\
-    $\boldsymbol{Tv}$ & 兩座標系中對方所在方位\\
     $L,P$ & LED與PD總數\\
     $\ell,p$ & LED與PD編號\\
     $F\ell,Fp$ & 過濾後的LED與PD數量\\
     $Ra$& 餘弦比值\\
     $r_c$& 取作餘弦比值參考值的硬體編號\\
     $r_s$& 參考平面由$r_c$與$r_s$編號的硬體資訊獲得\\
-    $N$& 平面法向量\\
+    $\boldsymbol{N}$& 平面法向量\\
+\end{longtable}
+
+\onehalfspacing
+
+\subsection*{系統模擬與評估參數}
+
+\begin{longtable}[l]{ll}
+    % $\text{Bell}(\cdot)$ & 鐘形函式\\
     $Kb$&波茲曼常數（Boltzmann constant）\\
     $Te$& 溫度\\
     $B$& 頻寬（Bandwidth）\\
     $q$&電子電荷\\
-    $Rs$&分路電阻（Shunt Resistance）\\
+    $R$&電阻\\
     $k,K$&樣本點編號以及樣本點總數\\
 
 \end{longtable}
-
-
 
 
 \onehalfspacing
@@ -182,6 +196,8 @@
     \item[(7) 使用的座標系統：]  以何種座標系呈現（無：卡氏座標系；$sph$：球座標系）
 \end{description}
 
+
+\onehalfspacing
 
 以下舉例解釋：
 \begin{description}

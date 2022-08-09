@@ -75,7 +75,7 @@
 \multirow{4}{*}{PD} 
 & 響應率 &$Re$ & $A/W$ & 可透過改變電壓調整 \\
 & 有效面積& $A$& $m^2$ & - \\
-& 飽和電流& $s$& $A$ & 可透過改變電壓調整 \\
+& 飽和電流& $S$& $A$ & 可透過改變電壓調整 \\
 & 朗博次方& $Mp$& -  & 最小為1 \\\hline
 \end{tabular}
 \end{table}
@@ -195,7 +195,7 @@
         \label{eqn:thermal_noise}
         It_{lp}=\sqrt{\frac{4 Kb Te B}{Rs}}\\
         \label{eqn:shot_noise}
-        Is_{lp}=\sqrt{2qIe_{lp}B}
+        Is_{lp}=\sqrt{2q(Ie_{lp}+Ib+Id)B}
     \end{gather}
 
     除了加上誤差以外，我還需評估硬體的解析度，光電二極體的解析度，也就是PD最小可感測的電流$Im$，可以用雜訊等效功率$Nep$（noise equivalent power，以下簡稱NEP）計算，如式\ref{eqn:nep}，，而NEP大小則取自硬體規格表。
@@ -223,6 +223,8 @@
         頻寬 &$B$ & $Hz$ &  \\
         分路電阻 &$Rs$ & $\Omega$ &  \\
         雜訊等效功率 &$Nep$ & $W/\sqrt{Hz}$ &  \\
+        PD暗電流 &$Id$ & $A$ &  \\
+        背景電流 &$Ib$ & $A$ &  \\
         \hline
         \end{tabular}
     \end{table}
@@ -244,38 +246,25 @@
 
 
 
-在此章節，我們利用\ref{chp:simulation}章中介紹的模擬方法，將需設計之參數帶入模型，透過圖\ref{pic:simulate_hardware}中軟體模擬的流程計算不同系統設計下，兩硬體於空間中各位置的距離與方位。有了流程之後，我們即可將欲評估的系統設計與相對位置帶入，利用計算出的定位$\hat{^{PL}\boldsymbol{T}}$與定義相對位置的平移向量$^{PL}\boldsymbol{T}$，兩者之間的歐氏距離作為誤差$\hat{e}$。如何抉擇使用的硬體參數於\ref{chp:simulate_para}章中記錄，而模擬的結果呈現於\ref{chp:simulate_result_sub}章中。
+在此章節，我們利用\ref{chp:simulation}章中介紹的模擬方法，將需設計之參數帶入模型，透過圖\ref{pic:simulate_hardware}中軟體模擬的流程計算不同系統設計下，兩硬體於空間中各位置計算出的定位$\hat{^{PL}\boldsymbol{T}}$，並將其與定義相對位置的平移向量$^{PL}\boldsymbol{T}$計算歐氏距離作為誤差$\hat{e}$。如何抉擇使用的參數於\ref{chp:simulate_para}章中記錄，而模擬的結果呈現於\ref{chp:simulate_result_sub}章中。
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection{參考市售硬體規格}
+\subsection{設定模擬參數}
 \label{chp:simulate_para}
 
-在模擬中，上述的所有參數皆可以透過簡單的調整數值來進行模擬；然而在現實中，一旦挑選了一種LED與PD，則表\ref{tab:para_hardware}中的數值基本上就被訂下。雖然仍能透過改變給定的電壓電流來調整硬體參數，但各硬體參數間的關係仍存在，因此設定硬體參數的最佳方法，便是直接參考現有的硬體規格表，由規格表上的數據進行設定。因此我們將\ref{chp:simulation}章中提到需要設定的參數們，依照「是否在硬體挑選時被決定」分為兩類，以下我們將現有市售的硬體規格列出。
+在此段落，我們介紹如何設定\ref{chp:simulation}章中須設置的參數們，包含硬體數量（表\ref{tab:para_amount}）、硬體參數（表\ref{tab:para_hardware}）、硬體組態（表\ref{tab:para_config}）、座標系相對關係（表\ref{tab:para_relative}）、與誤差模擬參數（表\ref{tab:para_error}）。在模擬中，所有參數皆可以透過簡單的調整數值來進行模擬；然而在現實中，一旦挑選了一種LED與PD，則硬體參數（表\ref{tab:para_hardware}）與部分的誤差模擬參數數值基本上就被訂下。雖然仍能透過改變給定的電壓電流來調整硬體參數，但各硬體參數間的關係仍存在，因此設定硬體參數的最佳方法，便是直接參考現有的硬體規格表，由規格表上的數據進行設定。
+
+因此我們將\ref{chp:simulation}章中提到需要設定的參數們，依照參數設定的方式分為三類，\ref{chp:para_hardware}章中介紹參考市售硬體規格表決定的參數，\ref{chp:para_from_cite}章中則參考文獻決定部分參數，其餘則為\ref{chp:para_can_design}章中介紹可以自由設計改變的系統設計變數。
 
 
 
-在此段落，我們介紹如何設定\ref{chp:simulation}章中須設置的參數們，包含硬體數量、硬體參數、硬體組態、與誤差模擬參數。
+\subsubsection{參考市售硬體規格之參數}
+\label{chp:para_hardware}
 
-
+以下我們將現有市售的硬體規格列出，LED硬體規格呈現於表\ref{tab:para_LED}中，決定了表\ref{tab:para_hardware}中的LED參數。PD的硬體規格則呈現於表\ref{tab:para_PD}中，除了表\ref{tab:para_hardware}中的PD參數以外，也決定了表\ref{tab:para_error}中的分路電阻、NEP與PD暗電流。
 
 \begin{table}[h]
     % \toprule% you can only use this within a tabular and if you load booktabs
@@ -302,9 +291,9 @@
     % & 飽和電流& $s$& $A$ & 可透過改變電壓調整 \\
     % & 朗博次方& $Mp$& -  & 最小為1 \\\hline
     \end{tabular}
-    \end{table}
+\end{table}
 
-    \begin{table}[h]
+\begin{table}[h]
         % \toprule% you can only use this within a tabular and if you load booktabs
         \renewcommand{\arraystretch}{1.3}
         \setlength{\arrayrulewidth}{0.15mm}
@@ -323,13 +312,14 @@
         響應率 &$Re$ & $A/W$ & 0.64& 0.64& 0.64& 0.38 \\
         有效面積& $A$& $m^2$ & 
         $6\times 10^{-6}$ & 
-        $33\times 10^{-6}$ & 
-        $100\times 10^{-6}$ & 
-        $33.6\times 10^{-6}$\\
+        $3.3\times 10^{-5}$ & 
+        $10^{-4}$ & 
+        $3.36\times 10^{-5}$\\
         朗博次方& $Mp$& -  & $1$& $1$& $1$& $1.5$\\
+        \hline
         分路電阻 &$Rs$ & $\Omega$ 
-        & $50\times 10^{9}$ 
-        & $10\times 10^{9}$
+        & $5\times 10^{10}$ 
+        & $10^{10}$
         & $5\times 10^{9}$
         & $10^{8}$  \\
         雜訊等效功率 &$Nep$ & $W/\sqrt{Hz}$ 
@@ -337,22 +327,64 @@
         & $9\times 10^{-16}$
         & $2\times 10^{-15}$
         & $2.8\times 10^{-15}$\\
+        PD暗電流 &$Id$ & $A$ 
+        & $5\times 10^{-12}$ 
+        & $5\times 10^{-11}$
+        & $2\times 10^{-10}$
+        & $10^{-10}$\\
         \hline
         \end{tabular}
-        \end{table}
+\end{table}
+
+
+
+\subsubsection{參考其他文獻之參數}
+\label{chp:para_from_cite}
+
+模擬誤差的參數（表\ref{tab:para_error}）中，除了PD規格表可參考的參數外，仍有部分尚未被定義，包含絕對溫度、頻寬與背景電流。絕對溫度我們取$300K$作為室內溫度，而頻寬與背景電流則選擇參考其他文獻來決定參數，這邊選擇參考文獻\cite{omg_old}，數值呈現於表\ref{tab:para_from_cite}。
+
+\begin{table}[h!]
+    % \toprule% you can only use this within a tabular and if you load booktabs
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\arrayrulewidth}{0.15mm}
+    \setlength{\doublerulesep}{0.12mm}
+    \caption{參考其他文獻之參數數值}
+    \label{tab:para_from_cite}
+    \centering
+    \begin{tabular}{|cc|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{模擬硬體誤差的參數}}  &\textbf{單位}  &  \textbf{數值}   \\
+    \hline
+    絕對溫度 &$Te$ & $K$ &  $300$ \\
+    頻寬 &$B$ & $Hz$ &  $640\times 10^{3}$ \cite{omg_old}\\
+    背景電流 &$Ib$ & $A$ &  $740\times 10^{-6}$ \cite{omg_old}\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{可自由設計之參數}
+\label{chp:para_can_design}
+
+除了以上參數以外，硬體數量（表\ref{tab:para_amount}）、硬體組態（表\ref{tab:para_config}）為可自由設計的系統設計變數，坐標系相對關係（表\ref{tab:para_relative}）則為描述相對位置與情境方法。
 
 
 
 \subsection{模擬結果}
 \label{chp:simulate_result_sub}
 
-根據\ref{chp:simulation}章所述系統設計與誤差模擬方法，我們利用將兩座標系至於模擬空間中，定義齊次座標轉換矩陣為
-
-結果如下
+我們建立了一個互動模擬介面如圖\ref{pic:result_interactive}，根據\ref{chp:simulation}章所述系統設計與誤差模擬方法，模擬參數初始值則選用表\ref{tab:para_LED}中的Vishay VSMA1085250與表\ref{tab:para_PD}中的Hamamatsu S12915-1010R兩者的參數，其餘誤差模擬參數以表\ref{tab:para_from_cite}的參數帶入，則可以透過調整各項參數、座標系相對關係來看定位結果與定位誤差。其中，硬體指向的部分，由於每個硬體都有兩個自由度，為了方便進行模擬，這裡將指向暫時限制成文獻中最常見的樣式，也就是$^P\boldsymbol{V}_p^{sph}$中的方位角平均分配：$\beta_p = 1\pi/P$，而各PD的天頂角則限制為相同：$\alpha_p = \alpha$，因此PD唯一的組態變數指剩下$\alpha$天頂角，參考圖\ref{pic:config_orient}。
 
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/result_interactive.png}
+    \caption{定位模擬結果互動介面}
+    \label{pic:result_interactive}
+\end{figure}
 
-我們參考文獻最常見的使用情境，將座標於空間中移動，誤差大小以顏色呈現於圖
+
+
+
 
 \subsection{小結}
 
@@ -362,6 +394,7 @@
 
 
 
+\newpage
 
 \section{系統評估}
 \label{chp:system_evaluate}
@@ -369,7 +402,7 @@
 上一章節中，我們能夠完整的以數值模擬方式，針對不同設計在模擬空間中不同位置，進行定位以及計算誤差，完成圖\ref{pic:simulate_hardware}中的流程。而本章節則是想要了解不同系統設計的表現，評估流程整理於圖\ref{pic:evaluate_flow}：
 
 
-\begin{figure}[ht]
+\begin{figure}[htpb]
     \centering
     \includegraphics[width=8cm]{ch4pic/evaluate_flow.png}
     \caption{評估系統流程圖}
@@ -391,7 +424,7 @@
 
 為了針對不同使用情境評估系統表現，我們須了解不同情境的ROI，而由於相對位置是定義LED座標系投影至PD座標系的齊次座標轉矩陣（參考\ref{chp:simulate_position}章），因此ROI是相對PD座標系去作定義。有了ROI之後，於其中建立多個樣本點，在設定樣本點時以\ref{chp:simulate_position}章中表\ref{tab:para_relative}呈現的參數來定義相對關係，包含平移與旋轉的各三個自由度，並針對每個樣本點進行誤差的計算，其中第$k$個樣本點中量測出的相對位置$\hat{^{PL}_{k}\boldsymbol{T}}$，式\ref{eqn:sample_error}計算出與實際相對位置$^{PL}\boldsymbol{T}$的誤差為$_k e$，參考示意圖\ref{pic:error_show}。
 
-\begin{figure}[ht]
+\begin{figure}[htpb]
     \centering
     \includegraphics[width=9cm]{ch4pic/error.png}
     \caption{樣本點與誤差示意圖}
@@ -407,7 +440,7 @@
 在這裡，我們選擇常見的室內定位情境作為模擬情境，
 也就是目標物LED座標系固定於天花板朝地面照射，而量測者的PD座標系於室內空間中。測試範圍則是設置的較\cite{case:cart3d}\cite{case:3d_layers}中的都大，為$3 \times 3 \times 3 m$的平移範圍。我們在此範圍內建立樣本點，平移自由度$^{PL}t_x$、$^{PL}t_y$、$^{PL}t_z$各自於範圍內平分為10段，總共有1000個平移樣本點。數值呈現於表\ref{tab:translate}中，空間中的關係則呈現於圖\ref{pic:translate_sample}。
 
-\begin{table}[h!]
+\begin{table}[htpb]
     \begin{center}
       \caption{平移樣本點}
       \label{tab:translate}
@@ -421,7 +454,7 @@
     \end{center}
   \end{table}
 
-\begin{figure}[ht]
+\begin{figure}[htpb]
     \centering
     \includegraphics[width=6cm]{ch4pic/translate_sample.png}
     \caption{平移樣本點}
@@ -432,7 +465,7 @@
 
 
 
-\begin{table}[h]
+\begin{table}[htpb]
     \begin{center}
       \caption{旋轉樣本點}
       \label{tab:rotate}
@@ -446,7 +479,7 @@
    \end{center}
  \end{table}
 
-\begin{figure}[h]
+\begin{figure}[htpb]
     \centering
     \includegraphics[width=12cm]{ch4pic/rotate_sample.png}
     \caption{旋轉樣本點}
@@ -468,16 +501,29 @@
 
 
 
-因此，我們改看「在容許範圍$To$（Tolerance）」內的樣本點比例，在這邊我們設定$To=0.1m$，而結果呈現於圖\ref{pic:sample_out}。
+因此，我們改看「在容許範圍$To$（Tolerance）」內的樣本點比例，在這邊我們設定$To=0.1m$，以及「有效範圍」，也就是超過有效閥值$Ef$的樣本位置，而結果呈現於圖\ref{pic:sample_out}。
 
-\begin{figure}[ht]
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=9cm]{ch4pic/sample_out.png}
+    \includegraphics[width=14cm]{ch4pic/sample_out.png}
     \caption{容許範圍內的樣本點比例}
     \label{pic:sample_out}
 \end{figure}
 
+
+
 觀察圖中的現象，在PD座標系延伸出去，有一橢圓區塊具有很高的定位能力，定位能力的分佈與其他文獻符合。
+
+
+為了觀察不同現象的影響，我們一樣建立一個互動模擬介面如圖\ref{pic:analysis_interactive}，可以透過改變不同的參數，針對此情境進行評估，
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/analysis_interactive.png}
+    \caption{分析互動模擬介面}
+    \label{pic:analysis_interactive}
+\end{figure}
+
 
 而由於第三章此演算法並沒有限制硬體數量、朗博次方與硬體指向，在設計上是有靈活度的，因此我們透過改變這幾項變數，來觀察系統的反應。其中，LED與PD指向的部分，我們將每個硬體皆具有的兩個由度限制剩下一個，假設方位角平均分配：$^P\beta_p = 2\pi/P$、$^L\beta_l = 2\pi/L$，仰角的部分則限制必須相同$^P\alpha_p =^P\alpha$、$^L\alpha_l = ^L\alpha$。在這樣的限制下，我們分別探討各項變數的影響。
 
@@ -489,24 +535,25 @@
 \subsubsection{硬體指向對系統表現的影響}
 \label{chp:orient_effect}
 
-在假設朗博次方$Mp=M\ell=1$，以及硬體數量$L=P-8$的情況下，我們改變硬體指向$^P\alpha,^L\alpha$，並將樣本中於容許範圍內的比例，呈現於圖\ref{pic:alpha_translate}與圖\ref{pic:alpha_rotate}中。隨著硬體指向提升，多個硬體之間重疊的覆蓋範圍便越來越小，漸漸僅剩下於中心位置的樣本點：$x,y,=0$。
+在假設朗博次方$Mp=M\ell=1$，以及硬體數量$L=P-8$的情況下，我們改變硬體指向$^P\alpha,^L\alpha$，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:alpha_effect}，我們可以觀察到在此情境中，較小的硬體擺設天頂角，使系統表現較佳。
+% 並將樣本中於容許範圍內的比例，呈現於圖\ref{pic:alpha_translate}與圖\ref{pic:alpha_rotate}中。隨著硬體指向提升，多個硬體之間重疊的覆蓋範圍便越來越小，漸漸僅剩下於中心位置的樣本點：$x,y,=0$。
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=14cm]{ch4pic/alpha_translate.png}
-    \caption{改變硬體指向對平移樣本點的影響}
-    \label{pic:alpha_translate}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=14cm]{ch4pic/m_rotate.png}
-    \caption{改變硬體指向對旋轉樣本點的影響}
-    \label{pic:alpha_rotate}
-\end{figure}
+% \begin{figure}[htpb]
+%     \centering
+%     \includegraphics[width=14cm]{ch4pic/alpha_translate.png}
+%     \caption{改變硬體指向對平移樣本點的影響}
+%     \label{pic:alpha_translate}
+% \end{figure}
+% \begin{figure}[htpb]
+%     \centering
+%     \includegraphics[width=14cm]{ch4pic/m_rotate.png}
+%     \caption{改變硬體指向對旋轉樣本點的影響}
+%     \label{pic:alpha_rotate}
+% \end{figure}
 
-我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:alpha_effect}，我們可以觀察到在此情境中，較小的硬體擺設天頂角，使系統表現較佳。
 
-\begin{figure}[h!]
+
+\begin{figure}[htpb]
     \centering
     \includegraphics[width=9cm]{ch4pic/m_effect.png}
     \caption{改變硬體指向對系統的影響}
@@ -516,24 +563,26 @@
 \subsubsection{朗博次方對系統表現的影響}
 \label{chp:m_effect}
 
-在假設$^P\alpha_p =\pi/18$、$^L\alpha_l = \pi/18$，以及硬體數量$L=P-8$的情況下，我們改變朗博次方，並將樣本中於容許範圍內的比例，呈現於圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}中。隨著朗博次方的提升，硬體所照射的範圍越來越小，因此容許範圍內比例高的的區域便越顯集中。
+在假設$^P\alpha_p =\pi/18$、$^L\alpha_l = \pi/18$，以及硬體數量$L=P=8$的情況下，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:m_effect}，我們可以觀察到在此情境中，較小的朗博次方使系統表現較佳。
+% 我們改變朗博次方，並將樣本中於容許範圍內的比例，
+% 呈現於圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}中。隨著朗博次方的提升，硬體所照射的範圍越來越小，因此容許範圍內比例高的的區域便越顯集中。
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=14cm]{ch4pic/m_translate.png}
-    \caption{改變朗博次方對平移樣本點的影響}
-    \label{pic:m_translate}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=14cm]{ch4pic/m_rotate.png}
-    \caption{改變朗博次方對旋轉樣本點的影響}
-    \label{pic:m_rotate}
-\end{figure}
+% \begin{figure}[htpb]
+%     \centering
+%     \includegraphics[width=14cm]{ch4pic/m_translate.png}
+%     \caption{改變朗博次方對平移樣本點的影響}
+%     \label{pic:m_translate}
+% \end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=14cm]{ch4pic/m_rotate.png}
+%     \caption{改變朗博次方對旋轉樣本點的影響}
+%     \label{pic:m_rotate}
+% \end{figure}
 
-我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:m_effect}，我們可以觀察到在此情境中，較小的朗博次方使系統表現較佳。
 
-\begin{figure}[h!]
+
+\begin{figure}[htpb]
     \centering
     \includegraphics[width=9cm]{ch4pic/m_effect.png}
     \caption{改變朗博次方對系統的影響}
