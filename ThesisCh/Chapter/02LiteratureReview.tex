@@ -489,7 +489,7 @@
         \subsection{小結：本研究使用技術的選擇}
         
 
-        在\ref{chp:technique}章中，由電磁波頻率分類為無線電波段與光波段，分別於\ref{chp:radio}章與\ref{chp:light}章中介紹無線電波與光波段的定位，並於圖\ref{pic:method_compare}中比較兩者，其中光波段較高的精度、較小的硬體、以及能夠零或應用的幾何方法演算法，使光波段定位為更適合的選擇。
+        在\ref{chp:technique}章中，由電磁波頻率分類為無線電波段與光波段，分別於\ref{chp:radio}章與\ref{chp:light}章中介紹無線電波與光波段的定位，並於圖\ref{pic:method_compare}中比較兩者，其中光波段較高的精度、較小的硬體、以及能夠靈活應用的幾何方法演算法，使光波段定位為更適合的選擇。
 
         光波段中，又依照使用波段與使用的硬體分類。使用波段於\ref{chp:light_electro}章中討論，分為可見光、近紅外光與遠紅外光，參考圖\ref{pic:light_freq_compare}，近紅外光兼具低成本低干擾的特色，因此選用近紅外光波段中，位於輻射光譜低谷的760nm與940nm波段最為合適。硬體選擇則於\ref{chp:light_receiver}章中討論，參考圖\ref{pic:pd_camera_sort}，權衡之下選擇PD，雖然捨棄精度，但得以換取較低的成本與較小的體積；另外，PD所使用的定位演算法需為具有單點對單點定位能力的幾何方法。
     
@@ -593,9 +593,9 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
 
 \subsection{LED與PD的定位理論}  
-\label{LEDPD:theorum}
+\label{chp:LEDPD_theorum}
 
-    在進入LED與PD定位系統的現況前，我們需先對LED與PD定位系統的原理有所了解。本章節依續從\ref{chp:light_unit}章光領域常用的單位介紹開始，有了基本理解後則進入\ref{chp:lambertian}章介紹朗博次方模型與\ref{chp:LEDPD_character}章中的LED與PD硬體特性，最後則於\ref{chp:model}章介紹光傳遞模型。
+    在進入LED與PD定位系統的現況前，我們需先對LED與PD定位系統的原理有所了解。本章節依續從\ref{chp:light_unit}章光領域常用的單位介紹開始，有了基本理解後則進入\ref{chp:lambertian}章介紹朗博次方模型與\ref{chp:LEDPD_hardware}章中的LED與PD硬體特性，最後則於\ref{chp:model}章介紹光傳遞模型。
 
     \subsubsection{光領域常用單位介紹}
     \label{chp:light_unit}
@@ -681,7 +681,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
         \end{figure}
         
 
-        LED與PD硬體有許多種類，最常見的市面上LED與PD為軸對稱並滿足朗博輻射模式（Lambertian Radiation Pattern），本論文僅考慮此類硬體，其中軸對稱可以參考圖\ref{pic:3d_angle}，當硬體指向為圖中黑色向量時，輻射強度僅為出入射角$\omega$的函數，而出入射角為硬體指向與出入射角向量之間的夾角；以圖\ref{pic:angle_3d}來看，藍色圓圈上的所有出入射角位置都擁有相同的輻射強度，與方位角無關，呈現軸對稱的特性。
+        LED與PD硬體有許多種類，最常見的市面上LED與PD為軸對稱並滿足朗博輻射模式（Lambertian Radiation Pattern），本論文僅考慮此類硬體，其中軸對稱可以參考圖\ref{pic:angle_3d}，當硬體指向為圖中黑色向量時，輻射強度僅為出入射角$\omega$的函數，而出入射角為硬體指向與出入射角向量之間的夾角；以圖\ref{pic:angle_3d}來看，藍色圓圈上的所有出入射角位置都擁有相同的輻射強度，與方位角無關，呈現軸對稱的特性。
 
         \begin{figure}[htpb]
             \centering
@@ -836,7 +836,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
         \hfill
     
-        光傳遞模型需建立由LED至PD的過程，LED與PD各自的輻射與接收特性分別於\ref{chp:LED}章與\ref{chp:PD}章中介紹，綜合描述LED發光強度$Il$的式\ref{eqn:lambertian_led}，以及描述PD輸出電流$Ie$的式\ref{eqn:pd}，即可獲得一LED對一PD的光傳遞模型（式\ref{eqn:model_1to1}）。
+        光傳遞模型需建立由LED至PD的過程，LED與PD各自的輻射與接收特性可參考\ref{chp:LEDPD_hardware}章中的介紹，綜合描述LED發光強度$Il$的式\ref{eqn:lambertian_led}，以及描述PD輸出電流$Ie$的式\ref{eqn:pd}，即可獲得一LED對一PD的光傳遞模型（式\ref{eqn:model_1to1}）。
     
         \begin{equation}
             \label{eqn:model_1to1}
@@ -1434,7 +1434,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
         該系統在Step4.執行二維系統演算法的部分，則與上述兩例子相似，由於三個於同位置的LED至同一PD，在幾何交互關係中距離與PD入射角皆相同，因此透過訊號比值可獲得LED出射角的餘弦比值，與\ref{eqn:hypercube}相似。而由餘弦比值獲得相對位置中的方位$^{PL}\boldsymbol{Tv}$，則是將任兩LED餘弦比值換算為相對方位$^{PL}\boldsymbol{Tv}$與LED指向內積$^{PL}\boldsymbol{V}_l$，如下式\ref{eqn:omg}，透過三個LED中三組餘弦比值來解聯立求得方位。
         
         \begin{equation}
-            \label{eqb:omg}
+            \label{eqn:omg}
             \frac{\cos\theta_{11}}{\cos\theta_{21}}=\frac{^{PL}\boldsymbol{Tv}\cdot^{PL}\boldsymbol{V}_1 }{^{PL}\boldsymbol{Tv}\cdot^{PL}\boldsymbol{V}_2 }
         \end{equation}
 

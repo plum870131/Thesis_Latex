@@ -1,17 +1,36 @@
-\chapter{以LED與PD建立三維相對位置之演算法}
+\chapter{建立廣用於三維空間的LED與PD的定位演算法}
 \label{chp:3}
 
-如\ref{chp:LEDPD_problem}章所述，現今LED與PD的定位方法雖具有靈活應用的潛力，然而在單點對單點的定位中，仍未有可以進行三維定位，且不限制目標平面與量測平面平行的方法。因此，本章節將提出一定位演算法，利用$L\times P$個LED對PD的電流大小資訊，計算出三維相對定位，且不需限制目標平面與使用者平面平行，並在模型中將LED與PD的朗博次方考慮進去。
+如\ref{chp:LEDPD_problem}章所述，現今LED與PD的定位方法雖具有靈活應用的潛力，然而在單點對單點的定位中，仍未有同時可以進行三維定位又不限制目標平面與量測平面平行的方法。因此，本章節將提出一定位演算法，利用$L$個LED對$P$個PD的電流大小資訊，計算出三維相對定位，且不限制目標平面與使用者平面平行，並在模型中將LED與PD的朗博次方考慮進去。表\ref{tab:restrict_compare}中將\ref{chp:LEDPD_restrict}章中的常見限制與本研究改善的部分作比較。
 
-\begin{figure}[h!]
+
+\begin{table}[htpb]
+    \begin{center}
+      \caption{本研究演算法使用的限制與常見限制的比較}
+      \label{tab:restrict_compare}
+      \begin{tabular}{|c|c|} 
+        \hline
+         常見限制 &
+          \textbf{本研究改善的方向}\\\hline
+          忽略朗博次方&考慮LED與PD的朗博次方\\
+          硬體種類限制& - \\
+          限制PD組態& 不限制指向\\
+          限制定位維度&可達三維定位\\
+          限制接收與發射平面平行&不限制\\
+        \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=9cm]{ch3pic/chp3_flow.png}
-    \caption{第三章章節與定位流程對應}
+    \includegraphics[width=12cm]{ch3pic/chp3_flow.png}
+    \caption{第三章架構}
     \label{pic:chp3_flow}
 \end{figure}
 
 
-本章節的論述順序可以參考圖\ref{pic:chp3_flow}，根據LED與PD定位系統流程圖（圖\ref{pic:lp_system_flow}）重新整理，著重在計算定位的方法上。首先，\ref{chp:algorithm_constraint}章定義本方法對系統設計的拘束條件，再於\ref{chp:algorithm_filter}章中針對電流資訊進行過濾，於\ref{chp:algorithm}章中解釋如何由過濾過的訊號，計算出三維相對定位，最後於\ref{chp:algorithm_ad_dis}章中整理此演算法的優缺點。
+本章節的論述順序可以參考圖\ref{pic:chp3_flow}，根據LED與PD定位系統流程圖，首先於\ref{chp:algorithm_constraint}章定義本方法對Step1.中次系統規格與Step2.系統設置的限制，再於\ref{chp:algorithm}章中敘述如何由Step3.得到的PD對各LED的訊號資訊，計算出三維相對定位，最後於\ref{chp:algorithm_ad_dis}章中比較此演算法與其他文獻的差別。
 
 
 
@@ -23,11 +42,11 @@
 \section{系統的限制}
 \label{chp:algorithm_constraint}
 
-根據\ref{chp:LEDPD_problem}章中的論述，我們知道現今文獻上需要透過對系統限制，以將光傳遞模型進行簡化，來求解相對位置。本段落將條列式列出本研究的定位演算法中，使用的系統限制：
+根據\ref{chp:LEDPD_problem}章中的論述，我們知道現今文獻上需要透過對系統限制，以將光傳遞模型進行簡化，來求解相對位置。本段落將條列式列出本研究的定位演算法中，使用的系統限制。值得注意的是，以下三項限制皆屬於Step1.次系統規格的限制，本研究主要目標便是使Step2.系統設置盡可能不受限制。
 
     \begin{description}
 
-        \item[1. 硬體選用限制：]系統使用的LED皆為同款式，PD亦然。
+        \item[1. 硬體選用限制：]系統使用的LED皆為同規格，PD亦然。
         \item[2. PD擺放位置限制：]PD擺放位置相同並於PD座標系原點，$^P\boldsymbol{P}_p=
         \left[\begin{array}{ccc}0&0&0\end{array}\right]^T$
         \item[3. LED擺放位置限制：]LED擺放位置相同並於LED座標系原點，$^L\boldsymbol{P}_l=
@@ -35,57 +54,55 @@
 
     \end{description}
    
-    \begin{figure}[h!]
+    \begin{figure}[htpb]
         \centering
         \includegraphics[width=14cm]{ch3pic/algorithm_place.png}
-        \caption{PD與LED組態皆限制擺放於原點的系統組態}
+        \caption{PD與LED硬體擺放於原點的次系統與系統設置}
         \label{pic:algorithm_coor}
     \end{figure}
 
-    根據以上限制，LED與PD的定位系統可以呈現於圖\ref{pic:algorithm_coor}，LED與PD座標系中的硬體皆固定於各自的座標系原點，指向則並無特別限制。在將LED與PD組態設計完成後，座標系放置於空間中兩個點進行定位，其中，各LED到各PD的距離$D_{lp}$皆相同，都是兩座標系之間的距離$^{PL}t_d$，我們便將光傳遞模型\ref{eqn:model}簡化為\ref{eqn:model_algorithm}。
+    根據以上限制，LED與PD的定位系統架構可以呈現於圖\ref{pic:algorithm_coor}，其中LED與PD次系統
+    中的硬體皆固定於各自的座標系原點，指向則並無特別限制。在完成Step1.中硬體擺放後，Step2.則將兩次系統放置於空間中兩個點進行定位，其中，各LED到各PD的距離$D_{lp}$皆相同，都是兩座標系之間的距離$^{PL}t_d$，我們便將光傳遞模型\ref{eqn:model}簡化為\ref{eqn:model_algorithm}。
 
     \begin{equation}
         \label{eqn:model_algorithm}
-        Ie_{lp} = \begin{cases}Re\frac{PtA(Ml+1)}{2\pi}\frac{\cos\phi_{lp}^{Mp}\cos \theta_{lp}^{Ml}}{D^2} , & \text { if } Ie_{lp}<s \\ s, & \text { otherwise }\end{cases}
+        Ie_{lp} = \begin{cases}Re\frac{PtA(Ml+1)}{2\pi}\frac{\cos\phi_{lp}^{Mp}\cos \theta_{lp}^{Ml}}{D^2} , & \text { if } Ie_{lp}<S \\ S, & \text { otherwise }\end{cases}
     \end{equation}
 
-    然而，大多文獻在討輪三維定位時是以卡氏座標系定義相對位置$^{PL}\boldsymbol{T}=\left[\begin{array}{ccc}^{PL}t_x&^{PL}t_y&^{PL}t_z\end{array}\right]^T$，而我們提出的演算法則是以球座標系定義$^{PL}\boldsymbol{T}^{sph}=\left[\begin{array}{ccc}^{PL}t_d&^{PL}t_{\alpha}&^{PL}t_{\beta}\end{array}\right]^T$，因此我們需求出的三個未知數為$^{PL}t_d,^{PL}t_\alpha,^{PL}t_\beta$三項，$^{PL}t_d$即為兩座標系之間的距離，而$^{PL}t_{\alpha},^{PL}t_{\beta}$則為LED座標系所在「方位」。
+    需注意的是，大多文獻在討輪定位時是以卡氏座標系定義相對位置$^{PL}\boldsymbol{T}=\left[\begin{array}{ccc}^{PL}t_x&^{PL}t_y&^{PL}t_z\end{array}\right]^T$，而我們提出的演算法則是以球座標系定義$^{PL}\boldsymbol{T}^{sph}=\left[\begin{array}{ccc}^{PL}t_d&^{PL}t_{\alpha}&^{PL}t_{\beta}\end{array}\right]^T$，因此我們需求出的三個未知數為距離$^{PL}t_d$、天頂角$^{PL}t_\alpha$、方位角$^{PL}t_\beta$三項，我們又可以將這三個變數分為距離$^{PL}t_d$與方位$^{PL}\boldsymbol{Tv}^{sph} = \left[\begin{array}{ccc}1&^{PL}t_{\alpha}&^{PL}t_{\beta}\end{array}\right]$以方便後續描述。
 
 
-\section{訊號過濾}
-\label{chp:algorithm_filter}
-
-由於PD電流會飽和的特性，已飽和的電流與距離與出入射角無關了，無法用來獲得相對定位，因此我們需將已飽和的電流$Ie_{lp}>s$訊號忽略。除此之外，過小的電流也有可能為雜訊，因此也需設定一閥值$Th$，將小於閥值的電流訊號也忽略，剩餘的訊號則為可運用於計算三維定位的資訊。在訊號過濾後，第$l$個LED中還剩下$Fp_l$個PD電流數值可使用，而第$p$個PD中則剩下$Fl_p$個LED對應的電流數值可使用，參考圖\ref{pic:after_filter}。
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=15cm]{ch3pic/after_filter.png}
-    \caption{訊號過濾後各LED與各PD所剩的訊號數量示意圖}
-    \label{pic:after_filter}
-\end{figure}
 
 \section{定位演算法}
 \label{chp:algorithm}
 
-\begin{figure}[h!]
+\begin{figure}[htpb]
     \centering
     \includegraphics[width=6cm]{ch3pic/algorithm_flow.png}
     \caption{本研究所提出的定位演算法流程}
     \label{pic:algorithm_flow}
 \end{figure}
 
-本章結提出的定位演算法，為LED與PD系統流程圖\ref{pic:chp3_flow}中的定位演算法步驟，定位演算法的步驟則呈現於圖\ref{pic:algorithm_flow}，依序從\ref{chp:solve_phi}章解出PD座標系中，LED座標系所在方位；\ref{chp:solve_D}綜合LED與PD方位資訊，解出距離。
+本章結提出的定位演算法，為整體定位流程中Step4.執行定位演算法的部分，而定位演算法的步驟則呈現於圖\ref{pic:algorithm_flow}，依序從\ref{chp:algorithm_filter}章過濾訊號開始，接續於\ref{chp:solve_phi}章解出PD座標系中LED座標系所在方位，\ref{chp:solve_theta}章中解出LED座標系中PD座標系所在方位，最後於\ref{chp:solve_D}解出距離。
 
-為了方便表示，將方位以符號表示$^{PL}\boldsymbol{Tv}^{sph} = \left[\begin{array}{ccc}1&^{PL}t_{\alpha}&^{PL}t_{\beta}\end{array}\right]^T$，方位為單位向量，可用單位圓表示方位的可行解範圍。
-
-
+% 為了方便表示，將方位以符號表示$^{PL}\boldsymbol{Tv}^{sph} = \left[\begin{array}{ccc}1&^{PL}t_{\alpha}&^{PL}t_{\beta}\end{array}\right]^T$，方位為單位向量，可用單位圓表示方位的可行解範圍。
 
 
+    \subsection{訊號過濾}
+    \label{chp:algorithm_filter}
 
-    \subsection{求解方位}
-    \label{chp:solve_phi}
+    參考式\ref{eqn:model}，由於PD電流會飽和的特性，已飽和的電流強度便與距離與出入射角這些幾何關係無關，無法用電流強度來獲得相對定位，因此我們需將已飽和的電流訊號$Ie_{lp}>S$忽略。除此之外，過小的電流也有可能為雜訊，因此也需設定一閥值$Th$，將小於閥值的電流訊號也忽略，剩餘的訊號則為可運用於計算三維定位的資訊。
+    
+    由Step3.獲得的$L\times P$的電流強度表格在訊號過濾後，第$l$個LED中還剩下$Fp_l$個PD電流數值可使用，而第$p$個PD中則剩下$Fl_p$個LED對應的電流數值可使用，參考圖\ref{pic:after_filter}。
 
-    首先，過濾後的訊號即不需考慮過飽和的狀況，因此式\ref{eqn:model_algorithm}可改寫為式\ref{eqn:model_algorithm_filter}。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=15cm]{ch3pic/after_filter.png}
+        \caption{訊號過濾後各LED與各PD所剩的訊號數量示意圖}
+        \label{pic:after_filter}
+    \end{figure}
+
+    而過濾後的訊號即不需考慮過飽和的狀況，因此式\ref{eqn:model_algorithm}可改寫為式\ref{eqn:model_algorithm_filter}。
 
     \begin{equation}
         \label{eqn:model_algorithm_filter}
@@ -95,26 +112,45 @@
         \end{aligned}
     \end{equation}
 
-    解方位的流程詳細如圖\ref{pic:orient_flow}，於\ref{chp:cosine_ratio}章到\ref{chp:orient_average}章詳細介紹取得方位$^{PL}\boldsymbol{Tv}^{sph} = \left[\begin{array}{ccc}1&t_{\alpha}&t_{\beta}\end{array}\right]^T$的過程。
 
-    \begin{figure}[h!]
+
+
+    \subsection{求解LED座標系方位}
+    \label{chp:solve_phi}
+
+    \begin{figure}[htpb]
         \centering
-        \includegraphics[width=14cm]{ch3pic/orient_flow.png}
-        \caption{本研究定位演算法中解方位的流程}
+        \includegraphics[width=10cm]{ch3pic/orient_flow.png}
+        \caption{解PD座標系中LED方位的流程圖}
         \label{pic:orient_flow}
     \end{figure}
 
-    \subsubsection{獲得兩PD對同一LED的入射角餘弦比值}
+    
+
+    在解PD座標系中LED座標系所在方位時，參考流程圖\ref{pic:orient_flow}，各LED對$P$個PD的訊號皆可以解出PD座標系中LED座標系所在方位，因此我們可以聚焦在單個LED對多個PD上解出方位的流程。
+    
+    當我們僅需考量單個LED對多個PD的電流資訊，流程參考圖\ref{pic:orient_flow_1led}，依序於\ref{chp:cosine_ratio}章中取得入射角餘弦比值，於\ref{chp:solve_surface}章中證明符合餘弦比值的方位解為一平面，再於\ref{chp:solve_axis}中由平面兩兩交軸取得方位解，接著於\ref{chp:orient_average}章中將取得的方位平均，得到方位解$^{PL}\boldsymbol{Tv}$。
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=12cm]{ch3pic/orient_flow_1led.png}
+        \caption{單LED對多PD解LED所在方位之流程圖}
+        \label{pic:orient_flow_1led}
+    \end{figure}
+
+    
+
+    \subsubsection{比較兩強度取得入射角餘弦比值}
     \label{chp:cosine_ratio}
 
-        \begin{figure}[h!]
+        \begin{figure}[htpb]
             \centering
             \includegraphics[width=5cm]{ch3pic/1led_mulpd.png}
             \caption{同一LED與多個PD之間的幾何關係}
             \label{pic:1led_mulpd}
         \end{figure}
 
-        當我們僅考慮第$l$個LED的資訊時，如圖\ref{pic:1led_mulpd}所示，各PD與該LED之間的LED出射角$\theta_{lp}$以及距離$D_{lp}$都一樣；因此，式\ref{eqn:model_algorithm_filter}中的三個變數只剩下PD入射角$\phi_{lp}$，而我們於式\ref{eqn:cosine_ratio}中，將不同PD對同樣第$l$個LED的強度訊號相除，可得到入射角餘弦比值的朗博次方。藉由將其開朗博次方根，我們得到編號$p_1$與$p_2$的PD，對第$l$個LED入射角餘弦比值$Ra_{p_1p_2}$。
+        當我們僅考慮第$l$個LED的資訊時，如圖\ref{pic:1led_mulpd}所示，各PD與該LED之間的LED出射角$\theta_{lp}$以及距離$D_{lp}$都一樣；因此，式\ref{eqn:model_algorithm_filter}中的三個變數只剩下PD入射角$\phi_{lp}$。因此我們於式\ref{eqn:cosine_ratio}中，將不同PD對同樣第$l$個LED的強度訊號相除，可得到入射角餘弦比值的朗博次方；藉由將其開朗博次方根，我們得到編號$p_1$與$p_2$的P的入射角餘弦比值$Ra_{p_1p_2}$。
     
         \begin{equation}
             \label{eqn:cosine_ratio}
@@ -124,9 +160,9 @@
             \end{aligned}
         \end{equation}
 
-        兩個PD比較即可得到一個入射角比值，而為了更有系統性的進行兩兩比較，我們選擇一參考PD，其餘PD訊號都與參考PD做比較，即可有效率的完成動作。其中，對第$l$個LED來說，過濾過後的訊號有$Fp_l$個，我們選擇第$r_c$個PD當作參考值，將其作為分母，其他PD電流值與其相比，總共得到$Fp_l-1$個比值$Ra_{pr_c}$
+        兩個PD比較即可得到一個入射角比值，而為了更有系統性的進行兩兩比較，我們選擇第$r_c$個PD當作參考值，將其作為分母，其餘PD訊號都與參考PD做比較，即可有效率的完成動作。其中，對第$l$個LED來說，過濾過後的訊號有$Fp_l$個，扣除一個作為參考值的PD訊號，總共可得到$Fp_l-1$個餘弦比值$Ra_{pr_c}$
 
-    \subsubsection{滿足入射角餘弦比值的方位解位於一通過原點之平面}
+    \subsubsection{滿足餘弦比值的方位解為一平面}
     \label{chp:solve_surface}
         
         於式\ref{eqn:cosine_ratio}中得到兩入射角餘弦比值，而我們需要從餘弦比值中得到方位關係，雖然兩角度的餘弦比值並沒有單一解，但是滿足入射角餘弦比值$Ra_{pr_c}$的方位解$^{PL}\boldsymbol{Tv}$，僅有可能位於一通過原點之平面，以下進行推導。
@@ -144,7 +180,7 @@
         \end{equation}
         % \begin{equation}
 
-        而式\ref{eqn:phi2dot}中的向量都以卡氏座標系展開，經過移項整理呈現於式\ref{eqn:surface}。
+        而式\ref{eqn:phi2dot}經過移項整理呈現於式\ref{eqn:surface}。
 
             \begin{gather}
                  \label{eqn:surface}
@@ -153,10 +189,10 @@
             \end{gather}
         % \end{equation}
 
-        式\ref{eqn:surface}中的方位$^{PL}\boldsymbol{Tv}$，於空間中為一通過原點的平面，參考圖\ref{pic:solve_surface}，透過兩個PD強度比較，我們可以得到一個方位解的可能平面。
+        根據上式\ref{eqn:surface}，方位$^{PL}\boldsymbol{Tv}$的可能解為$atv_x+btv_y+ctv_z=0$的形式，於空間中為一通過原點的平面，參考圖\ref{pic:solve_surface}，透過兩個PD強度比較，我們可以得到一個方位解的可能平面。
        
 
-       \begin{figure}[h!]
+       \begin{figure}[htpb]
         \centering
         \includegraphics[width=14cm]{ch3pic/solve_surface.png}
         \caption{滿足入射角餘弦比值$Ra$的方位為通過原點之平面}
@@ -164,12 +200,12 @@
         \end{figure}
 
          
-        我們將平面法向量以$\boldsymbol{N}_{p_1r_c}$表示於式\ref{eqn:surface_normal}中，小標$p_1,r_c$代表該平面是由第$p_1$個PD與第$r_c$個PD的入射角餘弦比值計算而得，其中$r_c$為作為參考值的PD編號。
+        我們將第$p$個PD與參考值的第$r_c$個PD所獲得的平面法向量以$\boldsymbol{N}_{pr_c}$表示，呈現於式\ref{eqn:surface_normal}中，
         
         \begin{gather}
             \label{eqn:surface_normal}
-            \boldsymbol{N}_{p_1r_c}  = {Ra_{p_1r_c}}{} ^P\boldsymbol{V}_{r_c}-
-            ^P\boldsymbol{V}_{p_1}
+            \boldsymbol{N}_{pr_c}  = {Ra_{pr_c}}{} ^P\boldsymbol{V}_{r_c}-
+            ^P\boldsymbol{V}_{p}
        \end{gather}
         
         而於\ref{chp:cosine_ratio}章中，我們知道對第$l$個LED可以得到$Fp_l-1$個入射角餘弦比值$Ra_{pr_c}$，在本段我們將這些比值換算成$Fp_l-1$個平面。值得注意的是，因為所解方位只有兩個自由度，方位唯一單位長度的向量，因此符合藉兩PD入射角餘弦比值的方位解，為通過原點平面上的單位圓。
@@ -178,9 +214,9 @@
     \subsubsection{兩平面交軸為方位}
     \label{chp:solve_axis}
 
-        由\ref{chp:solve_surface}章中，我們知道滿足兩PD入射角餘弦比值$Ra_{pr_c}$的方位為一通過原點之平面上的單位圓。為了得到入射方位，我們將平面兩兩取交軸，交軸則為可能方位。兩兩取交軸與\ref{chp:solve_surface}章相同，本小節同樣取一平面作為參考，該平面為第$r_c$與$r_s$個PD入射角比值$Ra_{r_sr_c}$所得到的平面，參考平面的平面法向量為$\boldsymbol{N}_{r_sr_c}$。
+        由\ref{chp:solve_surface}章中，我們知道滿足兩PD入射角餘弦比值$Ra_{pr_c}$的方位為一通過原點之平面上的單位圓。為了得到入射方位，我們將平面兩兩取交軸，交軸則為可能方位。兩兩取交軸同樣為了有效率的完成，同樣取一平面作為參考，這邊取第$r_s$與$r_c$兩PD所獲得的平面作為參考平面，參考平面的平面法向量為$\boldsymbol{N}_{r_sr_c}$。
         
-        \begin{figure}[h!]
+        \begin{figure}[htpb]
             \centering
             \includegraphics[width=9cm]{ch3pic/solve_axis.png}
             \caption{兩平面交於一軸}
@@ -204,13 +240,15 @@
     \subsubsection{平均方位}
     \label{chp:orient_average}
 
+        % 解方位的流程如圖\ref{pic:orient_flow}所示，於\ref{chp:cosine_ratio}章到\ref{chp:orient_average}章詳細介紹取得方位$^{PL}\boldsymbol{Tv}^{sph} = \left[\begin{array}{ccc}1&t_{\alpha}&t_{\beta}\end{array}\right]^T$的過程。
+
         第$l$個LED與PD的電流資訊，可以解出$Fp_l-2$個方位，因此\textbf{該LED過濾後的訊號最少需被3個PD感測到，才得以解出方位。}而我們將$Fp_l-2$個方位平均，得到第$l$個LED利用$Fp_l$個資訊求出的方位$\hat{{^{PL}\boldsymbol{Tv}}_{l}}$。
         \begin{equation}
             \label{eqn:average_orient_led}
             \hat{{^{PL}\boldsymbol{Tv}}_{l}} = \frac{\sum^{Fp_l-2}_{p=1}\hat{{^{PL}\boldsymbol{Tv}}_{p{r_sr_c}}}}{Fp_l-2}
         \end{equation}
 
-        而一共有$l$個LED，我們再將$l$個LED獲得的方位$\hat{{^{PL}\boldsymbol{Tv}}_{l}}$平均，解出方位$\hat{{^{PL}\boldsymbol{Tv}}}$。
+        以上為針對單個LED所獲得的方位解$\hat{{^{PL}\boldsymbol{Tv}}_{l}}$，而參考圖\ref{pic:orient_flow}，各LED都會獲得一方位解，而一共有$L$個LED，因此我們再將$L$個LED獲得的方位$\hat{{^{PL}\boldsymbol{Tv}}_{l}}$平均，解出方位$\hat{{^{PL}\boldsymbol{Tv}}}$。
 
         \begin{equation}
             \label{eqn:average_orient}
@@ -221,35 +259,44 @@
     \subsubsection{小結}
     \label{chp:orient_conclu}
 
-    計算方位的方法，是透過PD兩兩比較得到方位的可能平面解，再透過平面兩兩外積求交軸即為方位。然而由於$L$個LED與$P$個PD交互之下，兩兩比較便會變得很複雜，可以參考圖\ref{pic:algorithm_flow}中的流程較為清楚。在這之中，最少需要一個LED與三個訊號沒被過濾掉的PD訊號，才能夠解出方位。
+    計算方位的方法，是透過PD兩兩比較得到方位的可能平面解，再透過平面兩兩外積求交軸即為方位。然而由於$L$個LED與$P$個PD交互之下，兩兩比較便會變得很複雜，可以參考圖\ref{pic:algorithm_flow}中的流程較為清楚。在這之中，\textbf{最少需要一個LED與三個訊號沒被過濾掉的PD訊號，才能夠解出PD座標系中LED座標系所在方位}。
 
         
+    \subsection{求解LED座標系中PD座標系所在方位}
+    \label{chp:solve_theta}
 
+    我們可以利用\ref{chp:solve_phi}章中一樣的方法，改應用在LED座標系中，解出PD座標系於LED座標系上的方位$\hat{{^{LP}\boldsymbol{Tv}}}$。方法與\ref{chp:solve_phi}章完全相同，以下僅簡單介紹：
+
+    針對第$p$個PD的資訊，在訊號過濾後，總共接收到$Fl_p$個LED訊號。而由於硬體擺放位置皆限制於座標系原點，因此參考圖\ref{pic:mulled_1pd}，式\ref{eqn:model_algorithm_filter}中的三個幾合變數僅剩下LED出射角$\theta_{lp}$，即可透過兩兩比較，得到$Fl_p-1$個出射角餘弦比值，而滿足出射角餘弦比值的方位為通過原點的平面。
+    
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=6cm]{ch3pic/mulled_1pd.png}
+        \caption{多LED對同一PD之間的幾何關係}
+        \label{pic:mulled_1pd}
+    \end{figure}
+
+    再來，同樣取一平面作為參考平面，將其餘平面與參考平面外積，得到共$Fl_p-2$個方位（參考式\ref{eqn:solve_axis}）。最後將第$p$個PD獲得的$Fl_p-2$個方位平均得$\hat{{^{LP}\boldsymbol{Tv}_{p}}}$，再將總共$P$個PD所得方位平均，即可獲得PD座標系於LED座標系上的方位$\hat{{^{LP}\boldsymbol{Tv}}}$，可以參考圖\ref{pic:algorithm_coor}。
          
-
+    % $\hat{{^{LP}\boldsymbol{Tv}_{lr_sr_c}}}$
     
 
 
     \subsection{求解距離}
     \label{chp:solve_D}
 
-    在\ref{chp:solve_phi}章中解出方位後，對於光傳遞模型（式\ref{chp:model_mul}）中的變數，我們目前僅能夠得到入射角$\phi_{lp}$的資訊，仍缺少出射角資訊以求距離。因此，求解距離的步驟可參考圖\ref{pic:algorithm_flow}，需要先解出PD座標系於LED座標系上的方位，再利用方位資訊解出出入射角，進而利用光傳遞模型解出距離，以下分小節介紹。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=6cm]{ch3pic/solve_dis_flow.png}
+        \caption{求解距離之流程圖}
+        \label{pic:solve_dis_flow}
+    \end{figure}
 
-        \subsubsection{解LED座標系中PD座標系所在方位}
-        \label{chp:solve_theta}
+    在\ref{chp:solve_phi}章與\ref{chp:solve_theta}章中解出LED座標系與PD座標系所在方位後，解距離的流程可參考流程圖\ref{pic:solve_dis_flow}，先於\ref{chp:solve_ang}章中計算個硬體之間的出入射角，再於\ref{chp:dis_average}章中以光傳遞模型取得距離$\hat{D_{lp}}$並平均得距離解$\hat{t_d}$
+    
+    % 對於光傳遞模型（式\ref{eqn:model}）中的變數，我們目前僅能夠得到入射角$\phi_{lp}$的資訊，仍缺少出射角資訊以求距離。因此，求解距離的步驟可參考圖\ref{pic:algorithm_flow}，需要先解出PD座標系於LED座標系上的方位，再利用方位資訊解出出入射角，進而利用光傳遞模型解出距離，以下分小節介紹。
 
-        我們可以利用\ref{chp:solve_phi}章中一樣的方法，改應用在LED座標系中，解出PD座標系於LED座標系上的方位$\hat{{^{LP}\boldsymbol{Tv}}}$。方法與\ref{chp:solve_phi}章完全相同，以下僅簡單介紹：
-
-        針對第$p$個PD的資訊，在訊號過濾後，總共接收到$Fl_p$個LED訊號。而由於硬體擺放位置皆限制於座標系原點，因此參考圖\ref{pic:mulled_1pd}，式\ref{eqn:model_algorithm_filter}中的三個變數僅剩下LED出射角$\theta_{lp}$，即可透過兩兩比較，得到$Fl_p-1$個出射角餘弦比值，而滿足出射角餘弦比值的方位為通過原點的平面。
         
-        \begin{figure}[h!]
-            \centering
-            \includegraphics[width=6cm]{ch3pic/mulled_1pd.png}
-            \caption{多LED對同一PD之間的幾何關係}
-            \label{pic:mulled_1pd}
-        \end{figure}
-
-        再來，同樣取一平面作為參考，將其餘平面與參考平面外積，得到共$Fl_p-2$個方位$\hat{{^{LP}\boldsymbol{Tv}_{lr_sr_c}}}$（參考式\ref{eqn:solve_axis}）。最後將第$p$個PD獲得的$Fl_p-2$個方位平均得$\hat{{^{LP}\boldsymbol{Tv}_{p}}}$，再將總共$P$個PD所得方位平均，即可獲得PD座標系於LED座標系上的方位$\hat{{^{LP}\boldsymbol{Tv}}}$，可以參考圖\ref{pic:algorithm_coor}。
 
 
         \subsubsection{解出LED與PD的出入射角}
@@ -310,11 +357,11 @@
             \hat{^{PL}\boldsymbol{T} }= \hat{t_d} \times {^{PL}\boldsymbol{Tv}} 
         \end{equation}
 
-\section{演算法優點與缺點}
+\section{建立之演算法與其他文獻比較}
 \label{chp:algorithm_ad_dis}
 
 
-介紹完本研究所提出的演算法，這裡以條列分析此演算法的優缺點:
+介紹完本研究所提出的演算法，這裡將與其他文獻比較，以條列分析此演算法的優缺點:
 
 
 \begin{description}
