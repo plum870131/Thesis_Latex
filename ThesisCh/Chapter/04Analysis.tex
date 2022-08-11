@@ -389,7 +389,7 @@
 % \subsection{模擬結果}
 % \label{chp:simulate_result_sub}
 
-因此，我們建立了一個互動模擬介面如圖\ref{pic:result_interactive}，硬體規格參數選用表\ref{tab:para_LED}中的Vishay VSMA1085250與表\ref{tab:para_PD}中的Hamamatsu S12915-1010R兩者的參數，而誤差模擬參數則以表\ref{tab:para_from_cite}的參數帶入。在這個模擬介面中，我們可以透過改變自由設計的系統設計變數、兩次系統之間的相對位置、以及一些硬體與電路參數，來觀察定位的效果。其中，硬體指向的部分，由於每個硬體都有兩個自由度，為了方便進行模擬，這裡將指向暫時限制成文獻中最常見的樣式，也就是$^P\boldsymbol{V}_p^{sph}$中的方位角平均分配：$\beta_p = 1\pi/P$，而各PD的天頂角則限制為相同：$\alpha_p = \alpha$，因此PD唯一的組態變數指剩下$\alpha$天頂角，參考圖\ref{pic:config_orient}。
+因此，我們建立了一個互動模擬介面如圖\ref{pic:result_interactive}，硬體規格參數選用表\ref{tab:para_LED}中的Luxeon L1IZ與表\ref{tab:para_PD}中的Hamamatsu S12915-1010R兩者的參數，而誤差模擬參數則以表\ref{tab:para_from_cite}的參數帶入。在這個模擬介面中，我們可以透過改變自由設計的系統設計變數、兩次系統之間的相對位置、以及一些硬體與電路參數，來觀察定位的效果。其中，硬體指向的部分，由於每個硬體都有兩個自由度，為了方便進行模擬，這裡將指向暫時限制成文獻中最常見的樣式，也就是$^P\boldsymbol{V}_p^{sph}$中的方位角平均分配：$^P\beta_p = 1\pi/P$，而各PD的天頂角則限制為相同：$^P\alpha_p =^P \alpha$，因此PD唯一的組態變數指剩下$^P\alpha$天頂角，參考圖\ref{pic:config_orient}。
 
 % 根據\ref{chp:simulation}章所述系統設計與誤差模擬方法，模擬參數初始值則選用，其餘誤差模擬參數以表\ref{tab:para_from_cite}的參數帶入，則可以透過調整各項參數、座標系相對關係來看定位結果與定位誤差。
 
@@ -402,6 +402,23 @@
 \end{figure}
 
 
+
+\begin{table}[htpb]
+    \begin{center}
+      \caption{於不同系統設置位置的定位結果}
+      \label{tab:pos_error_result}
+      \begin{tabular}{c||c|c|c|c|c|c||c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+         & $^{PL}t_x$(m) & $^{PL}t_y$(m)&$^{PL}t_z$(m)&$ ^{PL}rx$(rad) & $^{PL}ry$(rad)&$^{PL}rz$(rad)&誤差(m)\\
+        \hline
+        圖\ref{pic:A}& 1.5 & 1&1&$\pi$ & 0&0&\\
+        圖\ref{pic:B}& 1.5 & 1&1&$\pi$ & 2.313&0\\
+        圖\ref{pic:C}& 1.5 & 1&1&$\pi$ & 2.533&0\\
+        圖\ref{pic:D}& 1.5 & 1.5&3&$\pi$ & 0&0\\
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+  
 下圖\ref{pic:result_1}呈現
 
 我們將次系統規格設定如下表\ref{tab:set_para}中的參數，觀察改變Step2.系統設置，也就是兩次系統座標系之間的相對關係的影響，呈現於圖\ref{pic:result_1}中，PD次系統以紅色座標軸表示，LED次系統則以藍色座標軸表示，透過\ref{chp:simulation}章中模擬方式所得到的相對位置以黑色向量表示，誤差向量則以粉色向量表示，誤差數值結果呈現於表\ref{tab:result_error}。
