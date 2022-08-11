@@ -389,7 +389,7 @@
 % \subsection{模擬結果}
 % \label{chp:simulate_result_sub}
 
-因此，我們建立了一個互動模擬介面如圖\ref{pic:result_interactive}，硬體規格參數選用表\ref{tab:para_LED}中的Luxeon L1IZ與表\ref{tab:para_PD}中的Hamamatsu S12915-1010R兩者的參數，而誤差模擬參數則以表\ref{tab:para_from_cite}的參數帶入。在這個模擬介面中，我們可以透過改變自由設計的系統設計變數、兩次系統之間的相對位置、以及一些硬體與電路參數，來觀察定位的效果。其中，硬體指向的部分，由於每個硬體都有兩個自由度，為了方便進行模擬，這裡將指向暫時限制成文獻中最常見的樣式，也就是$^P\boldsymbol{V}_p^{sph}$中的方位角平均分配：$^P\beta_p = 1\pi/P$，而各PD的天頂角則限制為相同：$^P\alpha_p =^P \alpha$，因此PD唯一的組態變數指剩下$^P\alpha$天頂角，參考圖\ref{pic:config_orient}。
+因此，我們建立了一個互動模擬介面如圖\ref{pic:result_interactive}，硬體規格參數選用表\ref{tab:para_LED}中的Luxeon L1IZ與表\ref{tab:para_PD}中的Hamamatsu S12915-1010R兩者的參數，而誤差模擬參數則以表\ref{tab:para_from_cite}的參數帶入。在這個模擬介面中，我們可以透過改變自由設計的系統設計變數、兩次系統之間的相對位置、以及一些硬體與電路參數，來觀察定位的效果。其中，硬體指向的部分，由於每個硬體都有兩個自由度，為了方便進行模擬，這裡將指向暫時限制成文獻中最常見的樣式，也就是$^P\boldsymbol{V}_p^{sph}$中的方位角平均分配：$^P\beta_p = 1\pi/P$，而各PD的天頂角則限制為相同：$^P\alpha_p =^P \alpha$，因此PD唯一的擺法自由度剩下$^P\alpha$天頂角，參考圖\ref{pic:config_orient}。
 
 % 根據\ref{chp:simulation}章所述系統設計與誤差模擬方法，模擬參數初始值則選用，其餘誤差模擬參數以表\ref{tab:para_from_cite}的參數帶入，則可以透過調整各項參數、座標系相對關係來看定位結果與定位誤差。
 
@@ -408,25 +408,61 @@
       \caption{於不同系統設置位置的定位結果}
       \label{tab:pos_error_result}
       \begin{tabular}{c||c|c|c|c|c|c||c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-         & $^{PL}t_x$(m) & $^{PL}t_y$(m)&$^{PL}t_z$(m)&$ ^{PL}rx$(rad) & $^{PL}ry$(rad)&$^{PL}rz$(rad)&誤差(m)\\
+         系統& $^{PL}t_x$ & $^{PL}t_y$&$^{PL}t_z$&$ ^{PL}rx$ & $^{PL}ry$&$^{PL}rz$&誤差\\
+         設置& (m) & (m)&(m)&(rad) & (rad)&(rad)&(m)\\
         \hline
-        圖\ref{pic:A}& 1.5 & 1&1&$\pi$ & 0&0&\\
-        圖\ref{pic:B}& 1.5 & 1&1&$\pi$ & 2.313&0\\
-        圖\ref{pic:C}& 1.5 & 1&1&$\pi$ & 2.533&0\\
-        圖\ref{pic:D}& 1.5 & 1.5&3&$\pi$ & 0&0\\
+        (a)& 1.5 & 1&1&$\pi$ & 0&0&$2.079\times10^{-3}$\\
+        (b)& 1.5 & 1&1&$\pi$ & 2.313&0&$3.723\times10^{-1}$\\
+        (c)& 1.5 & 1&1&$\pi$ & 2.533&0&（無法求解）\\
+        (d)& 1.5 & 1.5&3&$\pi$ & 0&0&$2.906\times10^{-1}$\\
       \end{tabular}
     \end{center}
   \end{table}
 
-  
-下圖\ref{pic:result_1}呈現
+  \begin{figure}[htpb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[width=7cm]{ch4pic/A.png}
+        % \captionsetup{labelformat=empty}
+        \caption{系統設置(a)的定位結果}
+        \label{pic:A}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=7cm]{ch4pic/B.png}
+        % \captionsetup{labelformat=empty}
+        \caption{系統設置(b)的定位結果}
+        \label{pic:B}
+    \end{minipage}
 
-我們將次系統規格設定如下表\ref{tab:set_para}中的參數，觀察改變Step2.系統設置，也就是兩次系統座標系之間的相對關係的影響，呈現於圖\ref{pic:result_1}中，PD次系統以紅色座標軸表示，LED次系統則以藍色座標軸表示，透過\ref{chp:simulation}章中模擬方式所得到的相對位置以黑色向量表示，誤差向量則以粉色向量表示，誤差數值結果呈現於表\ref{tab:result_error}。
+\end{figure}
+
+\begin{figure}[htpb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[width=7cm]{ch4pic/C.png}
+        % \captionsetup{labelformat=empty}
+        \caption{系統設置(c)的定位結果}
+        \label{pic:C}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=7cm]{ch4pic/D.png}
+        % \captionsetup{labelformat=empty}
+        \caption{系統設置(d)的定位結果}
+        \label{pic:D}
+    \end{minipage}
+
+\end{figure}
 
 
+我們觀察改變Step2.系統設置的結果，系統設置的參數與誤差於表\ref{tab:pos_error_result}中呈現，系統架構則於圖\ref{pic:A}至圖\ref{pic:D}呈現，其中PD次系統以紅色座標軸表示，LED次系統則以藍色座標軸表示，透過\ref{chp:simulation}章中模擬方式所得到的相對位置以黑色向量表示，誤差向量則以粉色向量表示。
 
+我們可以觀察到在同樣的次系統規格下，定位系統於不同系統設置的位置下，系統成效也不盡相同，如在系統設置為(c)時，由於沒有任何PD同時獲得三個以上的LED訊號，因此無法完成定位（參考\ref{chp:orient_conclu}章）；而在系統設置為(a)時，則可以達到相對誤差小的定位。
 
-我們可以觀察到在同樣的次系統規格下，定位系統於不同系統設置的位置，系統成效也不盡相同，如在圖\ref{}中的系統設置下，由於沒有滿足3LED對3PD的條件，因此無法完成定位；而在圖\ref{}中的系統設置下，則可以達到相對誤差小的定位。除了系統設置的影響以外，不同的次系統規格與誤差模擬參數也都會對系統成效有不同程度的影響，為了更有效率的分析不同次系統規格的系統成效，以及了解不同參數對系統的影響，我們進一步於後續\ref{chp:system_evaluate}章中建立評估系統效能的流程，以便有系統性的討論不同次系統規格、系統設置、誤差模擬參數對系統成效的影響。
+除了系統設置的影響以外，不同的次系統規格與誤差模擬參數也都會對系統成效有不同程度的影響，為了更有效率的分析不同次系統規格的系統成效，以及了解不同參數對系統的影響，我們進一步於後續\ref{chp:system_evaluate}章中建立評估系統效能的流程，以便有系統性的討論不同次系統規格、系統設置、誤差模擬參數對系統成效的影響。
 
 % \subsection{小結}
 
@@ -606,10 +642,55 @@
 以下於\ref{chp:orient_effect}章至\ref{chp:amount_effect}章中進行討論。
 
 
+
+
+
+
+
+
+
+
+
+\subsubsection{朗博次方對系統成效的影響}
+\label{chp:m_effect}
+
+在討論朗博次方對系統成效的影響時，我們將其餘系統設計變數固定：假設$^P\alpha_p =^L\alpha_l = \pi/18$、$L=P=5$，透過改變朗博次方，將不同LED與PD朗博次方的次系統規格下，計算容許範圍內樣本點的數量，以圖\ref{pic:}呈現平移樣本點與圖呈現旋轉樣本點受朗博次方的影響。
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=14cm]{ch4pic/lambertian_translate.png}
+    \caption{改變朗博次方對平移樣本點的影響}
+    \label{pic:m_translate}
+\end{figure}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=14cm]{ch4pic/lambertian_rotate.png}
+    \caption{改變朗博次方對旋轉樣本點的影響}
+    \label{pic:m_rotate}
+\end{figure}
+
+在，以及硬體數量的情況下，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:m_effect}，我們可以觀察到在此情境中，較小的朗博次方使系統表現較佳。
+% 我們改變朗博次方，並將樣本中於容許範圍內的比例，
+% 呈現於圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}中。隨著朗博次方的提升，硬體所照射的範圍越來越小，因此容許範圍內比例高的的區域便越顯集中。
+
+
+
+
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=9cm]{ch4pic/m_effect.png}
+    \caption{改變朗博次方對系統的影響}
+    \label{pic:m_effect}
+\end{figure}
+
 \subsubsection{硬體指向對系統效能的影響}
 \label{chp:orient_effect}
 
-評估硬體指向對系統效能影響時，我們將硬體天頂角$^L\alpha$與$^P\alpha$作為變數，將不同硬體天頂角的次系統規格，計算出的於容許範圍內的樣本點總數，呈現於圖\ref{pic:alpha_effect}
+評估硬體指向對系統效能影響時，我們將硬體天頂角$^L\alpha$與$^P\alpha$作為變數，其餘的變數：朗博次方固定為$Mp=M\ell=1$、硬體數量設定為$L=P=5$
+
+
+將不同硬體天頂角的次系統規格，計算出的於容許範圍內的樣本點總數，呈現於圖\ref{pic:alpha_effect}
 
 其餘朗博次方固定為$Mp=M\ell=1$，而硬體數量$L=P$則依序由3、5、8、10、15遞增，我們改變硬體指向$^P\alpha,^L\alpha$，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:alpha_effect}，我們可以觀察到在此情境中，較小的硬體擺設天頂角，使系統表現較佳。
 % 並將樣本中於容許範圍內的比例，呈現於圖\ref{pic:alpha_translate}與圖\ref{pic:alpha_rotate}中。隨著硬體指向提升，多個硬體之間重疊的覆蓋範圍便越來越小，漸漸僅剩下於中心位置的樣本點：$x,y,=0$。
@@ -636,34 +717,7 @@
     \label{pic:alpha_effect}
 \end{figure}
 
-\subsubsection{朗博次方對系統表現的影響}
-\label{chp:m_effect}
 
-在假設$^P\alpha_p =\pi/18$、$^L\alpha_l = \pi/18$，以及硬體數量$L=P=8$的情況下，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:m_effect}，我們可以觀察到在此情境中，較小的朗博次方使系統表現較佳。
-% 我們改變朗博次方，並將樣本中於容許範圍內的比例，
-% 呈現於圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}中。隨著朗博次方的提升，硬體所照射的範圍越來越小，因此容許範圍內比例高的的區域便越顯集中。
-
-% \begin{figure}[htpb]
-%     \centering
-%     \includegraphics[width=14cm]{ch4pic/m_translate.png}
-%     \caption{改變朗博次方對平移樣本點的影響}
-%     \label{pic:m_translate}
-% \end{figure}
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=14cm]{ch4pic/m_rotate.png}
-%     \caption{改變朗博次方對旋轉樣本點的影響}
-%     \label{pic:m_rotate}
-% \end{figure}
-
-
-
-\begin{figure}[htpb]
-    \centering
-    \includegraphics[width=9cm]{ch4pic/m_effect.png}
-    \caption{改變朗博次方對系統的影響}
-    \label{pic:m_effect}
-\end{figure}
 
 \subsubsection{硬體數量對系統表現的影響}
 \label{chp:amount_effect}

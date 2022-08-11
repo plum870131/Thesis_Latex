@@ -258,6 +258,10 @@ J.R. Barry, J.M. Kahn, W.J. Krause, E.A. Lee, and D.G. Messerschmitt.
 Hamamatsu.
 \newblock {\em Infrared LED L12170}, Aug 2014.
 
+\bibitem{datasheet:led_luxeon}
+Lumineds.
+\newblock {\em DS190 Luxeon IR compact Line Product Datasheet}, 2018.
+
 \bibitem{omg_old}
 Weizhi Zhang, M.~Chowdhury, and Mohsen Kavehrad.
 \newblock Asynchronous indoor positioning system based on visible light
