@@ -437,7 +437,7 @@
                     \item[- Photodiode(PD)]\hfill
                     
                     \qquad
-                    光電二極體（Photodiode，以下簡稱PD）能感測到資訊僅有強度資訊，而強度資訊受LED出射角度、PD入射角度、距離影響（詳細參考\ref{chp:LEDPD_radiate}章），相較大多無線電波技術主要僅受距離影響，PD的變數較多，使得獲得相對定位的演算法較複雜，也需要多個PD或多個LED以進行定位。然而PD優勢為具有極高的取樣頻率，可高達千赫茲甚至萬赫茲，高取樣頻率即可使用光通訊進行編碼與解碼，且硬體成本相較影像感測器來說非常低。
+                    光電二極體（Photodiode，以下簡稱PD）能感測到資訊僅有強度資訊，而強度資訊受LED出射角度、PD入射角度、距離影響（詳細參考\ref{chp:LEDPD_hardware}章），相較大多無線電波技術主要僅受距離影響，PD的變數較多，使得獲得相對定位的演算法較複雜，也需要多個PD或多個LED以進行定位。然而PD優勢為具有極高的取樣頻率，可高達千赫茲甚至萬赫茲，高取樣頻率即可使用光通訊進行編碼與解碼，且硬體成本相較影像感測器來說非常低。
 
                     \qquad
                     PD定位系統的架構如圖\ref{pic:vlc_flow}所示，訊號發送是利用驅動器與LED進行光通訊，PD接收訊號後進行解碼、取得LED的ID與與光強度，再利用光強度以不同演算法解出相對位置。而LED與PD的定位系統中，包含單LED對多PD、多LED對多PD、或是多LED對多PD，其中，當系統內包含多個LED對多PD時，PD會同時接收到來自多個LED的編碼訊號，參考圖\ref{pic:vlc_multi_pd}，PD會將訊號轉換至頻域，以獲得各頻率下的強度，也就是各LED傳送至各PD的強度。
@@ -1148,7 +1148,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
         
         \qquad
         Step1.決定次系統規格中，也常限制硬體的擺設方式，其中最常見的硬體擺設限制為所有PD的擺放位置於同一點：$^P\boldsymbol{P}_p=
-        \left[\begin{array}{ccc}0&0&0\end{array}\right]^T$，則擺設自由度僅剩下朝向$^P\boldsymbol{V}_p^{sph} = \left[\begin{array}{ccc}1&\alpha&\beta\end{array}\right]^T$的兩個自由度，擺法可參考圖\ref{pic:config_orient}，實際的硬體百法則可以參考圖\ref{pic:ml_pd_config}\cite{case_ml}。
+        \left[\begin{array}{ccc}0&0&0\end{array}\right]^T$，則擺設自由度僅剩下朝向$^P\boldsymbol{V}_p^{sph} = \left[\begin{array}{ccc}1&\alpha&\beta\end{array}\right]^T$的兩個自由度，擺法可參考圖\ref{pic:config_orient}，實際的硬體百法則可以參考圖\ref{pic:ml_pd_config}\cite{case:ml}。
         
         \begin{figure}[htpb]
             \centering

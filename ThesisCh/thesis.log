@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  11 AUG 2022 06:01
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  11 AUG 2022 11:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1408,99 +1408,20 @@ File: watermark.pdf Graphic file (type pdf)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [3] (./thesis.lof
-
-LaTeX Warning: Citation `iot' on page iv undefined on input line 3.
-
-
-LaTeX Warning: Citation `survey_light2018' on page iv undefined on input line 10.
-
-
-LaTeX Warning: Citation `survey_light2020' on page iv undefined on input line 11.
-
-
-LaTeX Warning: Citation `survey_light2018' on page iv undefined on input line 12.
-
-
-LaTeX Warning: Citation `pic:fingerprinting' on page iv undefined on input line 13.
-
-
-LaTeX Warning: Citation `pic:image_processing' on page iv undefined on input line 14.
-
-
-LaTeX Warning: Citation `pic:aruco' on page iv undefined on input line 15.
-
-
-LaTeX Warning: Citation `Spectrum' on page iv undefined on input line 16.
-
-
-LaTeX Warning: Citation `survey_rfid' on page iv undefined on input line 18.
-
-
-LaTeX Warning: Citation `landmarc' on page iv undefined on input line 19.
-
-
-LaTeX Warning: Citation `case:rfid_1to1' on page iv undefined on input line 20.
-
-
-LaTeX Warning: Citation `pic:vlc' on page iv undefined on input line 21.
-
-
-LaTeX Warning: Citation `astm' on page iv undefined on input line 23.
-
-
-LaTeX Warning: Citation `pic:rolling_shutter' on page iv undefined on input line 25.
-
-
-LaTeX Warning: Citation `pic:rolling_shutter_case' on page iv undefined on input line 26.
-
-
-LaTeX Warning: Citation `pic:multipath' on page iv undefined on input line 27.
-
-
-LaTeX Warning: Citation `case:ml' on page iv undefined on input line 28.
-
-
-LaTeX Warning: Citation `case:ml' on page iv undefined on input line 29.
-
-
-LaTeX Warning: Citation `case:3d_layers' on page iv undefined on input line 30.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[4
+ [4
 
 ]
-
-LaTeX Warning: Citation `case:3d_layers' on page v undefined on input line 48.
-
-
-LaTeX Warning: Citation `case:ml' on page v undefined on input line 49.
-
-
-LaTeX Warning: Citation `case:aoa' on page v undefined on input line 50.
-
-
-LaTeX Warning: Citation `case:3d_layers' on page v undefined on input line 51.
-
-
-LaTeX Warning: Citation `case:3d_layers' on page v undefined on input line 52.
-
-
-LaTeX Warning: Citation `case:cart3d' on page v undefined on input line 53.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[5])
+ [5])
 \tf@lof=\write10
 \openout10 = `thesis.lof'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [6] (./thesis.lot
-
-LaTeX Warning: Citation `datasheet:hm_pd' on page vii undefined on input line 13.
-
-)
+ [6] (./thesis.lot)
 \tf@lot=\write11
 \openout11 = `thesis.lot'.
 
@@ -1556,103 +1477,28 @@ File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [12] (./chapter/01Introduction.tex
 Chapter 1.
-
-LaTeX Warning: Citation `iot' on page 1 undefined on input line 7.
-
 File: ch1pic/iot.png Graphic file (type bmp)
 <ch1pic/iot.png>
-
-LaTeX Warning: Citation `iot' on page 1 undefined on input line 12.
-
-
-LaTeX Warning: Citation `iot' on page 1 undefined on input line 12.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [1
 
 
 ]
-
-LaTeX Warning: Citation `outdoor_scenario' on page 2 undefined on input line 20.
-
-
-LaTeX Warning: Citation `GPS_important' on page 2 undefined on input line 20.
-
-
-LaTeX Warning: Citation `survey_light2020' on page 2 undefined on input line 20.
-
-
-LaTeX Warning: Citation `survey_light2018' on page 2 undefined on input line 20.
-
-
-LaTeX Warning: Citation `survey_indoor2014' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `survey_light2020' on page 2 undefined on input line 24.
-
-
-LaTeX Warning: Citation `survey_light2018' on page 2 undefined on input line 24.
-
-
-LaTeX Warning: Citation `survey_indoor2014' on page 2 undefined on input line 24.
-
-
-LaTeX Warning: Citation `survey_indoor2018' on page 2 undefined on input line 24.
-
-
-LaTeX Warning: Citation `survey:indoor_wayfinding' on page 2 undefined on input line 24.
-
 File: ch1pic/imagine.png Graphic file (type bmp)
 <ch1pic/imagine.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[2]
-
-LaTeX Warning: Citation `survey_indoor2018' on page 3 undefined on input line 90.
-
-
-LaTeX Warning: Citation `survey:indoor_wayfinding' on page 3 undefined on input line 101.
-
-
-LaTeX Warning: Citation `survey_indoor2014' on page 3 undefined on input line 101.
-
-
-LaTeX Warning: Citation `survey_indoor2014' on page 3 undefined on input line 101.
-
-
-LaTeX Warning: Citation `survey:indoor_wayfinding' on page 3 undefined on input line 101.
-
+ [2]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[3]
-
-LaTeX Warning: Citation `survey_indoor2014' on page 4 undefined on input line 106.
-
-
-LaTeX Warning: Citation `survey:radio' on page 4 undefined on input line 111.
-
-
-LaTeX Warning: Citation `survey:indoor_wayfinding' on page 4 undefined on input line 111.
-
+ [3]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[4]
-
-LaTeX Warning: Citation `survey_light2020' on page 5 undefined on input line 134.
-
-
-LaTeX Warning: Citation `survey:indoor_wayfinding' on page 5 undefined on input line 139.
-
-
-LaTeX Warning: Citation `case:vlc_mobile' on page 5 undefined on input line 144.
-
-
-LaTeX Warning: Citation `survey_indoor2018' on page 5 undefined on input line 147.
-
+ [4]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[5]) (./chapter/02LiteratureReview.tex
+ [5]) (./chapter/02LiteratureReview.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [6]
@@ -1678,208 +1524,62 @@ File: watermark.pdf Graphic file (type pdf)
  [9]
 File: ch2pic/method_sort.png Graphic file (type bmp)
 <ch2pic/method_sort.png>
-
-
-LaTeX Warning: Citation `survey_light2018' on page 10 undefined on input line 127.
-
-
-LaTeX Warning: Citation `survey_light2018' on page 10 undefined on input line 127.
-
-
-LaTeX Warning: Citation `survey_indoor2018' on page 10 undefined on input line 133.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[10]
-
-LaTeX Warning: Citation `survey_indoor2014' on page 11 undefined on input line 135.
-
+ [10]
 File: ch2pic/multilateration.png Graphic file (type bmp)
 <ch2pic/multilateration.png>
-
-LaTeX Warning: Citation `survey_light2020' on page 11 undefined on input line 154.
-
-
-LaTeX Warning: Citation `survey_light2020' on page 11 undefined on input line 154.
-
 File: ch2pic/triangulation.png Graphic file (type bmp)
 <ch2pic/triangulation.png>
-
-LaTeX Warning: Citation `survey_light2018' on page 11 undefined on input line 165.
-
-
-LaTeX Warning: Citation `survey_light2018' on page 11 undefined on input line 165.
-
-
-LaTeX Warning: Citation `survey_light2020' on page 11 undefined on input line 172.
-
 File: ch2pic/fingerprinting.png Graphic file (type bmp)
 <ch2pic/fingerprinting.png>
-
-LaTeX Warning: Citation `pic:fingerprinting' on page 11 undefined on input line 176.
-
-
-LaTeX Warning: Citation `pic:fingerprinting' on page 11 undefined on input line 176.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[11]
-
-LaTeX Warning: Citation `pic:image_processing' on page 12 undefined on input line 183.
-
+ [11]
 File: ch2pic/image_processing.png Graphic file (type bmp)
 <ch2pic/image_processing.png>
-
-LaTeX Warning: Citation `pic:image_processing' on page 12 undefined on input line 188.
-
-
-LaTeX Warning: Citation `pic:image_processing' on page 12 undefined on input line 188.
-
 File: ch2pic/aruco.png Graphic file (type bmp)
 <ch2pic/aruco.png>
-
-LaTeX Warning: Citation `pic:aruco' on page 12 undefined on input line 198.
-
-
-LaTeX Warning: Citation `pic:aruco' on page 12 undefined on input line 198.
-
-
-LaTeX Warning: Citation `survey_light2020' on page 12 undefined on input line 205.
-
-
-LaTeX Warning: Citation `survey_indoor2018' on page 12 undefined on input line 210.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[12]
+ [12]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [13]
-
-LaTeX Warning: Citation `survey_ultrasonic' on page 14 undefined on input line 224.
-
 File: ch2pic/electro_spectrum.png Graphic file (type bmp)
 <ch2pic/electro_spectrum.png>
-
-LaTeX Warning: Citation `Spectrum' on page 14 undefined on input line 231.
-
-
-LaTeX Warning: Citation `Spectrum' on page 14 undefined on input line 231.
-
-
-LaTeX Warning: Citation `book_electromagnetic' on page 14 undefined on input line 237.
-
 File: ch2pic/electro_sort.png Graphic file (type bmp)
 <ch2pic/electro_sort.png>
-
-LaTeX Warning: Citation `rf_law' on page 14 undefined on input line 262.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[14]
-
-LaTeX Warning: Citation `survey_indoor2018' on page 15 undefined on input line 264.
-
-
-LaTeX Warning: Citation `survey_indoor2014' on page 15 undefined on input line 264.
-
-
-LaTeX Warning: Citation `survey_rfid' on page 15 undefined on input line 268.
-
-
-LaTeX Warning: Citation `landmarc' on page 15 undefined on input line 268.
-
+ [14]
 File: ch2pic/rfid_system.png Graphic file (type bmp)
 <ch2pic/rfid_system.png>
-
-LaTeX Warning: Citation `survey_rfid' on page 15 undefined on input line 275.
-
-
-LaTeX Warning: Citation `survey_rfid' on page 15 undefined on input line 275.
-
 File: ch2pic/landmarc.png Graphic file (type bmp)
 <ch2pic/landmarc.png>
-
-LaTeX Warning: Citation `landmarc' on page 15 undefined on input line 282.
-
-
-LaTeX Warning: Citation `landmarc' on page 15 undefined on input line 282.
-
-
-LaTeX Warning: Citation `case:rfid_1to1' on page 15 undefined on input line 286.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[15]
+ [15]
 File: ch2pic/rfid_1to1.png Graphic file (type bmp)
 <ch2pic/rfid_1to1.png>
-
-
-LaTeX Warning: Citation `case:rfid_1to1' on page 16 undefined on input line 291.
-
-
-LaTeX Warning: Citation `case:rfid_1to1' on page 16 undefined on input line 291.
-
-
-LaTeX Warning: Citation `survey_light2018' on page 16 undefined on input line 307.
-
-
-LaTeX Warning: Citation `pic:vlc' on page 16 undefined on input line 307.
-
 File: ch2pic/vlc_flow.png Graphic file (type bmp)
 <ch2pic/vlc_flow.png>
-
-LaTeX Warning: Citation `pic:vlc' on page 16 undefined on input line 311.
-
-
-LaTeX Warning: Citation `pic:vlc' on page 16 undefined on input line 311.
-
-
-LaTeX Warning: Citation `case:vlc_mobile' on page 16 undefined on input line 315.
-
-
-LaTeX Warning: Citation `vlc_adv' on page 16 undefined on input line 318.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[16]
+ [16]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [17]
-
-LaTeX Warning: Citation `datasheet:led_sfh4545' on page 18 undefined on input line 321.
-
-
-LaTeX Warning: Citation `datasheet:rfid_tag' on page 18 undefined on input line 321.
-
 File: ch2pic/method_compare.png Graphic file (type bmp)
 <ch2pic/method_compare.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[18]
-
-LaTeX Warning: Citation `si_pd' on page 19 undefined on input line 353.
-
-
-LaTeX Warning: Citation `vlc_adv' on page 19 undefined on input line 356.
-
-
-LaTeX Warning: Citation `survey_light2020' on page 19 undefined on input line 364.
-
-
-LaTeX Warning: Citation `book:solar_spectrum' on page 19 undefined on input line 369.
-
+ [18]
 File: ch2pic/solar_spectra.png Graphic file (type bmp)
 <ch2pic/solar_spectra.png>
-
-LaTeX Warning: Citation `astm' on page 19 undefined on input line 374.
-
-
-LaTeX Warning: Citation `astm' on page 19 undefined on input line 374.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[19]
+ [19]
 File: ch2pic/light_freq_compare.png Graphic file (type bmp)
 <ch2pic/light_freq_compare.png>
 File: watermark.pdf Graphic file (type pdf)
@@ -1887,67 +1587,19 @@ File: watermark.pdf Graphic file (type pdf)
  [20]
 File: ch2pic/rolling_shutter.png Graphic file (type bmp)
 <ch2pic/rolling_shutter.png>
-
-
-LaTeX Warning: Citation `pic:rolling_shutter' on page 21 undefined on input line 416.
-
-
-LaTeX Warning: Citation `pic:rolling_shutter' on page 21 undefined on input line 416.
-
 File: ch2pic/rolling_shutter_case.png Graphic file (type bmp)
 <ch2pic/rolling_shutter_case.png>
-
-LaTeX Warning: Citation `pic:rolling_shutter_case' on page 21 undefined on input line 423.
-
-
-LaTeX Warning: Citation `pic:rolling_shutter_case' on page 21 undefined on input line 423.
-
 File: ch2pic/multipath.png Graphic file (type bmp)
 <ch2pic/multipath.png>
-
-LaTeX Warning: Citation `pic:multipath' on page 21 undefined on input line 433.
-
-
-LaTeX Warning: Citation `pic:multipath' on page 21 undefined on input line 433.
-
-
-LaTeX Warning: Reference `chp:LEDPD_radiate' on page 21 undefined on input line 440.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[21]
+ [21]
 File: ch2pic/vlc_multi_pd.png Graphic file (type bmp)
 <ch2pic/vlc_multi_pd.png>
-
-
-LaTeX Warning: Citation `case:ml' on page 22 undefined on input line 450.
-
-
-LaTeX Warning: Citation `case:ml' on page 22 undefined on input line 450.
-
-
-LaTeX Warning: Citation `case:3d_layers' on page 22 undefined on input line 455.
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[22]
 File: ch2pic/env_finger.png Graphic file (type bmp)
 <ch2pic/env_finger.png>
-
-
-LaTeX Warning: Citation `case:ml' on page 23 undefined on input line 460.
-
-
-LaTeX Warning: Citation `case:ml' on page 23 undefined on input line 460.
-
 File: ch2pic/env_1to1.png Graphic file (type bmp)
 <ch2pic/env_1to1.png>
-
-LaTeX Warning: Citation `case:3d_layers' on page 23 undefined on input line 467.
-
-
-LaTeX Warning: Citation `case:3d_layers' on page 23 undefined on input line 467.
-
 File: ch2pic/pd_camera_sort.png Graphic file (type bmp)
 <ch2pic/pd_camera_sort.png>
 
@@ -1957,42 +1609,35 @@ Overfull \hbox (6.20865pt too wide) in paragraph at lines 492--493
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[23]
+[22]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [23]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [24]
 File: ch2pic/lp_system_structure.png Graphic file (type bmp)
 <ch2pic/lp_system_structure.png>
-
-
-LaTeX Warning: Citation `case:ml' on page 24 undefined on input line 536.
-
 File: ch2pic/lp_system_flow.png Graphic file (type bmp)
 <ch2pic/lp_system_flow.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[24]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [25]
 File: ch2pic/vlc_flow_draw.png Graphic file (type bmp)
 <ch2pic/vlc_flow_draw.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
+ [25]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
  [26]
-
-LaTeX Warning: Citation `case:orient' on page 27 undefined on input line 585.
-
-
-LaTeX Warning: Citation `radiometry_and_photometry' on page 27 undefined on input line 605.
-
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [27]
 File: ch2pic/photometry_table.png Graphic file (type bmp)
 <ch2pic/photometry_table.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[27]
+ [28]
 File: ch2pic/solid_angle.png Graphic file (type bmp)
 <ch2pic/solid_angle.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [28]
 File: ch2pic/intensity_irradiance.png Graphic file (type bmp)
 <ch2pic/intensity_irradiance.png>
 File: ch2pic/3d_angle.png Graphic file (type bmp)
@@ -2000,157 +1645,346 @@ File: ch2pic/3d_angle.png Graphic file (type bmp)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [29]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [30]
 File: ch2pic/lambertian.png Graphic file (type bmp)
 <ch2pic/lambertian.png>
 File: ch2pic/lambertian_3d.png Graphic file (type bmp)
 <ch2pic/lambertian_3d.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [30]
+ [31]
 File: ch2pic/hardware_para.png Graphic file (type bmp)
 <ch2pic/hardware_para.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [31]
+ [32]
 File: ch2pic/lambertian_led.png Graphic file (type bmp)
 <ch2pic/lambertian_led.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [32]
+ [33]
 File: ch2pic/vec_config.png Graphic file (type bmp)
 <ch2pic/vec_config.png>
 File: ch2pic/LED_config.png Graphic file (type bmp)
 <ch2pic/LED_config.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [33]
+ [34]
 File: ch2pic/interactive_1to1.png Graphic file (type bmp)
 <ch2pic/interactive_1to1.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [34]
+ [35]
 File: ch2pic/interactive_mul.png Graphic file (type bmp)
 <ch2pic/interactive_mul.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [35]
+ [36]
 File: ch2pic/relative_vs_coor.png Graphic file (type bmp)
 <ch2pic/relative_vs_coor.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [36]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [37]
-
-LaTeX Warning: Citation `datasheet:led_vsma' on page 38 undefined on input line 1089.
-
-
-LaTeX Warning: Citation `survey_light2018' on page 38 undefined on input line 1089.
-
-
-LaTeX Warning: Citation `survey_light2018' on page 38 undefined on input line 1089.
-
-
-LaTeX Warning: Citation `case:cart2d' on page 38 undefined on input line 1089.
-
-
-LaTeX Warning: Citation `case:cart3d' on page 38 undefined on input line 1089.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[38]
-
-LaTeX Warning: Citation `case_ml' on page 39 undefined on input line 1151.
-
+ [38]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [39]
 File: ch2pic/config_orient.png Graphic file (type bmp)
 <ch2pic/config_orient.png>
-
-LaTeX Warning: Citation `case:3d_layers' on page 39 undefined on input line 1156.
-
-
-LaTeX Warning: Citation `case:3d_layers' on page 39 undefined on input line 1156.
-
 File: ch2pic/ml_pd_config.png Graphic file (type bmp)
 <ch2pic/ml_pd_config.png>
-
-LaTeX Warning: Citation `case:ml' on page 39 undefined on input line 1163.
-
-
-LaTeX Warning: Citation `case:ml' on page 39 undefined on input line 1163.
-
-
-LaTeX Warning: Citation `survey_light2018' on page 39 undefined on input line 1167.
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[39]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [40]
-
-LaTeX Warning: Citation `case:cart2d' on page 41 undefined on input line 1206.
-
-
-LaTeX Warning: Citation `case:cart3d' on page 41 undefined on input line 1206.
-
-
-LaTeX Warning: Citation `case:3d_layers' on page 41 undefined on input line 1206.
-
-
-LaTeX Warning: Citation `case:ml' on page 41 undefined on input line 1206.
-
-
-LaTeX Warning: Citation `survey_light2018' on page 41 undefined on input line 1211.
-
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [41]
 File: ch2pic/case_parallel.png Graphic file (type bmp)
 <ch2pic/case_parallel.png>
-
-LaTeX Warning: Citation `case:aoa' on page 41 undefined on input line 1216.
-
-
-LaTeX Warning: Citation `case:aoa' on page 41 undefined on input line 1216.
-
-
-LaTeX Warning: Citation `case:ml' on page 41 undefined on input line 1221.
-
-
-LaTeX Warning: Citation `case:cart3d' on page 41 undefined on input line 1221.
-
-
-LaTeX Warning: Citation `case:3d_layers' on page 41 undefined on input line 1221.
-
-
-LaTeX Warning: Citation `case:hypercube' on page 41 undefined on input line 1221.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[41]
-
-LaTeX Warning: Citation `case:3d_layers' on page 42 undefined on input line 1296.
-
-
-LaTeX Warning: Citation `case:cart3d' on page 42 undefined on input line 1303.
-
-
-LaTeX Warning: Citation `omg_new' on page 42 undefined on input line 1310.
-
-
-LaTeX Warning: Citation `case:3d_layers' on page 42 undefined on input line 1368.
-
+ [42]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[42]
+ [43]
 File: ch2pic/layers_2d.png Graphic file (type bmp)
 <ch2pic/layers_2d.png>
-
-
-LaTeX Warning: Citation `case:3d_layers' on page 43 undefined on input line 1396.
-
-
-LaTeX Warning: Citation `case:3d_layers' on page 43 undefined on input line 1396.
-
 File: ch2pic/layers_3d.png Graphic file (type bmp)
 <ch2pic/layers_3d.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [44]
+File: ch2pic/case_cart3d.png Graphic file (type bmp)
+<ch2pic/case_cart3d.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [45]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [46]) (./chapter/03Method.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [47]
+Chapter 3.
+File: ch3pic/chp3_flow.png Graphic file (type bmp)
+<ch3pic/chp3_flow.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[48
 
-LaTeX Warning: Citation `case:3d_layers' on page 43 undefin
+]
+Overfull \hbox (3.71828pt too wide) in paragraph at lines 50--52
+[]\TU/TimesNewRoman(0)/m/n/12 PD \TU/DFKai-SB(0)/m/n/12 擺 放 位 置 相 同 並 於 \TU/TimesNewRoman(0)/m/n/12 PD \TU/DFKai-SB(0)/m/n/12 座 標 系 原 點，| $[][][] \OT1/cmr/m/n/12 = [][]$ 
+ []
+
+
+Overfull \hbox (25.93298pt too wide) in paragraph at lines 52--54
+[]\TU/TimesNewRoman(0)/m/n/12 LED \TU/DFKai-SB(0)/m/n/12 擺 放 位 置 相 同 並 於 \TU/TimesNewRoman(0)/m/n/12 LED \TU/DFKai-SB(0)/m/n/12 座 標 系 原 點，| $[][][] \OT1/cmr/m/n/12 = [][]$ 
+ []
+
+File: ch3pic/algorithm_place.png Graphic file (type bmp)
+<ch3pic/algorithm_place.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[49]
+File: ch3pic/algorithm_flow.png Graphic file (type bmp)
+<ch3pic/algorithm_flow.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [50]
+File: ch3pic/after_filter.png Graphic file (type bmp)
+<ch3pic/after_filter.png>
+File: ch3pic/orient_flow.png Graphic file (type bmp)
+<ch3pic/orient_flow.png>
+File: ch3pic/orient_flow_1led.png Graphic file (type bmp)
+<ch3pic/orient_flow_1led.png>
+File: ch3pic/1led_mulpd.png Graphic file (type bmp)
+<ch3pic/1led_mulpd.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [51]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [52]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [53]
+File: ch3pic/solve_surface.png Graphic file (type bmp)
+<ch3pic/solve_surface.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [54]
+File: ch3pic/solve_axis.png Graphic file (type bmp)
+<ch3pic/solve_axis.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [55]
+File: ch3pic/mulled_1pd.png Graphic file (type bmp)
+<ch3pic/mulled_1pd.png>
+File: ch3pic/solve_dis_flow.png Graphic file (type bmp)
+<ch3pic/solve_dis_flow.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [56]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [57]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [58]) (./chapter/04Analysis.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [59]
+Chapter 4.
+File: ch4pic/simulate_hardware.png Graphic file (type bmp)
+<ch4pic/simulate_hardware.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[60
+
+]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [61]
+
+LaTeX Warning: Citation `datasheet:led_luxeon' on page 62 undefined on input line 100.
+
+
+Overfull \hbox (13.91809pt too wide) in paragraph at lines 120--153
+ [][] 
+ []
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[62]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [63]
+File: ch4pic/simulate_signal_flow.png Graphic file (type bmp)
+<ch4pic/simulate_signal_flow.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [64]
+
+LaTeX Warning: Reference `chp:para_hardware' on page 65 undefined on input line 317.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[65]
+File: ch4pic/result_interactive.png Graphic file (type bmp)
+<ch4pic/result_interactive.png>
+
+
+LaTeX Warning: Reference `pic:result_1' on page 66 undefined on input line 405.
+
+
+LaTeX Warning: Reference `tab:set_para' on page 66 undefined on input line 407.
+
+
+LaTeX Warning: Reference `pic:result_1' on page 66 undefined on input line 407.
+
+
+LaTeX Warning: Reference `tab:result_error' on page 66 undefined on input line 407.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[66]
+
+LaTeX Warning: Reference `' on page 67 undefined on input line 412.
+
+
+LaTeX Warning: Reference `' on page 67 undefined on input line 412.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[67]
+File: ch4pic/evaluate_flow.png Graphic file (type bmp)
+<ch4pic/evaluate_flow.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [68]
+File: ch4pic/translate_sample.png Graphic file (type bmp)
+<ch4pic/translate_sample.png>
+File: ch4pic/rotate_sample.png Graphic file (type bmp)
+<ch4pic/rotate_sample.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [69]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [70]
+File: ch4pic/error.png Graphic file (type bmp)
+<ch4pic/error.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [71]
+File: ch4pic/tolerance.png Graphic file (type bmp)
+<ch4pic/tolerance.png>
+File: ch4pic/effective.png Graphic file (type bmp)
+<ch4pic/effective.png>
+File: ch4pic/analysis_interactive.png Graphic file (type bmp)
+<ch4pic/analysis_interactive.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [72]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [73]
+File: ch4pic/m_effect.png Graphic file (type bmp)
+<ch4pic/m_effect.png>
+File: ch4pic/m_effect.png Graphic file (type bmp)
+<ch4pic/m_effect.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [74]) (./chapter/05Optimize.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [75]
+Chapter 5.
+File: ch5pic/optimize_flow.png Graphic file (type bmp)
+<ch5pic/optimize_flow.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[76
+
+]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [77]
+File: ch5pic/optimize_variable.png Graphic file (type bmp)
+<ch5pic/optimize_variable.png>
+File: ch5pic/opt_result.png Graphic file (type bmp)
+<ch5pic/opt_result.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [78]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [79]) (./chapter/06Conclusion.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [80]
+Chapter 6.
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[81
+
+])
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [82] (./thesis.bbl
+
+Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 37--41
+[]\TU/TimesNewRoman(0)/m/n/12 OpenCV.  Detection of aruco markers.  Retrieved Jul 2022 from: [][]$[][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--41
+[] [] [][][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][][][][][][][][][][][] [] [][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] []
+ []
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[83
+
+
+]
+Missing character: There is no ‐ (U+2010) in font Times New Roman/AAT:mapping=tex-text;!
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [84]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [85])
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [86] (./thesis.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 55618FAB64067931D08C098D65B89AD2;9460.
+ ) 
+Here is how much of TeX's memory you used:
+ 40614 strings out of 476919
+ 849861 string characters out of 5821840
+ 1320302 words of memory out of 5000000
+ 59718 multiletter control sequences out of 15000+600000
+ 414674 words of font info for 114 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 106i,19n,117p,808b,941s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on thesis.pdf (99 pages).
