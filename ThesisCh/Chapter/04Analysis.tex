@@ -78,7 +78,7 @@
 \end{tabular}
 \end{table}
 
-而在模擬中，所有參數皆可以透過簡單的調整數值來進行模擬；然而在現實中，一旦挑選了一種LED與PD，則硬體規格參數（表\ref{tab:para_hardware}）與部分的誤差模擬參數數值基本上就被訂下。雖然仍能透過改變給定的電壓電流來調整硬體規格參數，但仍有一定的限制在，因此設定硬體參數的最佳方法，便是直接利用現有的硬體規格表，參考硬體規格表上的參數進行設定。因此，以下我們挑選一些現有市售的硬體規格列出，LED硬體規格呈現於表\ref{tab:para_LED}中，PD的硬體規格表中可參考的參數則呈現於表\ref{tab:para_PD}中，除了硬體規格參數以外也決定了後續\ref{chp:simulate_vlc}章節中的PD暗電流。
+而在模擬中，所有參數皆可以透過簡單的調整數值來進行模擬；然而在現實中，一旦挑選了一種LED與PD，則硬體規格參數（表\ref{tab:para_hardware}）與部分的誤差模擬參數數值基本上就被訂下。雖然仍能透過改變給定的電壓電流來調整硬體規格參數，但仍有一定的限制在，因此設定硬體參數的最佳方法，便是直接利用現有的硬體規格表，參考硬體規格表上的參數進行設定。因此，以下我們挑選一些現有市售的硬體規格列出，LED硬體規格呈現於表\ref{tab:para_LED}中，PD的硬體規格表中可參考的參數則呈現於表\ref{tab:para_PD}中，除了硬體規格參數以外也決定了後續\ref{chp:simulate_vlc}章節中的PD暗電流$Id$與終端電容$Ct$。至於PD飽和電流$S$則主要與PD使用的電路相關\cite{hamamatsu}，無法從規格表取得，因此直接根據使用PD的廠商Hamamatsu的資料暫時假設為10mW\cite{hamamatsu}。
 
     \begin{table}[htpb]
         % \toprule% you can only use this within a tabular and if you load booktabs
@@ -148,6 +148,11 @@
             & $5\times 10^{-11}$
             & $2\times 10^{-10}$
             & $10^{-10}$\\
+            PD終端電容 &$Ct$ & $F$ 
+            & $7.4\times 10^{-10}$ 
+            & $4\times 10^{-9}$
+            & $1.3\times 10^{-8}$
+            & $7\times 10^{-10}$\\
             \hline
             \end{tabular}
     \end{table}
@@ -160,7 +165,9 @@
 \left[\begin{array}{ccc}0&0&0\end{array}\right]^T$，LED的擺放位置也限制於LED座標系原點：$^L\boldsymbol{P}_l=
 \left[\begin{array}{ccc}0&0&0\end{array}\right]^T$，而硬體擺放中的硬體指向$\boldsymbol{V}$則為可以自由設計之次系統設計變數。
 
-而實際在設計硬體模組時，可以參考圖\ref{pic:ml_pd_config}，需要將各電子元件與LED、PD硬體固定於一特殊形狀的載體上，利用其形狀來調整硬體的擺放指向。在模擬時，我們僅需透過定義各硬體的指向$\boldsymbol{V}$即可，其中各指向有兩個自由度：以球座標系定義的天頂角$\alpha$與方位角$\beta$。改變各硬體的指向時，各硬體的照射範圍也會改變，導致定位效果不同，因此硬體指向如何設計為一影響系統表現的因素，於\ref{chp:system_evaluate}章中進行評估。值得注意的是，每一個硬體的組態需要定義兩個自由度，因此擺法的部分，\textbf{總共需定義$2\times(L+P)$個自由度，硬體擺法的變數總數為硬體數量的函數}，這個特性在後續第五章的最佳化問題中會使問題變十分複雜。
+而實際在設計硬體模組時，可以參考圖\ref{pic:ml_pd_config}，需要將各電子元件與LED、PD硬體固定於一特殊形狀的載體上，利用其形狀來調整硬體的擺放指向。在模擬時，我們僅需透過定義各硬體的指向$\boldsymbol{V}$即可，其中各指向有兩個自由度：以球座標系定義的天頂角$\alpha$與方位角$\beta$。改變各硬體的指向時，各硬體的照射範圍也會改變，導致定位效果不同，因此硬體指向如何設計為一影響系統表現的因素，於\ref{chp:system_evaluate}章中進行評估。值得注意的是，每一個硬體的組態需要定義兩個自由度，因此擺法的部分，\textbf{總共需定義$2\times(L+P)$個自由度，硬體擺法的變數總數為硬體數量的函數}，過多的變數於分析中會難以進行分析，除此之外這個特性在後續第五章的最佳化問題中會使問題變十分複雜。
+
+
 
 \begin{table}[htpb]
     % \toprule% you can only use this within a tabular and if you load booktabs
@@ -181,7 +188,48 @@
     & 天頂角 &$^P \alpha_p$ & $rad$ & $0\leq ^P \alpha_p<\pi$ \\
     & 方位角& $^P \beta_p$& $rad$ & $0\leq ^P \beta_p<2\pi$ \\\hline
     \end{tabular}
-    \end{table}
+\end{table}
+
+
+
+為了使擺設方法的自由度降低使分析複雜度一併降低，我們參考最常見的硬體擺設法如圖\ref{pic:config_orient}，使硬體以等天頂角的環狀平均分散，以LED為例，各LED的天頂角$^L\alpha_l = ^L\alpha$相等，而方位角$^L\beta = 2\pi/L$則平均分散，因此硬體擺設的變數被限制至僅勝LED天頂角$^L\alpha$與PD天頂角$^P\alpha$兩項，如表\ref{tab:para_restrict_config}，而硬體數量為5、$\alpha=30^o$的擺設樣式如圖\ref{fig:config_a}，硬體數量為10、$\alpha=50^o$則如圖\ref{pic:config_b}。我們將此擺設方法稱為「環狀擺設」，將於第四章後續分析使用，以降低分析複雜度，但於第五章最佳化的部分將不對擺設方法進行限制。
+
+\begin{table}[htpb]
+    \caption{環狀擺設所需設定的參數}
+    \label{tab:para_restrict_config}
+    \centering
+    \begin{tabular}{|c|cc|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{組態參數}}  &\textbf{單位}  &  \textbf{備註}   \\
+    \hline
+    {LED} 
+    & 天頂角 &$^L \alpha$ & $rad$ & $0\leq ^L \alpha_l<\pi$ \\\hline
+    {PD} 
+    & 天頂角 &$^P \alpha$ & $rad$ & $0\leq ^L \alpha_l<\pi$ \\\hline
+
+    \end{tabular}
+\end{table}
+
+\begin{figure}[htpb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{ch4pic/config_a.png}
+        \captionsetup{labelformat=empty}
+        \caption*{(a)天頂角$\alpha=30^o$、硬體數量：5}
+        \label{fig:config_a}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{ch4pic/config_b.png}
+        \captionsetup{labelformat=empty}
+        \caption*{(b)天頂角$\alpha=50^o$、硬體數量：10}
+        \label{fig:config_b}
+    \end{minipage}
+    \caption{常見的環狀擺設方法}
+\end{figure}
+
+
 
     
 
@@ -252,6 +300,62 @@
 
     而由於本論文使用的演算法並沒有對Step2.系統設置進行限制，因此表\ref{tab:para_relative}中的參數可以任意設置，使兩次系統座標系根據使用情境，於感興趣空間中（Region of Interest，以下簡稱ROI）自由移動。
 
+    為清楚呈現Step1.中的次系統擺設方法與Step2.系統設置的關係，我們舉例呈現如圖\ref{pic:system_set_a}至圖\ref{pic:system_set_d}，各自的系統設置參數統整於表\ref{tab:data_set_system}。如圖呈現，各自的LED與PD次系統於Step1.中以圖\ref{pic:config_a}的方法擺設，再經過Step2.系統設置將兩單位放至於空間中不同位置。其中系統設置(a)(b)與(c)(d)分別有相同的平移關係，而系統設置(a)(c)與(b)(d)則是有相同的旋轉相對關係。
+
+    \begin{table}[htpb]
+        \begin{center}
+          \caption{不同系統設置位置}
+          \label{tab:data_set_system}
+          \begin{tabular}{c||c|c|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+             系統& $^{PL}t_x$ & $^{PL}t_y$&$^{PL}t_z$&$ ^{PL}rx$ & $^{PL}ry$&$^{PL}rz$\\
+             設置& (m) & (m)&(m)&(rad) & (rad)&(rad)\\
+            \hline
+            (a)& 1 & 1&1.5&$\pi$ & 0&0\\
+            (b)& 1 & 1&1.5&$\pi$ & 1.833&0\\
+            (c)& 1.5 & 1.5&3&$\pi$ & 0&0\\
+            (d)& 1.5 & 1.5&3&$\pi$ & 1.833&0\\
+          \end{tabular}
+        \end{center}
+      \end{table}
+
+    \begin{figure}[htpb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[height=10cm]{ch4pic/set_a.png}
+        % \captionsetup{labelformat=empty}
+        \caption{系統設置(a)的系統組成}
+        \label{pic:set_a}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[height=10cm]{ch4pic/set_b.png}
+        % \captionsetup{labelformat=empty}
+        \caption{系統設置(b)的系統組成}
+        \label{pic:set_b}
+    \end{minipage}
+
+    \end{figure}
+
+    \begin{figure}[htpb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[height=10cm]{ch4pic/set_c.png}
+        % \captionsetup{labelformat=empty}
+        \caption{系統設置(c)的系統組成}
+        \label{pic:set_c}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[height=10cm]{ch4pic/set_d.png}
+        % \captionsetup{labelformat=empty}
+        \caption{系統設置(d)的系統組成}
+        \label{pic:set_d}
+    \end{minipage}
+
+    \end{figure}
+
 \subsection{模擬Step3.LED發送與PD接收訊號}
 \label{chp:simulate_vlc}
 
@@ -262,9 +366,9 @@
         \label{pic:simulate_signal_flow}
     \end{figure}
 
-    模擬Step3.LED發送與PD接收訊號的步驟參考圖\ref{pic:simulate_signal_flow}，將LED硬體位置與指向投影至PD座標系上後，於PD座標系中求出各LED與PD之間的距離$D_{lp}$與出入射角$\phi_{lp},\theta_{lp}$的關係，由此套入光傳播模型計算PD電流。以上這三個步驟與\ref{chp:model}中以次系統座標系表達光傳遞模型的步驟相同，可以透過式\ref{eqn:model_coor_extend}描述如何利用硬體規格參數、硬體擺法、兩次系統相對關係，計算出理論的PD電流輸出$Ie_{lp}$。然而實際情況下，硬體量測具有誤差，因此我們參考大多文獻模擬誤差的方式，於\ref{chp:hardware_error}章中介紹。
+    模擬Step3.LED發送與PD接收訊號的步驟參考圖\ref{pic:simulate_signal_flow}，將LED硬體位置與指向投影至PD座標系上後，於PD座標系中求出各LED與PD之間的距離$D_{lp}$與出入射角$\phi_{lp},\theta_{lp}$的關係，由此套入光傳播模型計算PD電流。以上這三個步驟與\ref{chp:model}中以次系統座標系表達光傳遞模型的步驟相同，可以透過式\ref{eqn:model_coor_extend}描述如何利用硬體規格參數、硬體擺法、兩次系統相對關係，計算出理論的PD電流輸出$Ie_{lp}$。然而實際情況下，量測上具有誤差，因此我們參考大多文獻模擬誤差的方式，於\ref{chp:hardware_error}章中介紹。
 
-    \subsubsection{模擬硬體誤差}
+    \subsubsection{模擬Step3.量測的訊號誤差}
     \label{chp:hardware_error}
 
     圖\ref{pic:simulate_hardware}流程中，模擬光通訊的部分可透過式\ref{eqn:model_algorithm_filter}獲得理論的PD電流強度，而為了更真實的模擬現實狀況，參考\cite{survey_light2018}中對誤差的敘述，LED與PD定位的誤差主要來源為：環境光源、多重路徑傳輸與硬體誤差。環境光源的部分即為空間中其餘電燈與太陽光的光源對PD的影響，而藉由選用近紅外光波段的硬體如\ref{chp:light_electro}章所述，我們可以盡可能的降低此項誤差，而模擬中則以$Ib$作為決定背景光源的參數。
@@ -289,20 +393,20 @@
     \end{table}
 
     
-    至於硬體誤差，則是呈現於式\ref{eqn:noise}中：$\hat{Ie}_{lp}$代表第l個LED對第p個PD模擬出的硬體輸出電流，其組成包含了理論的量測電流$Ie_{lp}$與PD硬體誤差$In$。其中，PD硬體誤差中，又可分為熱雜訊$It$（Thermal Noise）與散粒雜訊$Is$（Shot Noise），兩者皆可以用常態分佈（Normal Distribution）描述，因此各自以$It^2$與$Is^2$表示雜訊的變異數（Varaiance），呈現於式\ref{eqn:thermal_noise}與式\ref{eqn:shot_noise}中，其中$Kb$為波茲曼常數（Boltzmann constant）、$Te$為絕對溫度、$B$為頻寬、$R$為感測電路的電阻、$q$為電子電荷、$Ib$為背景電流、$Id$為PD暗電流。
+    至於硬體誤差，則是呈現於式\ref{eqn:noise}中：$\hat{Ie}_{lp}$代表第l個LED對第p個PD模擬出的硬體輸出電流，其組成包含了理論的量測電流$Ie_{lp}$與PD硬體誤差$In$。其中，PD硬體誤差中，又可分為熱雜訊$It$（Thermal Noise）與散粒雜訊$Is$（Shot Noise），兩者皆可以用常態分佈（Normal Distribution）描述，因此各自以$It^2$與$Is^2$表示雜訊的變異數$\sigma$（Varaiance），呈現於式\ref{eqn:thermal_noise}與式\ref{eqn:shot_noise}中，其中$Kb$為波茲曼常數（Boltzmann constant）、$Te$為絕對溫度、$B$為頻寬、$R$為感測電路的電阻、$q$為電子電荷、$Ib$為背景電流、$Id$為PD暗電流。
 
     \begin{equation}
     \label{eqn:noise}
-        \hat{Ie}_{lp}=Gm\times (Ie_{lp}+Ib)+In 
+        \hat{Ie}_{lp}=Gm\times (Ie_{lp})+In 
     \end{equation}
 
 
     \begin{gather}
         \label{eqn:thermal_noise}
-        In^2 = {It_{lp}^2+Is_{lp}^2}
-        It_{lp}^2={\frac{4 Kb Te B}{R}}\\
+        \sigma_{In}^2 = {It_{lp}^2+Is_{lp}^2}
+        \sigma_{It_{lp}}^2={\frac{4 Kb Te B}{R}}\\
         \label{eqn:shot_noise}
-        Is_{lp}^2={2q(Ie_{lp}+Ib+Id)B}
+        \sigma{Is_{lp}}^2={2q(Ie_{lp}+Ib+Id)B}
     \end{gather}
 
   
@@ -333,7 +437,7 @@
     \end{table}
 
 
-    表\ref{tab:para_error}的參數中，PD暗電流如\ref{chp:LEDPD_hardware}章所述，可以參考硬體規格表\ref{tab:para_PD}設定；而其餘參數則需依照使用情境進行調整。絕對溫度我們取$300K$作為室內溫度，而頻寬與背景電流則選擇參考其他文獻來決定參數，這邊選擇參考文獻\cite{omg_old}，數值呈現於表\ref{tab:para_from_cite}。
+    表\ref{tab:para_error}的參數中，PD暗電流如\ref{chp:LEDPD_hardware}章所述，可以參考硬體規格表\ref{tab:para_PD}設定；而其餘參數則需依照使用情境進行調整。絕對溫度、頻寬與背景電流選擇參考文獻\cite{omg_old}的數據，該文獻的模擬參數於後續被許多其他模擬文獻使用如\cite{omg_new}，數值呈現於表\ref{tab:para_from_cite}。多重路徑增益如前所述，參考文獻\cite{multipath_new}中的研究結果。電阻我們參考\cite{hamamatsu}中的PD量測電路，使電路中電阻與Bandwidth關係以$B = 1/2\pi RCt$，利用此關係由頻寬$B$與硬體規格$Ct$獲得。
 
 
     \begin{table}[htpb]
@@ -360,7 +464,7 @@
         & & &  $1.14$ &室內空間牆壁邊&\\
         & & &  $1.78$ &室內空間角落&\\\hline
 
-        電阻 &$R$ & $\Omega$ & & & \\
+        電阻 &$R$ & $\Omega$ & & 由頻寬與終端電容計算 & \\
         
         \hline
         \end{tabular}
@@ -426,7 +530,7 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=15cm]{ch4pic/result_interactive.png}
+    \includegraphics[width=15cm]{ch4pic/interactive_1to1.png}
     \caption{定位模擬結果互動介面}
     \label{pic:result_interactive}
 \end{figure}

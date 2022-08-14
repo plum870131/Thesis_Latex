@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  14 AUG 2022 18:48
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  15 AUG 2022 05:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1413,117 +1413,134 @@ File: watermark.pdf Graphic file (type pdf)
 
 
 
-] (./thesis.toc
+] (./FrontFile/abstractCH.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [1
 
 
 
+]) (./FrontFile/abstractEN.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [2
+
+]
+Overfull \hbox (8.65338pt too wide) in paragraph at lines 6--7
+\TU/TimesNewRoman(0)/b/n/12 Key Words\TU/DFKai-SB(0)/b/n/12 ：| \TU/TimesNewRoman(0)/b/n/12 Indoor Positioning, Light Positioning, Light-Emitting-Diode,
+ []
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[3]) (./thesis.toc
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [4
+
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [2])
+ [5])
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [3] (./thesis.lof
+ [6] (./thesis.lof
 
-LaTeX Warning: Citation `iot' on page iv undefined on input line 3.
-
-
-LaTeX Warning: Citation `survey_light2018' on page iv undefined on input line 10.
+LaTeX Warning: Citation `iot' on page vii undefined on input line 3.
 
 
-LaTeX Warning: Citation `survey_light2020' on page iv undefined on input line 11.
+LaTeX Warning: Citation `survey_light2018' on page vii undefined on input line 10.
 
 
-LaTeX Warning: Citation `survey_light2018' on page iv undefined on input line 12.
+LaTeX Warning: Citation `survey_light2020' on page vii undefined on input line 11.
 
 
-LaTeX Warning: Citation `pic:fingerprinting' on page iv undefined on input line 13.
+LaTeX Warning: Citation `survey_light2018' on page vii undefined on input line 12.
 
 
-LaTeX Warning: Citation `pic:image_processing' on page iv undefined on input line 14.
+LaTeX Warning: Citation `pic:fingerprinting' on page vii undefined on input line 13.
 
 
-LaTeX Warning: Citation `pic:aruco' on page iv undefined on input line 15.
+LaTeX Warning: Citation `pic:image_processing' on page vii undefined on input line 14.
 
 
-LaTeX Warning: Citation `Spectrum' on page iv undefined on input line 16.
+LaTeX Warning: Citation `pic:aruco' on page vii undefined on input line 15.
 
 
-LaTeX Warning: Citation `survey_rfid' on page iv undefined on input line 18.
+LaTeX Warning: Citation `Spectrum' on page vii undefined on input line 16.
 
 
-LaTeX Warning: Citation `landmarc' on page iv undefined on input line 19.
+LaTeX Warning: Citation `survey_rfid' on page vii undefined on input line 18.
 
 
-LaTeX Warning: Citation `case:rfid_1to1' on page iv undefined on input line 20.
+LaTeX Warning: Citation `landmarc' on page vii undefined on input line 19.
 
 
-LaTeX Warning: Citation `pic:vlc' on page iv undefined on input line 21.
+LaTeX Warning: Citation `case:rfid_1to1' on page vii undefined on input line 20.
 
 
-LaTeX Warning: Citation `astm' on page iv undefined on input line 23.
+LaTeX Warning: Citation `pic:vlc' on page vii undefined on input line 21.
 
 
-LaTeX Warning: Citation `pic:rolling_shutter' on page iv undefined on input line 25.
+LaTeX Warning: Citation `astm' on page vii undefined on input line 23.
 
 
-LaTeX Warning: Citation `pic:rolling_shutter_case' on page iv undefined on input line 26.
+LaTeX Warning: Citation `pic:rolling_shutter' on page vii undefined on input line 25.
 
 
-LaTeX Warning: Citation `pic:multipath' on page iv undefined on input line 27.
+LaTeX Warning: Citation `pic:rolling_shutter_case' on page vii undefined on input line 26.
 
 
-LaTeX Warning: Citation `case:ml' on page iv undefined on input line 28.
+LaTeX Warning: Citation `pic:multipath' on page vii undefined on input line 27.
 
 
-LaTeX Warning: Citation `case:ml' on page iv undefined on input line 29.
+LaTeX Warning: Citation `case:ml' on page vii undefined on input line 28.
 
 
-LaTeX Warning: Citation `case:3d_layers' on page iv undefined on input line 30.
+LaTeX Warning: Citation `case:ml' on page vii undefined on input line 29.
+
+
+LaTeX Warning: Citation `case:3d_layers' on page vii undefined on input line 30.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[4
+[7
 
 ]
 
-LaTeX Warning: Citation `case:3d_layers' on page v undefined on input line 48.
+LaTeX Warning: Citation `case:3d_layers' on page viii undefined on input line 48.
 
 
-LaTeX Warning: Citation `case:ml' on page v undefined on input line 49.
+LaTeX Warning: Citation `case:ml' on page viii undefined on input line 49.
 
 
-LaTeX Warning: Citation `case:aoa' on page v undefined on input line 50.
+LaTeX Warning: Citation `case:aoa' on page viii undefined on input line 50.
 
 
-LaTeX Warning: Citation `case:3d_layers' on page v undefined on input line 51.
+LaTeX Warning: Citation `case:3d_layers' on page viii undefined on input line 51.
 
 
-LaTeX Warning: Citation `case:3d_layers' on page v undefined on input line 52.
+LaTeX Warning: Citation `case:3d_layers' on page viii undefined on input line 52.
 
 
-LaTeX Warning: Citation `case:cart3d' on page v undefined on input line 53.
+LaTeX Warning: Citation `case:cart3d' on page viii undefined on input line 53.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[5])
+[8])
 \tf@lof=\write10
 \openout10 = `thesis.lof'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [6] (./thesis.lot
+ [9] (./thesis.lot
 
-LaTeX Warning: Citation `datasheet:hm_pd' on page vii undefined on input line 10.
+LaTeX Warning: Citation `datasheet:hm_pd' on page x undefined on input line 10.
 
 
-LaTeX Warning: Citation `multipath_new' on page vii undefined on input line 13.
+LaTeX Warning: Citation `multipath_new' on page x undefined on input line 15.
 
 )
 \tf@lot=\write11
@@ -1532,7 +1549,7 @@ LaTeX Warning: Citation `multipath_new' on page vii undefined on input line 13.
  (./Chapter/SymbolList.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [7
+ [10
 
 ]
 Overfull \hbox (57.1569pt too wide) in alignment at lines 14--29
@@ -1556,18 +1573,18 @@ Overfull \hbox (65.06126pt too wide) has occurred while \output is active
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[8
+[11
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [9]
+ [12]
 File: ch1pic/not_whole.png Graphic file (type bmp)
 <ch1pic/not_whole.png>
 ) (./Chapter/SymbolList_alphabet.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [10]
+ [13]
 Overfull \hbox (65.06126pt too wide) in alignment at lines 13--50
 [] [] 
  []
@@ -1589,7 +1606,7 @@ Overfull \hbox (65.06126pt too wide) has occurred while \output is active
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[11
+[14
 
 ]
 Overfull \hbox (65.06126pt too wide) has occurred while \output is active
@@ -1599,7 +1616,7 @@ Overfull \hbox (65.06126pt too wide) has occurred while \output is active
 )
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [12] (./chapter/01Introduction.tex
+ [15] (./chapter/01Introduction.tex
 Chapter 1.
 
 LaTeX Warning: Citation `iot' on page 1 undefined on input line 7.
@@ -2330,6 +2347,12 @@ File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [61]
 
+LaTeX Warning: Citation `hamamatsu' on page 62 undefined on input line 81.
+
+
+LaTeX Warning: Citation `hamamatsu' on page 62 undefined on input line 81.
+
+
 LaTeX Warning: Citation `datasheet:led_vsma' on page 62 undefined on input line 98.
 
 
@@ -2345,54 +2368,122 @@ LaTeX Warning: Citation `datasheet:hm_pd' on page 62 undefined on input line 117
 LaTeX Warning: Citation `datasheet:hm_pd' on page 62 undefined on input line 117.
 
 
-Overfull \hbox (13.91798pt too wide) in paragraph at lines 120--153
+Overfull \hbox (25.91798pt too wide) in paragraph at lines 120--158
  [][] 
  []
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [62]
+
+Package caption Warning: \label without proper reference on input line 220.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:config_a' on page 63 undefined on input line 195.
+
+
+LaTeX Warning: Reference `pic:config_b' on page 63 undefined on input line 195.
+
+File: ch4pic/config_a.png Graphic file (type bmp)
+<ch4pic/config_a.png>
+File: ch4pic/config_b.png Graphic file (type bmp)
+<ch4pic/config_b.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [63]
+[63]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [64]
-File: ch4pic/simulate_signal_flow.png Graphic file (type bmp)
-<ch4pic/simulate_signal_flow.png>
-
-
-LaTeX Warning: Citation `survey_light2018' on page 65 undefined on input line 270.
-
-
-LaTeX Warning: Citation `multipath_new' on page 65 undefined on input line 272.
-
-
-LaTeX Warning: Citation `multipath_new' on page 65 undefined on input line 272.
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[65]
+ [65]
 
-LaTeX Warning: Citation `multipath_new' on page 66 undefined on input line 277.
-
-
-LaTeX Warning: Citation `multipath_new' on page 66 undefined on input line 277.
+LaTeX Warning: Reference `pic:system_set_a' on page 66 undefined on input line 303.
 
 
-LaTeX Warning: Citation `omg_old' on page 66 undefined on input line 336.
+LaTeX Warning: Reference `pic:system_set_d' on page 66 undefined on input line 303.
 
+
+LaTeX Warning: Reference `pic:config_a' on page 66 undefined on input line 303.
+
+File: ch4pic/set_a.png Graphic file (type bmp)
+<ch4pic/set_a.png>
+
+Overfull \hbox (17.78255pt too wide) in paragraph at lines 325--327
+ [][] 
+ []
+
+File: ch4pic/set_b.png Graphic file (type bmp)
+<ch4pic/set_b.png>
+
+Overfull \hbox (4.86789pt too wide) in paragraph at lines 332--334
+ [][] 
+ []
+
+File: ch4pic/set_c.png Graphic file (type bmp)
+<ch4pic/set_c.png>
+
+Overfull \hbox (7.83861pt too wide) in paragraph at lines 344--346
+ [][] 
+ []
+
+File: ch4pic/set_d.png Graphic file (type bmp)
+<ch4pic/set_d.png>
+
+Overfull \hbox (8.33766pt too wide) in paragraph at lines 351--353
+ [][] 
+ []
+
+File: ch4pic/simulate_signal_flow.png Graphic file (type bmp)
+<ch4pic/simulate_signal_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [66]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [67]
 
-LaTeX Warning: Citation `omg_old' on page 67 undefined on input line 351.
+LaTeX Warning: Citation `survey_light2018' on page 68 undefined on input line 374.
 
 
-LaTeX Warning: Citation `multipath_new' on page 67 undefined on input line 359.
+LaTeX Warning: Citation `multipath_new' on page 68 undefined on input line 376.
 
-File: ch4pic/result_interactive.png Graphic file (type bmp)
-<ch4pic/result_interactive.png>
+
+LaTeX Warning: Citation `multipath_new' on page 68 undefined on input line 376.
+
+
+LaTeX Warning: Citation `multipath_new' on page 68 undefined on input line 381.
+
+
+LaTeX Warning: Citation `multipath_new' on page 68 undefined on input line 381.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[68]
+
+LaTeX Warning: Citation `omg_old' on page 69 undefined on input line 440.
+
+
+LaTeX Warning: Citation `omg_new' on page 69 undefined on input line 440.
+
+
+LaTeX Warning: Citation `multipath_new' on page 69 undefined on input line 440.
+
+
+LaTeX Warning: Citation `hamamatsu' on page 69 undefined on input line 440.
+
+
+LaTeX Warning: Citation `omg_old' on page 69 undefined on input line 455.
+
+
+LaTeX Warning: Citation `multipath_new' on page 69 undefined on input line 463.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[69]
+File: ch4pic/interactive_1to1.png Graphic file (type bmp)
+<ch4pic/interactive_1to1.png>
 File: ch4pic/A.png Graphic file (type bmp)
 <ch4pic/A.png>
 File: ch4pic/B.png Graphic file (type bmp)
@@ -2403,36 +2494,33 @@ File: ch4pic/D.png Graphic file (type bmp)
 <ch4pic/D.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[67]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [68]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [69]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [70]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [71]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [72]
 File: ch4pic/evaluate_flow.png Graphic file (type bmp)
 <ch4pic/evaluate_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [71]
+ [73]
 File: ch4pic/translate_sample.png Graphic file (type bmp)
 <ch4pic/translate_sample.png>
 File: ch4pic/rotate_sample.png Graphic file (type bmp)
 <ch4pic/rotate_sample.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [72]
+ [74]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [73]
+ [75]
 File: ch4pic/error.png Graphic file (type bmp)
 <ch4pic/error.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [74]
+ [76]
 File: ch4pic/tolerance.png Graphic file (type bmp)
 <ch4pic/tolerance.png>
 File: ch4pic/effective.png Graphic file (type bmp)
@@ -2441,63 +2529,63 @@ File: ch4pic/analysis_interactive.png Graphic file (type bmp)
 <ch4pic/analysis_interactive.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [75]
+ [77]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [76]
+ [78]
 File: ch4pic/lambertian_translate.png Graphic file (type bmp)
 <ch4pic/lambertian_translate.png>
 File: ch4pic/lambertian_rotate.png Graphic file (type bmp)
 <ch4pic/lambertian_rotate.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [77]
+ [79]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [78]
+ [80]
 File: ch4pic/m_effect.png Graphic file (type bmp)
 <ch4pic/m_effect.png>
 File: ch4pic/alpha_effect.png Graphic file (type bmp)
 <ch4pic/alpha_effect.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [79]) (./chapter/05Optimize.tex
+ [81]) (./chapter/05Optimize.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [80]
+ [82]
 Chapter 5.
 File: ch5pic/optimize_flow.png Graphic file (type bmp)
 <ch5pic/optimize_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[81
+[83
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [82]
+ [84]
 File: ch5pic/optimize_variable.png Graphic file (type bmp)
 <ch5pic/optimize_variable.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [83]
+ [85]
 File: ch5pic/opt_result.png Graphic file (type bmp)
 <ch5pic/opt_result.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [84]) (./chapter/06Conclusion.tex
+ [86]) (./chapter/06Conclusion.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [85]
+ [87]
 Chapter 6.
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[86
+[88
 
 ])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [87]
+ [89]
 No file thesis.bbl.
 (./thesis.aux)
 
@@ -2507,16 +2595,19 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D1E9CDDB7C1D3F148025AB0021C24292;9526.
+(rerunfilecheck)             Checksum: 1D4F227BEC4A9F72AFD3D6BF334967B0;9742.
  ) 
 Here is how much of TeX's memory you used:
- 40912 strings out of 476919
- 854574 string characters out of 5821840
- 1330146 words of memory out of 5000000
- 60011 multiletter control sequences out of 15000+600000
+ 40967 strings out of 476919
+ 855540 string characters out of 5821840
+ 1331871 words of memory out of 5000000
+ 60056 multiletter control sequences out of 15000+600000
  414658 words of font info for 112 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,19n,117p,808b,941s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,19n,117p,1998b,941s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (100 pages).
+Output written on thesis.pdf (105 pages).
