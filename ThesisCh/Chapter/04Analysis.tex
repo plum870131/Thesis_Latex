@@ -78,7 +78,7 @@
 \end{tabular}
 \end{table}
 
-而在模擬中，所有參數皆可以透過簡單的調整數值來進行模擬；然而在現實中，一旦挑選了一種LED與PD，則硬體規格參數（表\ref{tab:para_hardware}）與部分的誤差模擬參數數值基本上就被訂下。雖然仍能透過改變給定的電壓電流來調整硬體規格參數，但仍有一定的限制在，因此設定硬體參數的最佳方法，便是直接參考現有的硬體規格表，參考硬體規格表上的參數進行設定。因此，以下我們將現有市售的硬體規格列出，LED硬體規格呈現於表\ref{tab:para_LED}中，PD的硬體規格表中可參考的參數則呈現於表\ref{tab:para_PD}中，除了硬體規格參數以外也決定了後續\ref{chp:simulate_vlc}章節中的PD暗電流。
+而在模擬中，所有參數皆可以透過簡單的調整數值來進行模擬；然而在現實中，一旦挑選了一種LED與PD，則硬體規格參數（表\ref{tab:para_hardware}）與部分的誤差模擬參數數值基本上就被訂下。雖然仍能透過改變給定的電壓電流來調整硬體規格參數，但仍有一定的限制在，因此設定硬體參數的最佳方法，便是直接利用現有的硬體規格表，參考硬體規格表上的參數進行設定。因此，以下我們挑選一些現有市售的硬體規格列出，LED硬體規格呈現於表\ref{tab:para_LED}中，PD的硬體規格表中可參考的參數則呈現於表\ref{tab:para_PD}中，除了硬體規格參數以外也決定了後續\ref{chp:simulate_vlc}章節中的PD暗電流。
 
     \begin{table}[htpb]
         % \toprule% you can only use this within a tabular and if you load booktabs
@@ -152,6 +152,7 @@
             \end{tabular}
     \end{table}
     
+    在千萬種LED與PD的硬體中，我們僅選擇部分的LED與PD呈現，而在表\ref{tab:para_LED}中三種硬體中，我們可以看出無論是總輻射通量$Pt$還是朗博次方$M\ell$差異性可以非常大，總輻射通量的差異可以到一千倍。因此，根據不同的使用情境，挑選合適的參數便顯得非常重要，而硬體參數的影響我們於後續\ref{chp:system_evaluate}章中分析。
 
 \subsubsection{硬體擺法}
 
@@ -266,11 +267,33 @@
     \subsubsection{模擬硬體誤差}
     \label{chp:hardware_error}
 
-    圖\ref{pic:simulate_hardware}流程中，模擬光通訊的部分可透過式\ref{eqn:model_algorithm_filter}獲得理論的PD電流強度，而為了更真實的模擬現實狀況，參考\cite{survey_light2018}中對誤差的模擬，呈現於式\ref{eqn:noise}中：$\hat{Ie}_{lp}$代表第l個LED對第p個PD模擬出的硬體輸出電流，其組成包含了理論的量測電流$Ie_{lp}$與PD硬體誤差$In$。其中，PD硬體誤差中，又可分為熱雜訊$It$（Thermal Noise）與散粒雜訊$Is$（Shot Noise），兩者皆可以用常態分佈（Normal Distribution）描述，因此各自以$It^2$與$Is^2$表示雜訊的變異數（Varaiance），呈現於式\ref{eqn:thermal_noise}與式\ref{eqn:shot_noise}中，其中$Kb$為波茲曼常數（Boltzmann constant）、$Te$為絕對溫度、$B$為頻寬、$R$為感測電路的電阻、$q$為電子電荷、$Ib$為背景電流、$Id$為PD暗電流。
+    圖\ref{pic:simulate_hardware}流程中，模擬光通訊的部分可透過式\ref{eqn:model_algorithm_filter}獲得理論的PD電流強度，而為了更真實的模擬現實狀況，參考\cite{survey_light2018}中對誤差的敘述，LED與PD定位的誤差主要來源為：環境光源、多重路徑傳輸與硬體誤差。環境光源的部分即為空間中其餘電燈與太陽光的光源對PD的影響，而藉由選用近紅外光波段的硬體如\ref{chp:light_electro}章所述，我們可以盡可能的降低此項誤差，而模擬中則以$Ib$作為決定背景光源的參數。
+    
+    而多重路徑傳輸如圖\ref{pic:multipath}所示，由於光訊號於空間中遇到障礙物會有部分反射，因此PD所接收之訊號除了LoS訊號以外，還包含透過反射進入PD的NLoS訊號，因此造成誤差；參考\ref{chp:LEDPD_problem}所述，多重路徑傳輸的影響在模擬上的難度非常高，因此大多文獻上皆會忽略，僅有部分專為探討此效果的研究對其作研究\cite{multipath_new}，本研究將複雜的模擬簡化成以一個訊號增益值$Gm$作為模擬多重路徑傳輸的參數，以增益來簡單模擬NLoS訊號使訊號值變大的影響。而於\cite{multipath_new}的研究中，當感測系放至於室內空間中央，也就是距離牆壁距離較遠時，NLoS訊號為LoS訊號的$10^(-3)$倍以下，對定位影響極小；相較之下當感測器位於房間的角落時，也就是置於兩牆壁相遇轉折處，NLoS訊號約為LoS訊號的$0.78$倍，如此大的NLoS訊號則可想而知會對定位效果造成影響。
+
+
+    \begin{table}[htpb]
+        % \toprule% you can only use this within a tabular and if you load booktabs
+        \caption{\cite{multipath_new}中不同位置與NLoS訊號影響}
+        \label{tab:gain_multipath}
+        \centering
+        \begin{tabular}{|c||c|c||c|}
+            \hline
+        \textbf{位置}&\textbf{LoS訊號強度}(W)&\textbf{NLoS訊號強度}(W)&\textbf{訊號增益$Gm$}\\
+            \hline\hline
+        室內空間中央&$7.2\times 10^{-6}$ &$2.5\times 10^{-9}$&$1$ \\\hline
+        室內空間牆壁邊 &$6.8\times 10^{-7}$ &$1.0\times 10^{-7}$&$1.14$\\\hline
+        室內空間角落 &$2.8\times 10^{-7}$ & $2.2\times 10^{-7}$&$1.78$\\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    
+    至於硬體誤差，則是呈現於式\ref{eqn:noise}中：$\hat{Ie}_{lp}$代表第l個LED對第p個PD模擬出的硬體輸出電流，其組成包含了理論的量測電流$Ie_{lp}$與PD硬體誤差$In$。其中，PD硬體誤差中，又可分為熱雜訊$It$（Thermal Noise）與散粒雜訊$Is$（Shot Noise），兩者皆可以用常態分佈（Normal Distribution）描述，因此各自以$It^2$與$Is^2$表示雜訊的變異數（Varaiance），呈現於式\ref{eqn:thermal_noise}與式\ref{eqn:shot_noise}中，其中$Kb$為波茲曼常數（Boltzmann constant）、$Te$為絕對溫度、$B$為頻寬、$R$為感測電路的電阻、$q$為電子電荷、$Ib$為背景電流、$Id$為PD暗電流。
 
     \begin{equation}
     \label{eqn:noise}
-        \hat{Ie}_{lp}=Ie_{lp}+In 
+        \hat{Ie}_{lp}=Gm\times (Ie_{lp}+Ib)+In 
     \end{equation}
 
 
@@ -282,12 +305,7 @@
         Is_{lp}^2={2q(Ie_{lp}+Ib+Id)B}
     \end{gather}
 
-    % 除了加上誤差以外，我還需評估硬體的解析度，光電二極體的解析度，也就是PD最小可感測的電流$Im$，可以用雜訊等效功率$Nep$（noise equivalent power，以下簡稱NEP）計算，如式\ref{eqn:nep}，，而NEP大小則取自硬體規格表。
-
-    % \begin{gather}
-    %     \label{eqn:nep}
-    %     Im = Nep\times \sqrt{B}
-    % \end{gather}
+  
 
     我們將模擬硬體誤差所需設定的參數整理於表\ref{tab:para_error}：
 
@@ -309,29 +327,41 @@
         % 雜訊等效功率 &$Nep$ & $W/\sqrt{Hz}$ &  \\
         PD暗電流 &$Id$ & $A$ &  \\
         背景電流 &$Ib$ & $A$ &  \\
+        多重路徑增益 &$Gm$&-&\\
         \hline
         \end{tabular}
     \end{table}
 
 
-    表\ref{tab:para_error}的參數中，PD暗電流如\ref{chp:para_hardware}可以參考硬體規格表\ref{tab:para_PD}設定，而其餘參數則需依照使用情境進行調整。絕對溫度我們取$300K$作為室內溫度，而頻寬與背景電流則選擇參考其他文獻來決定參數，這邊選擇參考文獻\cite{omg_old}，數值呈現於表\ref{tab:para_from_cite}。
+    表\ref{tab:para_error}的參數中，PD暗電流如\ref{chp:LEDPD_hardware}章所述，可以參考硬體規格表\ref{tab:para_PD}設定；而其餘參數則需依照使用情境進行調整。絕對溫度我們取$300K$作為室內溫度，而頻寬與背景電流則選擇參考其他文獻來決定參數，這邊選擇參考文獻\cite{omg_old}，數值呈現於表\ref{tab:para_from_cite}。
 
 
-    \begin{table}[h!]
+    \begin{table}[htpb]
         % \toprule% you can only use this within a tabular and if you load booktabs
         \renewcommand{\arraystretch}{1.3}
         \setlength{\arrayrulewidth}{0.15mm}
         \setlength{\doublerulesep}{0.12mm}
-        \caption{參考其他文獻之參數數值}
+        \caption{模擬誤差之參數數值}
         \label{tab:para_from_cite}
         \centering
-        \begin{tabular}{|cc|c|c|}
+        \begin{tabular}{|cc|c|c|c|c|}
         \hline
-        \multicolumn{2}{|c|}{\textbf{模擬硬體誤差的參數}}  &\textbf{單位}  &  \textbf{數值}   \\
-        \hline
-        絕對溫度 &$Te$ & $K$ &  $300$\cite{omg_old} \\
-        頻寬 &$B$ & $Hz$ &  $640\times 10^{3}$ \cite{omg_old}\\
-        背景電流 &$Ib$ & $A$ &  $740\times 10^{-6}$ \cite{omg_old}\\
+        \multicolumn{2}{|c|}{\textbf{模擬硬體誤差的參數}}  &\textbf{單位}  &  \textbf{數值}  & \textbf{備註}& \textbf{參考文獻}  \\
+        \hline\hline
+        絕對溫度 &$Te$ & $K$ &  $300$&約$27^{o}C$&\multirow{4}{*}{\cite{omg_old}}  \\\cdashline{1-5}
+        頻寬 &$B$ & $Hz$ &  $640\times 10^{3}$ &&\\\cdashline{1-5}
+        \multirow{2}{*}{背景電流} &\multirow{2}{*}{$Ib$ }& \multirow{2}{*}{$A$}&  $740\times 10^{-6}$ &陽光間接照射&\\
+         & & &  $5100\times 10^{-6}$ &陽光直接照射&\\\hline
+
+        
+        PD暗電流 &$Id$ & $A$ & &由硬體規格決定& \\\hline
+
+        \multirow{3}{*}{多重路徑增益} &\multirow{3}{*}{$Gm$ }& \multirow{3}{*}{-}&  $1$ &室內空間中央& \multirow{3}{*}{\cite{multipath_new}}\\
+        & & &  $1.14$ &室內空間牆壁邊&\\
+        & & &  $1.78$ &室內空間角落&\\\hline
+
+        電阻 &$R$ & $\Omega$ & & & \\
+        
         \hline
         \end{tabular}
     \end{table}
@@ -654,7 +684,7 @@
 \subsubsection{朗博次方對系統成效的影響}
 \label{chp:m_effect}
 
-在討論朗博次方對系統成效的影響時，我們將其餘系統設計變數固定：假設$^P\alpha_p =^L\alpha_l = \pi/18$、$L=P=5$，透過改變朗博次方，將不同LED與PD朗博次方的次系統規格下，計算容許範圍內樣本點的數量，以圖\ref{pic:}呈現平移樣本點與圖呈現旋轉樣本點受朗博次方的影響。
+在討論朗博次方對系統成效的影響時，我們將其餘系統設計變數固定：假設$^P\alpha_p =^L\alpha_l = \pi/18$、$L=P=5$，透過改變朗博次方，將不同LED與PD朗博次方的次系統規格下，計算容許範圍內樣本點的數量，以圖\ref{pic:m_translate}呈現平移樣本點與圖\ref{pic:m_rotate}呈現旋轉樣本點受朗博次方的影響。
 
 \begin{figure}[htpb]
     \centering
@@ -669,13 +699,11 @@
     \label{pic:m_rotate}
 \end{figure}
 
-在，以及硬體數量的情況下，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:m_effect}，我們可以觀察到在此情境中，較小的朗博次方使系統表現較佳。
-% 我們改變朗博次方，並將樣本中於容許範圍內的比例，
-% 呈現於圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}中。隨著朗博次方的提升，硬體所照射的範圍越來越小，因此容許範圍內比例高的的區域便越顯集中。
+觀察圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}中的現象，隨著朗博次方的提升，硬體所照射的範圍越來越小，而由於本研究所使用的演算法需要有一PD同時獲得三個以上LED的訊號，以及一LED同時將訊號發送於三個以上的PD，隨著硬體覆蓋率變小，能夠求得定位的樣本點數量也減少，因此容許範圍內比例高的的區域便越顯集中。
 
 
 
-
+然而，圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}十分雜亂，不能夠很清楚的呈現不同朗博次方下的系統成效，因此我們改以圖\ref{pic:m_effect}呈現系統成效，圖中我們將不同朗博次方的系統中，樣本點誤差於容許範圍內的點總數畫於圖中，不將平移與旋轉樣本點分開討論。觀察結果，我們可以得到結論，針對此ROI與次系統規格限制的情況下，較小的朗博次方可得到較好的系統成效。
 
 \begin{figure}[htpb]
     \centering
@@ -684,15 +712,24 @@
     \label{pic:m_effect}
 \end{figure}
 
+% 在，以及硬體數量的情況下，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:m_effect}，我們可以觀察到在此情境中，較小的朗博次方使系統表現較佳。
+% 我們改變朗博次方，並將樣本中於容許範圍內的比例，
+
+
+
+
+
+
+
 \subsubsection{硬體指向對系統效能的影響}
 \label{chp:orient_effect}
 
-評估硬體指向對系統效能影響時，我們將硬體天頂角$^L\alpha$與$^P\alpha$作為變數，其餘的變數：朗博次方固定為$Mp=M\ell=1$、硬體數量設定為$L=P=5$
+評估硬體指向對系統效能影響時，我們將硬體天頂角$^L\alpha$與$^P\alpha$作為變數，其餘的變數：朗博次方固定為$Mp=M\ell=1$、硬體數量設定為$L=P=5$。與\ref{chp:m_effect}章中的方法相同，我們同樣透過改變硬體天頂角，將不同硬體天頂角系統於ROI中，硬體誤差於容許範圍內的樣本點總數呈現於圖\ref{pic:alpha_effect}中。
 
 
-將不同硬體天頂角的次系統規格，計算出的於容許範圍內的樣本點總數，呈現於圖\ref{pic:alpha_effect}
+% 將不同硬體天頂角的次系統規格，計算出的於容許範圍內的樣本點總數，呈現於圖\ref{pic:alpha_effect}
 
-其餘朗博次方固定為$Mp=M\ell=1$，而硬體數量$L=P$則依序由3、5、8、10、15遞增，我們改變硬體指向$^P\alpha,^L\alpha$，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:alpha_effect}，我們可以觀察到在此情境中，較小的硬體擺設天頂角，使系統表現較佳。
+其餘朗博次方固定為$Mp=M\ell=1$，而硬體數量$L=P$則依序由3、5、8、10、15遞增，我們改變硬體指向$^P\alpha,^L\alpha$，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:alpha_effect}，
 % 並將樣本中於容許範圍內的比例，呈現於圖\ref{pic:alpha_translate}與圖\ref{pic:alpha_rotate}中。隨著硬體指向提升，多個硬體之間重疊的覆蓋範圍便越來越小，漸漸僅剩下於中心位置的樣本點：$x,y,=0$。
 
 % \begin{figure}[htpb]
@@ -712,10 +749,13 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=9cm]{ch4pic/m_effect.png}
+    \includegraphics[width=9cm]{ch4pic/alpha_effect.png}
     \caption{改變硬體指向對系統的影響}
     \label{pic:alpha_effect}
 \end{figure}
+
+我們可以觀察到在此情境中，較小的硬體擺設天頂角，使系統表現較佳，原因與\ref{chp:m_effect}章中博次方較小時系統成效佳的原因類似，由於此ROI範圍很大，為了透過少量的硬體數量使所有樣本點都能滿足\ref{chp:orient_conclu}章中的條件，需使各硬體覆蓋範圍盡可能的重疊，在硬體數量僅為3時更為明顯。相較起來，當硬體數量較多時，則可以有稍微較大的硬體天頂角，透過較多個硬體使重疊的覆蓋範圍較大，達到較好的系統成效。而由於我們限制硬體擺設的變數僅有天頂角一個變數，因此系統透過增加硬體數量的改變幅度十分有限。
+
 
 
 
@@ -732,7 +772,7 @@
 \label{chp:4_conclusion}
 由以上分析，我們可以看出在\ref{chp:scenario}章中提出的情境下，小的朗博次方與較小的硬體天頂角$\alpha$使系統的表現較佳，而硬體數量則是愈多愈好，但成長的趨勢隨著硬體數量增多而減慢。
 
-我們本章節提出的方法，可以在軟體中透過改變硬體的選擇、樣本點的集合、組態等，快速的對不同情境，評估不同系統設計的表現。有了此模擬方法，我們可以在硬體系統架設之前對系統表現有所了解，避免在硬體架設的部分浪費時間與硬體成本。除此之外，藉由可以分析不同設計下的系統表現，我們進而於第五章針對不同情境，進行朗博次方、硬體指向以及硬體數量的最佳化，提供特定使用情境下的最佳系統設計。
+我們本章節提出的方法，可以讓使用者靈活的透過改變參數，模擬不同次系統規格、不同使用情境與ROI、不同誤差模擬參數下的系統成效結果，達到快速評估系統設計的效果。有了此模擬方法，我們可以在硬體系統架設之前對系統表現有所了解，避免在硬體架設的部分浪費時間與硬體成本。
 %______________________________________
 
 

@@ -66,23 +66,25 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces 以硬體驗證與軟體模擬的流程圖\relax }}{61}{figure.caption.70}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces 模擬Step3.LED發送與PD接收訊號之流程圖\relax }}{65}{figure.caption.77}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 定位模擬結果互動介面\relax }}{67}{figure.caption.80}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 系統設置(a)的定位結果\relax }}{68}{figure.caption.82}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces 系統設置(b)的定位結果\relax }}{68}{figure.caption.82}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces 系統設置(c)的定位結果\relax }}{68}{figure.caption.83}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces 系統設置(d)的定位結果\relax }}{68}{figure.caption.83}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces 評估系統流程圖\relax }}{70}{figure.caption.84}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces 相對於PD座標系之平移樣本點\relax }}{71}{figure.caption.86}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces 相對於PD座標系之旋轉樣本點\relax }}{72}{figure.caption.88}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces 樣本點與誤差示意圖\relax }}{73}{figure.caption.89}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces 容許範圍內的樣本點比例\relax }}{74}{figure.caption.90}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces 樣本點中的有效範圍\relax }}{74}{figure.caption.91}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces 分析互動模擬介面\relax }}{75}{figure.caption.92}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces 改變硬體指向對系統的影響\relax }}{76}{figure.caption.93}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces 改變朗博次方對系統的影響\relax }}{77}{figure.caption.94}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 定位模擬結果互動介面\relax }}{68}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 系統設置(a)的定位結果\relax }}{69}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 系統設置(b)的定位結果\relax }}{69}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 系統設置(c)的定位結果\relax }}{69}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 系統設置(d)的定位結果\relax }}{69}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces 評估系統流程圖\relax }}{71}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces 相對於PD座標系之平移樣本點\relax }}{72}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces 相對於PD座標系之旋轉樣本點\relax }}{73}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces 樣本點與誤差示意圖\relax }}{74}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces 容許範圍內的樣本點比例\relax }}{75}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces 樣本點中的有效範圍\relax }}{75}{figure.caption.92}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces 分析互動模擬介面\relax }}{76}{figure.caption.93}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces 改變朗博次方對平移樣本點的影響\relax }}{77}{figure.caption.94}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces 改變朗博次方對旋轉樣本點的影響\relax }}{78}{figure.caption.95}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces 改變朗博次方對系統的影響\relax }}{79}{figure.caption.96}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces 改變硬體指向對系統的影響\relax }}{80}{figure.caption.97}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 最佳化流程圖\relax }}{79}{figure.caption.95}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces 最佳化變數\relax }}{80}{figure.caption.96}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 最佳化結果\relax }}{81}{figure.caption.97}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 最佳化流程圖\relax }}{82}{figure.caption.98}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 最佳化變數\relax }}{83}{figure.caption.99}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 最佳化結果\relax }}{84}{figure.caption.100}%
 \addvspace {10\p@ }
 \contentsfinish 
