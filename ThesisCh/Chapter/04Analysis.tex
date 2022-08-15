@@ -311,9 +311,9 @@
              設置& (m) & (m)&(m)&(rad) & (rad)&(rad)\\
             \hline
             (a)& 1 & 1&1.5&$\pi$ & 0&0\\
-            (b)& 1 & 1&1.5&$\pi$ & 1.833&0\\
+            (b)& 1 & 1&1.5&$\pi$ & 1.898&0\\
             (c)& 1.5 & 1.5&3&$\pi$ & 0&0\\
-            (d)& 1.5 & 1.5&3&$\pi$ & 1.833&0\\
+            (d)& 1.5 & 1.5&3&$\pi$ & 1.898&0\\
           \end{tabular}
         \end{center}
       \end{table}
@@ -371,7 +371,9 @@
     \subsubsection{模擬Step3.量測的訊號誤差}
     \label{chp:hardware_error}
 
-    圖\ref{pic:simulate_hardware}流程中，模擬光通訊的部分可透過式\ref{eqn:model_algorithm_filter}獲得理論的PD電流強度，而為了更真實的模擬現實狀況，參考\cite{survey_light2018}中對誤差的敘述，LED與PD定位的誤差主要來源為：環境光源、多重路徑傳輸與硬體誤差。環境光源的部分即為空間中其餘電燈與太陽光的光源對PD的影響，而藉由選用近紅外光波段的硬體如\ref{chp:light_electro}章所述，我們可以盡可能的降低此項誤差，而模擬中則以$Ib$作為決定背景光源的參數。
+    圖\ref{pic:simulate_hardware}流程中，模擬光通訊的部分可透過式\ref{eqn:model_algorithm_filter}獲得理論的PD電流強度，而為了更真實的模擬現實狀況，參考\cite{survey_light2018}中對誤差的敘述，LED與PD定位的誤差主要來源為：環境光源、多重路徑傳輸與硬體誤差。
+    
+    環境光源的部分即為空間中其餘電燈與太陽光的光源對PD的影響，而藉由選用硬體使用的波段如\ref{chp:light_electro}章所述，我們可以盡可能的降低此項誤差。除此之外也可以透過加裝窗簾等方法隔絕太陽光。在訊號處理的部分，背景光源產生的訊號為直流電流，相對來說透過OOK編碼的LED訊號的訊號電流會不停改變，因此也可以僅考慮變動訊號將可視為定值的背景電流去除。而模擬中則以$Ib$作為決定背景光源的參數，公式如式\ref{eqn:noise}。
     
     而多重路徑傳輸如圖\ref{pic:multipath}所示，由於光訊號於空間中遇到障礙物會有部分反射，因此PD所接收之訊號除了LoS訊號以外，還包含透過反射進入PD的NLoS訊號，因此造成誤差；參考\ref{chp:LEDPD_problem}所述，多重路徑傳輸的影響在模擬上的難度非常高，因此大多文獻上皆會忽略，僅有部分專為探討此效果的研究對其作研究\cite{multipath_new}，本研究將複雜的模擬簡化成以一個訊號增益值$Gm$作為模擬多重路徑傳輸的參數，以增益來簡單模擬NLoS訊號使訊號值變大的影響。而於\cite{multipath_new}的研究中，當感測系放至於室內空間中央，也就是距離牆壁距離較遠時，NLoS訊號為LoS訊號的$10^(-3)$倍以下，對定位影響極小；相較之下當感測器位於房間的角落時，也就是置於兩牆壁相遇轉折處，NLoS訊號約為LoS訊號的$0.78$倍，如此大的NLoS訊號則可想而知會對定位效果造成影響。
 
@@ -406,7 +408,7 @@
         \sigma_{In}^2 = {It_{lp}^2+Is_{lp}^2}
         \sigma_{It_{lp}}^2={\frac{4 Kb Te B}{R}}\\
         \label{eqn:shot_noise}
-        \sigma{Is_{lp}}^2={2q(Ie_{lp}+Ib+Id)B}
+        \sigma_{Is_{lp}}^2={2q(Ie_{lp}+Ib+Id)B}
     \end{gather}
 
   
@@ -523,7 +525,7 @@
 % \subsection{模擬結果}
 % \label{chp:simulate_result_sub}
 
-因此，我們建立了一個互動模擬介面如圖\ref{pic:result_interactive}，硬體規格參數選用表\ref{tab:para_LED}中的Luxeon L1IZ與表\ref{tab:para_PD}中的Hamamatsu S12915-1010R兩者的參數，而誤差模擬參數則以表\ref{tab:para_from_cite}的參數帶入。在這個模擬介面中，我們可以透過改變自由設計的系統設計變數、兩次系統之間的相對位置、以及一些硬體與電路參數，來觀察定位的效果。其中，硬體指向的部分，由於每個硬體都有兩個自由度，為了方便進行模擬，這裡將指向暫時限制成文獻中最常見的樣式，也就是$^P\boldsymbol{V}_p^{sph}$中的方位角平均分配：$^P\beta_p = 1\pi/P$，而各PD的天頂角則限制為相同：$^P\alpha_p =^P \alpha$，因此PD唯一的擺法自由度剩下$^P\alpha$天頂角，參考圖\ref{pic:config_orient}。
+因此，我們建立了一個互動模擬介面如圖\ref{pic:result_interactive}，硬體規格參數選用表\ref{tab:para_LED}中的Luxeon L1IZ與表\ref{tab:para_PD}中的Hamamatsu S12915-1010R兩者的參數，而誤差模擬參數則以表\ref{tab:para_from_cite}的參數帶入，其中背景電流選擇較大的$Ib = 5100\times 10^{-6}$、多重路徑增益選擇使用三者間中間值：為於室內空間牆壁邊的$Gm=1.14$。在這個模擬介面中，我們可以透過改變自由設計的系統設計變數、兩次系統之間的相對位置、以及一些硬體與電路參數，來觀察定位的效果。其中，硬體指向的部分，由於每個硬體都有兩個自由度，為了方便進行模擬，這裡將指向暫時限制成文獻中最常見的樣式，參考表\ref{tab:para_restrict_config}與圖\ref{pic:config_a}。
 
 % 根據\ref{chp:simulation}章所述系統設計與誤差模擬方法，模擬參數初始值則選用，其餘誤差模擬參數以表\ref{tab:para_from_cite}的參數帶入，則可以透過調整各項參數、座標系相對關係來看定位結果與定位誤差。
 
@@ -545,13 +547,15 @@
          系統& $^{PL}t_x$ & $^{PL}t_y$&$^{PL}t_z$&$ ^{PL}rx$ & $^{PL}ry$&$^{PL}rz$&誤差\\
          設置& (m) & (m)&(m)&(rad) & (rad)&(rad)&(m)\\
         \hline
-        (a)& 1.5 & 1&1&$\pi$ & 0&0&$2.079\times10^{-3}$\\
-        (b)& 1.5 & 1&1&$\pi$ & 2.313&0&$3.723\times10^{-1}$\\
-        (c)& 1.5 & 1&1&$\pi$ & 2.533&0&（無法求解）\\
-        (d)& 1.5 & 1.5&3&$\pi$ & 0&0&$2.906\times10^{-1}$\\
+        (a)& 1 & 1&1.5&$\pi$ & 0&0&$8.4879\times 10^{-2}$\\
+        (b)& 1 & 1&1.5&$\pi$ & 1.898&0&(無法求解)\\
+        (c)& 1.5 & 1.5&3&$\pi$ & 0&0&$5.5332\times 10^{-1}$\\
+        (d)& 1.5 & 1.5&3&$\pi$ & 1.898&0&$6.9152\times 10^{-1}$\\
       \end{tabular}
     \end{center}
   \end{table}
+
+  
 
   \begin{figure}[htpb]
     \centering
@@ -594,7 +598,7 @@
 
 我們觀察改變Step2.系統設置的結果，系統設置的參數與誤差於表\ref{tab:pos_error_result}中呈現，系統架構則於圖\ref{pic:A}至圖\ref{pic:D}呈現，其中PD次系統以紅色座標軸表示，LED次系統則以藍色座標軸表示，透過\ref{chp:simulation}章中模擬方式所得到的相對位置以黑色向量表示，誤差向量則以粉色向量表示。
 
-我們可以觀察到在同樣的次系統規格下，定位系統於不同系統設置的位置下，系統成效也不盡相同，如在系統設置為(c)時，由於沒有任何PD同時獲得三個以上的LED訊號，因此無法完成定位（參考\ref{chp:orient_conclu}章）；而在系統設置為(a)時，則可以達到相對誤差小的定位。
+我們可以觀察到在同樣的次系統規格下，定位系統於不同系統設置的位置下，系統成效也不盡相同，如在系統設置為(b)時，由於沒有任何PD同時獲得三個以上的LED訊號，因此無法完成定位（參考\ref{chp:orient_conclu}章）；而在系統設置為(a)(c)(d)時，可以完成定位但定位誤差也各自不同，則可以達到相對誤差小的定位。
 
 除了系統設置的影響以外，不同的次系統規格與誤差模擬參數也都會對系統成效有不同程度的影響，為了更有效率的分析不同次系統規格的系統成效，以及了解不同參數對系統的影響，我們進一步於後續\ref{chp:system_evaluate}章中建立評估系統效能的流程，以便有系統性的討論不同次系統規格、系統設置、誤差模擬參數對系統成效的影響。
 
@@ -616,7 +620,7 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=10cm]{ch4pic/evaluate_flow.png}
+    \includegraphics[width=9cm]{ch4pic/evaluate_flow.png}
     \caption{評估系統流程圖}
     \label{pic:evaluate_flow}
 \end{figure}
@@ -643,7 +647,7 @@
 
 \begin{table}[htpb]
     \begin{center}
-      \caption{平移樣本點}
+      \caption{平移樣本參數設置}
       \label{tab:translate}
       \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
          & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
@@ -668,7 +672,7 @@
 
 \begin{table}[htpb]
     \begin{center}
-      \caption{旋轉樣本點}
+      \caption{旋轉樣本點參數設置}
       \label{tab:rotate}
       \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
         & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
@@ -688,7 +692,7 @@
 \end{figure}
 
 
-如表\ref{tab:translate}中所示，一共有$10\times 10\times 10$總共1000個平移樣本點，旋轉樣本點則有$1+1\times 6\times 10$共61個。這代表著每個平移樣本點上皆需做出61次旋轉，以旋轉樣本點來看也是，每個旋轉姿態都需在1000個平移樣本點上計算一次，兩者相乘代表總共61000個樣本點，我們以大寫$K$表示樣本點總數，而小寫$k$表示樣本點編號。
+如表\ref{tab:translate}中所示，一共有$10\times 10\times 10$總共1000個平移樣本點，旋轉樣本點則有$1+(1\times 6\times 10)$共61個。這代表著每個平移樣本點上皆需做出61次旋轉，以旋轉樣本點來看也是，每個旋轉姿態都需在1000個平移樣本點上計算一次，兩者相乘代表總共61000個樣本點，我們以大寫$K$表示樣本點總數，而小寫$k$表示樣本點編號。
 
 
 
@@ -718,16 +722,16 @@
 
 
 
-因此，我們改以「在容許範圍$To$（Tolerance）內的樣本點數量」來量化描述系統成效，其中，可以將樣本點以平移樣本點與旋轉樣本點分別呈現，結果如圖\ref{pic:sample_out}。我們可以透過平移樣本點中容許範圍內的樣本點比例，觀察定位系統在不同平移相對位置上的表現，以圖\ref{pic:sample_out}來看，平移樣本點在距離PD座標系較近的位置擁有較好的系統成效；同樣我們也可以觀察不同旋轉樣本點上的系統成效，在圖\ref{pic:sample_out}的情況下，Pitch的角度越接近0時系統成效越好，也就是在目標物與觀察者平面平行時具有較好的系統成效。
+因此，我們改以「在容許範圍$To$（Tolerance）內的樣本點數量$Nt$」來量化描述系統成效，其中，可以將樣本點以平移樣本點與旋轉樣本點分別呈現，在此假設$To=0.05m$，結果如圖\ref{pic:sample_out}。我們可以透過平移樣本點中容許範圍內的樣本點比例，觀察定位系統在不同平移相對位置上的表現，以圖\ref{pic:sample_out}來看，平移樣本點在距離PD座標系較近的位置擁有較好的系統成效；同樣我們也可以觀察不同旋轉樣本點上的系統成效，在圖\ref{pic:sample_out}的情況下，Pitch的角度越接近0時系統成效越好，也就是在目標物與觀察者平面平行時具有較好的系統成效。
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=14cm]{ch4pic/tolerance.png}
+    \includegraphics[width=14cm]{ch4pic/sample_out.png}
     \caption{容許範圍內的樣本點比例}
     \label{pic:sample_out}
 \end{figure}
 
-而由於樣本點數量多，僅透過容許範圍內的樣本點比例圖，仍無法非常清晰的看出系統於不同樣本位置的表現，因此圖\ref{pic:effective}則將圖\ref{pic:sample_out}中，於容許範圍內的比例超過有效閥值$Ef$的樣本點標示出，在這邊我們設定$Ef=80\%$。由圖\ref{pic:effective}，我們可以更清楚的觀察到系統於哪些樣本點位置有較好的定位成效。
+而由於樣本點數量多，僅透過容許範圍內的樣本點比例圖，仍無法非常清晰的看出系統於不同樣本位置的表現，因此圖\ref{pic:effective}則將圖\ref{pic:sample_out}中，於容許範圍內的比例超過有效閥值$Ef$的樣本點標示出，一樣分別以平移與旋轉樣本呈現，在這邊我們設定$Ef=80\%$。由圖\ref{pic:effective}，我們可以更清楚的觀察到系統於哪些樣本點位置有較好的定位成效。以圖\ref{pic:effective}為例，左圖平移樣本呈現在空間中以PD座標系往外延伸的一類似圓球體的範圍，在此次系統設計下屬於有效範圍有較好的定位成效；而右圖旋轉樣本則顯示並沒有任何相對姿態可使樣本點有超過有效閥值的比例於容許範圍內，可見相對姿態對系統成效的影響十分顯著。
 
 \begin{figure}[htpb]
     \centering
@@ -738,7 +742,22 @@
 
 
 
-為了觀察不同現象的影響，我們一樣建立一個互動模擬介面如圖\ref{pic:analysis_interactive}，可以透過改變不同的參數與變數，針對\ref{chp:scenario}章中設定的ROI進行評估。
+
+
+為了觀察不同現象的影響，我們一樣建立一個互動模擬介面如圖\ref{pic:analysis_interactive}，以上述圖\ref{pic:sample_out}與圖\ref{pic:effective}兩種圖呈現，左邊為樣本點於容許範圍內數量、右半則為有效範圍，上下分別以為平移樣本與旋轉樣本呈現。利用此互動模擬系統，使用者可以透過改變不同的參數與變數，針對\ref{chp:scenario}章中設定的ROI進行評估，而量化系統成效中使用到的兩個參數整理於表\ref{tab:para_evaluate}。
+
+\begin{table}[htpb]
+    \begin{center}
+      \caption{量化系統成效所需參數}
+      \label{tab:para_evaluate}
+      \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+        \textbf{參數} & \textbf{符號}&\textbf{單位}&\textbf{數值}\\
+       \hline
+       容許範圍 & $To$ &$m$& 0.05 \\
+       有效閥值 & $Ef$ && $80\%$\\
+     \end{tabular}
+   \end{center}
+ \end{table}
 
 \begin{figure}[htpb]
     \centering
@@ -753,12 +772,283 @@
 
 
 
+
+
+\subsection{不同量化系統成效參數的影響}
+\label{chp:effect_evaluate_para}
+
+量化系統成效所需的參數呈現於表\ref{tab:para_evaluate}中，使用者可以藉由設定不同的容許範圍$To$與有效閥值$Ef$來改變系統成效評估的結果，例如當使用者的目標情境需要有高精度時，則可以將容許範圍降低，而當使用情境期望各樣本姿態都能求解才能視為有效定位點時，可以將有效閥值提高。因此，使用者需根據自己的使用目標情境有詳細的了解，以此來設定合適的容許範圍與有效閥值。以下分別探討有效閥值$Ef$與容許範圍$To$的影響。
+
+\subsubsection{有效閥值的影響}
+\label{chp:effect_ef}
+
+
+
+在同樣$To=0.05m$時，於容許範圍內的樣本點呈現如圖\ref{pic:sample_out}根據不同有效閥值，我們將有效範圍呈現於圖\ref{pic:ef_effect}中，其中由於改變有效閥值對容許範圍樣本點並不會有改變，因此僅呈現有效範圍的圖作比較。
+
+由圖中可見，當我們將有效閥值降低時，能夠通過閥值成為有效範圍內的樣本點隨之變多，當$Ef=60\%$時，無論是平移樣本點還是旋轉樣本點幾乎都在有效範圍內，相較之下當$Ef=95\%$時，能夠通過閥值的樣本點僅有平移樣本點中的一小部分，標準十分嚴苛。
+
+
+\begin{figure}[htpb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[height = 9cm]{ch4pic/ef60.png}
+        % \captionsetup{labelformat=empty}
+        \caption{$Ef=60\%$的有效範圍}
+        \label{pic:ef60}
+        % \label{fig:prob1_6_2} 
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[height = 9cm]{ch4pic/ef70.png}
+        % \captionsetup{labelformat=empty}
+        \caption{$Ef=70\%$的有效範圍}
+        \label{pic:ef70}
+    \end{minipage}
+\end{figure}
+
+
+\begin{figure}[htpb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[height = 9cm]{ch4pic/ef80.png}
+        % \captionsetup{labelformat=empty}
+        \caption{$Ef=80\%$的有效範圍}
+        \label{pic:ef80}
+        % \label{fig:prob1_6_2} 
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[height = 9cm]{ch4pic/ef95.png}
+        % \captionsetup{labelformat=empty}
+        \caption{$Ef=95\%$的有效範圍}
+        \label{pic:ef95}
+    \end{minipage}
+    % \caption{不同有效閥值對有效範圍的影響}
+    % \label{fig:ef_effect}
+\end{figure}
+
+
+
+\subsubsection{容許範圍的影響}
+\label{chp:effect_to}
+
+在此段落，我們固定有效閥值$Ef=80\%$、改變容許範圍$To$，將結果呈現於圖\ref{pic:to001}至圖\ref{pic:to02}，其中系統成效量化數值：容許範圍內的樣本數$Nt$呈現於表\ref{tab:ef_effect}。顯而易見的，隨著容許範圍增加，可通過容許範圍內的樣本點述量隨之增加，使得系統成效提升，但也代表著各樣本的定位可能誤差較大。因此評估系統時，根據使用目標挑選合適的容許範圍非常重要，當挑選過小的容許範圍可能導致無論如何設計次系統仍無法達到合理的系統成效，而挑選過大的容許範圍則會如圖\ref{pic:to02}中的情況，幾乎所有樣本點皆於容許範圍內，系統成效已接近最高，因此在調整次系統設計變數時也較難從中觀察影響。
+
+\begin{table}[htpb]
+    \begin{center}
+      \caption{容許範圍對系統成效的影響}
+      \label{tab:ef_effect}
+      \begin{tabular}{|c||c|c|c|} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+        \hline  
+       \textbf{容許範圍$To$(m)} 
+       
+       
+       & $0.01$&$0.05$&$0.2$\\\hline\hline
+
+       \textbf{容許範圍內的樣本數$Nt$} 
+       & $11776$&$41496$&$49383$\\\hline
+       \textbf{容許範圍內的樣本比例$Nt/K$} 
+       & $0.193$&$0.680$&$0.890$\\\hline
+     \end{tabular}
+   \end{center}
+ \end{table}
+
+ \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=10cm]{ch4pic/to_effect.png}
+    \caption{容許範圍對系統成效的影響}
+    \label{pic:to_effect}
+\end{figure}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/to001.png}
+    \caption{有效範圍$To=0.01m$}
+    \label{pic:to001}
+\end{figure}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/to005.png}
+    \caption{有效範圍$To=0.05m$}
+    \label{pic:to005}
+\end{figure}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/to02.png}
+    \caption{有效範圍$To=0.2m$}
+    \label{pic:to02}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+\subsection{誤差模擬參數對系統成效的影響}
+\label{chp:effect_error_para}
+
+
+誤差模擬所需的參數統整於表格\ref{tab:para_error}的參數中，由於室內溫度大致不會改變太多，而PD暗電流需由硬體規格決定，至於電阻$R$則受頻寬影響，因此本段落僅針對其餘四項：頻寬$B$、背景電流$Ib$、多重路徑增益$Gm$的影響進行探討。
+
+    \subsubsection{頻寬對系統成效的影響}
+    \label{chp:effect_bandwidth}
+
+    頻寬在系統架設時除了影響誤差以外，也代表著Step3.訊號量測中光通訊可使用的頻寬。在高訊息量的光通訊應用中，有些系統對頻寬的需求會高達$GHz$的數量級，而在這種高通訊量的系統中，高頻寬使雜訊非常大使通訊難度高，需透過各種濾波器或是其他方法使誤差降低。相較高通訊需求的系統，大多定位系統對資訊僅需了解LED編號，對資訊需求量低，因此可以僅利用較低的頻寬來取得LED編號，以此來降低誤差。
+
+    在此段落，我們透過改變頻寬來觀察頻寬對系統成效的影響，其中誤差參數中的電阻$R$以$B=1/2\pi RCt$的方法換算，亦即以頻寬為標準來選擇PD量測電路所使用的電阻。而由於容許範圍內樣本點與有效範圍的圖皆於前方大同小異，主要差異為系統成效也就是於容許範圍內的樣本點總數$Nt$，將其數值呈現於表\ref{tab:bandwidth_effect}與圖\ref{pic:bandwidth_effect}。其中，隨著頻寬變大，由於硬體誤差增加而使系統成效越來越差。
+
+    \begin{table}[htpb]
+        \begin{center}
+          \caption{頻寬對系統成效的影響}
+          \label{tab:bandwidth_effect}
+          \begin{tabular}{|c||c|c|c|c|} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+            \hline  
+           \textbf{頻寬$B$} &
+           1kHz&
+           370kHz &
+           1MHz&
+           1GHz
+           \\\hline\hline
+
+        %    \textbf{電阻$R$($\Omega$)}  &
+        %    $1.075\times10^{2}$&
+        %    $3.9789\times10^{1}$&
+        %    $4\times10^{-2}$
+        %    \\\hline
+
+           \textbf{容許範圍內的樣本數$Nt$} &
+           $49389$&
+           $41496$&
+           $36653$&
+           $450$
+           \\\hline
+
+           \textbf{容許範圍內的樣本比例$Nt/K$} &
+           $0.810$&
+           $0.680$&
+           $0.601$&
+           $0.007$
+           \\\hline
+         \end{tabular}
+       \end{center}
+     \end{table}
+    
+     \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=10cm]{ch4pic/bandwidth_effect.png}
+        \caption{頻寬對系統成效的影響}
+        \label{pic:bandwidth_effect}
+    \end{figure}
+
+
+
+
+    \subsubsection{背景電流對系統成效的影響}
+    \label{chp:backgroung_bandwidth}
+
+    此段落改變背景電流的數值，呈現於表\ref{tab:background_effect}與圖\ref{pic:background_effect}，與其他參數相較之下，背景電流在此誤差模擬方法對系統成效的影響相較其他參數小，於容許範圍內的樣本點數量都為四萬多個。
+
+    \begin{table}[htpb]
+        \begin{center}
+          \caption{背景電流對系統成效的影響}
+          \label{tab:background_effect}
+          \begin{tabular}{|c||c|c|c|c|} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+            \hline  
+           \textbf{背景電流$Ib$} &
+           0&
+           $740\mu A$&
+           $5100\mu A$
+           \\\hline\hline
+
+           \textbf{容許範圍內的樣本數$Nt$} &
+           $47079$&
+           $45613$&
+           $41496$
+           \\\hline
+
+           \textbf{容許範圍內的樣本比例$Nt/K$} &
+           $0.772$&
+           $0.748$&
+           $0.680$
+           \\\hline
+         \end{tabular}
+       \end{center}
+     \end{table}
+
+     \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=10cm]{ch4pic/background_effect.png}
+        \caption{背景電流對系統成效的影響}
+        \label{pic:background_effect}
+    \end{figure}
+
+    \subsubsection{多重路徑增益對系統成效的影響}
+    \label{chp:multipath_bandwidth}
+
+    % \subsubsection{電阻對系統成效的影響}
+    % \label{chp:resistance_bandwidth}
+
+
+    \begin{table}[htpb]
+        \begin{center}
+          \caption{多重路徑增益對系統成效的影響}
+          \label{tab:multipath_effect}
+          \begin{tabular}{|c||c|c|c|c|c|c|} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+            \hline  
+           \textbf{多重路徑增益$Gm$} &
+           1&
+           1.14&
+           1.5&
+           1.78&
+           2&
+           3
+           \\\hline\hline
+
+           \textbf{容許範圍內的樣本數$Nt$} &
+           $49261$&
+           $47079$&
+           $5580$&
+           $1951$&
+           $1160$&
+           $431$
+           \\\hline
+
+           \textbf{容許範圍內的樣本比例$Nt/K$} &
+           $0.807$&
+           $0.772$&
+           $0.091$&
+           $0.032$&
+           $0.019$&
+           $0.007$
+           \\\hline
+         \end{tabular}
+       \end{center}
+     \end{table}
+
+     \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=10cm]{ch4pic/multipath_effect.png}
+        \caption{多重路徑增益對系統成效的影響}
+        \label{pic:multipath_effect}
+    \end{figure}
+
+
+
 \subsection{次系統規格對系統成效的影響}
 \label{chp:design_result}
 
 如\ref{chp:system_design}章中描述的，在Step1.決定次系統規格時，需決定硬體總數$L,P$、硬體規格參數、硬體指向。
 
-在此段落，為了方便模擬，我們將LED硬體指向共$2L$個自由度，透過常見的指向限制（可參考\ref{chp:LEDPD_restrict}章）使，假設方位角平均分配：$^L\beta_l = 2\pi/L$，仰角的部分則限制各LED必須相同：$^L\alpha_l = ^L\alpha$，使$2L$個自由度降低為一個自由度：$^L\alpha$；而PD指向也用同樣的方法使$2P$個自由度僅剩下$^P\alpha$一個變數。
+在此段落，為了方便模擬，我們限制擺設方法為環狀擺法，依照表\ref{tab:para_restrict_config}中的參數來設定，使LED擺法自由度由$2L$個降低為一個自由度：$^L\alpha$；而PD指向則由$2P$個自由度降至$^P\alpha$一個變數。
 
 而硬體規格中的多項參數，並不是可以自由設計的參數，於\ref{chp:system_design}中我們參考硬體規格表中的參數進行模擬。然而，市售的LED與PD規格非常多種，我們難以將所有硬體規格輸入模擬系統進行評估，因此，我們挑選硬體參數中不能透過改變電路電壓電流進行調整的朗博次方參數作為代表硬體規格的變數，其代表著對出入射角敏感度與覆蓋範圍的取捨，可參考\ref{chp:lambertian}章。
 
@@ -869,7 +1159,61 @@
 由圖\ref{pic:m_effect}與圖\ref{pic:alpha_effect}中，我們都可以看出在提高硬體數量時，系統表現提升，然而系統表現提升的幅度不與硬體提升的數量成正比。因此，在挑選硬體數量時，除了系統表現以外，也需將硬體增加所造成的硬體成本，以及架設系統的難度考慮進來，在系統表現與硬體系統簡單中取捨。
 
 
-% \subsection{不同使用情境的系統表現}
+
+
+\subsection{不同使用情境的系統表現}
+以上表現皆是針對\ref{chp:scenario}章中呈現的ROI進行評估，而為了探討不同使用情境的影響，以下將\ref{chp:scenario}章中的使用情境稱為使用情境甲，並提出其他使用情境作為參考：
+
+\subsubsection{使用情境甲：$3\times 3\times 3m$空間}
+
+即為\ref{chp:scenario}章中定義的使用情境，該ROI中以有1000個平移樣本與61個相對樣本姿態，總共六萬一千個樣本點。
+
+\subsubsection{使用情境乙：$10\times 10\times 10m$空間}
+
+與使用情境甲相似，將ROI中平移空間的放大至$10\times 10\times 10m$的空間，而相對姿態則與使用情境甲相同，期望由此情境來觀察不同空間大小的定位結果。平移樣本點的參數設定呈現於表\ref{tab:B_translate}，有一千的平移樣本與61個相對旋轉姿態的樣本，旋轉樣本與情境甲相同參考表\ref{tab:rotate}，樣本總數與情境甲相同為$K=61000$，空間中示意圖如\ref{pic:b_scenario}所示。
+
+\begin{table}[htpb]
+    \begin{center}
+      \caption{使用情境乙的平移樣本}
+      \label{tab:B_translate}
+      \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+         & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
+        \hline
+        $^{PL}t_x$ & -5 & 5&10\\
+        $^{PL}t_y$ & -5 & 5&10\\
+        $^{PL}t_z$ & 0 & 10 &10\\
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/b_scenario.png}
+    \caption{使用情境乙的樣本點}
+    \label{pic:b_scenario}
+\end{figure}
+
+\subsubsection{使用情境丙：平面平行且垂直距離相同}
+
+為呈現本研究達到不限制平面平行的重要性，本研究以大多文獻使用的使用情境：限制目標物與量測平面平行且垂直距離相同，其中使用情境中的平移範圍與情境甲相同，但將樣本數提升至$10000$個平移樣本。至於旋轉樣本則僅有一個：兩平面平行且面對面之姿態，$^{PL}rx=\pi,^{PL}ry=0,^{PL}rz=0$。
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/c_scenario.png}
+    \caption{使用情境丙的樣本點}
+    \label{pic:c_scenario}
+\end{figure}
+
+\subsubsection{使用情境丁：球狀空間}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/d_scenario.png}
+    \caption{使用情境丁的樣本點}
+    \label{pic:d_scenario}
+\end{figure}
+
+
+
 
 
 \section{結論}
