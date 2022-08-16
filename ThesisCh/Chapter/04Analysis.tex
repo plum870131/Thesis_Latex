@@ -1210,11 +1210,21 @@
     \end{center}
   \end{table}
 
+
+  
+
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=15cm]{ch4pic/b_scenario.png}
     \caption{使用情境乙的樣本點}
     \label{pic:b_scenario}
+\end{figure}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/scenario_b_solve.png}
+    \caption{以表\ref{tab:para_reference}參數模擬使用情境乙的系統表現}
+    \label{pic:scenario_b_solve}
 \end{figure}
 
 \subsubsection{使用情境丙：平面平行且垂直距離相同}
@@ -1242,7 +1252,19 @@
     \label{pic:c_scenario}
 \end{figure}
 
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/scenario_c_solve.png}
+    \caption{以表\ref{tab:para_reference}參數模擬使用情境丙的系統表現}
+    \label{pic:scenario_c_solve}
+\end{figure}
+
+
 \subsubsection{使用情境丁：球狀空間}
+
+
+由於使用情境甲至丙的ROI都位於PD座標系的Z軸方向，因此我們考量一ROI以PD座標系為中央的球狀空間，平一樣本以球座標系的距離$^{PL}t_d$、天頂角$^{PL}t_{\alpha}$、方位角$^{PL}t_{\beta}$定義，數值如表\ref{tab:D_translate}，其中天頂角與方位角除了表中的60個數值以外還包含位於正負Z軸的兩個樣本共62個，乘上距離樣本後總共248個平移樣本。而旋轉姿態也是任意旋轉，數值如表\ref{tab:D_rotate}，與平移樣本類似，Pitch與Row除了表中的60個數值以外還包含Pitch為0與$\pi$的兩個樣本共62個；樣本點如\ref{pic:d_scenario}。
+
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=15cm]{ch4pic/d_scenario.png}
@@ -1250,7 +1272,40 @@
     \label{pic:d_scenario}
 \end{figure}
 
+\begin{table}[htpb]
+    \begin{center}
+      \caption{使用情境丁的平移樣本}
+      \label{tab:C_translate}
+      \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+         & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
+        \hline
+        $^{PL}t_d$ & 0.75 &3&4\\
+        $^{PL}t_{\alpha}$ & $\pi/6$ & $5\pi/6$ & 5\\
+        $^{PL}t_{\beta}$ & $\pi/6$ & $2\pi$ &12\\
+      \end{tabular}
+    \end{center}
+  \end{table}
 
+  \begin{table}[htpb]
+    \begin{center}
+      \caption{使用情境丁的旋轉樣本}
+      \label{tab:C_translate}
+      \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+         & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
+        \hline
+        $^{PL}rx$ & 0 &0&1\\
+        $^{PL}ry$ & $\pi/6$ & $5\pi/6$ & 5\\
+        $^{PL}rz$ & $\pi/6$ & $2\pi$ &12\\
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=15cm]{ch4pic/scenario_d_solve.png}
+    \caption{以表\ref{tab:para_reference}參數模擬使用情境丁的系統表現}
+    \label{pic:scenario_d_solve}
+\end{figure}
 
 
 
