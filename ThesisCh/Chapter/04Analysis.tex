@@ -773,6 +773,11 @@
         &PD天頂角 &$^P \alpha$ & $deg$&$50$\\
         \hline
 
+        \multirow{2}{*}{硬體數量}
+        &LED數量 &$L$ & 個&5\\
+        &PD數量 &$P$ & 個&5\\
+        \hline
+
         \multirow{4}{*}{模擬誤差參數}
         &絕對溫度 &$Te$ & $K$ &  $300$\\
         &頻寬 &$B$ & $Hz$ &  $370\times 10^{3}$\\
@@ -1018,6 +1023,8 @@
     \subsubsection{多重路徑增益對系統成效的影響}
     \label{chp:multipath_bandwidth}
 
+    多重路徑增益對系統成效的影響十分顯著如圖\ref{pic:multipath_effect}與表\ref{tab:tab:multipath_effect}，隨著多重增益於1.1增加至1.5，系統成效下降的非常快速，從$68\%$的樣本點於容許範圍內下降到不到$10\%$，也因此在Step2.系統設置時，若需將兩次系統置於角落處時需格外小心，需有預期系統於接近角落處的成效將不佳。
+
     % \subsubsection{電阻對系統成效的影響}
     % \label{chp:resistance_bandwidth}
 
@@ -1070,9 +1077,7 @@
 \subsection{Step1.次系統規格對系統成效的影響}
 \label{chp:design_result}
 
-如\ref{chp:system_design}章中描述的，在Step1.決定次系統規格時，需決定硬體總數$L,P$、硬體規格參數、硬體指向。
-
-在此段落，為了方便模擬，我們限制擺設方法為環狀擺法，依照表\ref{tab:para_restrict_config}中的參數來設定，使LED擺法自由度由$2L$個降低為一個自由度：$^L\alpha$；而PD指向則由$2P$個自由度降至$^P\alpha$一個變數。
+如\ref{chp:system_design}章中描述的，在Step1.決定次系統規格時，需決定硬體總數$L,P$、硬體規格參數、硬體指向。在此段落，為了方便分析，我們限制擺設方法為環狀擺法，依照表\ref{tab:para_restrict_config}中的參數來設定，使LED擺法自由度由$2L$個降低為一個自由度：$^L\alpha$；而PD指向則由$2P$個自由度降至$^P\alpha$一個變數。
 
 而硬體規格中的多項參數，並不是可以自由設計的參數，於\ref{chp:system_design}中我們參考硬體規格表中的參數進行模擬。然而，市售的LED與PD規格非常多種，我們難以將所有硬體規格輸入模擬系統進行評估，因此，我們挑選硬體參數中不能透過改變電路電壓電流進行調整的朗博次方參數作為代表硬體規格的變數，其代表著對出入射角敏感度與覆蓋範圍的取捨，可參考\ref{chp:lambertian}章。
 
@@ -1091,18 +1096,12 @@
 
 
 
-
-
-
-
-
-
-
-
 \subsubsection{朗博次方對系統成效的影響}
 \label{chp:m_effect}
 
-在討論朗博次方對系統成效的影響時，我們將其餘系統設計變數固定：假設$^P\alpha_p =^L\alpha_l = \pi/18$、$L=P=5$，透過改變朗博次方，將不同LED與PD朗博次方的次系統規格下，計算容許範圍內樣本點的數量，以圖\ref{pic:m_translate}呈現平移樣本點與圖\ref{pic:m_rotate}呈現旋轉樣本點受朗博次方的影響。
+以使用表\ref{tab:para_reference}中參數進行模擬分析，我們改變LED與PD朗博次方，將容許範圍內的樣本比例圖畫出，以圖\ref{pic:m_translate}呈現平移樣本點與圖\ref{pic:m_rotate}呈現旋轉樣本點受朗博次方的影響。
+
+% 在討論朗博次方對系統成效的影響時，我們將其餘系統設計變數固定：假設$^P\alpha_p =^L\alpha_l = \pi/18$、$L=P=5$，透過改變朗博次方，將不同LED與PD朗博次方的次系統規格下，計算容許範圍內樣本點的數量，以圖\ref{pic:m_translate}呈現平移樣本點與圖\ref{pic:m_rotate}呈現旋轉樣本點受朗博次方的影響。
 
 \begin{figure}[htpb]
     \centering
@@ -1117,18 +1116,21 @@
     \label{pic:m_rotate}
 \end{figure}
 
-觀察圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}中的現象，隨著朗博次方的提升，硬體所照射的範圍越來越小，而由於本研究所使用的演算法需要有一PD同時獲得三個以上LED的訊號，以及一LED同時將訊號發送於三個以上的PD，隨著硬體覆蓋率變小，能夠求得定位的樣本點數量也減少，因此容許範圍內比例高的的區域便越顯集中。
+觀察圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}中的現象，隨著朗博次方的提升，硬體所照射的範圍越來越小，而\textbf{由於本研究所使用的演算法需要有一PD同時獲得三個以上LED的訊號，以及一LED同時將訊號發送於三個以上的PD，隨著硬體覆蓋率變小，能夠求得定位的樣本點數量也減少，因此容許範圍內比例高的的區域便越顯集中}。
 
 
 
-然而，圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}十分雜亂，不能夠很清楚的呈現不同朗博次方下的系統成效，因此我們改以圖\ref{pic:m_effect}呈現系統成效，圖中我們將不同朗博次方的系統中，樣本點誤差於容許範圍內的點總數畫於圖中，不將平移與旋轉樣本點分開討論。觀察結果，我們可以得到結論，針對此ROI與次系統規格限制的情況下，較小的朗博次方可得到較好的系統成效。
+然而，圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}十分雜亂，不能夠很清楚的呈現不同朗博次方下的系統成效，因此我們改以於容許範圍內的樣本點總數$Nt$呈現，將不同朗博次方的$Nt$呈現於圖\ref{pic:m alpha50 surface}中。由圖可知，朗博次方對系統成效的影響也十分顯著，在此使用情境、使用參數的條件下，較小的朗博次方可得到較好的系統成效，其原因如上所述，此使用情境需要較大的硬體覆蓋率而使小的朗博次方較合適。然而並不是所有情境下都是朗博次方越小越好，我們可以參考後續使用情景丙中的論述。
+% 圖\ref{pic:m_effect}呈現系統成效，圖中我們將不同朗博次方的系統中，樣本點誤差於容許範圍內的點總數畫於圖中，不將平移與旋轉樣本點分開討論。觀察結果，我們可以得到結論，針對此ROI與次系統規格限制的情況下，較小的朗博次方可得到較好的系統成效。
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=9cm]{ch4pic/m_effect.png}
+    \includegraphics[width=9cm]{ch4pic/m alpha50 surface.png}
     \caption{改變朗博次方對系統的影響}
-    \label{pic:m_effect}
+    \label{pic:m alpha50 surface}
 \end{figure}
+
+
 
 % 在，以及硬體數量的情況下，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:m_effect}，我們可以觀察到在此情境中，較小的朗博次方使系統表現較佳。
 % 我們改變朗博次方，並將樣本中於容許範圍內的比例，
@@ -1142,12 +1144,21 @@
 \subsubsection{硬體指向對系統效能的影響}
 \label{chp:orient_effect}
 
-評估硬體指向對系統效能影響時，我們將硬體天頂角$^L\alpha$與$^P\alpha$作為變數，其餘的變數：朗博次方固定為$Mp=M\ell=1$、硬體數量設定為$L=P=5$。與\ref{chp:m_effect}章中的方法相同，我們同樣透過改變硬體天頂角，將不同硬體天頂角系統於ROI中，硬體誤差於容許範圍內的樣本點總數呈現於圖\ref{pic:alpha_effect}中。
+同樣分別改變LED與PD的天頂角$^L \alpha,^P \alpha$，將結果呈現於圖\ref{pic:num5 alpha surface}，由此可知硬體指向對系統成效的影響仍是顯著的，但並沒有特別的趨勢。
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=9cm]{ch4pic/num5 alpha surface.png}
+    \caption{改變硬體指向天頂角對系統的影響}
+    \label{pic:num5 alpha surface}
+\end{figure}
+
+% 評估硬體指向對系統效能影響時，我們將硬體天頂角$^L\alpha$與$^P\alpha$作為變數，其餘的變數：朗博次方固定為$Mp=M\ell=1$、硬體數量設定為$L=P=5$。與\ref{chp:m_effect}章中的方法相同，我們同樣透過改變硬體天頂角，將不同硬體天頂角系統於ROI中，硬體誤差於容許範圍內的樣本點總數呈現於圖\ref{pic:alpha_effect}中。
 
 
 % 將不同硬體天頂角的次系統規格，計算出的於容許範圍內的樣本點總數，呈現於圖\ref{pic:alpha_effect}
 
-其餘朗博次方固定為$Mp=M\ell=1$，而硬體數量$L=P$則依序由3、5、8、10、15遞增，我們改變硬體指向$^P\alpha,^L\alpha$，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:alpha_effect}，
+% 其餘朗博次方固定為$Mp=M\ell=1$，而硬體數量$L=P$則依序由3、5、8、10、15遞增，我們改變硬體指向$^P\alpha,^L\alpha$，我們將平移與旋轉樣本點總共六萬個點中，在容許範圍內的比例，呈現於圖\ref{pic:alpha_effect}，
 % 並將樣本中於容許範圍內的比例，呈現於圖\ref{pic:alpha_translate}與圖\ref{pic:alpha_rotate}中。隨著硬體指向提升，多個硬體之間重疊的覆蓋範圍便越來越小，漸漸僅剩下於中心位置的樣本點：$x,y,=0$。
 
 % \begin{figure}[htpb]
@@ -1165,14 +1176,14 @@
 
 
 
-\begin{figure}[htpb]
-    \centering
-    \includegraphics[width=9cm]{ch4pic/alpha_effect.png}
-    \caption{改變硬體指向對系統的影響}
-    \label{pic:alpha_effect}
-\end{figure}
+% \begin{figure}[htpb]
+%     \centering
+%     \includegraphics[width=9cm]{ch4pic/alpha_effect.png}
+%     \caption{改變硬體指向對系統的影響}
+%     \label{pic:alpha_effect}
+% \end{figure}
 
-我們可以觀察到在此情境中，較小的硬體擺設天頂角，使系統表現較佳，原因與\ref{chp:m_effect}章中博次方較小時系統成效佳的原因類似，由於此ROI範圍很大，為了透過少量的硬體數量使所有樣本點都能滿足\ref{chp:orient_conclu}章中的條件，需使各硬體覆蓋範圍盡可能的重疊，在硬體數量僅為3時更為明顯。相較起來，當硬體數量較多時，則可以有稍微較大的硬體天頂角，透過較多個硬體使重疊的覆蓋範圍較大，達到較好的系統成效。而由於我們限制硬體擺設的變數僅有天頂角一個變數，因此系統透過增加硬體數量的改變幅度十分有限。
+% 我們可以觀察到在此情境中，較小的硬體擺設天頂角，使系統表現較佳，原因與\ref{chp:m_effect}章中博次方較小時系統成效佳的原因類似，由於此ROI範圍很大，為了透過少量的硬體數量使所有樣本點都能滿足\ref{chp:orient_conclu}章中的條件，需使各硬體覆蓋範圍盡可能的重疊，在硬體數量僅為3時更為明顯。相較起來，當硬體數量較多時，則可以有稍微較大的硬體天頂角，透過較多個硬體使重疊的覆蓋範圍較大，達到較好的系統成效。而由於我們限制硬體擺設的變數僅有天頂角一個變數，因此系統透過增加硬體數量的改變幅度十分有限。
 
 
 
@@ -1180,7 +1191,35 @@
 \subsubsection{硬體數量對系統表現的影響}
 \label{chp:amount_effect}
 
-由圖\ref{pic:m_effect}與圖\ref{pic:alpha_effect}中，我們都可以看出在提高硬體數量時，系統表現提升，然而系統表現提升的幅度不與硬體提升的數量成正比。因此，在挑選硬體數量時，除了系統表現以外，也需將硬體增加所造成的硬體成本，以及架設系統的難度考慮進來，在系統表現與硬體系統簡單中取捨。
+在此將\ref{chp:m_effect}章中做的圖\ref{pic:m alpha50 surface}改變硬體數量，以下依序呈現：
+
+
+\begin{figure}[htpb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{ch4pic/num3 alpha surface.png}
+        \captionsetup{labelformat=empty}
+        \caption*{L=P=3時硬體天頂角的影響}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{ch4pic/num5 alpha surface.png}
+        \captionsetup{labelformat=empty}
+        \caption*{L=P=5時硬體天頂角的影響}
+    \end{minipage}
+    \caption{常見的環狀擺設方法}
+    \label{fig:config_a}
+\end{figure}
+
+
+
+
+
+
+\ref{chp:m_effect}章中做的圖\ref{pic:m alpha50 surface}
+
+% 由圖\ref{pic:m_effect}與圖\ref{pic:alpha_effect}中，我們都可以看出在提高硬體數量時，系統表現提升，然而系統表現提升的幅度不與硬體提升的數量成正比。因此，在挑選硬體數量時，除了系統表現以外，也需將硬體增加所造成的硬體成本，以及架設系統的難度考慮進來，在系統表現與硬體系統簡單中取捨。
 
 
 

@@ -1,0 +1,113 @@
+<<<<<<< Updated upstream
+=======
+\contentsline {figure}{\numberline {1}{\ignorespaces 符號小標解釋\relax }}{xiii}{figure.caption.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces 物聯網應用的領域\cite {iot}\relax }}{1}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces 本論文所針對的目標情境\relax }}{2}{figure.caption.10}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 室內定位系統與次系統\relax }}{7}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 室內定位流程\relax }}{7}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces 室內定位分類\relax }}{8}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces LED座標系與PD座標系及相對關係\relax }}{9}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces 資訊種類與演算法之間的關聯（參考\cite {survey_light2018}）\relax }}{10}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces 多點定位法\cite {survey_light2020}\relax }}{11}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces 三角測量法\cite {survey_light2018}\relax }}{12}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces 指紋法流程圖\cite {pic:fingerprinting}\relax }}{13}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces 影像辨識示意圖\cite {pic:image_processing}\relax }}{13}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces ArUco標記例子\cite {pic:aruco}\relax }}{13}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces 電磁波頻譜度\cite {Spectrum}\relax }}{14}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces 以電磁波頻率分類硬體技術\relax }}{15}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces RFID定位系統示意\cite {survey_rfid}\relax }}{15}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces LANDMARC系統\cite {landmarc}\relax }}{16}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces 例用三角法定位的RFID系統\cite {case:rfid_1to1}(a)系統架構 (b)載具實驗\relax }}{17}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces 光通訊流程圖\cite {pic:vlc}\relax }}{17}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces 無線電波段與光波段的比較\relax }}{18}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces 太陽輻射波譜\cite {astm}\relax }}{20}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces 光波段中的波段特性比較\relax }}{20}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces 滾動式快門效應的成因\cite {pic:rolling_shutter}\relax }}{21}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces 滾動式快門效應產生的條紋樣式\cite {pic:rolling_shutter_case}\relax }}{21}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces 多重路徑傳輸\cite {pic:multipath}\relax }}{22}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces 多PD進行光通訊解碼\cite {case:ml}\relax }}{23}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.24}{\ignorespaces 使用指紋法的系統環境\cite {case:ml}\relax }}{23}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.25}{\ignorespaces 使用幾何方法的系統環境\cite {case:3d_layers}\relax }}{24}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.26}{\ignorespaces 影像感測器與PD的特性比較\relax }}{24}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.27}{\ignorespaces LED與PD定位系統架構\relax }}{26}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.28}{\ignorespaces LED與PD定位系統流程\relax }}{26}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.29}{\ignorespaces Step3.LED發送與PD接收訊號使用的光通訊流程圖\relax }}{27}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.30}{\ignorespaces 輻射測量學與光度測量學的物理量比較\relax }}{28}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.31}{\ignorespaces 角度與立體角\relax }}{29}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.32}{\ignorespaces 輻射強度與輻照度\relax }}{30}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.33}{\ignorespaces LED與PD軸對稱與三維空間中的出入射角\relax }}{30}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.34}{\ignorespaces 輻射強度與出入射角的關係\relax }}{31}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.35}{\ignorespaces 朗博次方為一時空間中輻射強度與出入射角方位的關係\relax }}{32}{figure.caption.45}%
+\contentsline {figure}{\numberline {2.36}{\ignorespaces LED與PD的硬體參數\relax }}{32}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.37}{\ignorespaces 輻射強度與總輻射通量比值\relax }}{33}{figure.caption.47}%
+\contentsline {figure}{\numberline {2.38}{\ignorespaces 三維空間中的向量\relax }}{34}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.39}{\ignorespaces LED在座標系中的擺放自由度\relax }}{35}{figure.caption.49}%
+\contentsline {figure}{\numberline {2.40}{\ignorespaces 單LED與單PD的交互關係\relax }}{36}{figure.caption.50}%
+\contentsline {figure}{\numberline {2.41}{\ignorespaces 多LED與多PD的交互關係\relax }}{36}{figure.caption.51}%
+\contentsline {figure}{\numberline {2.42}{\ignorespaces LED與PD之間的關係以座標系之間的關係表示\relax }}{37}{figure.caption.52}%
+\contentsline {figure}{\numberline {2.43}{\ignorespaces 各PD於同一位置的擺設\cite {case:3d_layers}\relax }}{41}{figure.caption.53}%
+\contentsline {figure}{\numberline {2.44}{\ignorespaces \cite {case:ml}研究的硬體組態設計\relax }}{41}{figure.caption.54}%
+\contentsline {figure}{\numberline {2.45}{\ignorespaces 室內限制垂直距離的LED與PD定位系統架設\cite {case:aoa}\relax }}{42}{figure.caption.55}%
+\contentsline {figure}{\numberline {2.46}{\ignorespaces 地面上PD電流強度比值(a)第一與第二個PD(b)第二與第三個PD(c)第一與第三個PD\cite {case:3d_layers}\relax }}{44}{figure.caption.57}%
+\contentsline {figure}{\numberline {2.47}{\ignorespaces \cite {case:3d_layers}將量測空間切為多層\relax }}{45}{figure.caption.58}%
+\contentsline {figure}{\numberline {2.48}{\ignorespaces \cite {case:cart3d}研究的(a)系統架構(b)PD組態\relax }}{45}{figure.caption.59}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 第三章架構\relax }}{49}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces PD與LED硬體擺放於原點的次系統與系統設置\relax }}{49}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 本研究所提出的定位演算法流程\relax }}{50}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 訊號過濾後各LED與各PD所剩的訊號數量示意圖\relax }}{51}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 解PD座標系中LED方位的流程圖\relax }}{52}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 單LED對多PD解LED所在方位之流程圖\relax }}{52}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 同一LED與多個PD之間的幾何關係\relax }}{53}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces 滿足入射角餘弦比值$Ra$的方位為通過原點之平面\relax }}{54}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces 兩平面交於一軸\relax }}{55}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces 多LED對同一PD之間的幾何關係\relax }}{56}{figure.caption.70}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces 求解距離之流程圖\relax }}{57}{figure.caption.71}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 以硬體驗證與軟體模擬的流程圖\relax }}{61}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 常見的環狀擺設方法\relax }}{64}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 系統設置(a)的系統組成\relax }}{66}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 系統設置(b)的系統組成\relax }}{66}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 系統設置(c)的系統組成\relax }}{67}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 系統設置(d)的系統組成\relax }}{67}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 模擬Step3.LED發送與PD接收訊號之流程圖\relax }}{67}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces 定位模擬結果互動介面\relax }}{71}{figure.caption.88}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces 系統設置(a)的定位結果\relax }}{71}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces 系統設置(b)的定位結果\relax }}{71}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces 系統設置(c)的定位結果\relax }}{72}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces 系統設置(d)的定位結果\relax }}{72}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces 評估系統流程圖\relax }}{73}{figure.caption.92}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces 相對於PD座標系之平移樣本點\relax }}{74}{figure.caption.94}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces 相對於PD座標系之旋轉樣本點\relax }}{75}{figure.caption.96}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces 樣本點與誤差示意圖\relax }}{76}{figure.caption.97}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces 容許範圍內的樣本點比例\relax }}{77}{figure.caption.98}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces 樣本點中的有效範圍\relax }}{78}{figure.caption.99}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces 分析互動模擬介面\relax }}{78}{figure.caption.101}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces $Ef=60\%$的有效範圍\relax }}{80}{figure.caption.103}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces $Ef=70\%$的有效範圍\relax }}{80}{figure.caption.103}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces $Ef=80\%$的有效範圍\relax }}{80}{figure.caption.104}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces $Ef=95\%$的有效範圍\relax }}{80}{figure.caption.104}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces 容許範圍對系統成效的影響\relax }}{81}{figure.caption.106}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces 有效範圍$To=0.01m$\relax }}{82}{figure.caption.107}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces 有效範圍$To=0.05m$\relax }}{83}{figure.caption.108}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces 有效範圍$To=0.2m$\relax }}{84}{figure.caption.109}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces 頻寬對系統成效的影響\relax }}{85}{figure.caption.111}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces 背景電流對系統成效的影響\relax }}{86}{figure.caption.113}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces 多重路徑增益對系統成效的影響\relax }}{87}{figure.caption.115}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces 改變朗博次方對平移樣本點的影響\relax }}{89}{figure.caption.116}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces 改變朗博次方對旋轉樣本點的影響\relax }}{90}{figure.caption.117}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces 改變朗博次方對系統的影響\relax }}{90}{figure.caption.118}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces 改變硬體指向天頂角對系統的影響\relax }}{91}{figure.caption.119}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces 常見的環狀擺設方法\relax }}{91}{figure.caption.120}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces 使用情境乙的樣本點\relax }}{92}{figure.caption.122}%
+\contentsline {figure}{\numberline {4.37}{\ignorespaces 使用情境丙的樣本點\relax }}{93}{figure.caption.124}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces 使用情境丁的樣本點\relax }}{94}{figure.caption.125}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 最佳化流程圖\relax }}{96}{figure.caption.126}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 最佳化變數\relax }}{97}{figure.caption.127}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 最佳化結果\relax }}{98}{figure.caption.128}%
+\addvspace {10\p@ }
+\contentsfinish 
+>>>>>>> Stashed changes
