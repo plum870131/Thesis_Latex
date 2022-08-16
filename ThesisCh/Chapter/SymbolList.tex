@@ -109,7 +109,8 @@
     $Mp$ & PD的朗伯次方（Lambertian Order）\\
     $A$ & 有效面積\\
     $Re$ & 響應率（Responsivity）\\
-    $S$ &飽和電流
+    $S$ &飽和電流\\
+    $Ct$&終端電容\\
 \end{longtable}
 
 
@@ -148,6 +149,7 @@
     % $\text{Bell}(\cdot)$ & 鐘形函式\\
     $L,P$ & LED與PD總數\\
     $\ell,p$ & LED與PD編號\\
+    $Th$& 閥值\\
     $F\ell,Fp$ & 過濾後的LED與PD數量\\
     $Ra$& 餘弦比值\\
     $r_c$& 取作餘弦比值參考值的硬體編號\\
@@ -157,7 +159,7 @@
 
 \onehalfspacing
 
-\subsection*{系統模擬與評估參數}
+\subsection*{系統模擬參數}
 
 \begin{longtable}[l]{ll}
     % $\text{Bell}(\cdot)$ & 鐘形函式\\
@@ -166,9 +168,28 @@
     $B$& 頻寬（Bandwidth）\\
     $q$&電子電荷\\
     $R$&電阻\\
+    $In$&硬體誤差電流\\
+    $Ib$&背景電流\\
+    $Is$&散粒雜訊（Shot Noise）\\
+    $It$&熱雜訊（Thermal Noise）\\
+    $Gm$&多重路徑傳輸增益\\
     $k,K$&樣本點編號以及樣本點總數\\
-
 \end{longtable}
+
+
+\onehalfspacing
+
+\subsection*{系統成效量化參數}
+
+\begin{longtable}[l]{ll}
+    % $\text{Bell}(\cdot)$ & 鐘形函式\\
+    $e$&誤差\\
+    $To$&容許範圍\\
+    $Ef$&有效閥值\\
+    $Nt$&容許範圍內樣本點數量\\
+\end{longtable}
+
+
 
 
 \onehalfspacing

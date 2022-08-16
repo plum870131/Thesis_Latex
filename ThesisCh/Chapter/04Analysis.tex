@@ -16,7 +16,7 @@
 因此，本論文會利用軟體模擬的方法，建立一模擬環境，將Step1.至Step3.的步驟在模擬中完成，再以第三章提出的定位演算法執行Step4.，各步驟如何以數學模型模擬實際情況與模擬中所需設定的參數於\ref{chp:simulation}章中詳細介紹。有了模擬方法後，我們於\ref{chp:simulate_result}章中設定一次系統規格並呈現其定位結果，並於\ref{chp:system_evaluate}章中則對不同的次系統規格設計進行效能評估，最後於\ref{chp:4_conclusion}章中總結。
 
 
-\section{模擬方法}
+\section{模擬室內定位流程之方法}
 \label{chp:simulation}
 
 根據圖\ref{pic:simulate_hardware}中軟體模擬的流程，本章節由\ref{chp:system_design}章中介紹軟體模擬Step1.決定次系統規格中所需設定的參數，於\ref{chp:simulate_position}章中模擬Step2.系統設置兩硬體單位於不同位置的擺放，於\ref{chp:simulate_vlc}章中介紹模擬Step3.各PD接收到各LED的訊號的流程。
@@ -192,7 +192,7 @@
 
 
 
-為了使擺設方法的自由度降低使分析複雜度一併降低，我們參考最常見的硬體擺設法如圖\ref{pic:config_orient}，使硬體以等天頂角的環狀平均分散，以LED為例，各LED的天頂角$^L\alpha_l = ^L\alpha$相等，而方位角$^L\beta = 2\pi/L$則平均分散，因此硬體擺設的變數被限制至僅勝LED天頂角$^L\alpha$與PD天頂角$^P\alpha$兩項，如表\ref{tab:para_restrict_config}，而硬體數量為5、$\alpha=30^o$的擺設樣式如圖\ref{fig:config_a}，硬體數量為10、$\alpha=50^o$則如圖\ref{pic:config_b}。我們將此擺設方法稱為「環狀擺設」，將於第四章後續分析使用，以降低分析複雜度，但於第五章最佳化的部分將不對擺設方法進行限制。
+為了使擺設方法的自由度降低使分析複雜度一併降低，我們參考最常見的硬體擺設法如圖\ref{pic:config_orient}，使硬體以等天頂角的環狀平均分散，以LED為例，各LED的天頂角$^L\alpha_l = ^L\alpha$相等，而方位角$^L\beta = 2\pi/L$則平均分散，因此硬體擺設的變數被限制至僅勝LED天頂角$^L\alpha$與PD天頂角$^P\alpha$兩項，如表\ref{tab:para_restrict_config}，而硬體數量為5、$\alpha=50^o$的擺設樣式以及硬體數量為10、$\alpha=50^o$呈現於圖\ref{pic:config_a}。我們將此擺設方法稱為「環狀擺設」，將於第四章後續分析使用，以降低分析複雜度，但於第五章最佳化的部分將不對擺設方法進行限制。
 
 \begin{table}[htpb]
     \caption{環狀擺設所需設定的參數}
@@ -216,17 +216,16 @@
         \centering
         \includegraphics[height=5cm]{ch4pic/config_a.png}
         \captionsetup{labelformat=empty}
-        \caption*{(a)天頂角$\alpha=30^o$、硬體數量：5}
-        \label{fig:config_a}
+        \caption*{(a)天頂角$\alpha=50^o$、硬體數量：5}
     \end{minipage}%
     \begin{minipage}{0.5\textwidth}
         \centering
         \includegraphics[height=5cm]{ch4pic/config_b.png}
         \captionsetup{labelformat=empty}
         \caption*{(b)天頂角$\alpha=50^o$、硬體數量：10}
-        \label{fig:config_b}
     \end{minipage}
     \caption{常見的環狀擺設方法}
+    \label{fig:config_a}
 \end{figure}
 
 
@@ -300,7 +299,7 @@
 
     而由於本論文使用的演算法並沒有對Step2.系統設置進行限制，因此表\ref{tab:para_relative}中的參數可以任意設置，使兩次系統座標系根據使用情境，於感興趣空間中（Region of Interest，以下簡稱ROI）自由移動。
 
-    為清楚呈現Step1.中的次系統擺設方法與Step2.系統設置的關係，我們舉例呈現如圖\ref{pic:system_set_a}至圖\ref{pic:system_set_d}，各自的系統設置參數統整於表\ref{tab:data_set_system}。如圖呈現，各自的LED與PD次系統於Step1.中以圖\ref{pic:config_a}的方法擺設，再經過Step2.系統設置將兩單位放至於空間中不同位置。其中系統設置(a)(b)與(c)(d)分別有相同的平移關係，而系統設置(a)(c)與(b)(d)則是有相同的旋轉相對關係。
+    為清楚呈現Step1.中的次系統擺設方法與Step2.系統設置的關係，我們舉例呈現如圖\ref{pic:set_a}至圖\ref{pic:set_d}，各自的系統設置參數統整於表\ref{tab:data_set_system}。如圖呈現，各自的LED與PD次系統於Step1.中以圖\ref{pic:config_a}的方法擺設，再經過Step2.系統設置將兩單位放至於空間中不同位置。其中系統設置(a)(b)與(c)(d)分別有相同的平移關係，而系統設置(a)(c)與(b)(d)則是有相同的旋轉相對關係。
 
     \begin{table}[htpb]
         \begin{center}
@@ -481,7 +480,7 @@
 
 
 
-\section{呈現定位結果}
+\subsection{呈現定位模擬結果}
 \label{chp:simulate_result}
 
 上一章節中，我們介紹了如何利用軟體模擬的方式，模擬LED與PD定位系統的Step1.決定次系統規格、Step2.系統設置、Step3.LED發送與PD接收訊號，並設定各模擬參數；在此章節，我們則要利用此模擬方法，將次系統規格帶入模型中進行定位，得到兩硬體於空間中各位置計算出的定位$\hat{^{PL}\boldsymbol{T}}$，而定位誤差則定義為其與定義相對位置的平移向量$^{PL}\boldsymbol{T}$之間的歐氏距離，參考式\ref{eqn:error_dis}。
@@ -492,33 +491,6 @@
     \hat{e} = ||\hat{^{PL}\boldsymbol{T}}-^{PL}\boldsymbol{T}||
 \end{equation}
 
-% 本章節將於\ref{chp:simulate_para}章中紀錄如何抉擇模擬中Step1.至Step3.所需使用的參數，而經過Step4.執行定位演算法後的結果則呈現於\ref{chp:simulate_result_sub}章中。
-
-
-% \subsection{設定模擬所需參數}
-% \label{chp:simulate_para}
-
-% 在此段落，我們介紹如何設定\ref{chp:simulation}章中須設置的參數們，包含Step1.次系統規格中的硬體數量（表\ref{tab:para_amount}）、硬體參數（表\ref{tab:para_hardware}）、硬體組態（表\ref{tab:para_config}），與Step2.系統設置中的座標系相對關係（表\ref{tab:para_relative}），還有Step3.LED發送與PD接收訊號的誤差模擬參數（表\ref{tab:para_error}）。因此我們將\ref{chp:simulation}章中提到需要設定的參數們，依照參數設定參考的方式分為三類，\ref{chp:para_hardware}章中介紹參考市售硬體規格表決定的參數，\ref{chp:para_from_cite}章中則參考文獻決定部分參數，其餘則為Step1.次系統規格與Step2.系統設置中可以自由設計的系統設計變數，於\ref{chp:para_can_design}章中介紹。
-
-
-
-% \subsubsection{參考市售硬體規格表設定之參數}
-% \label{chp:para_hardware}
-
-
-
-
-% \subsubsection{參考其他文獻設定之參數}
-% \label{chp:para_from_cite}
-
-
-
-% \subsubsection{可自由設計之參數}
-% \label{chp:para_can_design}
-
-% 除了以上參數以外，硬體數量（表\ref{tab:para_amount}）、硬體擺法的指向$\boldsymbol{V}$（表\ref{tab:para_config}）為可自由設計的Step1.次系統規格設計變數，而Step2.中系統設置描述坐標系相對關係（表\ref{tab:para_relative}）則會依照不同的使用情境而改變。
-
-% 為描述相對位置與情境方法。
 
 
 
@@ -602,6 +574,9 @@
 
 除了系統設置的影響以外，不同的次系統規格與誤差模擬參數也都會對系統成效有不同程度的影響，為了更有效率的分析不同次系統規格的系統成效，以及了解不同參數對系統的影響，我們進一步於後續\ref{chp:system_evaluate}章中建立評估系統效能的流程，以便有系統性的討論不同次系統規格、系統設置、誤差模擬參數對系統成效的影響。
 
+
+
+
 % \subsection{小結}
 
 % 我們利用\ref{chp:simulation}章中的方法，帶入\ref{chp:simulate_para}章中的硬體參數，於\ref{chp:simulate_result_sub}章中呈現不同系統設計下的定位結果$\hat{^{PL}\boldsymbol{T}}$，並計算出定位誤差$\hat{e}$。得到誤差後，我們即可透過改變兩座標系的相對位置，來觀察該系統設計在不同位置上的定位表現，因此我們在\ref{chp:system_evaluate}章中進行系統評估。
@@ -610,9 +585,12 @@
 
 
 
+
+
+
 \newpage
 
-\section{定位系統效能評估}
+\section{定位系統效能評估之方法}
 \label{chp:system_evaluate}
 
 上一章節中，我們能夠完整的以數值模擬方式，針對不同的次系統規格設計於不同的系統設置位置，執行定位演算法以及計算出誤差；而本章節則是要建立一評估系統成效的流程，評估流程整理於圖\ref{pic:evaluate_flow}。為與前述定位流程呼應，評估流程中以StepA.到StepC.進行系統效能評估，首先需於StepA.中設定使用情境與ROI中的樣本點，將各樣本點以Step1.到Step4.的室內定位流程得到定位解$^{PL}\boldsymbol{T}$，此室內定位流程包裝為系統效能評估中的StepB.；而評估的最後一個步驟則是StepC.量化評估系統效能。
@@ -766,15 +744,61 @@
     \label{pic:analysis_interactive}
 \end{figure}
 
-我們於後續章節透過調整不同參數，來觀察不同參數對系統成效的影響。
+我們於後續章節透過調整不同參數，來觀察不同參數對系統成效的影響。而為了方便比較，我們需將各模擬用參數取值作為參考值，統整於以下表格：
 
-% 而由於第三章此演算法並沒有限制硬體數量、朗博次方與硬體指向，在設計上是有靈活度的，因此我們透過改變這幾項變數，來觀察系統的反應。其中，LED與PD指向的部分，我們將每個硬體皆具有的兩個由度限制剩下一個，假設方位角平均分配：$^P\beta_p = 2\pi/P$、$^L\beta_l = 2\pi/L$，仰角的部分則限制必須相同$^P\alpha_p =^P\alpha$、$^L\alpha_l = ^L\alpha$。在這樣的限制下，我們分別探討各項變數的影響。
+\begin{table}[htpb]
+    \begin{center}
+      \caption{模擬數值參考值統整}
+      \label{tab:para_reference}
+      \begin{tabular}{|c|cc|c|c|} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+        \hline
+        \textbf{參數類別}&\multicolumn{2}{|c|}{\textbf{組態參數}}  &\textbf{數值}  &  \textbf{備註}   \\
+        \hline
+        \multirow{2}{*}{LED硬體規格}
+        & 總輻射通量 &$Pt$ & $W$ & 1.15\\
+        &朗博次方& $M\ell$& &1 \\
+        \hline
+
+        \multirow{5}{*}{PD硬體規格}
+        &響應率 &$Re$ & $A/W$ & 0.64\\
+        &有效面積& $A$& $m^2$ &$3.3\times 10^{-5}$\\
+        &朗博次方& $Mp$& - &1\\
+        &PD暗電流 &$Id$ & $A$& $5\times 10^{-11}$\\
+        &PD終端電容 &$Ct$ & $F$ &$4\times 10^{-9}$\\
+        &PD飽和電流& $S$ &$A$&$10^-3$\\
+        \hline
+
+        \multirow{2}{*}{擺設指向}
+        &LED天頂角 &$^L \alpha$ & $deg$&$50$\\
+        &PD天頂角 &$^P \alpha$ & $deg$&$50$\\
+        \hline
+
+        \multirow{4}{*}{模擬誤差參數}
+        &絕對溫度 &$Te$ & $K$ &  $300$\\
+        &頻寬 &$B$ & $Hz$ &  $370\times 10^{3}$\\
+        &背景電流&$Ib$&$A$&$5100\times 10^{-6}$\\
+        &多重路徑增益&$Gm$&-&$1.14$\\
+        \hline
+        % &電阻&$R$&$\Omega$&&\\
+
+        \multirow{2}{*}{系統評估參數}
+        &容許範圍&$To$&$m$&$0.05$\\
+        &有效閥值&$Ef$&-&$80\%$\\
+        \hline
+
+
+        % \multirow{2}{*}{PD硬體}
+      \end{tabular}
+    \end{center}
+  \end{table}
 
 
 
 
 
-\subsection{不同量化系統成效參數的影響}
+
+
+\subsection{StepC.量化系統成效參數的影響}
 \label{chp:effect_evaluate_para}
 
 量化系統成效所需的參數呈現於表\ref{tab:para_evaluate}中，使用者可以藉由設定不同的容許範圍$To$與有效閥值$Ef$來改變系統成效評估的結果，例如當使用者的目標情境需要有高精度時，則可以將容許範圍降低，而當使用情境期望各樣本姿態都能求解才能視為有效定位點時，可以將有效閥值提高。因此，使用者需根據自己的使用目標情境有詳細的了解，以此來設定合適的容許範圍與有效閥值。以下分別探討有效閥值$Ef$與容許範圍$To$的影響。
@@ -784,7 +808,7 @@
 
 
 
-在同樣$To=0.05m$時，於容許範圍內的樣本點呈現如圖\ref{pic:sample_out}根據不同有效閥值，我們將有效範圍呈現於圖\ref{pic:ef_effect}中，其中由於改變有效閥值對容許範圍樣本點並不會有改變，因此僅呈現有效範圍的圖作比較。
+在同樣$To=0.05m$時，於容許範圍內的樣本點呈現如圖\ref{pic:sample_out}根據不同有效閥值，我們將有效範圍呈現於圖\ref{pic:ef60}至圖\ref{pic:ef95}中，其中由於改變有效閥值對容許範圍樣本點並不會有改變，因此僅呈現有效範圍的圖作比較。
 
 由圖中可見，當我們將有效閥值降低時，能夠通過閥值成為有效範圍內的樣本點隨之變多，當$Ef=60\%$時，無論是平移樣本點還是旋轉樣本點幾乎都在有效範圍內，相較之下當$Ef=95\%$時，能夠通過閥值的樣本點僅有平移樣本點中的一小部分，標準十分嚴苛。
 
@@ -893,7 +917,7 @@
 
 
 
-\subsection{誤差模擬參數對系統成效的影響}
+\subsection{Step3.誤差模擬參數對系統成效的影響}
 \label{chp:effect_error_para}
 
 
@@ -1043,7 +1067,7 @@
 
 
 
-\subsection{次系統規格對系統成效的影響}
+\subsection{Step1.次系統規格對系統成效的影響}
 \label{chp:design_result}
 
 如\ref{chp:system_design}章中描述的，在Step1.決定次系統規格時，需決定硬體總數$L,P$、硬體規格參數、硬體指向。
@@ -1161,7 +1185,7 @@
 
 
 
-\subsection{不同使用情境的系統表現}
+\subsection{StepA.使用情境改變對系統效能的影響}
 以上表現皆是針對\ref{chp:scenario}章中呈現的ROI進行評估，而為了探討不同使用情境的影響，以下將\ref{chp:scenario}章中的使用情境稱為使用情境甲，並提出其他使用情境作為參考：
 
 \subsubsection{使用情境甲：$3\times 3\times 3m$空間}
@@ -1196,6 +1220,20 @@
 \subsubsection{使用情境丙：平面平行且垂直距離相同}
 
 為呈現本研究達到不限制平面平行的重要性，本研究以大多文獻使用的使用情境：限制目標物與量測平面平行且垂直距離相同，其中使用情境中的平移範圍與情境甲相同，但將樣本數提升至$10000$個平移樣本。至於旋轉樣本則僅有一個：兩平面平行且面對面之姿態，$^{PL}rx=\pi,^{PL}ry=0,^{PL}rz=0$。
+
+\begin{table}[htpb]
+    \begin{center}
+      \caption{使用情境丙的平移樣本}
+      \label{tab:C_translate}
+      \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+         & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
+        \hline
+        $^{PL}t_x$ & -1.5 &1.5&100\\
+        $^{PL}t_y$ & -1.5 & 1.5&100\\
+        $^{PL}t_z$ & 3 & 3 &1\\
+      \end{tabular}
+    \end{center}
+  \end{table}
 
 \begin{figure}[htpb]
     \centering
