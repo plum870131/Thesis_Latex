@@ -225,7 +225,7 @@
         \caption*{(b)天頂角$\alpha=50^o$、硬體數量：10}
     \end{minipage}
     \caption{常見的環狀擺設方法}
-    \label{fig:config_a}
+    \label{pic:config_a}
 \end{figure}
 
 
@@ -1023,7 +1023,7 @@
     \subsubsection{多重路徑增益對系統成效的影響}
     \label{chp:multipath_bandwidth}
 
-    多重路徑增益對系統成效的影響十分顯著如圖\ref{pic:multipath_effect}與表\ref{tab:tab:multipath_effect}，隨著多重增益於1.1增加至1.5，系統成效下降的非常快速，從$68\%$的樣本點於容許範圍內下降到不到$10\%$，也因此在Step2.系統設置時，若需將兩次系統置於角落處時需格外小心，需有預期系統於接近角落處的成效將不佳。
+    多重路徑增益對系統成效的影響十分顯著如圖\ref{pic:multipath_effect}與表\ref{tab:multipath_effect}，隨著多重增益於1.1增加至1.5，系統成效下降的非常快速，從$68\%$的樣本點於容許範圍內下降到不到$10\%$，也因此在Step2.系統設置時，若需將兩次系統置於角落處時需格外小心，需有預期系統於接近角落處的成效將不佳。
 
     % \subsubsection{電阻對系統成效的影響}
     % \label{chp:resistance_bandwidth}
@@ -1120,7 +1120,7 @@
 
 
 
-然而，圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}十分雜亂，不能夠很清楚的呈現不同朗博次方下的系統成效，因此我們改以於容許範圍內的樣本點總數$Nt$呈現，將不同朗博次方的$Nt$呈現於圖\ref{pic:m alpha50 surface}中。由圖可知，朗博次方對系統成效的影響也十分顯著，在此使用情境、使用參數的條件下，較小的朗博次方可得到較好的系統成效，其原因如上所述，此使用情境需要較大的硬體覆蓋率而使小的朗博次方較合適。然而並不是所有情境下都是朗博次方越小越好，我們可以參考後續使用情景丙\ref{chp:opimize_C}章中的論述。
+然而，圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}十分雜亂，不能夠很清楚的呈現不同朗博次方下的系統成效，因此我們改以於容許範圍內的樣本點總數$Nt$呈現，將不同朗博次方的$Nt$呈現於圖\ref{pic:m alpha50 surface}中。由圖可知，朗博次方對系統成效的影響也十分顯著，在此使用情境、使用參數的條件下，較小的朗博次方可得到較好的系統成效，其原因如上所述，此使用情境需要較大的硬體覆蓋率而使小的朗博次方較合適。然而並不是所有情境下都是朗博次方越小越好，我們可以參考後續使用情景丙\ref{chp:optimize_C}章中的論述。
 % 圖\ref{pic:m_effect}呈現系統成效，圖中我們將不同朗博次方的系統中，樣本點誤差於容許範圍內的點總數畫於圖中，不將平移與旋轉樣本點分開討論。觀察結果，我們可以得到結論，針對此ROI與次系統規格限制的情況下，較小的朗博次方可得到較好的系統成效。
 
 \begin{figure}[htpb]
@@ -1192,7 +1192,7 @@
 \subsubsection{硬體數量對系統表現的影響}
 \label{chp:amount_effect}
 
-首先，我們同時考慮硬體數量與朗博次方，在此將\ref{chp:m_effect}章中做的圖\ref{pic:m alpha50 surface}改變硬體數量，並同時呈現於圖\ref{pid:m_effect}，從途中我們可以知道，提高硬體數量可以改善系統表現，但是系統成效的幅度與硬體數量增加的幅度並不成正比。
+首先，我們同時考慮硬體數量與朗博次方，在此將\ref{chp:m_effect}章中做的圖\ref{pic:m alpha50 surface}改變硬體數量，並同時呈現於圖\ref{pic:m_effect}，從途中我們可以知道，提高硬體數量可以改善系統表現，但是系統成效的幅度與硬體數量增加的幅度並不成正比。
 
 \begin{figure}[htpb]
     \centering
@@ -1251,10 +1251,12 @@
 以上表現皆是針對\ref{chp:scenario}章中呈現的ROI進行評估，而為了探討不同使用情境的影響，以下將\ref{chp:scenario}章中的使用情境稱為使用情境甲，並提出其他使用情境作為參考：
 
 \subsubsection{使用情境甲：$3\times 3\times 3m$空間}
+\label{chp:scene_A}
 
 即為\ref{chp:scenario}章中定義的使用情境，該ROI中以有1000個平移樣本與61個相對樣本姿態，總共六萬一千個樣本點。以表\ref{tab:para_reference}的參數進行評估的效能$Nt=47079$，為總樣本中的$77.2\%$。
 
 \subsubsection{使用情境乙：$10\times 10\times 10m$空間}
+\label{chp:scene_B}
 
 與使用情境甲相似，將ROI中平移空間的放大至$10\times 10\times 10m$的空間，而相對姿態則與使用情境甲相同，期望由此情境來觀察不同空間大小的定位結果。平移樣本點的參數設定呈現於表\ref{tab:B_translate}，有一千的平移樣本與61個相對旋轉姿態的樣本，旋轉樣本與情境甲相同參考表\ref{tab:rotate}，樣本總數與情境甲相同為$K=61000$，空間中示意圖如\ref{pic:b_scenario}所示。
 
@@ -1294,6 +1296,7 @@
 
 
 \subsubsection{使用情境丙：平面平行且垂直距離相同}
+\label{chp:scene_C}
 
 為呈現本研究達到不限制平面平行的重要性，本研究以大多文獻使用的使用情境：限制目標物與量測平面平行且垂直距離相同，其中使用情境中的平移範圍為$3\times 3\times 2.5$，但將樣本數提升至$10000$個平移樣本。至於旋轉樣本則僅有一個：兩平面平行且面對面之姿態，$^{PL}rx=\pi,^{PL}ry=0,^{PL}rz=0$。
 
@@ -1329,6 +1332,7 @@
 
 
 \subsubsection{使用情境丁：球狀空間}
+\label{chp:scene_D}
 
 
 由於使用情境甲至丙的ROI都位於PD座標系的Z軸方向，因此我們考量一ROI以PD座標系為中央的球狀空間，平一樣本以球座標系的距離$^{PL}t_d$、天頂角$^{PL}t_{\alpha}$、方位角$^{PL}t_{\beta}$定義，數值如表\ref{tab:D_translate}，其中天頂角與方位角除了表中的60個數值以外還包含位於正負Z軸的兩個樣本共62個，乘上距離樣本後總共248個平移樣本。而旋轉姿態也是任意旋轉，數值如表\ref{tab:D_rotate}，與平移樣本類似，Pitch與Row除了表中的60個數值以外還包含Pitch為0與$\pi$的兩個樣本共62個；樣本點如\ref{pic:d_scenario}，總樣本數$K=248 \times 62 = 15376$。
@@ -1345,7 +1349,7 @@
 \begin{table}[htpb]
     \begin{center}
       \caption{使用情境丁的平移樣本}
-      \label{tab:C_translate}
+      \label{tab:D_translate}
       \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
          & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
         \hline
@@ -1359,7 +1363,7 @@
   \begin{table}[htpb]
     \begin{center}
       \caption{使用情境丁的旋轉樣本}
-      \label{tab:C_translate}
+      \label{tab:D_rotate}
       \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
          & \textbf{最小值} & \textbf{最大值}&\textbf{樣本數}\\
         \hline
