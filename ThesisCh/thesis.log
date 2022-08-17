@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  17 AUG 2022 06:18
-=======
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.3)  17 AUG 2022 05:48
->>>>>>> Stashed changes
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.3)  17 AUG 2022 08:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1214,9 +1210,47 @@ Package: arydshln 2019/02/21 v1.76
 \adl@clb=\count458
 \adl@everyvbox=\toks72
 \adl@LTpagetotal=\dimen443
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: xetex.def on input line 112.
+Package pict2e Info: Driver file for pict2e: p2e-xetex.def on input line 114.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/pict2e/p2e-xetex.def
+File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks73
+\@arclen=\dimen444
+\@arcrad=\dimen445
+\pIIe@tempdima=\dimen446
+\pIIe@tempdimb=\dimen447
+\pIIe@tempdimc=\dimen448
+\pIIe@tempdimd=\dimen449
+\pIIe@tempdime=\dimen450
+\pIIe@tempdimf=\dimen451
+)
+\diagbox@boxa=\box116
+\diagbox@boxb=\box117
+\diagbox@boxm=\box118
+\diagbox@wd=\dimen452
+\diagbox@ht=\dimen453
+\diagbox@insepl=\dimen454
+\diagbox@insepr=\dimen455
+\diagbox@outsepl=\dimen456
+\diagbox@outsepr=\dimen457
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 12.
- (./thesis.aux)
+ (./thesis.aux
+
+LaTeX Warning: Label `tab:C_translate' multiply defined.
+
+
+LaTeX Warning: Label `tab:C_translate' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -1456,101 +1490,107 @@ File: watermark.pdf Graphic file (type pdf)
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [6] (./thesis.lof
+ [6]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [7] (./thesis.lof
 
-LaTeX Warning: Citation `iot' on page vii undefined on input line 3.
-
-
-LaTeX Warning: Citation `survey_light2018' on page vii undefined on input line 10.
-
-
-LaTeX Warning: Citation `survey_light2020' on page vii undefined on input line 11.
+LaTeX Warning: Citation `iot' on page viii undefined on input line 3.
 
 
-LaTeX Warning: Citation `survey_light2018' on page vii undefined on input line 12.
+LaTeX Warning: Citation `survey_light2018' on page viii undefined on input line 10.
 
 
-LaTeX Warning: Citation `pic:fingerprinting' on page vii undefined on input line 13.
+LaTeX Warning: Citation `survey_light2020' on page viii undefined on input line 11.
 
 
-LaTeX Warning: Citation `pic:image_processing' on page vii undefined on input line 14.
+LaTeX Warning: Citation `survey_light2018' on page viii undefined on input line 12.
 
 
-LaTeX Warning: Citation `pic:aruco' on page vii undefined on input line 15.
+LaTeX Warning: Citation `pic:fingerprinting' on page viii undefined on input line 13.
 
 
-LaTeX Warning: Citation `Spectrum' on page vii undefined on input line 16.
+LaTeX Warning: Citation `pic:image_processing' on page viii undefined on input line 14.
 
 
-LaTeX Warning: Citation `survey_rfid' on page vii undefined on input line 18.
+LaTeX Warning: Citation `pic:aruco' on page viii undefined on input line 15.
 
 
-LaTeX Warning: Citation `landmarc' on page vii undefined on input line 19.
+LaTeX Warning: Citation `Spectrum' on page viii undefined on input line 16.
 
 
-LaTeX Warning: Citation `case:rfid_1to1' on page vii undefined on input line 20.
+LaTeX Warning: Citation `survey_rfid' on page viii undefined on input line 18.
 
 
-LaTeX Warning: Citation `pic:vlc' on page vii undefined on input line 21.
+LaTeX Warning: Citation `landmarc' on page viii undefined on input line 19.
 
 
-LaTeX Warning: Citation `astm' on page vii undefined on input line 23.
+LaTeX Warning: Citation `case:rfid_1to1' on page viii undefined on input line 20.
 
 
-LaTeX Warning: Citation `pic:rolling_shutter' on page vii undefined on input line 25.
+LaTeX Warning: Citation `pic:vlc' on page viii undefined on input line 21.
 
 
-LaTeX Warning: Citation `pic:rolling_shutter_case' on page vii undefined on input line 26.
+LaTeX Warning: Citation `astm' on page viii undefined on input line 23.
 
 
-LaTeX Warning: Citation `pic:multipath' on page vii undefined on input line 27.
+LaTeX Warning: Citation `pic:rolling_shutter' on page viii undefined on input line 25.
 
 
-LaTeX Warning: Citation `case:ml' on page vii undefined on input line 28.
+LaTeX Warning: Citation `pic:rolling_shutter_case' on page viii undefined on input line 26.
 
 
-LaTeX Warning: Citation `case:ml' on page vii undefined on input line 29.
+LaTeX Warning: Citation `pic:multipath' on page viii undefined on input line 27.
 
 
-LaTeX Warning: Citation `case:3d_layers' on page vii undefined on input line 30.
+LaTeX Warning: Citation `case:ml' on page viii undefined on input line 28.
+
+
+LaTeX Warning: Citation `case:ml' on page viii undefined on input line 29.
+
+
+LaTeX Warning: Citation `case:3d_layers' on page viii undefined on input line 30.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[7
+[8
 
 ]
 
-LaTeX Warning: Citation `case:3d_layers' on page viii undefined on input line 48.
+LaTeX Warning: Citation `case:3d_layers' on page ix undefined on input line 48.
 
 
-LaTeX Warning: Citation `case:ml' on page viii undefined on input line 49.
+LaTeX Warning: Citation `case:ml' on page ix undefined on input line 49.
 
 
-LaTeX Warning: Citation `case:aoa' on page viii undefined on input line 50.
+LaTeX Warning: Citation `case:aoa' on page ix undefined on input line 50.
 
 
-LaTeX Warning: Citation `case:3d_layers' on page viii undefined on input line 51.
+LaTeX Warning: Citation `case:3d_layers' on page ix undefined on input line 51.
 
 
-LaTeX Warning: Citation `case:3d_layers' on page viii undefined on input line 52.
+LaTeX Warning: Citation `case:3d_layers' on page ix undefined on input line 52.
 
 
-LaTeX Warning: Citation `case:cart3d' on page viii undefined on input line 53.
+LaTeX Warning: Citation `case:cart3d' on page ix undefined on input line 53.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[8])
+[9]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [10])
 \tf@lof=\write8
 \openout8 = `thesis.lof'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [9] (./thesis.lot
+ [11] (./thesis.lot
 
-LaTeX Warning: Citation `datasheet:hm_pd' on page x undefined on input line 10.
+LaTeX Warning: Citation `datasheet:hm_pd' on page xii undefined on input line 10.
 
 
-LaTeX Warning: Citation `multipath_new' on page x undefined on input line 15.
+LaTeX Warning: Citation `multipath_new' on page xii undefined on input line 15.
 
 )
 \tf@lot=\write9
@@ -1559,7 +1599,7 @@ LaTeX Warning: Citation `multipath_new' on page x undefined on input line 15.
  (./Chapter/SymbolList.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [10
+ [12
 
 ]
 Overfull \hbox (57.1569pt too wide) in alignment at lines 14--29
@@ -1583,20 +1623,20 @@ Overfull \hbox (65.06126pt too wide) has occurred while \output is active
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[11
+[13
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [12]
+ [14]
 File: ch1pic/not_whole.png Graphic file (type bmp)
 <ch1pic/not_whole.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [13]) (./Chapter/SymbolList_alphabet.tex
+ [15]) (./Chapter/SymbolList_alphabet.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [14]
+ [16]
 Overfull \hbox (65.06126pt too wide) in alignment at lines 13--95
 [] [] 
  []
@@ -1608,7 +1648,7 @@ Overfull \hbox (65.06126pt too wide) has occurred while \output is active
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[15
+[17
 
 ]
 Overfull \hbox (65.06126pt too wide) has occurred while \output is active
@@ -1618,7 +1658,7 @@ Overfull \hbox (65.06126pt too wide) has occurred while \output is active
 )
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [16] (./chapter/01Introduction.tex
+ [18] (./chapter/01Introduction.tex
 Chapter 1.
 
 LaTeX Warning: Citation `iot' on page 1 undefined on input line 7.
@@ -2018,9 +2058,6 @@ File: watermark.pdf Graphic file (type pdf)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [23]
-<<<<<<< Updated upstream
-File: watermark.pdf Graphic file (type p
-=======
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [24]
@@ -2585,24 +2622,14 @@ File: ch4pic/lambertian_translate.png Graphic file (type bmp)
 <ch4pic/lambertian_translate.png>
 File: ch4pic/lambertian_rotate.png Graphic file (type bmp)
 <ch4pic/lambertian_rotate.png>
+
+
+LaTeX Warning: Reference `chp:opimize_C' on page 88 undefined on input line 1123.
+
 File: ch4pic/m alpha50 surface.png Graphic file (type bmp)
 <ch4pic/m alpha50 surface.png>
 File: ch4pic/num5 alpha surface.png Graphic file (type bmp)
 <ch4pic/num5 alpha surface.png>
-File: ch4pic/num3 alpha surface.png Graphic file (type bmp)
-<ch4pic/num3 alpha surface.png>
-
-Overfull \hbox (66.7297pt too wide) in paragraph at lines 1201--1203
- [][] 
- []
-
-File: ch4pic/num5 alpha surface.png Graphic file (type bmp)
-<ch4pic/num5 alpha surface.png>
-
-Overfull \hbox (59.51349pt too wide) in paragraph at lines 1207--1209
- [][] 
- []
-
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [88]
@@ -2612,90 +2639,168 @@ File: watermark.pdf Graphic file (type pdf)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [90]
+
+LaTeX Warning: Reference `pid:m_effect' on page 91 undefined on input line 1195.
+
+File: ch4pic/m_effect.png Graphic file (type bmp)
+<ch4pic/m_effect.png>
+File: ch4pic/alpha_effect.png Graphic file (type bmp)
+<ch4pic/alpha_effect.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [91]
+[91]
+File: ch4pic/num3 alpha surface.png Graphic file (type bmp)
+<ch4pic/num3 alpha surface.png>
+
+Overfull \hbox (10.69682pt too wide) in paragraph at lines 1219--1221
+ [][] 
+ []
+
+File: ch4pic/num15 alpha surface.png Graphic file (type bmp)
+<ch4pic/num15 alpha surface.png>
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1230.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1230.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1230.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1230.
+(hyperref)                removing `math shift' on input line 1253.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1234.
+(hyperref)                removing `\times' on input line 1253.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1234.
+(hyperref)                removing `\times' on input line 1253.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1234.
+(hyperref)                removing `math shift' on input line 1253.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1234.
-
-File: ch4pic/b_scenario.png Graphic file (type bmp)
-<ch4pic/b_scenario.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [92]
-File: ch4pic/c_scenario.png Graphic file (type bmp)
-<ch4pic/c_scenario.png>
-File: ch4pic/d_scenario.png Graphic file (type bmp)
-<ch4pic/d_scenario.png>
-) (./chapter/05Optimize.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 1257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 1257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1257.
+
+File: ch4pic/b_scenario.png Graphic file (type bmp)
+<ch4pic/b_scenario.png>
+File: ch4pic/scene_b_solve.png Graphic file (type bmp)
+<ch4pic/scene_b_solve.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [93]
+[93]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [94]
+File: ch4pic/c_scenario.png Graphic file (type bmp)
+<ch4pic/c_scenario.png>
+
+
+LaTeX Warning: Reference `chp:optimize_C' on page 95 undefined on input line 1321.
+
+File: ch4pic/scene_c_solve.png Graphic file (type bmp)
+<ch4pic/scene_c_solve.png>
+
+LaTeX Warning: Reference `tab:D_translate' on page 95 undefined on input line 1334.
+
+
+LaTeX Warning: Reference `tab:D_rotate' on page 95 undefined on input line 1334.
+
+File: ch4pic/d_scenario.png Graphic file (type bmp)
+<ch4pic/d_scenario.png>
+
+LaTeX Warning: Reference `chp:optimize_D' on page 95 undefined on input line 1343.
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+[95]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [96]
+File: ch4pic/scene_d_solve.png Graphic file (type bmp)
+<ch4pic/scene_d_solve.png>
+) (./chapter/05Optimize.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [97]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [98]
 Chapter 5.
 File: ch5pic/optimize_flow.png Graphic file (type bmp)
 <ch5pic/optimize_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[95
+[99
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [96]
+ [100]
 File: ch5pic/optimize_variable.png Graphic file (type bmp)
 <ch5pic/optimize_variable.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [97]
+ [101]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 76.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 76.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 76.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 76.
+
 File: ch5pic/opt_result.png Graphic file (type bmp)
 <ch5pic/opt_result.png>
+File: ch5pic/optimize_A.png Graphic file (type bmp)
+<ch5pic/optimize_A.png>
+File: ch5pic/surface_opt_A.png Graphic file (type bmp)
+<ch5pic/surface_opt_A.png>
+File: ch5pic/optimize_C.png Graphic file (type bmp)
+<ch5pic/optimize_C.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [98]) (./chapter/06Conclusion.tex
+[102]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [99]
+ [103]
+File: ch5pic/optimize_d.png Graphic file (type bmp)
+<ch5pic/optimize_d.png>
+) (./chapter/06Conclusion.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [104]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [105]
 Chapter 6.
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[100
+[106
 
 ])
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [101]
+ [107]
 No file thesis.bbl.
 (./thesis.aux)
 
@@ -2706,19 +2811,18 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 74A5489B49B7507EE1997AD2BD453941;11910.
+(rerunfilecheck)             Checksum: A32FB687B212333AE104C4F860D69291;12298.
  ) 
 Here is how much of TeX's memory you used:
- 44380 strings out of 476179
- 967477 string characters out of 5809545
- 1383875 words of memory out of 5000000
- 64208 multiletter control sequences out of 15000+600000
- 481071 words of font info for 106 fonts, out of 8000000 for 9000
+ 44784 strings out of 476179
+ 975173 string characters out of 5809545
+ 1392242 words of memory out of 5000000
+ 64587 multiletter control sequences out of 15000+600000
+ 483686 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,19n,117p,2055b,960s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (118 pages).
->>>>>>> Stashed changes
+Output written on thesis.pdf (126 pages).

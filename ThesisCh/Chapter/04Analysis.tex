@@ -1120,7 +1120,7 @@
 
 
 
-然而，圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}十分雜亂，不能夠很清楚的呈現不同朗博次方下的系統成效，因此我們改以於容許範圍內的樣本點總數$Nt$呈現，將不同朗博次方的$Nt$呈現於圖\ref{pic:m alpha50 surface}中。由圖可知，朗博次方對系統成效的影響也十分顯著，在此使用情境、使用參數的條件下，較小的朗博次方可得到較好的系統成效，其原因如上所述，此使用情境需要較大的硬體覆蓋率而使小的朗博次方較合適。然而並不是所有情境下都是朗博次方越小越好，我們可以參考後續使用情景丙中的論述。
+然而，圖\ref{pic:m_translate}與圖\ref{pic:m_rotate}十分雜亂，不能夠很清楚的呈現不同朗博次方下的系統成效，因此我們改以於容許範圍內的樣本點總數$Nt$呈現，將不同朗博次方的$Nt$呈現於圖\ref{pic:m alpha50 surface}中。由圖可知，朗博次方對系統成效的影響也十分顯著，在此使用情境、使用參數的條件下，較小的朗博次方可得到較好的系統成效，其原因如上所述，此使用情境需要較大的硬體覆蓋率而使小的朗博次方較合適。然而並不是所有情境下都是朗博次方越小越好，我們可以參考後續使用情景丙\ref{chp:opimize_C}章中的論述。
 % 圖\ref{pic:m_effect}呈現系統成效，圖中我們將不同朗博次方的系統中，樣本點誤差於容許範圍內的點總數畫於圖中，不將平移與旋轉樣本點分開討論。觀察結果，我們可以得到結論，針對此ROI與次系統規格限制的情況下，較小的朗博次方可得到較好的系統成效。
 
 \begin{figure}[htpb]
@@ -1186,30 +1186,50 @@
 % 我們可以觀察到在此情境中，較小的硬體擺設天頂角，使系統表現較佳，原因與\ref{chp:m_effect}章中博次方較小時系統成效佳的原因類似，由於此ROI範圍很大，為了透過少量的硬體數量使所有樣本點都能滿足\ref{chp:orient_conclu}章中的條件，需使各硬體覆蓋範圍盡可能的重疊，在硬體數量僅為3時更為明顯。相較起來，當硬體數量較多時，則可以有稍微較大的硬體天頂角，透過較多個硬體使重疊的覆蓋範圍較大，達到較好的系統成效。而由於我們限制硬體擺設的變數僅有天頂角一個變數，因此系統透過增加硬體數量的改變幅度十分有限。
 
 
+\newpage
 
 
 \subsubsection{硬體數量對系統表現的影響}
 \label{chp:amount_effect}
 
-在此將\ref{chp:m_effect}章中做的圖\ref{pic:m alpha50 surface}改變硬體數量，以下依序呈現：
+首先，我們同時考慮硬體數量與朗博次方，在此將\ref{chp:m_effect}章中做的圖\ref{pic:m alpha50 surface}改變硬體數量，並同時呈現於圖\ref{pid:m_effect}，從途中我們可以知道，提高硬體數量可以改善系統表現，但是系統成效的幅度與硬體數量增加的幅度並不成正比。
 
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=9cm]{ch4pic/m_effect.png}
+    \caption{硬體數量與朗博次方對系統影響}
+    \label{pic:m_effect}
+\end{figure}
+
+我們改觀察硬體數量與硬體天頂角的影響，一樣將圖\ref{pic:num5 alpha surface}的數量改變一起呈現於圖\ref{pic:alpha_effect}，可以得到同樣的結論：增加硬體數量有助於提升系統效能，但系統成效的幅度與硬體數量增加的幅度並不成正比，因此挑選合適的硬體數量為一重要選擇。
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=9cm]{ch4pic/alpha_effect.png}
+    \caption{硬體數量與硬體天頂角對系統影響}
+    \label{pic:alpha_effect}
+\end{figure}
+
+值得注意的是，改變硬體數量除了提升系統成效以外，參考圖\ref{pic:num5 alpha surface}與\ref{pic:num3 alpha surface}、\ref{pic:num15 alpha surface}的差異，硬體數量也改變了硬體天頂角與系統效能間的趨勢，也可以由次觀察到系統的複雜程度，在僅考慮硬體數量與硬體天頂角時便已經有不同的趨勢，完整考量任意的硬體擺設方法、朗博次方與硬體數量時，系統的複雜程度非常可觀。
 
 \begin{figure}[htpb]
     \centering
     \begin{minipage}{.5\textwidth}
         \centering
-        \includegraphics[height=5cm]{ch4pic/num3 alpha surface.png}
-        \captionsetup{labelformat=empty}
-        \caption*{L=P=3時硬體天頂角的影響}
+        \includegraphics[height=4cm]{ch4pic/num3 alpha surface.png}
+        % \captionsetup{labelformat=empty}
+        \caption{L=P=3時硬體天頂角的影響}
+        \label{pic:num3 alpha surface}
     \end{minipage}%
     \begin{minipage}{0.5\textwidth}
         \centering
-        \includegraphics[height=5cm]{ch4pic/num5 alpha surface.png}
-        \captionsetup{labelformat=empty}
-        \caption*{L=P=5時硬體天頂角的影響}
+        \includegraphics[height=4cm]{ch4pic/num15 alpha surface.png}
+        % \captionsetup{labelformat=empty}
+        \caption{L=P=15時硬體天頂角的影響}
+        \label{pic:num15 alpha surface}
     \end{minipage}
-    \caption{常見的環狀擺設方法}
-    \label{fig:config_a}
+    % \caption{常見的環狀擺設方法}
+    % \label{fig:config_a}
 \end{figure}
 
 
@@ -1217,7 +1237,9 @@
 
 
 
-\ref{chp:m_effect}章中做的圖\ref{pic:m alpha50 surface}
+
+
+% \ref{chp:m_effect}章中做的圖\ref{pic:m alpha50 surface}
 
 % 由圖\ref{pic:m_effect}與圖\ref{pic:alpha_effect}中，我們都可以看出在提高硬體數量時，系統表現提升，然而系統表現提升的幅度不與硬體提升的數量成正比。因此，在挑選硬體數量時，除了系統表現以外，也需將硬體增加所造成的硬體成本，以及架設系統的難度考慮進來，在系統表現與硬體系統簡單中取捨。
 
@@ -1225,11 +1247,12 @@
 
 
 \subsection{StepA.使用情境改變對系統效能的影響}
+\label{chp:scene_effect}
 以上表現皆是針對\ref{chp:scenario}章中呈現的ROI進行評估，而為了探討不同使用情境的影響，以下將\ref{chp:scenario}章中的使用情境稱為使用情境甲，並提出其他使用情境作為參考：
 
 \subsubsection{使用情境甲：$3\times 3\times 3m$空間}
 
-即為\ref{chp:scenario}章中定義的使用情境，該ROI中以有1000個平移樣本與61個相對樣本姿態，總共六萬一千個樣本點。
+即為\ref{chp:scenario}章中定義的使用情境，該ROI中以有1000個平移樣本與61個相對樣本姿態，總共六萬一千個樣本點。以表\ref{tab:para_reference}的參數進行評估的效能$Nt=47079$，為總樣本中的$77.2\%$。
 
 \subsubsection{使用情境乙：$10\times 10\times 10m$空間}
 
@@ -1259,16 +1282,20 @@
     \label{pic:b_scenario}
 \end{figure}
 
+以表\ref{tab:para_reference}的參數進行評估的效能$Nt=2773$，為總樣本$K=61000$中的$4.54\%$。由此可知，雖然使用相同的次系統設計、相同的模擬參數與系統評估參數，僅是改變StepA.使用情境的「範圍大小」便可使系統效能有明顯的改變。以直觀來說，合適使用情境甲定位能力的次系統設計，對使用情境乙來說可定位的範圍太小了，針對情境乙我們可以選擇不同的硬體，例如選擇總輻射通量$Pt$更高的LED或感光能力更佳的PD硬體。
+
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=15cm]{ch4pic/scenario_b_solve.png}
+    \includegraphics[width=15cm]{ch4pic/scene_b_solve.png}
     \caption{以表\ref{tab:para_reference}參數模擬使用情境乙的系統表現}
     \label{pic:scenario_b_solve}
 \end{figure}
 
+
+
 \subsubsection{使用情境丙：平面平行且垂直距離相同}
 
-為呈現本研究達到不限制平面平行的重要性，本研究以大多文獻使用的使用情境：限制目標物與量測平面平行且垂直距離相同，其中使用情境中的平移範圍與情境甲相同，但將樣本數提升至$10000$個平移樣本。至於旋轉樣本則僅有一個：兩平面平行且面對面之姿態，$^{PL}rx=\pi,^{PL}ry=0,^{PL}rz=0$。
+為呈現本研究達到不限制平面平行的重要性，本研究以大多文獻使用的使用情境：限制目標物與量測平面平行且垂直距離相同，其中使用情境中的平移範圍為$3\times 3\times 2.5$，但將樣本數提升至$10000$個平移樣本。至於旋轉樣本則僅有一個：兩平面平行且面對面之姿態，$^{PL}rx=\pi,^{PL}ry=0,^{PL}rz=0$。
 
 \begin{table}[htpb]
     \begin{center}
@@ -1291,9 +1318,11 @@
     \label{pic:c_scenario}
 \end{figure}
 
+以表\ref{tab:para_reference}的參數對使用情境丙進行評估，系統效能$Nt=8780$，為總樣本$K=10000$中的$87.8\%$，可以說是系統表現十分良好，而更詳細的討論則參考\ref{chp:optimize_C}章。
+
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=15cm]{ch4pic/scenario_c_solve.png}
+    \includegraphics[width=15cm]{ch4pic/scene_c_solve.png}
     \caption{以表\ref{tab:para_reference}參數模擬使用情境丙的系統表現}
     \label{pic:scenario_c_solve}
 \end{figure}
@@ -1302,7 +1331,7 @@
 \subsubsection{使用情境丁：球狀空間}
 
 
-由於使用情境甲至丙的ROI都位於PD座標系的Z軸方向，因此我們考量一ROI以PD座標系為中央的球狀空間，平一樣本以球座標系的距離$^{PL}t_d$、天頂角$^{PL}t_{\alpha}$、方位角$^{PL}t_{\beta}$定義，數值如表\ref{tab:D_translate}，其中天頂角與方位角除了表中的60個數值以外還包含位於正負Z軸的兩個樣本共62個，乘上距離樣本後總共248個平移樣本。而旋轉姿態也是任意旋轉，數值如表\ref{tab:D_rotate}，與平移樣本類似，Pitch與Row除了表中的60個數值以外還包含Pitch為0與$\pi$的兩個樣本共62個；樣本點如\ref{pic:d_scenario}。
+由於使用情境甲至丙的ROI都位於PD座標系的Z軸方向，因此我們考量一ROI以PD座標系為中央的球狀空間，平一樣本以球座標系的距離$^{PL}t_d$、天頂角$^{PL}t_{\alpha}$、方位角$^{PL}t_{\beta}$定義，數值如表\ref{tab:D_translate}，其中天頂角與方位角除了表中的60個數值以外還包含位於正負Z軸的兩個樣本共62個，乘上距離樣本後總共248個平移樣本。而旋轉姿態也是任意旋轉，數值如表\ref{tab:D_rotate}，與平移樣本類似，Pitch與Row除了表中的60個數值以外還包含Pitch為0與$\pi$的兩個樣本共62個；樣本點如\ref{pic:d_scenario}，總樣本數$K=248 \times 62 = 15376$。
 
 \begin{figure}[htpb]
     \centering
@@ -1310,6 +1339,8 @@
     \caption{使用情境丁的樣本點}
     \label{pic:d_scenario}
 \end{figure}
+
+以表\ref{tab:para_reference}的參數對使用情境丁進行評估，系統效能$Nt=3161$，為總樣本$K=15376$中的$20.5\%$。其中，情境丁無論平移還是旋轉樣本的範圍都相較使用情境甲大許多，因此利用適用於情境甲的的次系統設計套用在此情境上無法有良好的表現，而針對此情境最佳次系統設計的系統表現可參考\ref{chp:optimize_D}章。
 
 \begin{table}[htpb]
     \begin{center}
@@ -1341,7 +1372,7 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=15cm]{ch4pic/scenario_d_solve.png}
+    \includegraphics[width=15cm]{ch4pic/scene_d_solve.png}
     \caption{以表\ref{tab:para_reference}參數模擬使用情境丁的系統表現}
     \label{pic:scenario_d_solve}
 \end{figure}
@@ -1350,9 +1381,14 @@
 
 \section{結論}
 \label{chp:4_conclusion}
-由以上分析，我們可以看出在\ref{chp:scenario}章中提出的情境下，小的朗博次方與較小的硬體天頂角$\alpha$使系統的表現較佳，而硬體數量則是愈多愈好，但成長的趨勢隨著硬體數量增多而減慢。
 
-我們本章節提出的方法，可以讓使用者靈活的透過改變參數，模擬不同次系統規格、不同使用情境與ROI、不同誤差模擬參數下的系統成效結果，達到快速評估系統設計的效果。有了此模擬方法，我們可以在硬體系統架設之前對系統表現有所了解，避免在硬體架設的部分浪費時間與硬體成本。
+本章節由建立模擬定位系統的方法開始，詳細介紹模擬系統中需設置的個參數意義與參數數值如何抉擇；能夠模擬Step1.至Step4.的定位流程後，繼續建立一系統評估的方法，針對不同使用情境設定樣本點，利用容許範圍$To$的樣本點總數$Nt$作為系統效能的量化指標，再由此量化指標去對系統中的各參數影響進行分析。
+
+本章節透過設置一組參考值的參數於表\ref{tab:para_reference}，在分析中一次觀察一個參數的影響，我們可以看出無論是評估流程中的StepA.設定使用情境、StepB.於個樣本點進行室內定位流程、還是StepC.量化系統效能，各步驟中的參數設置皆可以使系統表現有非常大的不同，系統複雜度高。雖然我們能夠對不同參數的影響有基本的理解，但對於不同使用情境該如何設計最佳的次系統規格仍沒有一有效率之方法，且本章節的討論將硬體擺法限制為環狀擺法。因此，針對不同使用情境，我們於第五章進行次系統規格的最佳化，將硬體數量、朗博次方與不受限制的硬體擺法視為變數，找出使系統效能最高的系統設計。
+
+% 可以看出在\ref{chp:scenario}章中提出的情境下，小的朗博次方與較小的硬體天頂角$\alpha$使系統的表現較佳，而硬體數量則是愈多愈好，但成長的趨勢隨著硬體數量增多而減慢。
+
+% 我們本章節提出的方法，可以讓使用者靈活的透過改變參數，模擬不同次系統規格、不同使用情境與ROI、不同誤差模擬參數下的系統成效結果，達到快速評估系統設計的效果。有了此模擬方法，我們可以在硬體系統架設之前對系統表現有所了解，避免在硬體架設的部分浪費時間與硬體成本。
 %______________________________________
 
 

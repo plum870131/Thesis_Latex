@@ -1,10 +1,8 @@
-<<<<<<< Updated upstream
-=======
 \contentsline {chapter}{中文摘要}{i}{chapter*.1}%
 \contentsline {chapter}{Abstract}{ii}{chapter*.2}%
 \contentsline {chapter}{目錄}{iv}{chapter*.3}%
-\contentsline {chapter}{圖目錄}{vii}{chapter*.4}%
-\contentsline {chapter}{表目錄}{x}{chapter*.5}%
+\contentsline {chapter}{圖目錄}{viii}{chapter*.4}%
+\contentsline {chapter}{表目錄}{xii}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}緒論}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}前言}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}目標情境}{2}{section.1.2}%
@@ -74,22 +72,23 @@
 \contentsline {subsection}{\numberline {4.2.5}Step1.次系統規格對系統成效的影響}{87}{subsection.4.2.5}%
 \contentsline {subsubsection}{\numberline {4.2.5.1}朗博次方對系統成效的影響}{88}{subsubsection.4.2.5.1}%
 \contentsline {subsubsection}{\numberline {4.2.5.2}硬體指向對系統效能的影響}{88}{subsubsection.4.2.5.2}%
-\contentsline {subsubsection}{\numberline {4.2.5.3}硬體數量對系統表現的影響}{88}{subsubsection.4.2.5.3}%
+\contentsline {subsubsection}{\numberline {4.2.5.3}硬體數量對系統表現的影響}{91}{subsubsection.4.2.5.3}%
 \contentsline {subsection}{\numberline {4.2.6}StepA.使用情境改變對系統效能的影響}{92}{subsection.4.2.6}%
 \contentsline {subsubsection}{\numberline {4.2.6.1}使用情境甲：$3\times 3\times 3m$空間}{92}{subsubsection.4.2.6.1}%
-\contentsline {subsubsection}{\numberline {4.2.6.2}使用情境乙：$10\times 10\times 10m$空間}{92}{subsubsection.4.2.6.2}%
-\contentsline {subsubsection}{\numberline {4.2.6.3}使用情境丙：平面平行且垂直距離相同}{93}{subsubsection.4.2.6.3}%
-\contentsline {subsubsection}{\numberline {4.2.6.4}使用情境丁：球狀空間}{93}{subsubsection.4.2.6.4}%
-\contentsline {section}{\numberline {4.3}結論}{93}{section.4.3}%
-\contentsline {chapter}{\numberline {5}針對不同使用情境進行最佳化}{95}{chapter.5}%
-\contentsline {section}{\numberline {5.1}最佳化問題}{97}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}目標函數}{97}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}最佳化變數}{97}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}案例}{98}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}室內空間的案例}{98}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}結論}{98}{section.5.3}%
-\contentsline {chapter}{\numberline {6}結論}{100}{chapter.6}%
-\contentsline {section}{\numberline {6.1}研究總結}{100}{section.6.1}%
-\contentsline {section}{\numberline {6.2}未來目標}{100}{section.6.2}%
+\contentsline {subsubsection}{\numberline {4.2.6.2}使用情境乙：$10\times 10\times 10m$空間}{93}{subsubsection.4.2.6.2}%
+\contentsline {subsubsection}{\numberline {4.2.6.3}使用情境丙：平面平行且垂直距離相同}{95}{subsubsection.4.2.6.3}%
+\contentsline {subsubsection}{\numberline {4.2.6.4}使用情境丁：球狀空間}{95}{subsubsection.4.2.6.4}%
+\contentsline {section}{\numberline {4.3}結論}{97}{section.4.3}%
+\contentsline {chapter}{\numberline {5}針對不同使用情境進行最佳化}{99}{chapter.5}%
+\contentsline {section}{\numberline {5.1}最佳化問題}{101}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}目標函數}{101}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}最佳化變數}{101}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}案例}{102}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}使用情境甲：$3\times 3\times 3m$空間}{102}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}使用情境丙：平面平行且垂直距離相同}{104}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}使用情境丁：球狀空間}{104}{subsubsection.5.2.1.2}%
+\contentsline {section}{\numberline {5.3}結論}{104}{section.5.3}%
+\contentsline {chapter}{\numberline {6}結論}{106}{chapter.6}%
+\contentsline {section}{\numberline {6.1}研究總結}{106}{section.6.1}%
+\contentsline {section}{\numberline {6.2}未來目標}{106}{section.6.2}%
 \contentsfinish 
->>>>>>> Stashed changes

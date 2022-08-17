@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces 比較與本研究相似的文獻\relax }}{43}{table.caption.56}%
@@ -26,9 +24,11 @@
 \contentsline {table}{\numberline {4.18}{\ignorespaces 頻寬對系統成效的影響\relax }}{85}{table.caption.110}%
 \contentsline {table}{\numberline {4.19}{\ignorespaces 背景電流對系統成效的影響\relax }}{86}{table.caption.112}%
 \contentsline {table}{\numberline {4.20}{\ignorespaces 多重路徑增益對系統成效的影響\relax }}{87}{table.caption.114}%
-\contentsline {table}{\numberline {4.21}{\ignorespaces 使用情境乙的平移樣本\relax }}{92}{table.caption.121}%
-\contentsline {table}{\numberline {4.22}{\ignorespaces 使用情境丙的平移樣本\relax }}{93}{table.caption.123}%
+\contentsline {table}{\numberline {4.21}{\ignorespaces 使用情境乙的平移樣本\relax }}{93}{table.caption.123}%
+\contentsline {table}{\numberline {4.22}{\ignorespaces 使用情境丙的平移樣本\relax }}{95}{table.caption.126}%
+\contentsline {table}{\numberline {4.23}{\ignorespaces 使用情境丁的平移樣本\relax }}{97}{table.caption.130}%
+\contentsline {table}{\numberline {4.24}{\ignorespaces 使用情境丁的旋轉樣本\relax }}{97}{table.caption.131}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces 使用情境甲的最佳化結果（樣本總數K=61000）\relax }}{103}{table.caption.136}%
 \addvspace {10\p@ }
 \contentsfinish 
->>>>>>> Stashed changes

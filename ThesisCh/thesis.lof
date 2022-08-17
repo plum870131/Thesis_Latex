@@ -1,6 +1,4 @@
-<<<<<<< Updated upstream
-=======
-\contentsline {figure}{\numberline {1}{\ignorespaces 符號小標解釋\relax }}{xiii}{figure.caption.7}%
+\contentsline {figure}{\numberline {1}{\ignorespaces 符號小標解釋\relax }}{xv}{figure.caption.7}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces 物聯網應用的領域\cite {iot}\relax }}{1}{figure.caption.9}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces 本論文所針對的目標情境\relax }}{2}{figure.caption.10}%
@@ -100,14 +98,23 @@
 \contentsline {figure}{\numberline {4.32}{\ignorespaces 改變朗博次方對旋轉樣本點的影響\relax }}{90}{figure.caption.117}%
 \contentsline {figure}{\numberline {4.33}{\ignorespaces 改變朗博次方對系統的影響\relax }}{90}{figure.caption.118}%
 \contentsline {figure}{\numberline {4.34}{\ignorespaces 改變硬體指向天頂角對系統的影響\relax }}{91}{figure.caption.119}%
-\contentsline {figure}{\numberline {4.35}{\ignorespaces 常見的環狀擺設方法\relax }}{91}{figure.caption.120}%
-\contentsline {figure}{\numberline {4.36}{\ignorespaces 使用情境乙的樣本點\relax }}{92}{figure.caption.122}%
-\contentsline {figure}{\numberline {4.37}{\ignorespaces 使用情境丙的樣本點\relax }}{93}{figure.caption.124}%
-\contentsline {figure}{\numberline {4.38}{\ignorespaces 使用情境丁的樣本點\relax }}{94}{figure.caption.125}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces 硬體數量與朗博次方對系統影響\relax }}{91}{figure.caption.120}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces 硬體數量與硬體天頂角對系統影響\relax }}{92}{figure.caption.121}%
+\contentsline {figure}{\numberline {4.37}{\ignorespaces L=P=3時硬體天頂角的影響\relax }}{92}{figure.caption.122}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces L=P=15時硬體天頂角的影響\relax }}{92}{figure.caption.122}%
+\contentsline {figure}{\numberline {4.39}{\ignorespaces 使用情境乙的樣本點\relax }}{93}{figure.caption.124}%
+\contentsline {figure}{\numberline {4.40}{\ignorespaces 以表\ref {tab:para_reference}參數模擬使用情境乙的系統表現\relax }}{94}{figure.caption.125}%
+\contentsline {figure}{\numberline {4.41}{\ignorespaces 使用情境丙的樣本點\relax }}{95}{figure.caption.127}%
+\contentsline {figure}{\numberline {4.42}{\ignorespaces 以表\ref {tab:para_reference}參數模擬使用情境丙的系統表現\relax }}{96}{figure.caption.128}%
+\contentsline {figure}{\numberline {4.43}{\ignorespaces 使用情境丁的樣本點\relax }}{96}{figure.caption.129}%
+\contentsline {figure}{\numberline {4.44}{\ignorespaces 以表\ref {tab:para_reference}參數模擬使用情境丁的系統表現\relax }}{98}{figure.caption.132}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 最佳化流程圖\relax }}{96}{figure.caption.126}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces 最佳化變數\relax }}{97}{figure.caption.127}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 最佳化結果\relax }}{98}{figure.caption.128}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 最佳化流程圖\relax }}{100}{figure.caption.133}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 最佳化變數\relax }}{101}{figure.caption.134}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 最佳化結果\relax }}{102}{figure.caption.135}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 情境甲的最佳化結果\relax }}{103}{figure.caption.137}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces 情境甲的最佳化結果（以平面呈現）\relax }}{103}{figure.caption.138}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces 情境丙的最佳化結果\relax }}{104}{figure.caption.139}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces 情境丁的最佳化結果\relax }}{105}{figure.caption.140}%
 \addvspace {10\p@ }
 \contentsfinish 
->>>>>>> Stashed changes

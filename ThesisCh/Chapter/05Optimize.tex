@@ -71,7 +71,10 @@
 \section{案例}
 \label{chp:optimize_case}
 
-    \subsection{室內空間的案例}
+本章節將舉例對不同情境以圖\ref{pic:optimize_flow}中的流程做最佳化，這裡以\ref{chp:scene_effect}章中的使用情境作為例子，其中由於使用情境乙與情境甲僅有範圍差異，因此以下僅對使用情境甲、丙、丁舉例做最佳化。
+
+    \subsection{使用情境甲：$3\times 3\times 3m$空間}
+    \label{chp:optimiza_A}
 
     我們最佳化的目標情境參考\ref{chp:scenario}章，為一包含平移樣本與旋轉樣本的的室內空間，而以下圖\ref{pic:opt_result}呈現硬體數量分別為$P=L=5$以及$P=L=10$時，朗博次方與硬體指向的最佳化結果。
 
@@ -84,8 +87,71 @@
 
     觀察這兩個系統設計的差別，在硬體數量少的時候，為了讓空間中的最多個樣本點可讀到訊號，因此朗博次方較小，捨棄了對出入射角敏感度。
 
+    \begin{table}[htpb]
+        \begin{center}
+          \caption{使用情境甲的最佳化結果（樣本總數K=61000）}
+          \label{tab:optimize_A}
+          \begin{tabular}{c||c|c|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+            \diagbox{PD數量}{LED數量}& 3&4&5&6&7&8\\
+            \hline
+
+            3&39522&42216&42828&43765&43777&43265\\
+            5&43792&45279&47893&48378&48844&48377\\
+            8&47483&48005&52609&53191&53465&54144\\
+            12&50511&50677&54010&56550&56272&56685\\
+          \end{tabular}
+        \end{center}
+      \end{table}
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=15cm]{ch5pic/optimize_A.png}
+        \caption{情境甲的最佳化結果}
+        \label{pic:opt_A_line}
+    \end{figure}
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=15cm]{ch5pic/surface_opt_A.png}
+        \caption{情境甲的最佳化結果（以平面呈現）}
+        \label{pic:opt_A_surface}
+    \end{figure}
+
+
     % \subsection{以目標物為中心的案例}
 
+    \subsubsection{使用情境丙：平面平行且垂直距離相同}
+    \label{chp:optimiza_C}
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=15cm]{ch5pic/optimize_C.png}
+        \caption{情境丙的最佳化結果}
+        \label{pic:opt_C_line}
+    \end{figure}
+
+    \subsubsection{使用情境丁：球狀空間}
+    \label{chp:optimiza_D}
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=15cm]{ch5pic/optimize_d.png}
+        \caption{情境丁的最佳化結果}
+        \label{pic:opt_D}
+    \end{figure}
+
+    % \begin{table}[htpb]
+    %     \begin{center}
+    %       \caption{使用情境丁的最佳化結果}
+    %       \label{tab:optimize_d}
+    %       \begin{tabular}{c||c|c|c|c|c|cccccc} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+    %         硬體數量$L=P$& 3&4&5&6&7&8&9&10&11&12&13\\
+    %         \hline
+
+    %         系統成效$Nt$&2149&2544&3439&4512&8571&13677&14151&14453&14534&14614&14624
+    %       \end{tabular}
+    %     \end{center}
+    %   \end{table}
 
 % --------------------------------------
 \section{結論}
