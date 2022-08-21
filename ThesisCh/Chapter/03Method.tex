@@ -190,7 +190,7 @@
             \end{gather}
         % \end{equation}
 
-        根據上式\ref{eqn:surface}，方位$^{PL}\boldsymbol{Tv}$的可能解為$atv_x+btv_y+ctv_z=0$的形式，於空間中為一通過原點的平面，如圖\ref{pic:solve_surface}，透過兩個PD強度比較，我們可以得到一個方位解的可能平面。
+        根據上式\ref{eqn:surface}，方位$^{PL}\boldsymbol{Tv}$的可能解為$a\cdot tv_x+b\cdot tv_y+c\cdot tv_z=0$的形式，於空間中為一通過原點的平面，如圖\ref{pic:solve_surface}，透過兩個PD強度比較，我們可以得到一個方位解的可能平面。
        
 
        \begin{figure}[htpb]
@@ -224,7 +224,7 @@
             \label{pic:solve_axis}
         \end{figure}
 
-        其中，兩平面交軸有正負兩個方向，我們可以透過PD可視範圍最大為$90^o$的特性，判斷出方位解為交軸的正方向還是負方向，呈現於式\ref{eqn:solve_axis}。
+        \noindent 其中，兩平面交軸有正負兩個方向，我們可以透過PD可視範圍最大為$90^o$的特性，判斷出方位解為交軸的正方向還是負方向，呈現於式\ref{eqn:solve_axis}。
    
         \begin{gather}
             \label{eqn:solve_axis}
@@ -235,7 +235,7 @@
              \end{cases}
         \end{gather}
 
-        \noindent 在此步驟，我們利用\ref{chp:cosine_ratio}章中產生的$Fp_l-1$個平面，選擇其中一個作為參考平面，將他以外的$Fp_l-2$個平面與其參考平面外積，得到共$Fp_l-2$個計算出的方位$\hat{{^{PL}\boldsymbol{Tv}}_{p{r_sr_c}}}$。
+        在此步驟，我們利用\ref{chp:cosine_ratio}章中產生的$Fp_l-1$個平面，選擇其中一個作為參考平面，將他以外的$Fp_l-2$個平面與其參考平面外積，得到共$Fp_l-2$個計算出的方位$\hat{{^{PL}\boldsymbol{Tv}}_{p{r_sr_c}}}$。
 
 
     \subsubsection{平均方位}
@@ -410,6 +410,8 @@
     \end{description}
     
 \end{description}
+
+\hfill
 
 介紹完本研究提出的演算法後，我們需要分析此演算法在定位上的效果，以及各參數對定位表現的影響，因此於第\ref{chp:4}章中，建立模擬環境模擬多LED與多PD的定位系統，套用本章節提出的定位演算法，進行誤差分析。
 
