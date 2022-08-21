@@ -1,0 +1,96 @@
+\contentsline {chapter}{中文摘要}{i}{chapter*.1}%
+\contentsline {chapter}{Abstract}{ii}{chapter*.2}%
+\contentsline {chapter}{目錄}{iv}{chapter*.3}%
+\contentsline {chapter}{圖目錄}{viii}{chapter*.4}%
+\contentsline {chapter}{表目錄}{xii}{chapter*.5}%
+\contentsline {chapter}{\numberline {1}緒論}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}前言}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}目標情境}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}室內定位考量的面向}{3}{subsection.1.2.1}%
+\contentsline {section}{\numberline {1.3}研究目的}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}論文架構}{6}{section.1.4}%
+\contentsline {chapter}{\numberline {2}室內定位相關文獻探討}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}相對定位定義}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}依後處理方法分類}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}資訊種類}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}定位演算法}{11}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}小結}{14}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}依硬體技術分類}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}無線電波段定位}{15}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}光波段定位}{17}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}依照波段分類：紅外光、近紅外光與可見光}{18}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3.2.2}依接收子類型分類：PD與影像感測器}{21}{subsubsection.2.3.2.2}%
+\contentsline {subsection}{\numberline {2.3.3}小結：本研究使用技術的選擇}{26}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}LED與PD的定位系統}{26}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}LED與PD的定位理論}{29}{subsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.1}光領域常用單位介紹}{29}{subsubsection.2.4.1.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.2}朗博輻射模型}{32}{subsubsection.2.4.1.2}%
+\contentsline {subsubsection}{\numberline {2.4.1.3}LED與PD的硬體特性}{33}{subsubsection.2.4.1.3}%
+\contentsline {subsubsection}{\numberline {2.4.1.4}LED與PD於次系統中的硬體擺設}{36}{subsubsection.2.4.1.4}%
+\contentsline {subsubsection}{\numberline {2.4.1.5}光傳遞模型}{37}{subsubsection.2.4.1.5}%
+\contentsline {subsection}{\numberline {2.4.2}現行LED與PD的定位方法與應用}{41}{subsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}常見的次系統規格與系統設置的限制}{41}{subsubsection.2.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}LED與PD定位系統文獻案例}{45}{subsubsection.2.4.2.2}%
+\contentsline {subsection}{\numberline {2.4.3}現行LED與PD定位所遇困難}{48}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}結論}{49}{section.2.5}%
+\contentsline {chapter}{\numberline {3}建立廣用於三維空間的LED與PD的定位演算法}{50}{chapter.3}%
+\contentsline {section}{\numberline {3.1}系統的限制}{50}{section.3.1}%
+\contentsline {section}{\numberline {3.2}定位演算法}{52}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}訊號過濾}{53}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}求解LED座標系方位}{53}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}比較兩強度取得入射角餘弦比值}{55}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}滿足餘弦比值的方位解為一平面}{55}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}兩平面交軸為方位}{56}{subsubsection.3.2.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.2.4}平均方位}{57}{subsubsection.3.2.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.2.5}小結}{58}{subsubsection.3.2.2.5}%
+\contentsline {subsection}{\numberline {3.2.3}求解LED座標系中PD座標系所在方位}{58}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}求解距離}{59}{subsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}解出LED與PD的出入射角}{59}{subsubsection.3.2.4.1}%
+\contentsline {subsubsection}{\numberline {3.2.4.2}利用光傳遞模型取得距離並平均}{59}{subsubsection.3.2.4.2}%
+\contentsline {subsubsection}{\numberline {3.2.4.3}小結}{60}{subsubsection.3.2.4.3}%
+\contentsline {section}{\numberline {3.3}建立之演算法與其他文獻比較}{60}{section.3.3}%
+\contentsline {chapter}{\numberline {4}模擬與評估系統表現}{62}{chapter.4}%
+\contentsline {section}{\numberline {4.1}模擬室內定位流程之方法}{63}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}模擬Step1.決定次系統規格}{63}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}硬體數量}{63}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}硬體規格}{64}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}硬體擺法}{65}{subsubsection.4.1.1.3}%
+\contentsline {subsection}{\numberline {4.1.2}模擬Step2.系統設置}{67}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}模擬Step3.LED發送與PD接收訊號}{68}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}模擬Step3.量測的訊號誤差}{70}{subsubsection.4.1.3.1}%
+\contentsline {subsection}{\numberline {4.1.4}呈現定位模擬結果}{71}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}定位系統效能評估之方法}{75}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}StepA.設定使用情境與ROI中樣本點}{75}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}StepC.量化系統表現}{78}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}分析各參數對系統成效的影響}{81}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}StepC.量化系統成效參數的影響}{81}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}有效閥值的影響}{81}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}容許範圍的影響}{82}{subsubsection.4.3.1.2}%
+\contentsline {subsection}{\numberline {4.3.2}Step3.誤差模擬參數對系統成效的影響}{87}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}頻寬對系統成效的影響}{87}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}背景電流對系統成效的影響}{87}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}多重路徑增益對系統成效的影響}{89}{subsubsection.4.3.2.3}%
+\contentsline {subsection}{\numberline {4.3.3}Step1.次系統規格對系統成效的影響}{89}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}朗博次方對系統成效的影響}{90}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}硬體指向對系統效能的影響}{90}{subsubsection.4.3.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3.3}硬體數量對系統表現的影響}{93}{subsubsection.4.3.3.3}%
+\contentsline {section}{\numberline {4.4}分析使用情境改變對系統效能的影響}{94}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}使用情境甲：$3\times 3\times 3m$空間的系統表現}{95}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}使用情境乙：$10\times 10\times 10m$空間的系統表現}{95}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}使用情境丙：平面平行且垂直距離相同的系統表現}{97}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}使用情境丁：球狀空間的系統表現}{97}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}結論}{99}{section.4.5}%
+\contentsline {chapter}{\numberline {5}針對不同使用情境進行次系統最佳化}{101}{chapter.5}%
+\contentsline {section}{\numberline {5.1}最佳化問題}{101}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}目標函數}{103}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}最佳化變數}{103}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}最佳化案例}{104}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}使用情境甲：$3\times 3\times 3m$空間}{104}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}使用情境丙：平面平行且垂直距離相同}{105}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}使用情境丁：球狀空間}{107}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}結論}{109}{section.5.3}%
+\contentsline {chapter}{\numberline {6}結論}{111}{chapter.6}%
+\contentsline {section}{\numberline {6.1}研究總結}{111}{section.6.1}%
+\contentsline {section}{\numberline {6.2}未來目標}{112}{section.6.2}%
+\contentsline {chapter}{參考文獻}{113}{section.6.2}%
+\contentsfinish 
