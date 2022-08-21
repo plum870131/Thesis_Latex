@@ -3,30 +3,30 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=5.5cm]{ch2pic/subsystem.png}
+    \includegraphics[width=7cm]{ch2pic/subsystem.png}
     \caption{室內定位系統與次系統}
     \label{pic:subsystem}
 \end{figure}
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=5cm]{ch2pic/pos_flow.png}
+    \includegraphics[width=5.5cm]{ch2pic/pos_flow.png}
     \caption{室內定位流程}
     \label{pic:pos_flow}
 \end{figure}
 
 
-室內定位系統架構可以參考圖\ref{pic:subsystem}，其由目標物次系統與量測者次系統組成，兩次系統各自擔任傳送訊號與皆收訊號兩任務。而室內定位有非常多種技術與方法，無論何種方法，定位流程皆可以用圖\ref{pic:pos_flow}的步驟表示，分別為決定系統規格、系統設置、發送與接收訊號以及執行定位演算法四個步驟。為方便後續敘述，本論文中會以Step1.到Step4.描述定位流程中的四個步驟。
+室內定位系統架構如圖\ref{pic:subsystem}，其由目標物次系統與量測者次系統組成，兩次系統各自擔任傳送訊號與皆收訊號兩任務。室內定位有非常多種技術與方法，無論何種方法，定位流程皆可以用圖\ref{pic:pos_flow}的步驟表示，分別為決定系統規格、系統設置、發送與接收訊號以及執行定位演算法四個步驟。為方便後續敘述，本論文中會以Step1.到Step4.描述定位流程中的四個步驟。
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=10cm]{ch2pic/pos_category.png}
+    \includegraphics[width=13cm]{ch2pic/pos_category.png}
     \caption{室內定位分類}
     \label{pic:pos_category}
 \end{figure}
 
 
-本章節將介紹室內依序於\ref{chp:relative}章先定義相對定位，接著參考圖\ref{pic:pos_category}，依照使用硬體技術與後處方法各自分類，分別於\ref{chp:method}章介紹不同硬體技術，以及在\ref{chp:technique}章中介紹不同後處理方法，並根據\ref{chp:motivate}章中：硬體系統需為低能耗、可封裝成量測單位與目標物單位、進行單點對單點的定位的需求，聚焦在「LED與PD定位技術」，\ref{chp:LEDandPD}章便針對「LED與PD定位技術」進行深入探討，敘述此領域研究現況與困難。
+本章節將依序於\ref{chp:relative}章先定義相對定位，接著如圖\ref{pic:pos_category}，依照使用硬體技術與後處方法各自分類，分別於\ref{chp:method}章介紹不同硬體技術，以及在\ref{chp:technique}章中介紹不同後處理方法，並根據\ref{chp:motivate}章中：硬體系統需為低能耗、可封裝成量測單位與目標物單位、進行單點對單點的定位的需求，聚焦在「LED與PD定位技術」，\ref{chp:LEDandPD}章便針對「LED與PD定位技術」進行深入探討，敘述此領域研究現況與困難。
 
 
    
@@ -45,7 +45,7 @@
     \begin{figure}[htpb]
         \centering
         \includegraphics[width=11cm]{ch2pic/homo_trans.png}
-        \caption{LED座標系與PD座標系及相對關係}
+        \caption{LED與PD次系統座標系及其相對關係}
         \label{pic:homo_trans}
     \end{figure}
 
@@ -119,18 +119,18 @@
     
     根據圖\ref{pic:pos_category}中所示，定位分類可以由使用的硬體技術與後處理方法分類，為了在介紹硬體技術時可以參照各自硬體使用的後處理方法，我們先於本段落介紹不同的後處理方法，於\ref{chp:technique}中再介紹不同的硬體技術。
 
-    而後處理方法又可以分類成兩部分（參考圖\ref{pic:pos_category}）：第一個分類標準是資訊種類的不同，也就是室內定位的硬體在接收訊號時，量測者次系統所接收的資訊種類；第二種分類標準，則是在接收資訊後，如何利用資訊計算出相對位置，屬於定位演算法的部分。而資訊種類與後處理演算法並不能任意搭配，各資訊種類都是會有合適的後處理演算法，參考圖\ref{pic:method_sort}，以下依續介紹不同的資訊種類與後處理演算法。
+    後處理方法可以分類成兩部分如圖\ref{pic:pos_category}：第一個分類標準是資訊種類的不同，也就是室內定位的硬體在接收訊號時，量測者次系統所接收的資訊種類；第二種分類標準則是在接收資訊後，如何利用資訊計算出相對位置，屬於定位演算法的部分。而資訊種類與後處理演算法並不能任意搭配，各資訊種類都是會有合適的後處理演算法如圖\ref{pic:method_sort}，以下依續介紹不同的資訊種類與後處理演算法。
 
     \begin{figure}[htpb]
         \centering
-        \includegraphics[width=12cm]{ch2pic/method_sort.png}
+        \includegraphics[width=15cm]{ch2pic/method_sort.png}
         \caption{資訊種類與演算法之間的關聯（參考\cite{survey_light2018}）}
         \label{pic:method_sort}
     \end{figure}
     
     \subsection{資訊種類}
 
-    常見的訊號種類包含訊號強度（Received Signal Strength，簡寫RSS）、時間、角度與影像。訊號強度為最常見的資訊種類\cite{survey_indoor2018}，使用的是該硬體所接收到的訊號強度，而利用訊號強度的演算法也十分多樣，包含多點定位、三角法、指紋法等，可參考\ref{chp:method-algorithm}章。
+    常見的訊號種類包含訊號強度（Received Signal Strength，簡寫RSS）、時間、角度與影像。訊號強度為最常見的資訊種類\cite{survey_indoor2018}，使用的是該硬體所接收到的訊號強度，而利用訊號強度的演算法也十分多樣，包含多點定位、三角法、指紋法等，詳述於\ref{chp:method-algorithm}章。
 
     時間資訊種類則是硬體利用訊號之間的時間差量測距離的方法，常見使用的技術為紅外線，紅外線可以利用訊號傳送到不同接收子的時間差，判斷出之間的距離。若要利用時間資訊，在各硬體之間則需要將時間同步，在實作上為一大挑戰\cite{survey_indoor2014}。
 
@@ -169,7 +169,7 @@
         \item[- 指紋法（Fingerprinting）] \hfill 
         
         \qquad
-        指紋法在環境中建立多個參考點，在實際進行測量前，需進行事先測量訓練的階段。在訓練階段時需將目標物在環境中移動，蒐集大量訊號數據庫，量測階段則藉由接收訊號與訓練階段所建立的數據庫參照，尋找最有可能存在的位置\cite{survey_light2020}，近年則是有許多以機器學習方法增加此演算法的精確度。
+        指紋法的流程圖如圖\ref{pic:fingerprinting}，在環境中建立多個參考點，在實際進行測量前，需進行事先測量訓練的階段，在訓練階段時需將目標物在環境中移動，蒐集大量訊號數據庫。量測階段則藉由接收訊號與訓練階段所建立的數據庫參照，尋找最有可能存在的位置\cite{survey_light2020}，近年則是有許多以機器學習方法增加此演算法的精確度。
         \begin{figure}[htpb]
             \centering
             \includegraphics[width=13cm]{ch2pic/fingerprinting.png}
@@ -180,7 +180,7 @@
         \item[- 影像辨識]\hfill 
         
         \qquad
-        三維空間中的物體，透過相機拍攝成為二維的影像時，為三維空間投影至二維影像平面上的幾何轉換。利用影像辨識求解相對位置時，則是試圖將二維影像中的特徵點比對、轉換回三維空間中，利用PnP演算法（Perspective-n-Point）解出目標物相對影像感測器座標系的位置與方位\cite{pic:image_processing}。
+    如圖\ref{pic:image_processing}，三維空間中的物體，透過相機拍攝成為二維的影像時，為三維空間投影至二維影像平面上的幾何轉換。利用影像辨識求解相對位置時，則是試圖將二維影像中的特徵點比對、轉換回三維空間中，利用PnP演算法（Perspective-n-Point）解出目標物相對影像感測器座標系的位置與方位\cite{pic:image_processing}。
         
         \begin{figure}[htpb]
             \centering
@@ -190,7 +190,7 @@
         \end{figure}
         
         \qquad
-        為了使辨識過程中，辨識特徵點的難度降低，通常會設計特徵明顯的標記，例如常見OpenCV中的ArUco標記，利用其快速的辨識ID以及距離、方位等資訊。
+        為了使辨識過程中，辨識特徵點的難度降低，通常會設計特徵明顯的標記，例如常見OpenCV中的ArUco標記如圖\ref{pic:aruco}，利用其快速的辨識ID以及距離、方位等資訊。
         
         \begin{figure}[htpb]
             \centering
@@ -227,7 +227,7 @@
 
     \begin{figure}[htpb]
         \centering
-        \includegraphics[width=12cm]{ch2pic/electro_spectrum.png}
+        \includegraphics[width=15cm]{ch2pic/electro_spectrum.png}
         \caption{電磁波頻譜度\cite{Spectrum}}
         \label{pic:spectrum}
     \end{figure}
@@ -239,7 +239,7 @@
 
     \begin{figure}[htpb]
         \centering
-        \includegraphics[width=13cm]{ch2pic/electro_sort.png}
+        \includegraphics[width=15cm]{ch2pic/electro_sort.png}
         \caption{以電磁波頻率分類硬體技術}
         \label{pic:electro_sort}
     \end{figure}
@@ -288,7 +288,7 @@
         \begin{figure}[htpb]
             \centering
             \includegraphics[width=8cm]{ch2pic/rfid_1to1.png}
-            \caption{例用三角法定位的RFID系統\cite{case:rfid_1to1}(a)系統架構 (b)載具實驗}
+           \caption{利用三角法定位的RFID系統\cite{case:rfid_1to1}(a)系統架構 (b)載具實驗}
             \label{pic:rfid_1to1}
         \end{figure}
         
@@ -320,22 +320,22 @@
 
             除此之外，電磁波有一特性為：波長愈短可達到的量測精度愈高，且感測器與訊號發射器的硬體大小也愈小，例如市售便宜常見的光波段感測器如PD感光二極體尺寸量級為mm或以下\cite{datasheet:led_sfh4545}且能耗低，而使用低頻波段的RFID感測器常見量級為cm\cite{datasheet:rfid_tag}。因此，選擇波長較短的光波段相較無線電波段具有硬體上的優勢。
 
-            \begin{figure}[htpb]
+            \begin{table}[htpb]
                 \centering
-                \includegraphics[width=9cm]{ch2pic/method_compare.png}
                 \caption{無線電波段與光波段的比較}
                 \label{pic:method_compare}
-            \end{figure}
+                \includegraphics[width=11cm]{ch2pic/method_compare.png}   
+            \end{table}
 
 
-            光波段定位也分為許多種類（參考圖\ref{pic:electro_sort}），以下分別於\ref{chp:light_electro}章探討使用波段的差異，以及於\ref{chp:light_receiver}章介紹感測器硬體技術的選擇。
+            光波段定位也分為許多種類如圖\ref{pic:electro_sort}，以下分別於\ref{chp:light_electro}章探討使用波段的差異，以及於\ref{chp:light_receiver}章介紹感測器硬體技術的選擇。
 
 
             \subsubsection{依照波段分類：紅外光、近紅外光與可見光}
 
             \label{chp:light_electro}
 
-            參考圖\ref{pic:electro_sort}，光波段依照人眼可視與否分成可見光與紅外光兩類，而其中紅外光內由於硬體特性不同，又分為近紅外光與遠紅外光。以下依照不同面向條列討論：
+            如圖\ref{pic:electro_sort}，光波段依照人眼可視與否分成可見光與紅外光兩類，而其中紅外光內由於硬體特性不同，又分為近紅外光與遠紅外光。以下依照不同面向條列討論：
 
             \begin{description}
 
@@ -366,7 +366,7 @@
                 
 
                 \qquad
-                環境光源包含了室內的光源以及太陽光源，室內的光源使用交流電的頻率約在120hz，可以針對頻率進行濾波。而太陽光源的強度與電磁波頻率有關，可以由太陽輻射波譜（Solar Irradiance Spectrum）觀察強度與波長的關係。太陽光照射至地球時，傳送至地表的能量與大氣層的吸收度有關，高峰即為可見光波段，低谷則出現在760nm左右的氧氣吸收帶（Oxygen A-band）、與940nm和1550nm附近被水蒸氣吸收之波段\cite{book:solar_spectrum}。
+                環境光源包含了室內的光源以及太陽光源，室內的光源使用交流電的頻率約在120hz，可以針對頻率進行濾波。而太陽光源的強度與電磁波頻率有關，可以由太陽輻射波譜（Solar Irradiance Spectrum）如圖\ref{pic:solar_spectrum}，其呈現強度與波長的關係。太陽光照射至地球時，傳送至地表的能量與大氣層的吸收度有關，高峰即為可見光波段，低谷則出現在760nm左右的氧氣吸收帶（Oxygen A-band）、與940nm和1550nm附近被水蒸氣吸收之波段\cite{book:solar_spectrum}。
                 
                 \begin{figure}[htpb]
                     \centering
@@ -385,12 +385,12 @@
 
                 綜上所述，根據本研究的需求，最適合選擇使用近紅外光波段中的太陽能量低谷波段，簡單整理於圖\ref{pic:light_freq_compare}，可以同時節省硬體成本、降低環境光源的影響，也能夠不造成使用者的眼經不適。
 
-                \begin{figure}[htpb]
-                    \centering
-                    \includegraphics[width=15cm]{ch2pic/light_freq_compare.png}
+                \begin{table}[htpb]
                     \caption{光波段中的波段特性比較}
                     \label{pic:light_freq_compare}
-                \end{figure}
+                    \centering
+                    \includegraphics[width=16cm]{ch2pic/light_freq_compare.png}
+                \end{table}
 
 
             \subsubsection{依接收子類型分類：PD與影像感測器}
@@ -405,21 +405,21 @@
                     \item[- 影像感測器]\hfill 
                     
                     \qquad
-                    影像感測器包含常見的相機，運作原理為每次取樣時，獲得多個像素的強度資訊，資訊量極多，是眾多定位技術中最消耗運算資源的。其定位方式是利用辨識已知的特徵圖案，進而將圖片中圖案的大小與變形與特徵進行比對，利用PnP眼算法推算目標物的距離以及姿態（參考\ref{chp:method-algorithm}章）。其中，若量測範圍要廣，由於隨距離增加，投射於影像平面上的圖案大小衰減快速，因此特徵圖案則需要越大越好。然而其取樣頻率大多在百赫茲內，且視覺辨識所需要的運算資源多，因此成本高，且運算速度也較慢。
+                    影像感測器包含常見的相機，運作原理為每次取樣時，獲得多個像素的強度資訊，資訊量極多，是眾多定位技術中最消耗運算資源的。其定位方式是利用辨識已知的特徵圖案，進而將圖片中圖案的大小與變形與特徵進行比對，利用PnP眼算法推算目標物的距離以及姿態（如\ref{chp:method-algorithm}章）。其中，若量測範圍要廣，由於隨距離增加，投射於影像平面上的圖案大小衰減快速，因此特徵圖案則需要越大越好。然而其取樣頻率大多在百赫茲內，且視覺辨識所需要的運算資源多，因此成本高，且運算速度也較慢。
 
                     \qquad
-                    影像感測器所辨識的特徵點又可分為主動與被動傳送訊號的，被動傳送訊號的包含ArUco標誌（參考圖\ref{pic:aruco}），其需透過環境光源照設可見光波，讓影像感測器得以看到標誌，若室內光源未開，則無法定位。反之，主動傳送訊號的標誌便是光源，大多室內定位會使用半徑15公分以上的崁燈，利用影像感測器的滾動式快門效應（Rolling Shutter Effect），將條紋圖案視為特徵辨識。其中，滾動式快門效應會造成條紋圖樣的原因可參考圖\ref{pic:rolling_shutter}，因為CMOS感測器並非同時進行所有像素的成像，而是輪流一列一列的成像，搭配光源的閃爍，各列成像時便會各自呈現亮暗，因此產生條紋樣式。除此之外，透過調整光源的閃爍頻率，可以調整條紋的粗細，進而達到編碼與解碼的效果，如圖\ref{pic:rolling_shutter_case}。
+                    影像感測器所辨識的特徵點又可分為主動與被動傳送訊號的，被動傳送訊號的包含ArUco標誌（圖\ref{pic:aruco}），其需透過環境光源照設可見光波，讓影像感測器得以看到標誌，若室內光源未開，則無法定位。反之，主動傳送訊號的標誌便是光源，大多室內定位會使用半徑15公分以上的崁燈，利用影像感測器的滾動式快門效應（Rolling Shutter Effect），將條紋圖案視為特徵辨識。其中，滾動式快門效應會造成條紋圖樣的原因如圖\ref{pic:rolling_shutter}，因為CMOS感測器並非同時進行所有像素的成像，而是輪流一列一列的成像，搭配光源的閃爍，各列成像時便會各自呈現亮暗，因此產生條紋樣式。除此之外，透過調整光源的閃爍頻率，可以調整條紋的粗細，進而達到編碼與解碼的效果，如圖\ref{pic:rolling_shutter_case}。
 
                     \begin{figure}[htpb]
                         \centering
-                        \includegraphics[width=8cm]{ch2pic/rolling_shutter.png}
+                        \includegraphics[width=12cm]{ch2pic/rolling_shutter.png}
                         \caption{滾動式快門效應的成因\cite{pic:rolling_shutter}}
                         \label{pic:rolling_shutter}
                     \end{figure}
 
                     \begin{figure}[htpb]
                         \centering
-                        \includegraphics[width=8cm]{ch2pic/rolling_shutter_case.png}
+                        \includegraphics[width=10cm]{ch2pic/rolling_shutter_case.png}
                         \caption{滾動式快門效應產生的條紋樣式\cite{pic:rolling_shutter_case}}
                         \label{pic:rolling_shutter_case}
                     \end{figure}
@@ -429,7 +429,7 @@
 
                     \begin{figure}[htpb]
                         \centering
-                        \includegraphics[width=6cm]{ch2pic/multipath.png}
+                        \includegraphics[width=8cm]{ch2pic/multipath.png}
                         \caption{多重路徑傳輸\cite{pic:multipath}}
                         \label{pic:multipath}
                     \end{figure}
@@ -437,10 +437,19 @@
                     \item[- Photodiode(PD)]\hfill
                     
                     \qquad
-                    光電二極體（Photodiode，以下簡稱PD）能感測到資訊僅有強度資訊，而強度資訊受LED出射角度、PD入射角度、距離影響（詳細參考\ref{chp:LEDPD_hardware}章），相較大多無線電波技術主要僅受距離影響，PD的變數較多，使得獲得相對定位的演算法較複雜，也需要多個PD或多個LED以進行定位。然而PD優勢為具有極高的取樣頻率，可高達千赫茲甚至萬赫茲，高取樣頻率即可使用光通訊進行編碼與解碼，且硬體成本相較影像感測器來說非常低。
+                    光電二極體（Photodiode，以下簡稱PD）能感測到資訊僅有強度資訊，而強度資訊受LED出射角度、PD入射角度、距離影響（於\ref{chp:LEDPD_hardware}章詳述），相較大多無線電波技術主要僅受距離影響，PD的變數較多，使得獲得相對定位的演算法較複雜，也需要多個PD或多個LED以進行定位。然而PD優勢為具有極高的取樣頻率，可高達千赫茲甚至萬赫茲，高取樣頻率即可使用光通訊進行編碼與解碼，且硬體成本相較影像感測器來說非常低。
+
+                    LED與PD定位的次系統常有多個硬體一同組成，而由於光強度與出入射角度與距離相關，因此次系統經常透過多個硬體改變擺設位置或擺設姿態，來改變出入射角與距離使光強度大小不同，以此進行定位的計算。以研究\cite{case:ml}為例的PD次系統設計如圖\ref{pic:ml_pd_config}，將多個PD以不同擺放姿態固定。
+
+                    \begin{figure}[htpb]
+                        \centering
+                        \includegraphics[width=10cm]{ch2pic/ml_pd_config.png}
+                        \caption{文獻提供之PD次系統設計\cite{case:ml}}
+                        \label{pic:ml_pd_config}
+                    \end{figure}
 
                     \qquad
-                    PD定位系統的架構如圖\ref{pic:vlc_flow}所示，訊號發送是利用驅動器與LED進行光通訊，PD接收訊號後進行解碼、取得LED的ID與與光強度，再利用光強度以不同演算法解出相對位置。而LED與PD的定位系統中，包含單LED對多PD、多LED對多PD、或是多LED對多PD，其中，當系統內包含多個LED對多PD時，PD會同時接收到來自多個LED的編碼訊號，參考圖\ref{pic:vlc_multi_pd}，PD會將訊號轉換至頻域，以獲得各頻率下的強度，也就是各LED傳送至各PD的強度。
+                    PD定位系統的架構如圖\ref{pic:vlc_flow}所示，訊號發送是利用驅動器與LED進行光通訊，PD接收訊號後進行解碼、取得LED的ID與與光強度，再利用光強度以不同演算法解出相對位置。而LED與PD的定位系統中，包含單LED對多PD、多LED對多PD、或是多LED對多PD，其中，當系統內包含多個LED對多PD時，PD會同時接收到來自多個LED的編碼訊號如圖\ref{pic:vlc_multi_pd}，PD會將訊號轉換至頻域，以獲得各頻率下的強度，也就是各LED傳送至各PD的強度。
 
     
                     
@@ -452,19 +461,19 @@
                     \end{figure}
 
                     \qquad
-                    利用光通訊獲得各LED傳送至各PD的強度後，解出定位的演算法分成兩類，一類型為使用指紋法或多點定位，這種類型的系統需在環境中放置多個參考點（如圖\ref{pic:env_finger}），為「環境對一點的定位」。除此之外，大多使用\ref{chp:method-algorithm}章中提到的幾何方法，如\cite{case:3d_layers}（參考圖\ref{pic:env_1to1}），透過多PD量測強度後，利用多個PD強度與幾何之間的關係取得定位，此類型方法詳述於\ref{chp:LEDPD_problem}章。
+                    利用光通訊獲得各LED傳送至各PD的強度後，解出定位的演算法分成兩類，一類型為使用指紋法或多點定位，這種類型的系統需在環境中放置多個參考點（如圖\ref{pic:env_finger}），為「環境對一點的定位」。除此之外，大多使用\ref{chp:method-algorithm}章中提到的幾何方法，如\cite{case:3d_layers}（如圖\ref{pic:env_1to1}），透過多PD量測強度後，利用多個PD強度與幾何之間的關係取得定位，此類型方法詳述於\ref{chp:LEDPD_problem}章。
 
                     \begin{figure}[htpb]
                         \centering
                         \includegraphics[width=8cm]{ch2pic/env_finger.png}
-                        \caption{使用指紋法的系統環境\cite{case:ml}}
+                        \caption{文獻\cite{case:ml}的系統架構（使用指紋法）}
                         \label{pic:env_finger}
                     \end{figure}
 
                     \begin{figure}[htpb]
                         \centering
-                        \includegraphics[width=8cm]{ch2pic/env_1to1.png}
-                        \caption{使用幾何方法的系統環境\cite{case:3d_layers}}
+                        \includegraphics[width=10cm]{ch2pic/env_1to1.png}
+                        \caption{文獻\cite{case:3d_layers}的系統架構（使用幾何方法）}
                         \label{pic:env_1to1}
                     \end{figure}
 
@@ -473,12 +482,12 @@
                 影像感測器與PD進行定位的方法差異非常大，前者演算法為影像辨識，利用特殊圖案分辨光源，以影像中的變形計算位置；PD常見的定位演算法則包含多點定位、指紋法、幾何方法，利用光通訊分辨光源。在兩者之間權衡時，本研究主要考量到成本以及硬體大小，為了能夠達到靈活、廣泛運用，取捨掉影像感測器具有高精度可能性的優勢。
 
 
-                \begin{figure}[htpb]
+                \begin{table}[htpb]
                     \centering
-                    \includegraphics[width=9cm]{ch2pic/pd_camera_sort.png}
                     \caption{影像感測器與PD的特性比較}
                     \label{pic:pd_camera_sort}
-                \end{figure}
+                    \includegraphics[width=10cm]{ch2pic/pd_camera_sort.png}     
+                \end{table}
 
                 
 
@@ -491,7 +500,7 @@
 
         在\ref{chp:technique}章中，由電磁波頻率分類為無線電波段與光波段，分別於\ref{chp:radio}章與\ref{chp:light}章中介紹無線電波與光波段的定位，並於圖\ref{pic:method_compare}中比較兩者，其中光波段較高的精度、較小的硬體、以及能夠靈活應用的幾何方法演算法，使光波段定位為更適合的選擇。
 
-        光波段中，又依照使用波段與使用的硬體分類。使用波段於\ref{chp:light_electro}章中討論，分為可見光、近紅外光與遠紅外光，參考圖\ref{pic:light_freq_compare}，近紅外光兼具低成本低干擾的特色，因此選用近紅外光波段中，位於輻射光譜低谷的760nm與940nm波段最為合適。硬體選擇則於\ref{chp:light_receiver}章中討論，參考圖\ref{pic:pd_camera_sort}，權衡之下選擇PD，雖然捨棄精度，但得以換取較低的成本與較小的體積；另外，PD所使用的定位演算法需為具有單點對單點定位能力的幾何方法。
+        光波段中，又依照使用波段與使用的硬體分類。使用波段於\ref{chp:light_electro}章中討論，分為可見光、近紅外光與遠紅外光，如表\ref{pic:light_freq_compare}，近紅外光兼具低成本低干擾的特色，因此選用近紅外光波段中，位於輻射光譜低谷的760nm與940nm波段最為合適。硬體選擇則於\ref{chp:light_receiver}章中討論，如表\ref{pic:pd_camera_sort}，權衡之下選擇PD，雖然捨棄精度，但得以換取較低的成本與較小的體積；另外，PD所使用的定位演算法需為具有單點對單點定位能力的幾何方法。
     
         
         綜上所述，本論文將使用LED與PD的定位方法，於後續的\ref{chp:LEDandPD}章中更深入的討論，分別介紹LED與PD的特性、光傳遞模型，以及現今文獻所遇困難與限制。
@@ -525,7 +534,7 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=12cm]{ch2pic/lp_system_structure.png}
+    \includegraphics[width=11cm]{ch2pic/lp_system_structure.png}
     \caption{LED與PD定位系統架構}
     \label{pic:lp_system_structure}
 \end{figure}
@@ -533,7 +542,7 @@
 
 
 
-LED與PD的定位系統架構參考圖\ref{pic:lp_system_structure}，是由$L$個LED與$P$個PD組成，在文獻中，$L$與$P$的數量可為一也可為多個。根據\ref{chp:motivate}章中提到的使用情境，我們希望將LED與PD各自封裝成兩硬體單位，因此可用兩座標系表示兩硬體單位。其中，多個LED固定於LED座標系上，PD則是固定在PD座標系上，而兩座標系的相對關係可以自由的改變，參考\ref{chp:relative}章。實體的系統架構，可以參考圖\ref{pic:env_finger}，其為\cite{case:ml}中的系統架構，而圖\ref{pic:ml_pd_config}則為該研究中的PD量測單位。
+LED與PD的定位系統架構如圖\ref{pic:lp_system_structure}，是由$L$個LED與$P$個PD組成，在文獻中，$L$與$P$的數量可為一也可為多個。根據\ref{chp:motivate}章中提到的使用情境，我們希望將LED與PD各自封裝成兩硬體單位，因此可用兩座標系表示兩硬體單位。其中，多個LED固定於LED座標系上，PD則是固定在PD座標系上，而兩座標系的相對關係可以自由的改變如\ref{chp:relative}章所述。實體的系統架構如圖\ref{pic:env_finger}，其為\cite{case:ml}中的系統架構，而圖\ref{pic:ml_pd_config}則為該研究中的PD量測單位。
 
 \begin{figure}[htpb]
     \centering
@@ -542,7 +551,7 @@ LED與PD的定位系統架構參考圖\ref{pic:lp_system_structure}，是由$L$�
     \label{pic:lp_system_flow}
 \end{figure}
 
-LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟與圖\ref{pic:pos_flow}中的步驟相同，僅是針對LED與PD系統進行微調，以下分項介紹：
+LED與PD系統的定位流程則如圖\ref{pic:lp_system_flow}，步驟與圖\ref{pic:pos_flow}中的步驟相同，僅是針對LED與PD系統進行微調，以下分項介紹：
     
 
 \begin{description}
@@ -551,10 +560,10 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
     \hfill
     
         \begin{itemize}
-            \item 決定使用的LED與PD硬體規格（參考\ref{chp:lambertian}章與\ref{chp:LEDPD_hardware}章）
+            \item 決定使用的LED與PD硬體規格（詳述於\ref{chp:lambertian}章與\ref{chp:LEDPD_hardware}章）
             \item 將LED硬體與驅動器等電路連接
             \item PD需與放大器或是電阻連接完成感測電路  
-            \item 設置兩次系統中硬體擺設的方式（參考\ref{chp:config}章）
+            \item 設置兩次系統中硬體擺設的方式（詳述於\ref{chp:config}章）
         \end{itemize}
 
     \item[Step2. 系統設置：] 
@@ -562,24 +571,24 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
     \hfill
     
     \qquad 
-    完成兩次系統的前置作業後，進行Step2.系統設置，也就是將兩次系統擺設於空間中欲量測的位置，呈現如圖\ref{pic:lp_system_structure}中呈現的系統架構，兩座標系之間的轉換可以參考\ref{chp:relative}章中的齊次座標轉換矩陣。
+    完成兩次系統的前置作業後，進行Step2.系統設置，也就是將兩次系統擺設於空間中欲量測的位置，呈現如圖\ref{pic:lp_system_structure}中呈現的系統架構，兩座標系之間的轉換如\ref{chp:relative}章中的齊次座標轉換矩陣。
 
     \item[Step3. LED發送與PD接收訊號]\hfill
     
     \begin{figure}[htpb]
         \centering
-        \includegraphics[width=7cm]{ch2pic/vlc_flow_draw.png}
-        \caption{Step3.LED發送與PD接收訊號使用的光通訊流程圖}
+        \includegraphics[width=10cm]{ch2pic/vlc_flow_draw.png}
+        \caption{Step3.中的光通訊流程圖}
         \label{pic:vlc_flow_draw}
     \end{figure}
 
     \qquad
-    為了能夠辨識是哪個LED發出的訊號，系統需要透過光通訊技術，光通訊流程圖可以參考圖\ref{pic:vlc_flow_draw}，由LED進行編碼，傳輸特定模式的訊號，而在光定位上最常使用的編碼系統為OOK，其僅利用開關頻率將LED的ID傳輸。LED發出的光訊號透過光傳遞至PD，每個PD將所收到的訊號進行光通訊解碼，將訊號拆成訊號來自哪個LED以及該LED所造成的電流大小，綜合$P$個PD解碼後的資訊，即可獲得一$L\times P$的表格，顯示各PD對應各LED的電流強度，而理論上的電流強度可以用光傳遞模型描述，詳述於\ref{chp:model}章中。
+    為了能夠辨識是哪個LED發出的訊號，系統需要透過光通訊技術，光通訊流程圖如圖\ref{pic:vlc_flow_draw}，由LED進行編碼，傳輸特定模式的訊號，而在光定位上最常使用的編碼系統為OOK，其僅利用開關頻率將LED的ID傳輸。LED發出的光訊號透過光傳遞至PD，每個PD將所收到的訊號進行光通訊解碼，將訊號拆成訊號來自哪個LED以及該LED所造成的電流大小，綜合$P$個PD解碼後的資訊，即可獲得一$L\times P$的表格，顯示各PD對應各LED的電流強度，而理論上的電流強度可以用光傳遞模型描述，詳述於\ref{chp:model}章中。
     
     \item[Step4. 執行LED與PD定位演算法] \hfill
     
     \qquad
-    執行定位演算法則是透過Step3.所獲得的$L\times P$各PD對應各LED的電流表格，回推出兩座標系的相對位置，如同\ref{chp:method-algorithm}章敘述，PD能使用的定位演算法種類包含多點定位、三角法、指紋法與幾何類型，前三種都為多點對一目標物的定位，系統環境與架構可參考圖\ref{pic:env_finger}，並不符合本研究目標欲達到的兩單位之間的互相定位，參考圖\ref{pic:env_1to1}；因此，以下針對幾何類型介紹。
+    執行定位演算法則是透過Step3.所獲得的$L\times P$各PD對應各LED的電流表格，回推出兩座標系的相對位置，如同\ref{chp:method-algorithm}章敘述，PD能使用的定位演算法種類包含多點定位、三角法、指紋法與幾何類型，前三種都為多點對一目標物的定位，系統環境與架構如圖\ref{pic:env_finger}，並不符合本研究目標欲達到的兩單位之間的互相定位，如圖\ref{pic:env_1to1}；因此，以下針對幾何類型介紹。
 
     \qquad
     使用幾何方法的演算法，主要是仰賴光傳播模型中（式\ref{eqn:model}），PD的電流與距離、出入射角相關，利用多個LED與PD之間的交互關係，得到相對位置。光傳遞模型中，變數除了距離以外，還包含出入射角，使得PD比起僅能得到距離資訊的感測器，靈活度更高，例如PD得以透過特殊的限制與組態，得到目標物的姿態\cite{case:orient}，是除了影像感測器以外能得到姿態資訊的方法。然而也因為變數較多，使得模型較為複雜，如同式\ref{eqn:model_coor_extend}呈現，因此需透過適當的限制簡化模型複雜度，常見的限制於\ref{chp:LEDPD_restrict}章中介紹。
@@ -605,12 +614,12 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
     首先，描述光照的單位分為兩種系統，輻射測量學(Radiometry)與光度測量學(Photometry)，兩領域以不同單位描述光源，其中輻射測量學著重在電磁波輻射的量測，描述通量單位為瓦特(Watt)；而光度測量學著重在人演可見之可見光波段的研究，通量單位為流明(Lumen)，同樣物理量下單位定義不同\cite{radiometry_and_photometry}。
     
 
-    \begin{figure}[htpb]
+    \begin{table}[htpb]
         \centering
-        \includegraphics[width=14cm]{ch2pic/photometry_table.png}
         \caption{輻射測量學與光度測量學的物理量比較}
         \label{tab:photometry}
-    \end{figure}
+        \includegraphics[width=15cm]{ch2pic/photometry_table.png}      
+    \end{table}
 
 
     本研究聚焦在近紅外光波段，因此本論文會使用輻射測量學的系統，然而文獻上可見光定位數量較多，因此在單位的換算上需特別注意。以下針對光領域常用物理量分項簡單介紹：
@@ -627,7 +636,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
             \begin{figure}[htpb]
                 \centering
-                \includegraphics[width=12cm]{ch2pic/solid_angle.png}
+                \includegraphics[width=15cm]{ch2pic/solid_angle.png}
                 \caption{角度與立體角}
                 \label{pic:solid_angle}
             \end{figure}
@@ -644,7 +653,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
             \begin{figure}[htpb]
                 \centering
-                \includegraphics[width=8cm]{ch2pic/intensity_irradiance.png}
+                \includegraphics[width=10cm]{ch2pic/intensity_irradiance.png}
                 \caption{輻射強度與輻照度}
                 \label{pic:intensity_irradiance}
             \end{figure}
@@ -652,7 +661,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
         \item[- 輻照度 Irradiance $E$] \hfill
             
             \qquad
-            每單位面積所含的通量稱為輻照度（參考圖\ref{pic:intensity_irradiance}），其中照射面積隨著距離$D$增加而平方遞增。
+            每單位面積所含的通量稱為輻照度（如圖\ref{pic:intensity_irradiance}），其中照射面積隨著距離$D$增加而平方遞增。
 
             
             % \begin{equation}
@@ -675,22 +684,22 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=8cm]{ch2pic/3d_angle.png}
-            \caption{LED與PD軸對稱與三維空間中的出入射角}
+            \includegraphics[width=12cm]{ch2pic/3d_angle.png}
+            \caption{LED與PD三維空間中的出入射角}
             \label{pic:angle_3d}
         \end{figure}
         
 
-        LED與PD硬體有許多種類，最常見的市面上LED與PD為軸對稱並滿足朗博輻射模式（Lambertian Radiation Pattern），本論文僅考慮此類硬體，其中軸對稱可以參考圖\ref{pic:angle_3d}，當硬體指向為圖中黑色向量時，輻射強度僅為出入射角$\omega$的函數，而出入射角為硬體指向與出入射角向量之間的夾角；以圖\ref{pic:angle_3d}來看，藍色圓圈上的所有出入射角位置都擁有相同的輻射強度，與方位角無關，呈現軸對稱的特性。
+        LED與PD硬體有許多種類，最常見的市面上LED與PD為軸對稱並滿足朗博輻射模式（Lambertian Radiation Pattern），本論文僅考慮此類硬體，其中軸對稱如圖\ref{pic:angle_3d}，當硬體指向為圖中黑色向量時，輻射強度僅為出入射角$\omega$的函數，而出入射角為硬體指向與出入射角向量之間的夾角；以圖\ref{pic:angle_3d}來看，藍色圓圈上的所有出入射角位置都擁有相同的輻射強度，與方位角無關，呈現軸對稱的特性。
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=8cm]{ch2pic/lambertian.png}
+            \includegraphics[width=10cm]{ch2pic/lambertian.png}
             \caption{輻射強度與出入射角的關係}
             \label{pic:lambertian}
         \end{figure}
 
-        LED與PD的照射與接收模式(Pattern)皆可以用朗博輻射模式描述（圖\ref{pic:lambertian}），其代表感（發）光強度隨著LED出射角（PD入射角）的增加而衰減，如式\ref{eqn:lambertian_pattern}描述，感（發）光強度於中心軸時最大，其衰減模式可用餘弦函數(cosine)的$M$次方(power)表示，$M$代表的是朗博次方（Lambertian Order），需注意的是輻射強度與距離無關（參考\ref{chp:light_unit}章）。
+        LED與PD的照射與接收模式(Pattern)皆可以用朗博輻射模式描述（圖\ref{pic:lambertian}），其代表感（發）光強度隨著LED出射角（PD入射角）的增加而衰減，如式\ref{eqn:lambertian_pattern}描述，感（發）光強度於中心軸時最大，其衰減模式可用餘弦函數(cosine)的$M$次方(power)表示，$M$代表的是朗博次方（Lambertian Order），需注意的是輻射強度與距離無關（詳述於\ref{chp:light_unit}章）。
 
         \begin{equation}
             \label{eqn:lambertian_pattern}
@@ -718,12 +727,12 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
             LED與PD在選購時，除了挑選朗博次方以外，也需注意其他特性以及影響發收光能力的硬體參數，也屬於Step1.決定次系統規格中的步驟。在此將硬體參數整理於圖\ref{pic:hardware_para}，以下將LED與PD的特性分項介紹。
             
-            \begin{figure}[htpb]
+            \begin{table}[htpb]
                 \centering
-                \includegraphics[width=9cm]{ch2pic/hardware_para.png}
                 \caption{LED與PD的硬體參數}
                 \label{pic:hardware_para}
-            \end{figure}
+                \includegraphics[width=12cm]{ch2pic/hardware_para.png}                
+            \end{table}
 
             \paragraph*{- LED硬體特性}
 
@@ -747,8 +756,8 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
                 \begin{figure}[htpb]
                     \centering
-                    \includegraphics[width=9cm]{ch2pic/lambertian_led.png}
-                    \caption{輻射強度與總輻射通量比值}
+                    \includegraphics[width=10cm]{ch2pic/lambertian_led.png}
+                    \caption{LED輻射強度與總輻射通量比值}
                     \label{pic:lambertian_led}
                 \end{figure}
 
@@ -781,7 +790,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
                     Ie(\Phi) = \begin{cases}\Phi\times Re, & \text { if } Ie<S \\ S, & \text { otherwise }\end{cases}
                 \end{equation}
 
-                綜合式\ref{eqn:pd_I}、式\ref{eqn:pd_flux}、式\ref{eqn:pd_current}，PD輸出的電流$Ie$與LED的輻射強度$I\ell$統整於式\ref{eqn:pd}，式中的硬體參數可參考圖\ref{pic:hardware_para}：
+                綜合式\ref{eqn:pd_I}、式\ref{eqn:pd_flux}、式\ref{eqn:pd_current}，PD輸出的電流$Ie$與LED的輻射強度$I\ell$統整於式\ref{eqn:pd}，式中的硬體參數如表\ref{pic:hardware_para}：
 
                 \begin{equation}
                     \label{eqn:pd}
@@ -801,26 +810,26 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
         
 
-        在決定完合適的硬體規格（參考\ref{chp:LEDPD_hardware}）後，還需決定LED與PD次系統中的硬體如何擺設，也屬於Step1.決定次系統規格中的步驟。
+        在決定完合適的硬體規格（\ref{chp:LEDPD_hardware}章）後，還需決定LED與PD次系統中的硬體如何擺設，也屬於Step1.決定次系統規格中的步驟。
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=12cm]{ch2pic/vec_config.png}
+            \includegraphics[width=13cm]{ch2pic/vec_config.png}
             \caption{三維空間中的向量}
             \label{pic:vec_config}
         \end{figure}
         
-        首先，在描述次系統三維空間中的LED與PD時，需要描述硬體的擺放位置，而由於LED與PD皆有中心軸，因此需要用向量表示指向。如圖\ref{pic:vec_config}，圓點代表硬體位置，而向量表示硬體指向，其中位置以$\boldsymbol{P}$表示，包含三個自由度$[x,y,z]^T$，指相則由$\boldsymbol{V}$表示，自由度包含$[u,v,w]^T$，而由於LED與PD指向只在乎方位不在乎距離，因此可將指向向量定義為單位向量：$||\boldsymbol{V}||=1$。指向也常以球座標系表示$\boldsymbol{V}^{sph}$，三個分量為$[d,\alpha,\beta]^T$，其中指向的距離分量$d$為一，而球座標系與卡氏座標系之間的換算可參考式\ref{eqn:car2sph}。
+        首先，在描述次系統三維空間中的LED與PD時，需要描述硬體的擺放位置，而由於LED與PD皆有中心軸，因此需要用向量表示指向。如圖\ref{pic:vec_config}，圓點代表硬體位置，而向量表示硬體指向，其中位置以$\boldsymbol{P}$表示，包含三個自由度$[x,y,z]^T$，指相則由$\boldsymbol{V}$表示，自由度包含$[u,v,w]^T$，而由於LED與PD指向只在乎方位不在乎距離，因此可將指向向量定義為單位向量：$||\boldsymbol{V}||=1$。指向也常以球座標系表示$\boldsymbol{V}^{sph}$，三個分量為$[d,\alpha,\beta]^T$，其中指向的距離分量$d$為一，而球座標系與卡氏座標系之間的換算可如式\ref{eqn:car2sph}。
         
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=10cm]{ch2pic/LED_config.png}
+            \includegraphics[width=12cm]{ch2pic/LED_config.png}
             \caption{LED在座標系中的擺放自由度}
             \label{pic:led_config}
         \end{figure}
 
-        以LED為例（參考圖\ref{pic:led_config}），我們需要定義LED硬體於LED次系統座標系中的位置$^{L}\boldsymbol{P}$與指向$^{L}\boldsymbol{V}$，，左上標$L$代表其定義於LED座標系中。一個LED的組態一共有五個自由度，包含擺放位置$^L \boldsymbol{P}$的三個自由度$[^Lx,^Ly,^Lz]^T$，以及定義指向的單位向量$^L\boldsymbol{V}$所含兩個自由度：天頂角$^L\alpha$與方位角$^L\beta$，換算至卡氏座標系則為$[^Lu,^Lv,^Lw]^T$。
+        以LED為例（如圖\ref{pic:led_config}），我們需要定義LED硬體於LED次系統座標系中的位置$^{L}\boldsymbol{P}$與指向$^{L}\boldsymbol{V}$，，左上標$L$代表其定義於LED座標系中。一個LED的組態一共有五個自由度，包含擺放位置$^L \boldsymbol{P}$的三個自由度$[^Lx,^Ly,^Lz]^T$，以及定義指向的單位向量$^L\boldsymbol{V}$所含兩個自由度：天頂角$^L\alpha$與方位角$^L\beta$，換算至卡氏座標系則為$[^Lu,^Lv,^Lw]^T$。
 
         而PD的擺放自由度相同，唯一差別為定義的座標系為PD座標系，因此左上標為$P$，如擺放位置為$^P \boldsymbol{P}=[^Px,^Py,^Pz]^T$，定義指向的單位向量$^P\boldsymbol{V}^{sph}=[1,^P\alpha,^P\beta]^T$。
 
@@ -836,7 +845,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
         \hfill
     
-        光傳遞模型需建立由LED至PD的過程，LED與PD各自的輻射與接收特性可參考\ref{chp:LEDPD_hardware}章中的介紹，綜合描述LED發光強度$Il$的式\ref{eqn:lambertian_led}，以及描述PD輸出電流$Ie$的式\ref{eqn:pd}，即可獲得一LED對一PD的光傳遞模型（式\ref{eqn:model_1to1}）。
+        光傳遞模型需建立由LED至PD的過程，LED與PD各自的輻射與接收特性可如\ref{chp:LEDPD_hardware}章中的介紹，綜合描述LED發光強度$Il$的式\ref{eqn:lambertian_led}，以及描述PD輸出電流$Ie$的式\ref{eqn:pd}，即可獲得一LED對一PD的光傳遞模型（式\ref{eqn:model_1to1}）。
     
         \begin{equation}
             \label{eqn:model_1to1}
@@ -847,7 +856,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
     
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=6cm]{ch2pic/interactive_1to1.png}
+            \includegraphics[width=5cm]{ch2pic/interactive_1to1.png}
             \caption{單LED與單PD的交互關係}
             \label{pic:interactive_1to1}
         \end{figure}
@@ -858,11 +867,11 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
         \hfill
     
-        由於LED與PD定位時數量通常不只一個，因此描述多LED對多PD的光傳遞模型時，需註明清楚（可參考第\pageref{chp:symbol}頁）。在此設定LED總數為$L$、PD總數為$P$，描述第$l$個LED與第$p$個PD的硬體參數時，於硬體參數的右下標加註，如$A_2$為第二個PD的有效面積；再來，描述第$l$個LED與第$p$個PD之間的關係時，則將LED與PD的編號$lp$同樣加註於右下標，例如$D_{34}$為第三個LED與第四個PD之間的距離，參考圖\ref{pic:interactive_mul}。
+        由於LED與PD定位時數量通常不只一個，因此描述多LED對多PD的光傳遞模型時，需註明清楚（可參考第\pageref{chp:symbol}頁）。在此設定LED總數為$L$、PD總數為$P$，描述第$l$個LED與第$p$個PD的硬體參數時，於硬體參數的右下標加註，如$A_2$為第二個PD的有效面積；再來，描述第$l$個LED與第$p$個PD之間的關係時，則將LED與PD的編號$lp$同樣加註於右下標，例如$D_{34}$為第三個LED與第四個PD之間的距離，如圖\ref{pic:interactive_mul}。
         
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=8cm]{ch2pic/interactive_mul.png}
+            \includegraphics[width=12cm]{ch2pic/interactive_mul.png}
             \caption{多LED與多PD的交互關係}
             \label{pic:interactive_mul}
         \end{figure}
@@ -884,12 +893,12 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
         \hfill
     
-        雖然式\ref{eqn:model}已呈現了多LED對多PD的光傳遞模型，然而式子中的變數為距離$D$與出入射角$\theta,\phi$，參考圖\ref{pic:relative_vs_coor}，這三個變數為LED與PD各自於全域座標系中的交互幾何關係，並沒有將LED與PD定義於各自的次系統座標系中，呈現\ref{chp:relative}章中描述的兩次系統座標系各自移動的情境。而由於Step1.決定次系統規格中的硬體擺設方式都是定義於各自次系統座標系中，我們為了得到Step2.系統設置中兩次系統座標系相對位置，與Step3.PD接收電流強度之間的關係，因此需要將式\ref{eqn:model}中的三個全域座標系中的變數，改以兩座標系轉換關係與組態來表示，才能夠利用電流強度得到兩次系統之間的相對位置關係。
+        雖然式\ref{eqn:model}已呈現了多LED對多PD的光傳遞模型，然而式子中的變數為距離$D$與出入射角$\theta,\phi$，如圖\ref{pic:relative_vs_coor}，這三個變數為LED與PD各自於全域座標系中的交互幾何關係，並沒有將LED與PD定義於各自的次系統座標系中，呈現\ref{chp:relative}章中描述的兩次系統座標系各自移動的情境。而由於Step1.決定次系統規格中的硬體擺設方式都是定義於各自次系統座標系中，我們為了得到Step2.系統設置中兩次系統座標系相對位置，與Step3.PD接收電流強度之間的關係，因此需要將式\ref{eqn:model}中的三個全域座標系中的變數，改以兩座標系轉換關係與組態來表示，才能夠利用電流強度得到兩次系統之間的相對位置關係。
     
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=8cm]{ch2pic/relative_vs_coor.png}
-            \caption{LED與PD之間的關係以座標系之間的關係表示}
+            \includegraphics[width=15cm]{ch2pic/relative_vs_coor.png}
+            \caption{LED與PD次系統中座標系的LED與PD交互關係}
             \label{pic:relative_vs_coor}
         \end{figure}
     
@@ -910,7 +919,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
         %     \item[a. 將LED次系統中的硬體擺設投影到PD座標系上]\hfill 
             
         %         \qquad
-                首先是LED位置$^L \boldsymbol{P}_l$與指向$^L \boldsymbol{V}_l$需由LED次系統座標系中投影至PD座標系上，我們透過式\ref{eqn:homogeneous_point}將$^L \boldsymbol{P}_l$經過齊次座標轉換至PD座標系上，以$^{PL} \boldsymbol{P}_l$描述被投影至PD座標系上的LED位置。而$^L \boldsymbol{V}$為單位指向向量，僅用旋轉矩陣$\boldsymbol{Ro}$轉換投影至PD座標系上，參考式\ref{eqn:homogeneous_vector}，$^{PL}\boldsymbol{V}$描述被投影至PD座標系上的LED指向。
+                首先是LED位置$^L \boldsymbol{P}_l$與指向$^L \boldsymbol{V}_l$需由LED次系統座標系中投影至PD座標系上，我們透過式\ref{eqn:homogeneous_point}將$^L \boldsymbol{P}_l$經過齊次座標轉換至PD座標系上，以$^{PL} \boldsymbol{P}_l$描述被投影至PD座標系上的LED位置。而$^L \boldsymbol{V}$為單位指向向量，僅用旋轉矩陣$\boldsymbol{Ro}$轉換投影至PD座標系上如式\ref{eqn:homogeneous_vector}，$^{PL}\boldsymbol{V}$描述被投影至PD座標系上的LED指向。
         
                 \begin{equation}
                     \label{eqn:homogeneous_point}
@@ -1068,7 +1077,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 \subsection{現行LED與PD的定位方法與應用}
 \label{chp:LEDPD_now}
             
-% 簡單統整一下前面敘述的LED與PD定位系統資訊：首先，LED與PD皆為軸對稱，定義一空間中的LED或PD共有五個自由度（參考\ref{chp:config}章），且LED與PD皆遵守朗博輻射模式，藉由挑選朗博次方，可對出入射角敏感度與輻射範圍之間取捨（參考\ref{chp:lambertian}章）。接著，\ref{chp:LED}章中介紹了LED的特性，而\ref{chp:PD}章中介紹了PD接收光輻射的特性，綜合便可獲得\ref{chp:model}章中完整的光傳遞模型，並於\ref{chp:model_transform}章將光傳遞模型，以LED與PD座標系的座標轉換呈現。
+
 
 由於\ref{chp:model}章中呈現的光傳遞模型，在完整考慮Step1.中的硬體擺設自由度與硬體規格的選擇，以及Step2.系統設置時兩次系統座標系六個自由度的相對關係時，會使模型非常複雜如式\ref{eqn:model_coor_extend}，難以從中獲得PD電流強度與相對位置$^{PL}\boldsymbol{T}$的關係。因此現有文獻都會透過適當限制Step1.與Step2.的自由度以簡化模型，常見限制於\ref{chp:LEDPD_restrict}章中介紹，而在\ref{chp:LEDPD_case}章中則介紹幾個與本研究較相近的文獻的定位方法。
 
@@ -1083,7 +1092,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
         \item[$\cdot$ 忽略朗博次方] \hfill
         
         \qquad
-        朗博次方是一個影響輻射模式的重要參數（參考\ref{chp:lambertian}章），LED與PD兩者皆有各自的朗博次方，代表著訊號對角度敏感度與覆蓋範位的取捨。大多文獻將LED與PD的朗博次方皆假設為一，降低系統複雜度，使式\ref{eqn:model_coor_extend}簡化於式\ref{eqn:model_no_lamb}。
+        朗博次方是一個影響輻射模式的重要參數（如\ref{chp:lambertian}章），LED與PD兩者皆有各自的朗博次方，代表著訊號對角度敏感度與覆蓋範位的取捨。大多文獻將LED與PD的朗博次方皆假設為一，降低系統複雜度，使式\ref{eqn:model_coor_extend}簡化於式\ref{eqn:model_no_lamb}。
 
         \qquad
         然而，假設朗博次方為一在實際上是不符合現實的，因為實際上在挑選硬體時朗博次方時有許多選擇，如\cite{datasheet:led_vsma}的朗博次方約為5.57。為了降低複雜度而省略朗博次方，會侷限Step1.決定次系統規格時能夠挑選使用的硬體，也限制了系統的自由度\cite{survey_light2018}。即便如此，大多研究仍將其省略，其中將PD的朗博次方納入考量的文獻極少\cite{survey_light2018}，相較起來，LED朗博次方有少部分研究將其納入計算，如\cite{case:cart2d}\cite{case:cart3d}。
@@ -1093,7 +1102,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
         \item[$\cdot$ 硬體種類限制]\hfill
         
         \qquad
-        文獻上，在Step1.決定次系統規格中的硬體規格時，$L$個LED皆會選擇同一規格，也就是同一系統下，並不會出現不同規格的LED，PD亦然。因此，LED與PD的硬體參數（參考圖\ref{pic:hardware_para}）並不會隨LED與PD的編號改變，綜合此限制與朗博次方為一的限制，將式\ref{eqn:model_coor_extend}簡化為式\ref{eqn:model_no_lamb}。
+        文獻上，在Step1.決定次系統規格中的硬體規格時，$L$個LED皆會選擇同一規格，也就是同一系統下，並不會出現不同規格的LED，PD亦然。因此，LED與PD的硬體參數（如表\ref{pic:hardware_para}）並不會隨LED與PD的編號改變，綜合此限制與朗博次方為一的限制，將式\ref{eqn:model_coor_extend}簡化為式\ref{eqn:model_no_lamb}。
 
         \begin{equation}
             \label{eqn:model_no_lamb}
@@ -1144,25 +1153,20 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
             \end{aligned}
         \end{equation}
 
-        \item[$\cdot$ 限制PD組態]\hfill
+        \item[$\cdot$ 限制PD擺設自由度]\hfill
         
         \qquad
         Step1.決定次系統規格中，也常限制硬體的擺設方式，其中最常見的硬體擺設限制為所有PD的擺放位置於同一點：$^P\boldsymbol{P}_p=
-        \left[\begin{array}{ccc}0&0&0\end{array}\right]^T$，則擺設自由度僅剩下朝向$^P\boldsymbol{V}_p^{sph} = \left[\begin{array}{ccc}1&\alpha&\beta\end{array}\right]^T$的兩個自由度，擺法可參考圖\ref{pic:config_orient}，實際的硬體百法則可以參考圖\ref{pic:ml_pd_config}\cite{case:ml}。
+        \left[\begin{array}{ccc}0&0&0\end{array}\right]^T$，則擺設自由度僅剩下朝向$^P\boldsymbol{V}_p^{sph} = \left[\begin{array}{ccc}1&\alpha&\beta\end{array}\right]^T$的兩個自由度，擺法如圖\ref{pic:config_orient}，實際的硬體擺法則如圖\ref{pic:ml_pd_config}\cite{case:ml}。
         
         \begin{figure}[htpb]
             \centering
             \includegraphics[width=8cm]{ch2pic/config_orient.png}
-            \caption{各PD於同一位置的擺設\cite{case:3d_layers}}
+            \caption{文獻\cite{case:3d_layers}各PD於同一位置的擺設}
             \label{pic:config_orient}
         \end{figure}
 
-        \begin{figure}[htpb]
-            \centering
-            \includegraphics[width=10cm]{ch2pic/ml_pd_config.png}
-            \caption{\cite{case:ml}研究的硬體組態設計}
-            \label{pic:ml_pd_config}
-        \end{figure}
+        
 
         現今幾乎所有幾何方法的PD組態都是此種類型\cite{survey_light2018}。通過此限制，式\ref{eqn:model_no_lamb}可進一步簡化為式\ref{eqn:model_config_restrict}。
 
@@ -1208,11 +1212,11 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
         \item[$\cdot$ 限制定位維度]\hfill
         
         \qquad 
-        現今使用幾何方法的LED與PD系統，大多定位維度僅到二維\cite{survey_light2018}，將欲解的相對位置$^{PL}\boldsymbol{T}=\left[\begin{array}{ccc}x&y&z\end{array}\right]^T$中的$z$限制為已知，參考圖\ref{pic:case_parallel}。由於大多LED與PD的定位系統使用室內原有的光源，因此此限制代表的意義，便是目標物僅能於室內地面的水平高度移動，垂直距離已知，無法定位不在地面上的目標物。此限制在數學模型上的意義，則是將相對位置欲解的變數由三個減少為兩個。
+        現今使用幾何方法的LED與PD系統，大多定位維度僅到二維\cite{survey_light2018}，將欲解的相對位置$^{PL}\boldsymbol{T}=\left[\begin{array}{ccc}x&y&z\end{array}\right]^T$中的$z$限制為已知，如圖\ref{pic:case_parallel}。由於大多LED與PD的定位系統使用室內原有的光源，因此此限制代表的意義，便是目標物僅能於室內地面的水平高度移動，垂直距離已知，無法定位不在地面上的目標物。此限制在數學模型上的意義，則是將相對位置欲解的變數由三個減少為兩個。
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=8cm]{ch2pic/case_parallel.png}
+            \includegraphics[width=10cm]{ch2pic/case_parallel.png}
             \caption{室內限制垂直距離的LED與PD定位系統架設\cite{case:aoa}}
             \label{pic:case_parallel}
         \end{figure}
@@ -1317,7 +1321,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
         \end{center}
       \end{table}
 
-      本段落將對介紹現行LED與PD文獻實例，其中針對本研究中單點對單點定位、兩次系統可自由移動定位的這些目標，篩選出幾篇與本研究目標較為接近的文獻舉例介紹，文獻特色可參考表\ref{tab:LEDPD_case}，根據是否限制目標物與量測者平面平行、定位維度、定位範圍、是否有硬體驗證等特性分類，並於以下進行分項介紹各文獻的細節與特色。
+      本段落將對介紹現行LED與PD文獻實例，其中針對本研究中單點對單點定位、兩次系統可自由移動定位的這些目標，篩選出幾篇與本研究目標較為接近的文獻舉例介紹，文獻特色呈現於表\ref{tab:LEDPD_case}，根據是否限制目標物與量測者平面平行、定位維度、定位範圍、是否有硬體驗證等特性分類，並於以下進行分項介紹各文獻的細節與特色。
 
     \begin{description}
         % \item[\cite{case:hypercube}：使用紅外光且易於攜帶但量測範圍小的案例]\hfill 
@@ -1392,15 +1396,15 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=12cm]{ch2pic/layers_2d.png}
-            \caption{地面上PD電流強度比值(a)第一與第二個PD(b)第二與第三個PD(c)第一與第三個PD\cite{case:3d_layers}}
+            \includegraphics[width=15cm]{ch2pic/layers_2d.png}
+            \caption{文獻\cite{case:3d_layers}中地面上PD電流強度比值(a)第一與第二個PD(b)第二與第三個PD(c)第一與第三個PD}
             \label{pic:layers_2d}
         \end{figure}
 
         \begin{figure}[htpb]
             \centering
             \includegraphics[width=12cm]{ch2pic/layers_3d.png}
-            \caption{\cite{case:3d_layers}將量測空間切為多層}
+            \caption{文獻\cite{case:3d_layers}中將量測空間切為多層}
             \label{pic:layers_3d}
         \end{figure}
 
@@ -1419,7 +1423,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
         \begin{figure}[htpb]
             \centering
             \includegraphics[width=10cm]{ch2pic/case_cart3d.png}
-            \caption{\cite{case:cart3d}研究的(a)系統架構(b)PD組態}
+            \caption{文獻\cite{case:cart3d}的(a)系統架構(b)PD組態}
             \label{pic:case_cart3d}
         \end{figure}
 
@@ -1459,7 +1463,7 @@ LED與PD系統的定位流程則可以參考圖\ref{pic:lp_system_flow}，步驟
     \item[- 系統限制多]\hfill 
     
     \qquad
-    參考\ref{chp:LEDPD_restrict}章，常見的限制包含忽略朗博次方的影響、限制硬體選擇、限制PD組態、限制定位維度、限制使用情境等。當一次使用所有限制，即可得到式\ref{eqn:model_parallel_restrict}中簡單的模型，能夠輕易的取得相對定位。然而如\ref{chp:LEDPD_restrict}章所述，忽略朗博次方不符合實際情況，而其他的限制都會限制系統靈活度，也就是本論文最主要的目標，因此提出一限制較少的定位演算法有其必要性。
+    如\ref{chp:LEDPD_restrict}章所述，常見的限制包含忽略朗博次方的影響、限制硬體選擇、限制PD組態、限制定位維度、限制使用情境等。當一次使用所有限制，即可得到式\ref{eqn:model_parallel_restrict}中簡單的模型，能夠輕易的取得相對定位。然而如\ref{chp:LEDPD_restrict}章所述，忽略朗博次方不符合實際情況，而其他的限制都會限制系統靈活度，也就是本論文最主要的目標，因此提出一限制較少的定位演算法有其必要性。
     
     \item[- 較少硬體實驗驗證]\hfill 
     

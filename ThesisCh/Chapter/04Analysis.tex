@@ -7,7 +7,7 @@
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=15cm]{ch4pic/simulate_hardware.png}
-    \caption{以硬體驗證與軟體模擬的流程圖}
+    \caption{以硬體驗證與軟體模擬的定位流程圖}
     \label{pic:simulate_hardware}
 \end{figure}
 
@@ -379,7 +379,7 @@
 
     \begin{table}[htpb]
         % \toprule% you can only use this within a tabular and if you load booktabs
-        \caption{\cite{multipath_new}中不同位置與NLoS訊號影響}
+        \caption{文獻\cite{multipath_new}中不同位置與NLoS訊號影響}
         \label{tab:gain_multipath}
         \centering
         \begin{tabular}{|c||c|c||c|}
@@ -505,7 +505,7 @@
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=15cm]{ch4pic/interactive_1to1.png}
-    \caption{定位模擬結果互動介面}
+    \caption{定位模擬系統的互動介面}
     \label{pic:result_interactive}
 \end{figure}
 
@@ -677,7 +677,7 @@
 
 
 
-\subsection{量化系統表現}
+\subsection{StepC.量化系統表現}
 \label{chp:evaluate_method}
 
 於\ref{chp:scenario}章中建立了樣本點後，利用\ref{chp:simulation}章中的模擬方法對每個樣本點進行定位的計算，得到相對位置$\hat{_k^{PL}\boldsymbol{T}}$，並進行誤差$\hat{_k e}$的計算，參考示意圖\ref{pic:error_show}，其中左下標k代表的是樣本點編號。
@@ -744,7 +744,14 @@
     \label{pic:analysis_interactive}
 \end{figure}
 
-我們於後續章節透過調整不同參數，來觀察不同參數對系統成效的影響。而為了方便比較，我們需將各模擬用參數取值作為參考值，統整於以下表格：
+
+
+
+
+\section{分析各參數對系統成效的影響}
+\label{chp:para_effect}
+
+在\ref{chp:evaluate_method}章中建立一量化系統成效的方法，在此章節將討論不同參數對系統成效的影響。為了方便比較，我們需將各模擬用參數取值作為參考值，統整於以下表\ref{tab:para_reference}，透過一次調整一個參數來觀察該參數對系統成效的影響。而此部分所使用的樣本點為\ref{chp:scenario}章建立的$3\times 3\times 3$的空間。
 
 \begin{table}[htpb]
     \begin{center}
@@ -796,12 +803,6 @@
       \end{tabular}
     \end{center}
   \end{table}
-
-
-
-
-
-
 
 \subsection{StepC.量化系統成效參數的影響}
 \label{chp:effect_evaluate_para}
@@ -1243,19 +1244,22 @@
 
 % 由圖\ref{pic:m_effect}與圖\ref{pic:alpha_effect}中，我們都可以看出在提高硬體數量時，系統表現提升，然而系統表現提升的幅度不與硬體提升的數量成正比。因此，在挑選硬體數量時，除了系統表現以外，也需將硬體增加所造成的硬體成本，以及架設系統的難度考慮進來，在系統表現與硬體系統簡單中取捨。
 
+% \section{分析各參數對系統成效的影響}
+
+% 在\ref{chp:evaluate_method}章中建立一量化系統成效的方法，在此章節將討論不同參數對系統成效的影響。為了方便比較，我們需將各模擬用參數取值作為參考值，統整於以下表\ref{para:tab:para_reference}，透過一次調整一個參數來觀察該參數對系統成效的影響。而此部分所使用的樣本點為\ref{chp:scenario}章建立的$3\times 3\times 3$的空間。
 
 
 
-\subsection{StepA.使用情境改變對系統效能的影響}
+\section{分析使用情境改變對系統效能的影響}
 \label{chp:scene_effect}
-以上表現皆是針對\ref{chp:scenario}章中呈現的ROI進行評估，而為了探討不同使用情境的影響，以下將\ref{chp:scenario}章中的使用情境稱為使用情境甲，並提出其他使用情境作為參考：
+在\ref{chp:para_effect}章中討論StepB.各樣本點進行室內定位流程與StepC.量化評估系統效能步驟中參數對系統成效的影響，以上表現皆是針對\ref{chp:scenario}章中呈現的ROI進行評估。而此章節則探討不同StepA.使用情境與樣本點的系統表現，以下將\ref{chp:scenario}章中的使用情境稱為使用情境甲，並提出其他使用情境作為參考：
 
-\subsubsection{使用情境甲：$3\times 3\times 3m$空間}
+\subsection{使用情境甲：$3\times 3\times 3m$空間的系統表現}
 \label{chp:scene_A}
 
 即為\ref{chp:scenario}章中定義的使用情境，該ROI中以有1000個平移樣本與61個相對樣本姿態，總共六萬一千個樣本點。以表\ref{tab:para_reference}的參數進行評估的效能$Nt=47079$，為總樣本中的$77.2\%$。
 
-\subsubsection{使用情境乙：$10\times 10\times 10m$空間}
+\subsection{使用情境乙：$10\times 10\times 10m$空間的系統表現}
 \label{chp:scene_B}
 
 與使用情境甲相似，將ROI中平移空間的放大至$10\times 10\times 10m$的空間，而相對姿態則與使用情境甲相同，期望由此情境來觀察不同空間大小的定位結果。平移樣本點的參數設定呈現於表\ref{tab:B_translate}，有一千的平移樣本與61個相對旋轉姿態的樣本，旋轉樣本與情境甲相同參考表\ref{tab:rotate}，樣本總數與情境甲相同為$K=61000$，空間中示意圖如\ref{pic:b_scenario}所示。
@@ -1295,7 +1299,7 @@
 
 
 
-\subsubsection{使用情境丙：平面平行且垂直距離相同}
+\subsection{使用情境丙：平面平行且垂直距離相同的系統表現}
 \label{chp:scene_C}
 
 為呈現本研究達到不限制平面平行的重要性，本研究以大多文獻使用的使用情境：限制目標物與量測平面平行且垂直距離相同，其中使用情境中的平移範圍為$3\times 3\times 2.5$，但將樣本數提升至$10000$個平移樣本。至於旋轉樣本則僅有一個：兩平面平行且面對面之姿態，$^{PL}rx=\pi,^{PL}ry=0,^{PL}rz=0$。
@@ -1331,7 +1335,7 @@
 \end{figure}
 
 
-\subsubsection{使用情境丁：球狀空間}
+\subsection{使用情境丁：球狀空間的系統表現}
 \label{chp:scene_D}
 
 
