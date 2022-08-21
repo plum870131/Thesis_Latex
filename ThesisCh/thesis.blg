@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+The style file: unsrt.bst
+Database file #1: thesisbib.bib
+Warning--empty booktitle in Spectrum
+Warning--empty booktitle in case:rfid_1to1
+Warning--empty author and editor in astm
+Warning--there's a number but no series in astm
+Warning--empty publisher in astm
+Warning--empty publisher in radiometry_and_photometry
+You've used 48 entries,
+            1791 wiz_defined-function locations,
+            706 strings with 11963 characters,
+and the built_in function-call counts, 10782 in all, are:
+= -- 888
+> -- 544
+< -- 9
++ -- 201
+- -- 153
+* -- 778
+:= -- 1683
+add.period$ -- 138
+call.type$ -- 48
+change.case$ -- 39
+chr.to.int$ -- 0
+cite$ -- 54
+duplicate$ -- 487
+empty$ -- 1062
+format.name$ -- 153
+if$ -- 2441
+int.to.chr$ -- 0
+int.to.str$ -- 48
+missing$ -- 39
+newline$ -- 234
+num.names$ -- 41
+pop$ -- 133
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 232
+stack$ -- 0
+substring$ -- 617
+swap$ -- 119
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 6
+while$ -- 77
+width$ -- 50
+write$ -- 498
+(There were 6 warnings)
