@@ -1,4 +1,4 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces 符號小標解釋\relax }}{xvi}{figure.caption.7}%
+\contentsline {figure}{\numberline {1}{\ignorespaces 符號小標解釋\relax }}{ix}{figure.caption.7}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces 物聯網應用的領域\cite {iot}\relax }}{1}{figure.caption.9}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces 本論文所針對的目標情境\relax }}{2}{figure.caption.10}%
@@ -20,8 +20,8 @@
 \contentsline {figure}{\numberline {2.15}{\ignorespaces 利用三角法定位的RFID系統\cite {case:rfid_1to1}(a)系統架構 (b)載具實驗\relax }}{17}{figure.caption.25}%
 \contentsline {figure}{\numberline {2.16}{\ignorespaces 光通訊流程圖\cite {pic:vlc}\relax }}{18}{figure.caption.26}%
 \contentsline {figure}{\numberline {2.17}{\ignorespaces 太陽輻射波譜\cite {astm}\relax }}{21}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.18}{\ignorespaces 滾動式快門效應的成因\cite {pic:rolling_shutter}\relax }}{22}{figure.caption.30}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces 滾動式快門效應產生的條紋樣式\cite {pic:rolling_shutter_case}\relax }}{22}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces 滾動式快門效應的成因\cite {pic:rolling_shutter}\relax }}{23}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces 滾動式快門效應產生的條紋樣式\cite {pic:rolling_shutter_case}\relax }}{23}{figure.caption.31}%
 \contentsline {figure}{\numberline {2.20}{\ignorespaces 多重路徑傳輸\cite {pic:multipath}\relax }}{23}{figure.caption.32}%
 \contentsline {figure}{\numberline {2.21}{\ignorespaces 文獻提供之PD次系統設計\cite {case:ml}\relax }}{24}{figure.caption.33}%
 \contentsline {figure}{\numberline {2.22}{\ignorespaces 多PD進行光通訊解碼\cite {case:ml}\relax }}{24}{figure.caption.34}%
@@ -29,23 +29,23 @@
 \contentsline {figure}{\numberline {2.24}{\ignorespaces 文獻\cite {case:3d_layers}的系統架構（使用幾何方法）\relax }}{26}{figure.caption.36}%
 \contentsline {figure}{\numberline {2.25}{\ignorespaces LED與PD定位系統架構\relax }}{27}{figure.caption.38}%
 \contentsline {figure}{\numberline {2.26}{\ignorespaces LED與PD定位系統流程\relax }}{28}{figure.caption.39}%
-\contentsline {figure}{\numberline {2.27}{\ignorespaces Step3.中的光通訊流程圖\relax }}{28}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.27}{\ignorespaces Step3.中的光通訊流程圖\relax }}{29}{figure.caption.40}%
 \contentsline {figure}{\numberline {2.28}{\ignorespaces 角度與立體角\relax }}{31}{figure.caption.42}%
-\contentsline {figure}{\numberline {2.29}{\ignorespaces 輻射強度與輻照度\relax }}{31}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.29}{\ignorespaces 輻射強度與輻照度\relax }}{32}{figure.caption.43}%
 \contentsline {figure}{\numberline {2.30}{\ignorespaces LED與PD三維空間中的出入射角\relax }}{32}{figure.caption.44}%
-\contentsline {figure}{\numberline {2.31}{\ignorespaces 輻射強度與出入射角的關係\relax }}{32}{figure.caption.45}%
-\contentsline {figure}{\numberline {2.32}{\ignorespaces 朗博次方為一時空間中輻射強度與出入射角方位的關係\relax }}{33}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.31}{\ignorespaces 輻射強度與出入射角的關係\relax }}{33}{figure.caption.45}%
+\contentsline {figure}{\numberline {2.32}{\ignorespaces 朗博次方為一時空間中輻射強度與出入射角方位的關係\relax }}{34}{figure.caption.46}%
 \contentsline {figure}{\numberline {2.33}{\ignorespaces LED輻射強度與總輻射通量比值\relax }}{35}{figure.caption.48}%
 \contentsline {figure}{\numberline {2.34}{\ignorespaces 三維空間中的向量\relax }}{36}{figure.caption.49}%
 \contentsline {figure}{\numberline {2.35}{\ignorespaces LED在座標系中的擺放自由度\relax }}{37}{figure.caption.50}%
 \contentsline {figure}{\numberline {2.36}{\ignorespaces 單LED與單PD的交互關係\relax }}{38}{figure.caption.51}%
-\contentsline {figure}{\numberline {2.37}{\ignorespaces 多LED與多PD的交互關係\relax }}{38}{figure.caption.52}%
-\contentsline {figure}{\numberline {2.38}{\ignorespaces LED與PD次系統中座標系的LED與PD交互關係\relax }}{39}{figure.caption.53}%
+\contentsline {figure}{\numberline {2.37}{\ignorespaces 多LED與多PD的交互關係\relax }}{39}{figure.caption.52}%
+\contentsline {figure}{\numberline {2.38}{\ignorespaces LED與PD次系統中座標系的LED與PD交互關係\relax }}{40}{figure.caption.53}%
 \contentsline {figure}{\numberline {2.39}{\ignorespaces 文獻\cite {case:3d_layers}各PD於同一位置的擺設\relax }}{43}{figure.caption.54}%
-\contentsline {figure}{\numberline {2.40}{\ignorespaces 室內限制垂直距離的LED與PD定位系統架設\cite {case:aoa}\relax }}{44}{figure.caption.55}%
+\contentsline {figure}{\numberline {2.40}{\ignorespaces 室內限制垂直距離的LED與PD定位系統架設\cite {case:aoa}\relax }}{45}{figure.caption.55}%
 \contentsline {figure}{\numberline {2.41}{\ignorespaces 文獻\cite {case:3d_layers}中地面上PD電流強度比值(a)第一與第二個PD(b)第二與第三個PD(c)第一與第三個PD\relax }}{46}{figure.caption.57}%
-\contentsline {figure}{\numberline {2.42}{\ignorespaces 文獻\cite {case:3d_layers}中將量測空間切為多層\relax }}{46}{figure.caption.58}%
-\contentsline {figure}{\numberline {2.43}{\ignorespaces 文獻\cite {case:cart3d}的(a)系統架構(b)PD組態\relax }}{47}{figure.caption.59}%
+\contentsline {figure}{\numberline {2.42}{\ignorespaces 文獻\cite {case:3d_layers}中將量測空間切為多層\relax }}{47}{figure.caption.58}%
+\contentsline {figure}{\numberline {2.43}{\ignorespaces 文獻\cite {case:cart3d}的(a)系統架構(b)PD組態\relax }}{48}{figure.caption.59}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces 第三章架構\relax }}{51}{figure.caption.61}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces PD與LED硬體擺放於原點的次系統與系統設置\relax }}{51}{figure.caption.62}%
