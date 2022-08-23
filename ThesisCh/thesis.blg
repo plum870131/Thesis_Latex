@@ -11,7 +11,7 @@ Warning--empty publisher in astm
 Warning--empty publisher in radiometry_and_photometry
 You've used 48 entries,
             1791 wiz_defined-function locations,
-            706 strings with 11963 characters,
+            705 strings with 11127 characters,
 and the built_in function-call counts, 10782 in all, are:
 = -- 888
 > -- 544
