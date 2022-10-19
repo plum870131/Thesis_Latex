@@ -1,6 +1,11 @@
 \chapter{室內定位相關文獻探討}
 
 
+
+
+
+室內定位系統架構如圖\ref{pic:subsystem}，其由目標物次系統與量測者次系統組成，兩次系統各自擔任傳送訊號與皆收訊號兩任務。室內定位有非常多種硬體技術與後處理方法，無論何種技術，定位流程皆可以用圖\ref{pic:pos_flow}的步驟表示，依序為決定系統規格、系統設置、發送與接收訊號以及執行定位演算法四個步驟。決定次系統規格時，需分別設計量測者與目標物次系統，系統設置的步驟為將兩次系統放置於空間中，進行發送與接收訊號，藉由接收到的訊號進行最後的步驟：執行定位演算法。為方便後續敘述，本論文中都會以Step1.到Step4.描述定位流程中的四個步驟。
+
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=7cm]{ch2pic/subsystem.png}
@@ -16,7 +21,9 @@
 \end{figure}
 
 
-室內定位系統架構如圖\ref{pic:subsystem}，其由目標物次系統與量測者次系統組成，兩次系統各自擔任傳送訊號與皆收訊號兩任務。室內定位有非常多種硬體技術與後處理方法，無論何種技術，定位流程皆可以用圖\ref{pic:pos_flow}的步驟表示，依序為決定系統規格、系統設置、發送與接收訊號以及執行定位演算法四個步驟。決定次系統規格時，需分別設計量測者與目標物次系統，系統設置的步驟為將兩次系統放置於空間中，進行發送與接收訊號，藉由接收到的訊號進行最後的步驟：執行定位演算法。為方便後續敘述，本論文中都會以Step1.到Step4.描述定位流程中的四個步驟。
+
+本章節將依序於\ref{chp:relative}章先定義何謂相對定位，接著根據後處理方法與硬體技術分類介紹，分類方法如圖\ref{pic:pos_category}，分別於\ref{chp:method}章介紹不同硬體技術，以及在\ref{chp:technique}章中介紹不同後處理方法，並根據\ref{chp:motivate}章中：硬體系統需為低能耗、可封裝成量測單位與目標物單位、進行單點對單點的定位的需求，聚焦在「LED與PD定位技術」，\ref{chp:LEDandPD}章便針對「LED與PD定位技術」進行深入探討，敘述此領域研究現況與困難，最後於\ref{chp:2_conclusion}章總結。
+
 
 \begin{figure}[htpb]
     \centering
@@ -24,11 +31,6 @@
     \caption{室內定位分類}
     \label{pic:pos_category}
 \end{figure}
-
-
-本章節將依序於\ref{chp:relative}章先定義何謂相對定位，接著根據後處理方法與硬體技術分類介紹，分類方法如圖\ref{pic:pos_category}，分別於\ref{chp:method}章介紹不同硬體技術，以及在\ref{chp:technique}章中介紹不同後處理方法，並根據\ref{chp:motivate}章中：硬體系統需為低能耗、可封裝成量測單位與目標物單位、進行單點對單點的定位的需求，聚焦在「LED與PD定位技術」，\ref{chp:LEDandPD}章便針對「LED與PD定位技術」進行深入探討，敘述此領域研究現況與困難，最後於\ref{chp:2_conclusion}章總結。
-
-
    
 
 
@@ -44,7 +46,7 @@
 
     \begin{figure}[htpb]
         \centering
-        \includegraphics[width=11cm]{ch2pic/homo_trans.png}
+        \includegraphics[width=13cm]{ch2pic/homo_trans.png}
         \caption{LED與PD次系統座標系及其相對關係}
         \label{pic:homo_trans}
     \end{figure}
@@ -156,7 +158,7 @@
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=6cm]{ch2pic/multilateration.png}
+            \includegraphics[width=9cm]{ch2pic/multilateration.png}
             \caption{多點定位法\cite{survey_light2020}}
             \label{pic:multilateration}
         \end{figure}
@@ -167,7 +169,7 @@
         三角測量法如圖\ref{pic:triangulation}所示，需要在環境中建立多個參考點，藉由量測目標物與各參考點之間的角度關係，推算目標物位置。
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=9cm]{ch2pic/triangulation.png}
+            \includegraphics[width=14cm]{ch2pic/triangulation.png}
             \caption{三角測量法\cite{survey_light2018}}
             \label{pic:triangulation}
         \end{figure}
@@ -178,7 +180,7 @@
         指紋法的流程圖如圖\ref{pic:fingerprinting}，在環境中建立多個參考點，在實際進行測量前，需進行事先測量訓練的階段，此階段中需將目標物在環境中移動，蒐集大量訊號數據庫。量測階段則藉由接收訊號與訓練階段所建立的數據庫參照，尋找最有可能存在的位置\cite{survey_light2020}，近年則是有許多以機器學習方法增加此演算法的精確度。
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=13cm]{ch2pic/fingerprinting.png}
+            \includegraphics[width=15cm]{ch2pic/fingerprinting.png}
             \caption{指紋法流程圖\cite{pic:fingerprinting}}
             \label{pic:fingerprinting}
         \end{figure}
@@ -200,7 +202,7 @@
         
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=5cm]{ch2pic/aruco.png}
+            \includegraphics[width=7cm]{ch2pic/aruco.png}
             \caption{ArUco標記例子\cite{pic:aruco}}
             \label{pic:aruco}
         \end{figure}
@@ -277,14 +279,14 @@
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=6cm]{ch2pic/rfid_system.png}
+            \includegraphics[width=9cm]{ch2pic/rfid_system.png}
             \caption{RFID定位系統示意\cite{survey_rfid}}
             \label{pic:rfid_system}
         \end{figure}
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=8cm]{ch2pic/landmarc.png}
+            \includegraphics[width=11cm]{ch2pic/landmarc.png}
             \caption{LANDMARC系統環境\cite{landmarc}}
             \label{pic:landmarc}
         \end{figure}
@@ -293,7 +295,7 @@
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=8cm]{ch2pic/rfid_1to1.png}
+            \includegraphics[width=13cm]{ch2pic/rfid_1to1.png}
            \caption{利用三角法定位的RFID系統\cite{case:rfid_1to1}(a)系統架構 (b)載具實驗}
             \label{pic:rfid_1to1}
         \end{figure}
@@ -376,7 +378,7 @@
                 
                 \begin{figure}[htpb]
                     \centering
-                    \includegraphics[width=10cm]{ch2pic/solar_spectra.png}
+                    \includegraphics[width=12cm]{ch2pic/solar_spectra.png}
                     \caption{太陽輻射波譜\cite{astm}}
                     \label{pic:solar_spectrum}
                 \end{figure}
@@ -1243,7 +1245,7 @@ LED與PD系統的定位流程則如圖\ref{pic:lp_system_flow}，步驟與圖\re
 
         \begin{figure}[htpb]
             \centering
-            \includegraphics[width=10cm]{ch2pic/case_parallel.png}
+            \includegraphics[width=14cm]{ch2pic/case_parallel.png}
             \caption{室內限制垂直距離的LED與PD定位系統架設\cite{case:aoa}}
             \label{pic:case_parallel}
         \end{figure}

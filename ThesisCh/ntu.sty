@@ -16,11 +16,12 @@
 \RequirePackage{fontspec}
 \defaultfontfeatures{Mapping=tex-text}
 \RequirePackage[AutoFakeBold,AutoFakeSlant]{xeCJK}
-\RequirePackage{CJKfntef}
+% \RequirePackage{CJKfntef}
+\RequirePackage{xeCJKfntef}
 \setmainfont{Times New Roman} % Default main font
 \setromanfont{Times New Roman} % Default roman font
 \setCJKmainfont{DFKai-SB} % Default CJK: Windows 標楷體
-\setCJKfamilyfont{kaiv}[Vertical=RotatedGlyphs]{DFKai-SB} % 垂直中文字型
+\setCJKfamilyfont{kaiv}[Vertical=RotatedGlyphs, RawFeature=vertical]{DFKai-SB} % 垂直中文字型
 % \setCJKmainfont{cwTeX Q Kai} % Default CJK: cwTeX-Q 楷體
 % \setCJKfamilyfont{kaiv}[Vertical=RotatedGlyphs]{cwTeX Q Kai}
 %\setmonofont{Courier New} % 等寬字型
@@ -61,11 +62,13 @@
 \newcommand\studentID[1]{\newcommand{\thestudentID}{#1}}
 \newcommand\acknowledgementsnameEN[1]{\newcommand{\theacknowledgementsnameEN}{#1}}
 \newcommand\acknowledgementsnameCH[1]{\newcommand{\theacknowledgementsnameCH}{#1}}
+\newcommand\symbollistname[1]{\newcommand{\thesymbollist}{#1}}
 
 % Command to generate the title page.
 \renewcommand{\maketitle}{ {
 
-\newgeometry{top=4cm,bottom=3cm}
+% \newgeometry{top=4cm,bottom=3cm}
+\newgeometry{top=4cm,left=2cm,bottom=3cm,right=2cm}
 \begin{titlepage}
 \begin{center}
 \fontsize{18}{27}\selectfont
@@ -84,6 +87,7 @@
 \centering
 \fontsize{18}{27}\selectfont
 \thetitleCH\\
+\fontsize{18}{27}\selectfont
 \thetitleEN
 }
 
@@ -105,6 +109,7 @@
 \themonthEN, \theyearEN
 \end{center}
 \end{titlepage}
+\clearpage{\thispagestyle{empty}}
 \restoregeometry
 } }
 
@@ -123,12 +128,21 @@
 \noindent\rotatebox{-90}{
 \begin{tabular}{%
 	m{3.5cm}m{0.1cm}m{2cm}m{0.1cm}m{10cm}m{1cm}m{3cm}m{0.1cm}m{1.5cm}}
-\fontsize{12}{12}\selectfont\begin{CJKfilltwosides}{3cm}\CJKfamily{kaiv}\CJKmove{\theuniversityCH}\\
-	\CJKfamily{kaiv}\CJKmove{\theinstituteCH}\end{CJKfilltwosides} & &
-\CJKfamily{kaiv}\CJKmove{\thethesisCH} & &
-{\fontsize{14}{14}\selectfont\CJKfamily{kaiv}\CJKmove{\thetitleCH}} & &
-{\fontsize{14}{14}\CJKfamily{kaiv}\CJKmove{\theauthorCH{\quad} \thewrittenCH}} & &
-\rotatebox{90}{\hspace{-0.25em}\theyearCH} \rotatebox{90}{\hspace{0.25em}\themonthCH}
+
+  \fontsize{12}{12}\selectfont
+  \begin{CJKfilltwosides}{3cm}
+    \CJKfamily{kaiv}\CJKmove{\theuniversityCH}\\
+    \CJKfamily{kaiv}\CJKmove{\theinstituteCH}
+  \end{CJKfilltwosides} & &
+
+  \CJKfamily{kaiv}\CJKmove{\thethesisCH} & &
+
+ {\fontsize{12}{12}\selectfont\CJKfamily{kaiv}\CJKmove{\thetitleCH}} & &
+
+ {\fontsize{14}{14}\CJKfamily{kaiv}\CJKmove{\theauthorCH{\quad} \thewrittenCH}} & &
+
+\rotatebox{90}{\hspace{-0.25em}\theyearCH} 
+  \rotatebox{90}{\themonthCH}
 \end{tabular}
 }    
 
@@ -148,14 +162,14 @@
 
 \vspace{0.5cm}
 
-\fontsize{20}{30}\selectfont
+\fontsize{18}{30}\selectfont
 \thetitleCH\\
 \thetitleEN
 \end{center}
 
 \vspace{1cm}
 
-\fontsize{16}{24}\selectfont
+\fontsize{14}{24}\selectfont
 \noindent \hspace{29pt}本論文係\theauthorCH 君\raisebox{1pt}{ (\thestudentID)} 
 在\theuniversityCH\theinstituteCH 完成之\thedegreeCH 學位論文，於民國 
 \raisebox{1pt}{\theyearCH} 年 
@@ -229,6 +243,14 @@
   %{	\chapter*{\centerline{\theacknowledgementsnameCH}}%
   {	\chapter*{\theacknowledgementsnameCH}%
 	\addcontentsline{toc}{chapter}{\theacknowledgementsnameCH}%
+	\quotation}
+  {\endquotation\newpage} % }}}
+
+% Environment to generate the symbol list page.
+\newenvironment{symbollist} % {{{
+  %{	\chapter*{\centerline{\thesymbollist}}%
+  {	\chapter*{\thesymbollist}%
+	\addcontentsline{toc}{chapter}{\thesymbollist}%
 	\quotation}
   {\endquotation\newpage} % }}}
 

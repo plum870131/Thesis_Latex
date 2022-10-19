@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  22 AUG 2022 05:01
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.22)  20 OCT 2022 05:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1005,7 +1005,27 @@ Package: xeCJK-listings 2020/10/19 v3.8.6 xeCJK patch file for listings
 \l__xeCJK_listings_flag_int=\count422
 ) (/usr/local/texlive/2021/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2020/10/19 v3.8.6 Configuration file for xeCJK package
-))
+)) (/usr/local/texlive/2021/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+Package: xeCJKfntef 2020/10/19 v3.8.6 xeCJK font effect
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box91
+\UL@hyphenbox=\box92
+\UL@skip=\skip87
+\UL@hook=\toks67
+\UL@height=\dimen403
+\UL@pe=\count423
+\UL@pixel=\dimen404
+\ULC@box=\box93
+Package: ulem 2019/11/18
+\ULdepth=\dimen405
+)
+\l__xeCJK_space_skip=\skip88
+\c__xeCJK_ulem-begin_node_dim=\dimen406
+\l__xeCJK_hidden_box=\box94
+\l__xeCJK_fntef_box=\box95
+\l__xeCJK_under_symbol_box=\box96
+\c__xeCJK_filll_skip=\skip89
+)
 
 Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             New Roman' with options
@@ -1064,73 +1084,73 @@ Package: textpos 2020/09/26 v1.10
 
 Package: textpos 2020/09/26 1.10, absolute positioning of text on the page
 Package textpos Info: choosing support for LaTeX3 on input line 61.
-\TP@textbox=\box91
-\TP@holdbox=\box92
-\TPHorizModule=\dimen403
-\TPVertModule=\dimen404
-\TP@margin=\dimen405
-\TP@absmargin=\dimen406
+\TP@textbox=\box97
+\TP@holdbox=\box98
+\TPHorizModule=\dimen407
+\TPVertModule=\dimen408
+\TP@margin=\dimen409
+\TP@absmargin=\dimen410
 Grid set 16 x 16 = 37.34424pt x 52.81541pt
-\TPboxrulesize=\dimen407
-\TP@ox=\dimen408
-\TP@oy=\dimen409
-\TP@tbargs=\toks67
+\TPboxrulesize=\dimen411
+\TP@ox=\dimen412
+\TP@oy=\dimen413
+\TP@tbargs=\toks68
 TextBlockOrigin set to 0pt x 0pt
 )
 TextBlockOrigin set to 0mm x 0mm
 ) (./XeCJKsetting.tex (/usr/local/texlive/2021/texmf-dist/tex/latex/cjk/texinput/CJKnumb.sty
 Package: CJKnumb 2015/04/18 4.8.4
-\CJK@q=\count423
-\CJK@r=\count424
+\CJK@q=\count424
+\CJK@r=\count425
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2019/10/16 v2.13 TOC entries
-\ttl@leftsep=\dimen410
+\ttl@leftsep=\dimen414
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box93
-\beforetitleunit=\skip87
-\aftertitleunit=\skip88
-\ttl@plus=\dimen411
-\ttl@minus=\dimen412
-\ttl@toksa=\toks68
-\titlewidth=\dimen413
-\titlewidthlast=\dimen414
-\titlewidthfirst=\dimen415
+\ttl@box=\box99
+\beforetitleunit=\skip90
+\aftertitleunit=\skip91
+\ttl@plus=\dimen415
+\ttl@minus=\dimen416
+\ttl@toksa=\toks69
+\titlewidth=\dimen417
+\titlewidthlast=\dimen418
+\titlewidthfirst=\dimen419
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip89
-\LTright=\skip90
-\LTpre=\skip91
-\LTpost=\skip92
-\LTchunksize=\count425
-\LTcapwidth=\dimen416
-\LT@head=\box94
-\LT@firsthead=\box95
-\LT@foot=\box96
-\LT@lastfoot=\box97
-\LT@cols=\count426
-\LT@rows=\count427
-\c@LT@tables=\count428
-\c@LT@chunks=\count429
-\LT@p@ftn=\toks69
+\LTleft=\skip92
+\LTright=\skip93
+\LTpre=\skip94
+\LTpost=\skip95
+\LTchunksize=\count426
+\LTcapwidth=\dimen420
+\LT@head=\box100
+\LT@firsthead=\box101
+\LT@foot=\box102
+\LT@lastfoot=\box103
+\LT@cols=\count427
+\LT@rows=\count428
+\c@LT@tables=\count429
+\c@LT@chunks=\count430
+\LT@p@ftn=\toks70
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
  (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen417
-\captionmargin@=\dimen418
-\captionwidth=\dimen419
-\caption@tempdima=\dimen420
-\caption@indent=\dimen421
-\caption@parindent=\dimen422
-\caption@hangindent=\dimen423
+\captionmargin=\dimen421
+\captionmargin@=\dimen422
+\captionwidth=\dimen423
+\caption@tempdima=\dimen424
+\caption@indent=\dimen425
+\caption@parindent=\dimen426
+\caption@hangindent=\dimen427
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count430
-\c@continuedfloat=\count431
+\c@caption@flags=\count431
+\c@continuedfloat=\count432
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen424
-\caption@adjustwidth@linewidth=\dimen425
+\caption@adjustwidth@hsize=\dimen428
+\caption@adjustwidth@linewidth=\dimen429
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1141,70 +1161,70 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 Package caption Info: rotating package is loaded.
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
-\l__siunitx_tmp_box=\box98
-\l__siunitx_tmp_dim=\dimen426
-\l__siunitx_tmp_int=\count432
-\l__siunitx_number_mantissa_length_int=\count433
-\l__siunitx_number_uncert_length_int=\count434
-\l__siunitx_round_int=\count435
-\l__siunitx_process_decimal_int=\count436
-\l__siunitx_process_uncertainty_int=\count437
-\l__siunitx_process_fixed_int=\count438
-\l__siunitx_process_integer_min_int=\count439
-\l__siunitx_process_precision_int=\count440
-\l__siunitx_group_min_int=\count441
-\l__siunitx_angle_marker_box=\box99
-\l__siunitx_angle_unit_box=\box100
-\l__siunitx_angle_marker_dim=\dimen427
-\l__siunitx_angle_unit_dim=\dimen428
-\l__siunitx_unit_int=\count442
-\l__siunitx_unit_denominator_int=\count443
-\l__siunitx_unit_numerator_int=\count444
-\l__siunitx_unit_prefix_int=\count445
-\l__siunitx_unit_prefix_base_int=\count446
-\l__siunitx_unit_prefix_gram_int=\count447
-\l__siunitx_number_product_int=\count448
-\c__siunitx_one_fill_skip=\skip93
-\l__siunitx_table_unit_align_skip=\skip94
-\l__siunitx_table_exponent_dim=\dimen429
-\l__siunitx_table_integer_dim=\dimen430
-\l__siunitx_table_mantissa_dim=\dimen431
-\l__siunitx_table_marker_dim=\dimen432
-\l__siunitx_table_result_dim=\dimen433
-\l__siunitx_table_uncert_dim=\dimen434
-\l__siunitx_table_fill_pre_dim=\dimen435
-\l__siunitx_table_fill_post_dim=\dimen436
-\l__siunitx_table_fill_mid_dim=\dimen437
-\l__siunitx_table_pre_box=\box101
-\l__siunitx_table_post_box=\box102
-\l__siunitx_table_mantissa_box=\box103
-\l__siunitx_table_result_box=\box104
-\l__siunitx_table_number_align_skip=\skip95
-\l__siunitx_table_text_align_skip=\skip96
+\l__siunitx_tmp_box=\box104
+\l__siunitx_tmp_dim=\dimen430
+\l__siunitx_tmp_int=\count433
+\l__siunitx_number_mantissa_length_int=\count434
+\l__siunitx_number_uncert_length_int=\count435
+\l__siunitx_round_int=\count436
+\l__siunitx_process_decimal_int=\count437
+\l__siunitx_process_uncertainty_int=\count438
+\l__siunitx_process_fixed_int=\count439
+\l__siunitx_process_integer_min_int=\count440
+\l__siunitx_process_precision_int=\count441
+\l__siunitx_group_min_int=\count442
+\l__siunitx_angle_marker_box=\box105
+\l__siunitx_angle_unit_box=\box106
+\l__siunitx_angle_marker_dim=\dimen431
+\l__siunitx_angle_unit_dim=\dimen432
+\l__siunitx_unit_int=\count443
+\l__siunitx_unit_denominator_int=\count444
+\l__siunitx_unit_numerator_int=\count445
+\l__siunitx_unit_prefix_int=\count446
+\l__siunitx_unit_prefix_base_int=\count447
+\l__siunitx_unit_prefix_gram_int=\count448
+\l__siunitx_number_product_int=\count449
+\c__siunitx_one_fill_skip=\skip96
+\l__siunitx_table_unit_align_skip=\skip97
+\l__siunitx_table_exponent_dim=\dimen433
+\l__siunitx_table_integer_dim=\dimen434
+\l__siunitx_table_mantissa_dim=\dimen435
+\l__siunitx_table_marker_dim=\dimen436
+\l__siunitx_table_result_dim=\dimen437
+\l__siunitx_table_uncert_dim=\dimen438
+\l__siunitx_table_fill_pre_dim=\dimen439
+\l__siunitx_table_fill_post_dim=\dimen440
+\l__siunitx_table_fill_mid_dim=\dimen441
+\l__siunitx_table_pre_box=\box107
+\l__siunitx_table_post_box=\box108
+\l__siunitx_table_mantissa_box=\box109
+\l__siunitx_table_result_box=\box110
+\l__siunitx_table_number_align_skip=\skip98
+\l__siunitx_table_text_align_skip=\skip99
  (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/arydshln/arydshln.sty
 Package: arydshln 2019/02/21 v1.76 
-\dashlinedash=\dimen438
-\dashlinegap=\dimen439
-\adl@box=\box105
-\adl@height=\dimen440
-\adl@heightsave=\dimen441
-\adl@depth=\dimen442
-\adl@depthsave=\dimen443
-\adl@finaldepth=\dimen444
-\adl@columns=\count449
-\adl@ncol=\count450
-\adl@currentcolumn=\count451
-\adl@currentcolumnsave=\count452
-\adl@totalheight=\count453
-\adl@totalheightsave=\count454
-\adl@dash=\count455
-\adl@gap=\count456
-\adl@cla=\count457
-\adl@clb=\count458
-\adl@everyvbox=\toks70
-\adl@LTpagetotal=\dimen445
+\dashlinedash=\dimen442
+\dashlinegap=\dimen443
+\adl@box=\box111
+\adl@height=\dimen444
+\adl@heightsave=\dimen445
+\adl@depth=\dimen446
+\adl@depthsave=\dimen447
+\adl@finaldepth=\dimen448
+\adl@columns=\count450
+\adl@ncol=\count451
+\adl@currentcolumn=\count452
+\adl@currentcolumnsave=\count453
+\adl@totalheight=\count454
+\adl@totalheightsave=\count455
+\adl@dash=\count456
+\adl@gap=\count457
+\adl@cla=\count458
+\adl@clb=\count459
+\adl@everyvbox=\toks71
+\adl@LTpagetotal=\dimen449
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/diagbox/diagbox.sty
 Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
  (/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.sty
@@ -1217,63 +1237,63 @@ Package pict2e Info: Driver file for pict2e: p2e-xetex.def on input line 114.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/p2e-xetex.def
 File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
-\pIIe@GRAPH=\toks71
-\@arclen=\dimen446
-\@arcrad=\dimen447
-\pIIe@tempdima=\dimen448
-\pIIe@tempdimb=\dimen449
-\pIIe@tempdimc=\dimen450
-\pIIe@tempdimd=\dimen451
-\pIIe@tempdime=\dimen452
-\pIIe@tempdimf=\dimen453
+\pIIe@GRAPH=\toks72
+\@arclen=\dimen450
+\@arcrad=\dimen451
+\pIIe@tempdima=\dimen452
+\pIIe@tempdimb=\dimen453
+\pIIe@tempdimc=\dimen454
+\pIIe@tempdimd=\dimen455
+\pIIe@tempdime=\dimen456
+\pIIe@tempdimf=\dimen457
 )
-\diagbox@boxa=\box106
-\diagbox@boxb=\box107
-\diagbox@boxm=\box108
-\diagbox@wd=\dimen454
-\diagbox@ht=\dimen455
-\diagbox@insepl=\dimen456
-\diagbox@insepr=\dimen457
-\diagbox@outsepl=\dimen458
-\diagbox@outsepr=\dimen459
+\diagbox@boxa=\box112
+\diagbox@boxb=\box113
+\diagbox@boxm=\box114
+\diagbox@wd=\dimen458
+\diagbox@ht=\dimen459
+\diagbox@insepl=\dimen460
+\diagbox@insepr=\dimen461
+\diagbox@outsepl=\dimen462
+\diagbox@outsepr=\dimen463
 ) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 14.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-Package hyperref Info: Link coloring ON on input line 13.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+Package hyperref Info: Link coloring ON on input line 14.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count459
+\c@section@level=\count460
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 14.
+LaTeX Info: Redefining \pageref on input line 14.
+LaTeX Info: Redefining \nameref on input line 14.
  (./thesis.out) (./thesis.out)
 \@outlinefile=\write8
 \openout8 = `thesis.out'.
@@ -1285,7 +1305,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 )
-\c@lstlisting=\count460
+\c@lstlisting=\count461
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1327,56 +1347,56 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 13.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 13.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 13.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 13.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 13.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 13.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 13.
-LaTeX Font Info:    Redeclaring math accent \check on input line 13.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 13.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 13.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 13.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 13.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 14.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 14.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 14.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 14.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 14.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 14.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 14.
+LaTeX Font Info:    Redeclaring math accent \check on input line 14.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 14.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 14.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 14.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 14.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 14.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 13.
+(Font)              `operators' in the math version `normal' on input line 14.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 13.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 14.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 13.
+(Font)              `operators' in the math version `bold' on input line 14.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 13.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 14.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 13.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 14.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 13.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 14.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 13.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 14.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 13.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 14.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 13.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 14.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 13.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 14.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 13.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 14.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 13.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 14.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 13.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 14.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
@@ -1384,11 +1404,11 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1398,14 +1418,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
 * v-part:(T,H,B)=(113.81102pt, 645.87756pt, 85.35826pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=418.25368pt
+* \textwidth=483.69687pt
 * \textheight=645.87756pt
-* \oddsidemargin=17.3571pt
-* \evensidemargin=17.3571pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
 * \topmargin=9.66724pt
 * \headheight=12.0pt
 * \headsep=19.8738pt
@@ -1424,19 +1444,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 27.
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 28.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line 27.
+(Font)              size <17.28> substituted on input line 28.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 27.
+(Font)              size <17.28> substituted on input line 28.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 27.
+(Font)              size <17.28> substituted on input line 28.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
@@ -1444,17 +1464,44 @@ File: watermark.pdf Graphic file (type pdf)
 
 
 
-] (./FrontFile/abstractCH.tex
+]
+File: Verification_Letter.pdf Graphic file (type pdf)
+<use Verification_Letter.pdf>
+File: Verification_Letter.pdf Graphic file (type pdf)
+<use Verification_Letter.pdf>
+File: Verification_Letter.pdf Graphic file (type pdf)
+<use Verification_Letter.pdf, page 1>
+File: Verification_Letter.pdf Graphic file (type pdf)
+<use Verification_Letter.pdf, page 1>
+File: Verification_Letter.pdf Graphic file (type pdf)
+<use Verification_Letter.pdf, page 1>
+File: Verification_Letter.pdf Graphic file (type pdf)
+<use Verification_Letter.pdf, page 1>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
+File: Verification_Letter.pdf Graphic file (type pdf)
+<use Verification_Letter.pdf, page 1>
  [1
 
 
 
-]) (./FrontFile/abstractEN.tex
+] (./FrontFile/acknowledgementsCH.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [2
+
+]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [3]) (./FrontFile/abstractCH.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [4
+
+]) (./FrontFile/abstractEN.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [5
 
 ]
 Overfull \hbox (8.65338pt too wide) in paragraph at lines 6--7
@@ -1463,44 +1510,44 @@ Overfull \hbox (8.65338pt too wide) in paragraph at lines 6--7
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[3]) (./thesis.toc
+[6]) (./thesis.toc
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [4
+ [7
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [5]
+ [8]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [6])
+ [9])
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [7] (./thesis.lof
+ [10] (./thesis.lof
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [8
+ [11
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [9]
+ [12]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [10])
+ [13])
 \tf@lof=\write10
 \openout10 = `thesis.lof'.
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [11] (./thesis.lot
+ [14] (./thesis.lot
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [12
+ [15
 
 ])
 \tf@lot=\write11
@@ -1509,7 +1556,7 @@ File: watermark.pdf Graphic file (type pdf)
  (./Chapter/SymbolList.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [13]
+ [16]
 Overfull \hbox (57.1569pt too wide) in alignment at lines 14--29
 [] [] 
  []
@@ -1531,20 +1578,20 @@ Overfull \hbox (65.06126pt too wide) has occurred while \output is active
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[14
+[17
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [15]
+ [18]
 File: ch1pic/not_whole.png Graphic file (type bmp)
 <ch1pic/not_whole.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [16]) (./Chapter/SymbolList_alphabet.tex
+ [19]) (./Chapter/SymbolList_alphabet.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [17]
+ [20]
 Overfull \hbox (65.06126pt too wide) in alignment at lines 13--42
 [] [] 
  []
@@ -1566,7 +1613,7 @@ Overfull \hbox (65.06126pt too wide) has occurred while \output is active
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[18
+[21
 
 ]
 Overfull \hbox (65.06126pt too wide) has occurred while \output is active
@@ -1576,7 +1623,7 @@ Overfull \hbox (65.06126pt too wide) has occurred while \output is active
 )
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [19] (./chapter/01Introduction.tex
+ [22] (./chapter/01Introduction.tex
 Chapter 1.
 File: ch1pic/iot.png Graphic file (type bmp)
 <ch1pic/iot.png>
@@ -1608,18 +1655,18 @@ File: ch2pic/subsystem.png Graphic file (type bmp)
 <ch2pic/subsystem.png>
 File: ch2pic/pos_flow.png Graphic file (type bmp)
 <ch2pic/pos_flow.png>
+File: ch2pic/pos_category.png Graphic file (type bmp)
+<ch2pic/pos_category.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
 [7
 
 ]
-File: ch2pic/pos_category.png Graphic file (type bmp)
-<ch2pic/pos_category.png>
-File: ch2pic/homo_trans.png Graphic file (type bmp)
-<ch2pic/homo_trans.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [8]
+File: ch2pic/homo_trans.png Graphic file (type bmp)
+<ch2pic/homo_trans.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [9]
@@ -1635,6 +1682,9 @@ File: ch2pic/triangulation.png Graphic file (type bmp)
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [11]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [12]
 File: ch2pic/fingerprinting.png Graphic file (type bmp)
 <ch2pic/fingerprinting.png>
 File: ch2pic/image_processing.png Graphic file (type bmp)
@@ -1643,110 +1693,112 @@ File: ch2pic/aruco.png Graphic file (type bmp)
 <ch2pic/aruco.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [12]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [13]
-File: ch2pic/electro_spectrum.png Graphic file (type bmp)
-<ch2pic/electro_spectrum.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [14]
+File: ch2pic/electro_spectrum.png Graphic file (type bmp)
+<ch2pic/electro_spectrum.png>
 File: ch2pic/electro_sort.png Graphic file (type bmp)
 <ch2pic/electro_sort.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [15]
 File: ch2pic/rfid_system.png Graphic file (type bmp)
 <ch2pic/rfid_system.png>
 File: ch2pic/landmarc.png Graphic file (type bmp)
 <ch2pic/landmarc.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [15]
+File: ch2pic/rfid_1to1.png Graphic file (type bmp)
+<ch2pic/rfid_1to1.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [16]
-File: ch2pic/rfid_1to1.png Graphic file (type bmp)
-<ch2pic/rfid_1to1.png>
-File: ch2pic/vlc_flow.png Graphic file (type bmp)
-<ch2pic/vlc_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [17]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [18]
+File: ch2pic/vlc_flow.png Graphic file (type bmp)
+<ch2pic/vlc_flow.png>
 File: ch2pic/method_compare.png Graphic file (type bmp)
 <ch2pic/method_compare.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [18]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [19]
-File: ch2pic/solar_spectra.png Graphic file (type bmp)
-<ch2pic/solar_spectra.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [20]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [21]
+File: ch2pic/solar_spectra.png Graphic file (type bmp)
+<ch2pic/solar_spectra.png>
 File: ch2pic/light_freq_compare.png Graphic file (type bmp)
 <ch2pic/light_freq_compare.png>
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 398--399
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 400--401
  [][] 
  []
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[21]
+[22]
 File: ch2pic/rolling_shutter.png Graphic file (type bmp)
 <ch2pic/rolling_shutter.png>
 File: ch2pic/rolling_shutter_case.png Graphic file (type bmp)
 <ch2pic/rolling_shutter_case.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [22]
 File: ch2pic/multipath.png Graphic file (type bmp)
 <ch2pic/multipath.png>
-File: ch2pic/ml_pd_config.png Graphic file (type bmp)
-<ch2pic/ml_pd_config.png>
-File: ch2pic/vlc_multi_pd.png Graphic file (type bmp)
-<ch2pic/vlc_multi_pd.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [23]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [24]
+File: ch2pic/ml_pd_config.png Graphic file (type bmp)
+<ch2pic/ml_pd_config.png>
+File: ch2pic/vlc_multi_pd.png Graphic file (type bmp)
+<ch2pic/vlc_multi_pd.png>
 File: ch2pic/env_finger.png Graphic file (type bmp)
 <ch2pic/env_finger.png>
 File: ch2pic/env_1to1.png Graphic file (type bmp)
 <ch2pic/env_1to1.png>
 File: ch2pic/pd_camera_sort.png Graphic file (type bmp)
 <ch2pic/pd_camera_sort.png>
-
-Overfull \hbox (6.20865pt too wide) in paragraph at lines 509--510
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [25]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [26]
+Overfull \hbox (6.20865pt too wide) in paragraph at lines 511--512
 []\TU/DFKai-SB(0)/m/n/12 在[][]\TU/TimesNewRoman(0)/m/n/12 2.3[][]\TU/DFKai-SB(0)/m/n/12 章 中，|  由 電 磁 波 頻 率 分 類 為 無 線 電 波 段 與 光 波 段，|  分 別 於[][]\TU/TimesNewRoman(0)/m/n/12 2.3.1[][]\TU/DFKai-SB(0)/m/n/12 章 與[][]\TU/TimesNewRoman(0)/m/n/12 2.3.2[][]\TU/DFKai-SB(0)/m/n/12 章
  []
 
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[25]
 File: ch2pic/lp_system_structure.png Graphic file (type bmp)
 <ch2pic/lp_system_structure.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [26]
+[27]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [28]
 File: ch2pic/lp_system_flow.png Graphic file (type bmp)
 <ch2pic/lp_system_flow.png>
 File: ch2pic/vlc_flow_draw.png Graphic file (type bmp)
 <ch2pic/vlc_flow_draw.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [27]
+ [29]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [28]
+ [30]
 File: ch2pic/photometry_table.png Graphic file (type bmp)
 <ch2pic/photometry_table.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [29]
+ [31]
 File: ch2pic/solid_angle.png Graphic file (type bmp)
 <ch2pic/solid_angle.png>
 File: ch2pic/intensity_irradiance.png Graphic file (type bmp)
@@ -1755,98 +1807,98 @@ File: ch2pic/3d_angle.png Graphic file (type bmp)
 <ch2pic/3d_angle.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [30]
+ [32]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [31]
+ [33]
 File: ch2pic/lambertian.png Graphic file (type bmp)
 <ch2pic/lambertian.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [32]
+ [34]
 File: ch2pic/lambertian_3d.png Graphic file (type bmp)
 <ch2pic/lambertian_3d.png>
 File: ch2pic/hardware_para.png Graphic file (type bmp)
 <ch2pic/hardware_para.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [33]
+ [35]
 File: ch2pic/lambertian_led.png Graphic file (type bmp)
 <ch2pic/lambertian_led.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [34]
+ [36]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [35]
+ [37]
 File: ch2pic/vec_config.png Graphic file (type bmp)
 <ch2pic/vec_config.png>
 File: ch2pic/LED_config.png Graphic file (type bmp)
 <ch2pic/LED_config.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [36]
+ [38]
 File: ch2pic/interactive_1to1.png Graphic file (type bmp)
 <ch2pic/interactive_1to1.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [37]
+ [39]
 File: ch2pic/interactive_mul.png Graphic file (type bmp)
 <ch2pic/interactive_mul.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [38]
+ [40]
 File: ch2pic/relative_vs_coor.png Graphic file (type bmp)
 <ch2pic/relative_vs_coor.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [39]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [40]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [41]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [42]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [43]
 File: ch2pic/config_orient.png Graphic file (type bmp)
 <ch2pic/config_orient.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [42]
+ [44]
 File: ch2pic/case_parallel.png Graphic file (type bmp)
 <ch2pic/case_parallel.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [43]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [44]
-File: ch2pic/layers_2d.png Graphic file (type bmp)
-<ch2pic/layers_2d.png>
-File: ch2pic/layers_3d.png Graphic file (type bmp)
-<ch2pic/layers_3d.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [45]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [46]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [47]
+File: ch2pic/layers_2d.png Graphic file (type bmp)
+<ch2pic/layers_2d.png>
+File: ch2pic/layers_3d.png Graphic file (type bmp)
+<ch2pic/layers_3d.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [48]
 File: ch2pic/case_cart3d.png Graphic file (type bmp)
 <ch2pic/case_cart3d.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [47]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [48]) (./chapter/03Method.tex
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [49]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [50]) (./chapter/03Method.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [51]
 Chapter 3.
 File: ch3pic/chp3_flow.png Graphic file (type bmp)
 <ch3pic/chp3_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[50
+[52
 
 ]
 Overfull \hbox (3.71823pt too wide) in paragraph at lines 50--52
@@ -1862,12 +1914,12 @@ File: ch3pic/algorithm_place.png Graphic file (type bmp)
 <ch3pic/algorithm_place.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[51]
+[53]
 File: ch3pic/algorithm_flow.png Graphic file (type bmp)
 <ch3pic/algorithm_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [52]
+ [54]
 File: ch3pic/after_filter.png Graphic file (type bmp)
 <ch3pic/after_filter.png>
 File: ch3pic/orient_flow.png Graphic file (type bmp)
@@ -1878,70 +1930,70 @@ File: ch3pic/1led_mulpd.png Graphic file (type bmp)
 <ch3pic/1led_mulpd.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [53]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [54]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [55]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [56]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [57]
 File: ch3pic/solve_surface.png Graphic file (type bmp)
 <ch3pic/solve_surface.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [56]
+ [58]
 File: ch3pic/solve_axis.png Graphic file (type bmp)
 <ch3pic/solve_axis.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [57]
+ [59]
 File: ch3pic/mulled_1pd.png Graphic file (type bmp)
 <ch3pic/mulled_1pd.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [60]
 File: ch3pic/solve_dis_flow.png Graphic file (type bmp)
 <ch3pic/solve_dis_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [58]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [59]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [60]) (./chapter/04Analysis.tex
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [61]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [62]) (./chapter/04Analysis.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [63]
 Chapter 4.
 File: ch4pic/simulate_hardware.png Graphic file (type bmp)
 <ch4pic/simulate_hardware.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[62
+[64
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [63]
+ [65]
 Overfull \hbox (25.91798pt too wide) in paragraph at lines 120--158
  [][] 
  []
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[64]
+[66]
 File: ch4pic/config_a.png Graphic file (type bmp)
 <ch4pic/config_a.png>
 File: ch4pic/config_b.png Graphic file (type bmp)
 <ch4pic/config_b.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [65]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [66]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [67]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [68]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [69]
 File: ch4pic/set_a.png Graphic file (type bmp)
 <ch4pic/set_a.png>
 
@@ -1974,16 +2026,16 @@ File: ch4pic/simulate_signal_flow.png Graphic file (type bmp)
 <ch4pic/simulate_signal_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[68]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [69]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [70]
+[70]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [71]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [72]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [73]
 File: ch4pic/interactive_1to1.png Graphic file (type bmp)
 <ch4pic/interactive_1to1.png>
 File: ch4pic/A.png Graphic file (type bmp)
@@ -1996,33 +2048,33 @@ File: ch4pic/D.png Graphic file (type bmp)
 <ch4pic/D.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [72]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [73]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [74]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [75]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [76]
 File: ch4pic/evaluate_flow.png Graphic file (type bmp)
 <ch4pic/evaluate_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [75]
+ [77]
 File: ch4pic/translate_sample.png Graphic file (type bmp)
 <ch4pic/translate_sample.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [78]
 File: ch4pic/rotate_sample.png Graphic file (type bmp)
 <ch4pic/rotate_sample.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [76]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [77]
 File: ch4pic/error.png Graphic file (type bmp)
 <ch4pic/error.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [78]
+ [79]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [80]
 File: ch4pic/sample_out.png Graphic file (type bmp)
 <ch4pic/sample_out.png>
 File: ch4pic/effective.png Graphic file (type bmp)
@@ -2031,13 +2083,13 @@ File: ch4pic/analysis_interactive.png Graphic file (type bmp)
 <ch4pic/analysis_interactive.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [79]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [80]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [81]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [82]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [83]
 File: ch4pic/ef60.png Graphic file (type bmp)
 <ch4pic/ef60.png>
 File: ch4pic/ef70.png Graphic file (type bmp)
@@ -2056,34 +2108,37 @@ File: ch4pic/to02.png Graphic file (type bmp)
 <ch4pic/to02.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [82]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [83]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
  [84]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [85]
+File: ch4pic/bandwidth_effect.png Graphic file (type bmp)
+<ch4pic/bandwidth_effect.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [86]
-File: ch4pic/bandwidth_effect.png Graphic file (type bmp)
-<ch4pic/bandwidth_effect.png>
-File: ch4pic/background_effect.png Graphic file (type bmp)
-<ch4pic/background_effect.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [87]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
  [88]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [89]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [90]
+File: ch4pic/background_effect.png Graphic file (type bmp)
+<ch4pic/background_effect.png>
 File: ch4pic/multipath_effect.png Graphic file (type bmp)
 <ch4pic/multipath_effect.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [89]
+ [91]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [92]
 File: ch4pic/lambertian_translate.png Graphic file (type bmp)
 <ch4pic/lambertian_translate.png>
 File: ch4pic/lambertian_rotate.png Graphic file (type bmp)
@@ -2094,24 +2149,30 @@ File: ch4pic/num5 alpha surface.png Graphic file (type bmp)
 <ch4pic/num5 alpha surface.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [90]
+ [93]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [91]
+ [94]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [92]
+ [95]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [96]
 File: ch4pic/m_effect.png Graphic file (type bmp)
 <ch4pic/m_effect.png>
 File: ch4pic/alpha_effect.png Graphic file (type bmp)
 <ch4pic/alpha_effect.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [93]
+ [97]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [98]
 File: ch4pic/num3 alpha surface.png Graphic file (type bmp)
 <ch4pic/num3 alpha surface.png>
 
-Overfull \hbox (10.69682pt too wide) in paragraph at lines 1220--1222
+Overfull \hbox (10.69682pt too wide) in paragraph at lines 1221--1223
  [][] 
  []
 
@@ -2119,38 +2180,35 @@ File: ch4pic/num15 alpha surface.png Graphic file (type bmp)
 <ch4pic/num15 alpha surface.png>
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1257.
+(hyperref)                removing `math shift' on input line 1258.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1257.
+(hyperref)                removing `\times' on input line 1258.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1257.
+(hyperref)                removing `\times' on input line 1258.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1257.
-
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
-[94]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1262.
+(hyperref)                removing `math shift' on input line 1258.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1262.
+(hyperref)                removing `math shift' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1262.
+(hyperref)                removing `\times' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1262.
+(hyperref)                removing `\times' on input line 1263.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1263.
 
 File: ch4pic/b_scenario.png Graphic file (type bmp)
 <ch4pic/b_scenario.png>
@@ -2158,47 +2216,49 @@ File: ch4pic/scene_b_solve.png Graphic file (type bmp)
 <ch4pic/scene_b_solve.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[95]
+[99]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [96]
+ [100]
 File: ch4pic/c_scenario.png Graphic file (type bmp)
 <ch4pic/c_scenario.png>
 File: ch4pic/scene_c_solve.png Graphic file (type bmp)
 <ch4pic/scene_c_solve.png>
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [101]
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [102]
 File: ch4pic/d_scenario.png Graphic file (type bmp)
 <ch4pic/d_scenario.png>
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [97]
-File: watermark.pdf Graphic file (type pdf)
-<use watermark.pdf>
- [98]
 File: ch4pic/scene_d_solve.png Graphic file (type bmp)
 <ch4pic/scene_d_solve.png>
-) (./chapter/05Optimize.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [99]
+ [103]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [100]
+ [104]) (./chapter/05Optimize.tex
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [105]
 Chapter 5.
 File: ch5pic/optimize_flow.png Graphic file (type bmp)
 <ch5pic/optimize_flow.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[101
+[106
 
 ]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [102]
+ [107]
 File: ch5pic/optimize_variable.png Graphic file (type bmp)
 <ch5pic/optimize_variable.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [103]
+ [108]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 76.
@@ -2221,17 +2281,17 @@ File: ch5pic/surface_opt_A.png Graphic file (type bmp)
 <ch5pic/surface_opt_A.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[104]
+[109]
 File: ch5pic/a_33.png Graphic file (type bmp)
 <ch5pic/a_33.png>
 File: ch5pic/a_88.png Graphic file (type bmp)
 <ch5pic/a_88.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [105]
+ [110]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [106]
+ [111]
 File: ch5pic/optimize_C.png Graphic file (type bmp)
 <ch5pic/optimize_C.png>
 
@@ -2245,30 +2305,53 @@ File: ch5pic/optimize_d.png Graphic file (type bmp)
 <ch5pic/optimize_d.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[107]
+[112]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [108]
+ [113]
 File: ch5pic/d_1010.png Graphic file (type bmp)
 <ch5pic/d_1010.png>
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [109]) (./chapter/06Conclusion.tex
+ [114]) (./chapter/06Conclusion.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [110]
+ [115]
 Chapter 6.
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[111
+[116
 
-])
+]) (./chapter/AppendixA.tex
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [112] (./thesis.bbl
+ [117]
+Chapter 7.
+File: ReadMe.pdf Graphic file (type pdf)
+<use ReadMe.pdf>
+)
+Overfull \hbox (135.811pt too wide) in paragraph at lines 3--70
+[]| []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--70
+
+ []
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [113
+[118
+
+]
+Overfull \vbox (429.72713pt too high) has occurred while \output is active []
+
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [119] (./thesis.bbl
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [120
 
 
 ]
@@ -2278,38 +2361,75 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 75--79
-[]\TU/TimesNewRoman(0)/m/n/12 OpenCV.  Detection of aruco markers.  Retrieved Jul 2022 from: [][]$[][][][] []
+Underfull \hbox (badness 1189) in paragraph at lines 130--136
+[]\TU/TimesNewRoman(0)/m/n/12 OSRAM Opto Semiconductors Inc.  High power infrared emitter (940 nm).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--79
-[] [] [][][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][][][][][][][][][][][] [] [][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] []
+Underfull \hbox (badness 5652) in paragraph at lines 138--143
+\TU/TimesNewRoman(0)/m/n/12 Retrieved Aug 2022 from: [][]$[][][][][] [] [] [] [][][][] [] [][][][][][][][][][][][][] [] [][][] [] [][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
+[][][] [] [][][][] [] [][] [] [][][][][][][][] [] [][][][] [][] [][][][][][][][] [] [][][][] [][] [][][][][][] [] [][][][] [] [][][][][][][] []
  []
 
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
-[114]
+[121]
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [115])
+ [122]
+Underfull \hbox (badness 10000) in paragraph at lines 257--262
+[][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][][][][] [] [][][] [] [][][][][][][][][] [][] [][][][][][][][][] [] [][][][][] []
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 264--269
+[]\TU/TimesNewRoman(0)/m/n/12 Hamamatsu.  Infrared LED L12170.  Retrieved Aug 2022 from: [][]$[][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--269
+[] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][][][][] [] [][][] [] [][][][][][][][][] [][] [][][][][][][][][] [] [][][][][] []
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 277--282
+[]\TU/TimesNewRoman(0)/m/n/12 Hamamatsu.  Si Photodiodes S12915 series.  Retrieved Aug 2022 from:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--282
+[][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][][][][] [] [][][] [] [][][][][][][][][] [][] [][][][][][][][][] [] [][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--282
+[][][][][][][][][] [] [][] [] [][][][][] [] [][][][][][][] [] [][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][] [] [][][]$[][]\TU/TimesNewRoman(0)/m/n/12 , Jan
+ []
+
 File: watermark.pdf Graphic file (type pdf)
 <use watermark.pdf>
- [116] (./thesis.aux)
+[123])
+File: watermark.pdf Graphic file (type pdf)
+<use watermark.pdf>
+ [124] (./thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 407E94C97F3E7A54207882BFA1643C1A;12692.
+(rerunfilecheck)             Checksum: 3C851D55AE25ABC875188D50FAE46986;12859.
  ) 
 Here is how much of TeX's memory you used:
- 41481 strings out of 476919
- 864448 string characters out of 5821840
- 1346632 words of memory out of 5000000
- 60512 multiletter control sequences out of 15000+600000
- 417337 words of font info for 133 fonts, out of 8000000 for 9000
+ 41966 strings out of 476919
+ 878369 string characters out of 5821840
+ 1353076 words of memory out of 5000000
+ 60981 multiletter control sequences out of 15000+600000
+ 417443 words of font info for 134 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  106i,19n,117p,1959b,941s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (136 pages).
+Output written on thesis.pdf (147 pages).

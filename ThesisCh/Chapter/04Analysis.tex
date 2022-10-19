@@ -403,8 +403,9 @@
 
 
     \begin{gather}
+        \label{eqn:var_noise}
+        \sigma_{In}^2 = {It_{lp}^2+Is_{lp}^2}\\
         \label{eqn:thermal_noise}
-        \sigma_{In}^2 = {It_{lp}^2+Is_{lp}^2}
         \sigma_{It_{lp}}^2={\frac{4 Kb Te B}{R}}\\
         \label{eqn:shot_noise}
         \sigma_{Is_{lp}}^2={2q(Ie_{lp}+Ib+Id)B}
@@ -639,7 +640,7 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=6cm]{ch4pic/translate_sample.png}
+    \includegraphics[width=9cm]{ch4pic/translate_sample.png}
     \caption{相對於PD座標系之平移樣本點}
     \label{pic:translate_sample}
 \end{figure}
@@ -664,7 +665,7 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=12cm]{ch4pic/rotate_sample.png}
+    \includegraphics[width=15cm]{ch4pic/rotate_sample.png}
     \caption{相對於PD座標系之旋轉樣本點}
     \label{pic:rotate_sample}
 \end{figure}
@@ -684,7 +685,7 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=9cm]{ch4pic/error.png}
+    \includegraphics[width=13cm]{ch4pic/error.png}
     \caption{樣本點與誤差示意圖}
     \label{pic:error_show}
 \end{figure}
@@ -823,7 +824,7 @@
     \centering
     \begin{minipage}{.5\textwidth}
         \centering
-        \includegraphics[height = 9cm]{ch4pic/ef60.png}
+        \includegraphics[height = 12cm]{ch4pic/ef60.png}
         % \captionsetup{labelformat=empty}
         \caption{$Ef=60\%$的有效範圍}
         \label{pic:ef60}
@@ -831,7 +832,7 @@
     \end{minipage}%
     \begin{minipage}{0.5\textwidth}
         \centering
-        \includegraphics[height = 9cm]{ch4pic/ef70.png}
+        \includegraphics[height = 12cm]{ch4pic/ef70.png}
         % \captionsetup{labelformat=empty}
         \caption{$Ef=70\%$的有效範圍}
         \label{pic:ef70}
@@ -843,7 +844,7 @@
     \centering
     \begin{minipage}{.5\textwidth}
         \centering
-        \includegraphics[height = 9cm]{ch4pic/ef80.png}
+        \includegraphics[height = 12cm]{ch4pic/ef80.png}
         % \captionsetup{labelformat=empty}
         \caption{$Ef=80\%$的有效範圍}
         \label{pic:ef80}
@@ -851,7 +852,7 @@
     \end{minipage}%
     \begin{minipage}{0.5\textwidth}
         \centering
-        \includegraphics[height = 9cm]{ch4pic/ef95.png}
+        \includegraphics[height = 12cm]{ch4pic/ef95.png}
         % \captionsetup{labelformat=empty}
         \caption{$Ef=95\%$的有效範圍}
         \label{pic:ef95}
@@ -888,7 +889,7 @@
 
  \begin{figure}[htpb]
     \centering
-    \includegraphics[width=10cm]{ch4pic/to_effect.png}
+    \includegraphics[width=15cm]{ch4pic/to_effect.png}
     \caption{容許範圍對系統成效的影響}
     \label{pic:to_effect}
 \end{figure}
@@ -974,7 +975,7 @@
     
      \begin{figure}[htpb]
         \centering
-        \includegraphics[width=10cm]{ch4pic/bandwidth_effect.png}
+        \includegraphics[width=15cm]{ch4pic/bandwidth_effect.png}
         \caption{頻寬對系統成效的影響}
         \label{pic:bandwidth_effect}
     \end{figure}
@@ -1016,7 +1017,7 @@
 
      \begin{figure}[htpb]
         \centering
-        \includegraphics[width=10cm]{ch4pic/background_effect.png}
+        \includegraphics[width=15cm]{ch4pic/background_effect.png}
         \caption{背景電流對系統成效的影響}
         \label{pic:background_effect}
     \end{figure}
@@ -1068,7 +1069,7 @@
 
      \begin{figure}[htpb]
         \centering
-        \includegraphics[width=10cm]{ch4pic/multipath_effect.png}
+        \includegraphics[width=15cm]{ch4pic/multipath_effect.png}
         \caption{多重路徑增益對系統成效的影響}
         \label{pic:multipath_effect}
     \end{figure}
@@ -1126,7 +1127,7 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=9cm]{ch4pic/m alpha50 surface.png}
+    \includegraphics[width=15cm]{ch4pic/m alpha50 surface.png}
     \caption{改變朗博次方對系統的影響}
     \label{pic:m alpha50 surface}
 \end{figure}
@@ -1149,7 +1150,7 @@
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=9cm]{ch4pic/num5 alpha surface.png}
+    \includegraphics[width=15cm]{ch4pic/num5 alpha surface.png}
     \caption{改變硬體指向天頂角對系統的影響}
     \label{pic:num5 alpha surface}
 \end{figure}
@@ -1193,20 +1194,20 @@
 \subsubsection{硬體數量對系統表現的影響}
 \label{chp:amount_effect}
 
-首先，我們同時考慮硬體數量與朗博次方，在此將\ref{chp:m_effect}章中做的圖\ref{pic:m alpha50 surface}改變硬體數量，並同時呈現於圖\ref{pic:m_effect}，從途中我們可以知道，提高硬體數量可以改善系統表現，但是系統成效的幅度與硬體數量增加的幅度並不成正比。
+首先，我們同時考慮硬體數量與朗博次方，在此將\ref{chp:m_effect}章中做的圖\ref{pic:m alpha50 surface}改變硬體數量，並同時呈現於圖\ref{pic:m_effect}，從圖中我們可以知道，提高硬體數量可以改善系統表現，但是系統成效的幅度與硬體數量增加的幅度並不成正比。
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=9cm]{ch4pic/m_effect.png}
-    \caption{硬體數量與朗博次方對系統影響}
+    \includegraphics[width=15cm]{ch4pic/m_effect.png}
+    \caption{硬體數量與朗博次方對系統的影響}
     \label{pic:m_effect}
 \end{figure}
 
-我們改觀察硬體數量與硬體天頂角的影響，一樣將圖\ref{pic:num5 alpha surface}的數量改變一起呈現於圖\ref{pic:alpha_effect}，可以得到同樣的結論：增加硬體數量有助於提升系統效能，但系統成效的幅度與硬體數量增加的幅度並不成正比，因此挑選合適的硬體數量為一重要選擇。
+我們改觀察硬體數量與硬體天頂角的影響，一樣將圖\ref{pic:num5 alpha surface}中的硬體數量改變，呈現於圖\ref{pic:alpha_effect}中，可以得到同樣的結論：增加硬體數量有助於提升系統效能，但系統成效的幅度與硬體數量增加的幅度並不成正比，因此挑選合適的硬體數量為一重要選擇。
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=9cm]{ch4pic/alpha_effect.png}
+    \includegraphics[width=15cm]{ch4pic/alpha_effect.png}
     \caption{硬體數量與硬體天頂角對系統影響}
     \label{pic:alpha_effect}
 \end{figure}

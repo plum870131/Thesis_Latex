@@ -11,34 +11,34 @@ Warning--empty publisher in astm
 Warning--empty publisher in radiometry_and_photometry
 You've used 48 entries,
             1791 wiz_defined-function locations,
-            705 strings with 11127 characters,
-and the built_in function-call counts, 10782 in all, are:
-= -- 888
-> -- 544
+            712 strings with 11903 characters,
+and the built_in function-call counts, 11086 in all, are:
+= -- 912
+> -- 565
 < -- 9
-+ -- 201
-- -- 153
-* -- 778
-:= -- 1683
-add.period$ -- 138
++ -- 208
+- -- 160
+* -- 765
+:= -- 1752
+add.period$ -- 146
 call.type$ -- 48
-change.case$ -- 39
+change.case$ -- 44
 chr.to.int$ -- 0
 cite$ -- 54
-duplicate$ -- 487
-empty$ -- 1062
-format.name$ -- 153
-if$ -- 2441
+duplicate$ -- 485
+empty$ -- 1098
+format.name$ -- 160
+if$ -- 2510
 int.to.chr$ -- 0
 int.to.str$ -- 48
-missing$ -- 39
-newline$ -- 234
-num.names$ -- 41
-pop$ -- 133
+missing$ -- 41
+newline$ -- 242
+num.names$ -- 48
+pop$ -- 155
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 232
+skip$ -- 236
 stack$ -- 0
 substring$ -- 617
 swap$ -- 119
@@ -47,7 +47,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 77
+while$ -- 84
 width$ -- 50
-write$ -- 498
+write$ -- 514
 (There were 6 warnings)

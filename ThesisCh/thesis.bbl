@@ -73,9 +73,9 @@ J.~Kim, I.~Kim, D.~Yun, T.~Jung, S.~Kwon, and K.~Jung.
 
 \bibitem{pic:aruco}
 OpenCV.
-\newblock Detection of aruco markers.
+\newblock Detection of {A}r{U}co {M}arkers.
 \newblock Retrieved Jul 2022 from:
-  \url{http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm}.
+  \url{https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html}.
 
 \bibitem{survey_ultrasonic}
 Z.~Qiu, Y.~Lu, and Z.~Qiu.
@@ -89,8 +89,9 @@ Y.~Abdelrahman, A.~Schmidt, and P.~Knierim.
 \newblock pages 1067--1071, 09 2017.
 
 \bibitem{book_electromagnetic}
-D.~Griffiths.
-\newblock Introduction to electrodynamics, 2005.
+David~J. Griffiths.
+\newblock {\em Introduction to {E}lectrodynamics}.
+\newblock Pearson, Boston, 1942(2013).
 
 \bibitem{rf_law}
 國家通訊傳播委員會.
@@ -126,13 +127,19 @@ P.~Pathak, X.~Feng, P.~Hu, and P.~Mohapatra.
   2015.
 
 \bibitem{datasheet:led_sfh4545}
-OSRAM Opto Semiconductors Inc.
-\newblock {\em High Power Infrared Emitter (940 nm)}, 11 2021.
+OSRAM Opto~Semiconductors Inc.
+\newblock High power infrared emitter (940 nm).
+\newblock Retrieved Aug 2022 from: \url{
+  https://dammedia.osram.info/media/resource/hires/osram-dam-5824111/SFH%204545_EN.pdf},
+  11 2021.
 \newblock Ver 1.8.
 
 \bibitem{datasheet:rfid_tag}
-Avery Dennison Corp.
-\newblock {\em UHF RFID Inlays}, 2015.
+Avery~Dennison Corp.
+\newblock Digital labeling technologies that optimize rfid performance.
+\newblock Retrieved Aug 2022 from: \url{
+  https://rfid.averydennison.com/content/dam/rfid/en/products/rfid-products/data-sheets/RFID_Product_Portfolio_Joint_Digital.pdf#page=3},
+  2022.
 
 \bibitem{si_pd}
 A.~Sood, J.~Zeller, R.~Richwine, Y.~Puri, H.~Efstathiadis, P.~Haldar, N.~Dhar,
@@ -198,8 +205,10 @@ W.~Mccluney.
 
 \bibitem{datasheet:led_vsma}
 Vishay.
-\newblock {\em High Power Infrared Emitting Diode, 850 nm, Surface Emitter
-  Technology}, 03 2022.
+\newblock High power infrared emitting diode, 850 nm, surface emitter
+  technology.
+\newblock Retrieved Aug 2022 from:
+  \url{https://www.vishay.com/docs/80297/vsma1085250.pdf}, 03 2022.
 
 \bibitem{case:cart2d}
 X.~Yu, J.~Wang, and H.~Lu.
@@ -246,20 +255,30 @@ J.~Barry, J.~Kahn, W.~Krause, E.~Lee, and D.~Messerschmitt.
 
 \bibitem{hamamatsu}
 Hamamatsu.
-\newblock {\em Technical note of Si photodiodes}, no.kspd9001e02 edition, May
-  2022.
+\newblock Technical {N}ote of {S}i {P}hotodiodes.
+\newblock Retrieved Aug 2022 from:
+  \url{https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/si_pd_kspd9001e.pdf},
+  May 2022.
 
 \bibitem{datasheet:hmL12170}
 Hamamatsu.
-\newblock {\em Infrared LED L12170}, Aug 2014.
+\newblock Infrared {LED} {L}12170.
+\newblock Retrieved Aug 2022 from:
+  \url{https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/si_pd_kspd9001e.pdf},
+  Aug 2014.
 
 \bibitem{datasheet:led_luxeon}
 Lumineds.
-\newblock {\em DS190 Luxeon IR compact Line Product Datasheet}, 2018.
+\newblock Ds190 {L}uxeon {IR} {C}ompact {L}ine {P}roduct {D}atasheet.
+\newblock Retrieved Aug 2022 from:
+  \url{https://lumileds.com/wp-content/uploads/files/DS190.pdf}, 2018.
 
 \bibitem{datasheet:hm_pd}
 Hamamatsu.
-\newblock {\em Si Photodiodes S12915 series}, Jan 2019.
+\newblock Si {P}hotodiodes {S}12915 series.
+\newblock Retrieved Aug 2022 from:
+  \url{https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/s12915_series_kspd1086e.pdf},
+  Jan 2019.
 
 \bibitem{multipath_new}
 W.~Gu, M.~Aminikashani, P.~Deng, and M.~Kavehrad.

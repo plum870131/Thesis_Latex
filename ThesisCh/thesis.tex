@@ -1,4 +1,5 @@
-
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
 \documentclass[a4paper, 12pt, oneside]{book}
 
 \input{PackageSetting}
@@ -37,9 +38,9 @@
 %\addcontentsline{toc}{chapter}{口試委員會審定書}
 %\includepdf[pages={1}]{cert.pdf}
 
-%\includepdf[pages={1}]{Verification_Letter.pdf}
+\includepdf[pages={1}]{Verification_Letter.pdf}
 \onehalfspacing
-% \input{FrontFile/acknowledgementsCH} %致謝
+\input{FrontFile/acknowledgementsCH} %致謝
 \input{FrontFile/abstractCH}
 \doublespacing
 \input{FrontFile/abstractEN}
@@ -65,14 +66,8 @@
 \input{chapter/05Optimize.tex}
 \input{chapter/06Conclusion.tex}
 
+\input{chapter/AppendixA.tex}
 
-%chapter cite  == \include
-%\include{start}
-%\include{introduction}
-%\include{THM}
-%\include{EXP}
-%\include{main}
-%\include{conclusions}
 
 
 %----------- Input your appendix here  -----------
@@ -91,7 +86,8 @@
 % 	[\vspace{2ex}%
 % 	 \titlerule]
 
-
+% \includepdf[pages={1}]{ReadMe.pdf}
+% \onehalfspacing
 
 
 

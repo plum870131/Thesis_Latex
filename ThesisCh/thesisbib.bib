@@ -7,16 +7,22 @@
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+@misc{hamamatsu,
+  author = {Hamamatsu},
+  title = {Technical {N}ote of {S}i {P}hotodiodes},
+  howpublished = {Retrieved Aug 2022 from: \url{https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/si_pd_kspd9001e.pdf}},
+  year = {2022}, 
+  month = {May}
+  }
 
-@manual{hamamatsu,
+@manual{hamamatsu1,
 	date-added = {2022-08-14 19:59:31 +0800},
 	date-modified = {2022-08-14 20:00:43 +0800},
 	edition = {No.KSPD9001E02},
 	month = {May},
 	organization = {Hamamatsu},
-	title = {Technical note of Si photodiodes},
 	year = {2022}}
-
+	
 @article{multipath_new,
 	author = {W. Gu and M. Aminikashani and P. Deng and M. Kavehrad},
 	date-added = {2022-08-14 17:34:33 +0800},
@@ -30,11 +36,12 @@
 	year = {2016},
 	bdsk-url-1 = {https://doi.org/10.1109/JLT.2016.2541659}}
 
-@manual{datasheet:led_luxeon,
+@misc{datasheet:led_luxeon,
 	date-added = {2022-08-11 08:51:44 +0800},
 	date-modified = {2022-08-11 08:52:43 +0800},
-	organization = {Lumineds},
-	title = {DS190 Luxeon IR compact Line Product Datasheet},
+	author = {Lumineds},
+	title = {DS190 {L}uxeon {IR} {C}ompact {L}ine {P}roduct {D}atasheet},
+	howpublished = {Retrieved Aug 2022 from: \url{https://lumileds.com/wp-content/uploads/files/DS190.pdf}},
 	year = {2018}}
 
 @article{omg_new,
@@ -63,23 +70,25 @@
 	year = {2014},
 	bdsk-url-1 = {https://doi.org/10.1117/1.OE.53.4.045105}}
 
-@manual{datasheet:hm_pd,
+@misc{datasheet:hm_pd,
 	date-added = {2022-08-04 12:30:51 +0800},
 	date-modified = {2022-08-04 12:31:52 +0800},
 	month = {Jan},
-	organization = {Hamamatsu},
-	title = {Si Photodiodes S12915 series},
+	author = {Hamamatsu},
+	title = {Si {P}hotodiodes {S}12915 series},
+	howpublished = {Retrieved Aug 2022 from: \url{https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/s12915_series_kspd1086e.pdf}},
 	year = {2019}}
 
-@manual{datasheet:hmL12170,
+@misc{datasheet:hmL12170,
 	date-added = {2022-08-04 12:29:25 +0800},
 	date-modified = {2022-08-04 12:30:34 +0800},
 	month = {Aug},
-	organization = {Hamamatsu},
-	title = {Infrared LED L12170},
+	author = {Hamamatsu},
+	title = {Infrared {LED} {L}12170},
+	howpublished = {Retrieved Aug 2022 from: \url{https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/si_pd_kspd9001e.pdf}},
 	year = {2014}}
 
-@manual{datasheet:BPW,
+@misc{datasheet:BPW,
 	date-added = {2022-07-25 15:36:11 +0800},
 	date-modified = {2022-07-25 15:37:19 +0800},
 	month = {08},
@@ -87,12 +96,13 @@
 	title = {Silicon PN Photodiode BPW20RF},
 	year = {2005}}
 
-@manual{datasheet:led_vsma,
+@misc{datasheet:led_vsma,
 	date-added = {2022-07-23 04:30:11 +0800},
 	date-modified = {2022-07-23 04:31:41 +0800},
 	month = {03},
-	organization = {Vishay},
+	author = {Vishay},
 	title = {High Power Infrared Emitting Diode, 850 nm, Surface Emitter Technology},
+	howpublished = {Retrieved Aug 2022 from: \url{https://www.vishay.com/docs/80297/vsma1085250.pdf}},
 	year = {2022}}
 
 @article{multipath,
@@ -288,11 +298,10 @@
 
 @misc{pic:aruco,
 	author = {OpenCV},
-	howpublished = {Retrieved Jul 2022 from: \url{http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm}},
-	title = {Detection of ArUco Markers}}
+	howpublished = {Retrieved Jul 2022 from: \url{https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html}},
+	title = {Detection of {A}r{U}co {M}arkers}}
 
 @article{pic:image_processing,
-	abstract = {Recently, the demand for location-based services using mobile devices in indoor spaces without a global positioning system (GPS) has increased. However, to the best of our knowledge, solutions that are fully applicable to indoor positioning and navigation and ensure real-time mobility on mobile devices, such as global navigation satellite system (GNSS) solutions, cannot achieve remarkable researches in indoor circumstances. Indoor single-shot image positioning using smartphone cameras does not require a dedicated infrastructure and offers the advantages of low price and large potential markets owing to the popularization of smartphones. However, existing methods or systems based on smartphone cameras and image algorithms encounter various limitations when implemented in indoor environments. To address this, we designed an indoor visual positioning system for mobile devices that can locate users in indoor scenes. The proposed method uses a smartphone camera to detect objects through a single image in a web environment and calculates the location of the smartphone to find users in an indoor space. The system is inexpensive because it integrates deep learning and computer vision algorithms and does not require additional infrastructure. We present a novel method of detecting 3D model objects from single-shot RGB data, estimating the 6D pose and position of the camera and correcting errors based on voxels. To this end, the popular convolutional neural network (CNN) is improved by real-time pose estimation to handle the entire 6D pose estimate the location and direction of the camera. The estimated position of the camera is addressed to a voxel to determine a stable user position. Our VPS system provides the user with indoor information in 3D AR model. The voxel address optimization approach with camera 6D position estimation using RGB images in a mobile web environment outperforms real-time performance and accuracy compared to current state-of-the-art methods using RGB depth or point cloud.},
 	article-number = {865},
 	author = {J. Kim and I. Kim and D. Yun and T. Jung and S. Kwon and K. Jung},
 	date-added = {2022-07-09 08:08:02 +0800},
@@ -491,13 +500,14 @@
 	title = {Standard Solar Spectra},
 	year = {1992}}
 
-@misc{book_electromagnetic,
-	author = {D. Griffiths},
+@book{book_electromagnetic,
+	author = {David J. Griffiths},
 	date-added = {2022-04-11 13:48:51 +0800},
 	date-modified = {2022-04-11 13:49:00 +0800},
-	publisher = {American Association of Physics Teachers},
-	title = {Introduction to electrodynamics},
-	year = {2005}}
+	address = {Boston},
+	publisher = {Pearson},
+	title = {Introduction to {E}lectrodynamics},
+	year = {1942(2013)}}
 
 @article{survey_rfid,
 	author = {A. Motroni and A. Buffi and P. Nepa},
@@ -527,21 +537,23 @@
 	year = {2013},
 	bdsk-url-1 = {https://doi.org/10.4236/pos.2013.42019}}
 
-@manual{datasheet:rfid_tag,
+@misc{datasheet:rfid_tag,
 	date-added = {2022-04-11 12:51:03 +0800},
 	date-modified = {2022-04-11 12:52:03 +0800},
 	number = {AD-321r6},
-	organization = {Avery Dennison Corp.},
-	title = {UHF RFID Inlays},
-	year = 2015}
+	author = {Avery Dennison Corp.},
+	title = {Digital labeling technologies that optimize RFID performance},
+	howpublished = {Retrieved Aug 2022 from: \url{ https://rfid.averydennison.com/content/dam/rfid/en/products/rfid-products/data-sheets/RFID_Product_Portfolio_Joint_Digital.pdf#page=3}},
+	year = 2022}
 
-@manual{datasheet:led_sfh4545,
+@misc{datasheet:led_sfh4545,
 	date-added = {2022-04-11 12:41:40 +0800},
 	month = 11,
 	note = {Ver 1.8},
 	number = {SFH 4545},
-	organization = {OSRAM Opto Semiconductors Inc.},
+	author = {OSRAM Opto Semiconductors Inc.},
 	title = {High Power Infrared Emitter (940 nm)},
+	howpublished = {Retrieved Aug 2022 from: \url{ https://dammedia.osram.info/media/resource/hires/osram-dam-5824111/SFH%204545_EN.pdf}},
 	year = 2021}
 
 @inproceedings{Spectrum,
